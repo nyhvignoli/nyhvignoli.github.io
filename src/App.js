@@ -3,9 +3,7 @@ import MainScreen from "./screens/MainScreen/MainScreen";
 
 const App = () => {
   return (
-    <div>
-      <MainScreen />
-    </div>
+    <MainScreen />
   );
 }
 
