@@ -1,4 +1,5 @@
 import React from "react";
+import { Wrapper, Content } from "./styles";
 import AboutMe from "../../components/AboutMe/AboutMe";
 import Footer from "../../components/Footer/Footer";
 import Knowledges from "../../components/Knowledges/Knowledges";
@@ -9,16 +10,16 @@ import Projects from "../../components/Projects/Projects";
 const MainScreen = () => {
 
     return (
-        <div>
+        <Wrapper>
             <NavBar />
-            <main>
+            <Content>
                 <AboutMe/>
                 <Knowledges/>
                 <Education />
-                <Projects/>
-            </main>
+                <Projects />
+            </Content>
             <Footer/>
-        </div>
+        </Wrapper>
     );
 }
 
