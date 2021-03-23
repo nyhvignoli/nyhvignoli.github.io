@@ -1,8 +1,10 @@
+import React from "react";
+import MainScreen from "./screens/MainScreen/MainScreen";
 
-function App() {
+const App = () => {
   return (
     <div>
-      Hello World
+      <MainScreen />
     </div>
   );
 }
