@@ -1,11 +1,81 @@
 import React from "react";
-import { Wrapper, ImageContainer, Content, TextWrapper, ButtonGroup, StyledButton, Title } from "./styles";
+import { ListItem, StackList } from "../../AboutMe/styles";
+import { Wrapper, ImageContainer, Content, TextWrapper, ButtonGroup, StyledButton, Title, Image } from "./styles";
 
 const ProjectsContent = (props) => {
+
+    const fullStackButtonGroup = (
+        <ButtonGroup>
+            <a 
+                href={props.githubLink.frontend}
+                target="_blank"
+                rel="noreferrer"
+            >
+                <StyledButton>Front-end no Github</StyledButton>
+            </a>
+            <a 
+                href={props.githubLink.backend}
+                target="_blank"
+                rel="noreferrer"
+            >
+                <StyledButton>Back-end no Github</StyledButton>
+            </a>
+        </ButtonGroup>
+    );
+
+    const backendButtonGroup = (
+        <ButtonGroup>
+            <a 
+                href={props.githubLink}
+                target="_blank"
+                rel="noreferrer"
+            >
+                <StyledButton>Ver no Github</StyledButton>
+            </a>
+            <a
+                href={props.url}
+                target="_blank"
+                rel="norefferer"
+            >
+                <StyledButton>Ver documentação</StyledButton>
+            </a>
+        </ButtonGroup>
+    );
+
+    const frontendButtonGroup = (
+        <ButtonGroup>
+            <a 
+                href={props.githubLink}
+                target="_blank"
+                rel="noreferrer"
+            >
+                <StyledButton>Ver no Github</StyledButton>
+            </a>
+            <a
+                href={props.url}
+                target="_blank"
+                rel="norefferer"
+            >
+                <StyledButton>Abrir site</StyledButton>
+            </a>
+        </ButtonGroup>
+    );
+
+    const getButtonGroup = () => {
+        switch (props.type) {
+            case "Full Stack":
+                return fullStackButtonGroup;
+            case "Backend":
+                return backendButtonGroup;
+            case "Frontend":
+                return frontendButtonGroup;
+        }
+    };
+
     return (
         <Wrapper>
             <ImageContainer>
-                <img src={props.image.src} alt={props.image.alt}/>
+                <Image src={props.image.src} alt={props.image.alt}/>
             </ImageContainer>
             <Content>
                 <TextWrapper>
@@ -13,10 +83,14 @@ const ProjectsContent = (props) => {
                     <h2>{props.type}</h2>
                     <p>{props.description}</p>
                 </TextWrapper>
-                <ButtonGroup>
-                    <StyledButton>Ver no Github</StyledButton>
-                    <StyledButton>{props.type === "Front-end" ? "Abri site" : "Ver documentação"}</StyledButton>
-                </ButtonGroup>
+                <StackList>
+                    {props.tags.map((tag, index) => {
+                        return (
+                            <ListItem small key={index}>{tag}</ListItem>
+                        )
+                    })}
+                </StackList>
+                {getButtonGroup()}
             </Content>
         </Wrapper>
     );
