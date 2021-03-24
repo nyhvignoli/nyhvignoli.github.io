@@ -15,16 +15,26 @@ export const Wrapper = styled.div`
 
 export const ImageContainer = styled.div`
     margin: auto;
+    width: 50%;
 
     @media (max-width: 800px) {
         width: auto;
     }
 `;
 
+export const Image = styled.img`
+    width: 100%;
+`
+
 export const Content = styled.div`
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @media (max-width: 800px) {
+        width: auto;
+    }
 `;
 
 export const TextWrapper = styled.div`
@@ -51,10 +61,9 @@ export const StyledButton = styled.button`
     border: none;
     box-shadow: 2px 2px 5px 1px #012940;
     border-radius: 5px;
-    width: 30%;
-    min-width: 160px;
+    min-width: 150px;
     font-family: 'Roboto Condensed', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1rem;
     background-color: #5b83a6;
     color: #FFF;
 

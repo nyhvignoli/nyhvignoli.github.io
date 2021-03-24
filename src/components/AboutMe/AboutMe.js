@@ -4,22 +4,38 @@ import { Wrapper, InfoSection, ImageSection, Filter, StackList, ListItem } from 
 import { Title } from "../../global/styles";
 
 const AboutMe = () => {
+    const stacks = [
+        "Javascript",
+        "Typescript",
+        "React",
+        "HTML5",
+        "CSS3",
+        "GIT",
+        "Node",
+        "Java",
+        "Android Studio",
+        "MySQL",
+        "Firebase",
+        "Metodologias Ágeis"
+    ];
     return (
         <Wrapper id="about-me">
             <InfoSection>
                 <Title>Aline "Nyh" Vignoli</Title>
                 <h2>Desenvolvedora Full Stack</h2>
                 <p>
-                    Maecenas at ipsum in velit porttitor pulvinar. Ut molestie tempus vehicula. Sed blandit quis mauris a posuere. Vestibulum bibendum dignissim nunc in vestibulum. Sed feugiat tincidunt pulvinar. Sed semper, felis sed rhoncus dapibus, quam neque sodales tortor, sagittis auctor erat arcu eget elit. Sed interdum ornare orci, quis mollis libero cursus ut. Quisque condimentum nisl quis metus elementum rutrum. Nullam hendrerit sollicitudin commodo. Quisque at augue id libero convallis eleifend. Maecenas a blandit libero, in facilisis sapien. Sed arcu massa, auctor nec sollicitudin at, feugiat suscipit nibh. Pellentesque a sollicitudin orci. Cras euismod, quam in hendrerit porttitor, arcu urna bibendum nunc, sit amet scelerisque massa velit at tellus.
+                    Oi tudo bem? Eu sou Aline mas pode me chamar de Nyh!<br/>
+                    Descobri minha paixão por programação há mais ou menos 1 ano e hoje sou Desenvolvedora Web Full Stack recém formada.<br/>
+                    Tenho um background artístico autônomo como musicista e tatuadora (profissão que excerci por 12 anos), e atualmente estou buscando incorporar essas experiências na minha carreira como programadora.<br/>
+                    Enquanto mulher e lésbica, busco somar na inclusão e diversidade na tecnologia!
+
                 </p>
                 <StackList>
-                    <ListItem>Javascript</ListItem>
-                    <ListItem>Typescript</ListItem>
-                    <ListItem>HTML5</ListItem>
-                    <ListItem>CSS3</ListItem>
-                    <ListItem>React</ListItem>
-                    <ListItem>Node</ListItem>
-                    <ListItem>SQL</ListItem>
+                    {stacks.map((stack, index) => {
+                        return (
+                            <ListItem key={index}>{stack}</ListItem>
+                        )
+                    })}
                 </StackList>
             </InfoSection>
             <Filter>
