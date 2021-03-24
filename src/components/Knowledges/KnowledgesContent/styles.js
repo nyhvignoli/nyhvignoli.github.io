@@ -6,4 +6,8 @@ export const Wrapper = styled.div`
     p {
         opacity: 0.8;
     }
+
+    @media (max-width: 800px) {
+        width: 100%;
+    }
 `;

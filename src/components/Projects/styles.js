@@ -12,4 +12,9 @@ export const Wrapper = styled.section`
     p {
         opacity: 0.8;
     }
+
+    @media (max-width: 800px) {
+        padding: 2rem;
+        gap: 1rem;
+    }
 `;
