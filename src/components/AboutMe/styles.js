@@ -56,7 +56,6 @@ export const ImageSection = styled.div`
     height: 100%;
 
     @media (max-width: 1024px) {
-        /* border-radius: 5px; */
         box-shadow: 2px 2px 6px 2px #012940;
     }
 `;
