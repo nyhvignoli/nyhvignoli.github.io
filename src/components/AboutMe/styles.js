@@ -40,7 +40,7 @@ export const ImageSection = styled.div`
     background-repeat: no-repeat;
     background-position: center;
     opacity: 0.5;
-    height: 600px;
+    height: 100%;
     position: relative;
 `;
 

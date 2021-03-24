@@ -6,6 +6,5 @@ export const SocialMediaWrapper = styled.aside`
     gap: 2rem;
     position: absolute;
     right: 2rem;
-    bottom: 50%;
-    top: 50%;
+    top: 40%;
 `;

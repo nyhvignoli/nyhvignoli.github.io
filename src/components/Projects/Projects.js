@@ -1,5 +1,7 @@
 import React from "react";
 import ProjectsContent from "./ProjectsContent/ProjectsContent";
+import { Wrapper } from "./styles";
+import { Subtitle } from "../../global/styles";
 
 const Projects = () => {
     const projects = [
@@ -28,8 +30,8 @@ const Projects = () => {
     ];
 
     return (
-        <section id="projects">
-            <h1>Projetos</h1>
+        <Wrapper id="projects">
+            <Subtitle>Projetos</Subtitle>
             {projects.map((project, index) => {
                 return (
                     <ProjectsContent
@@ -43,7 +45,7 @@ const Projects = () => {
                     />
                 )
             })}
-        </section>
+        </Wrapper>
     );
 }
 
