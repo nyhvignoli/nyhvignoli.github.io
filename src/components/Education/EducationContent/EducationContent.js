@@ -1,14 +1,21 @@
 import React from "react";
+import { Wrapper, BaseContainer } from "./styles";
 
 const EducationContent = (props) => {
     return (
-        <div>
-            <h2>{props.title}</h2>
-            <h3>{props.instituition}</h3>
-            <p>{props.duration}</p>
-            <p>{props.period}</p>
+        <Wrapper>
+            <BaseContainer>
+                <h2>{props.title}</h2>
+                <span>-</span>
+                <h2>{props.institution}</h2>
+            </BaseContainer>
+            <BaseContainer>
+                <p>{props.period}</p>
+                <span>|</span>
+                <p>{props.duration}</p>   
+            </BaseContainer>
             <p>{props.description}</p>
-        </div>
+        </Wrapper>
     );
 }
 

@@ -1,5 +1,7 @@
 import React from "react";
 import EducationContent from "./EducationContent/EducationContent";
+import { Wrapper, Content } from "./styles";
+import { Subtitle } from "../../global/styles";
 
 const Education = () => {
     const courses = [
@@ -20,21 +22,23 @@ const Education = () => {
     ];
 
     return (
-        <section>
-            <h1>Formação</h1>
-            {courses.map((course, index) => {
-                return (
-                    <EducationContent
-                        key={index}
-                        title={course.title} 
-                        institution={course.institution}
-                        duration={course.duration}
-                        period={course.period}
-                        description={course.description}
-                    />
-                )
-            })}
-        </section>
+        <Wrapper>
+            <Subtitle>Formação</Subtitle>
+            <Content>
+                {courses.map((course, index) => {
+                    return (
+                        <EducationContent
+                            key={index}
+                            title={course.title} 
+                            institution={course.institution}
+                            duration={course.duration}
+                            period={course.period}
+                            description={course.description}
+                        />
+                    )
+                })}
+            </Content>
+        </Wrapper>
     );
 }
 
