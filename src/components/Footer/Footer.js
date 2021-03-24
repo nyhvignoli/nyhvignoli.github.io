@@ -1,14 +1,22 @@
 import React from "react";
+import { Subtitle } from "../../global/styles";
+import SocialMedia from "../SocialMedia/SocialMedia";
+import { StyledFooter, ContactInfos , CopyRights } from "./styles";
 
 const Footer = () => {
     return (
-        <footer id="contact">
-            <h2>Contato</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut gravida nisl, in viverra dolor. Sed ullamcorper est purus, tristique tincidunt metus molestie ut. Vivamus congue lacinia ligula, vitae lobortis velit. Phasellus vel tincidunt urna, vitae aliquam nisi. Etiam quam lorem, congue ut ante at, ultricies egestas tellus. Duis eu magna elit. Sed efficitur a erat quis lobortis.</p>
-            <div>
-                social media icons
-            </div>
-        </footer>
+        <StyledFooter id="contact">
+            <ContactInfos>
+                <Subtitle>Contato</Subtitle>
+                <p>Gostou do meu trabalho? Bora bater um papo!</p>
+                <p>
+                    Email: nyhv.contato@gmail.com<br/>
+                    Telefone: (51) 99667-1364
+                </p>
+                <SocialMedia/>
+            </ContactInfos>
+            <CopyRights><p>© 2021 ~ Desenvolvido por Aline "Nyh" Vignoli</p></CopyRights>
+        </StyledFooter>
     );
 }
 

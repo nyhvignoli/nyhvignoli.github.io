@@ -34,7 +34,7 @@ export const StyledButton = styled.button`
     box-shadow: 2px 2px 5px 1px #012940;
     border-radius: 5px;
     width: 30%;
-    font-family: inherit;
+    font-family: 'Roboto Condensed', sans-serif;
     font-size: 1.2rem;
     background-color: #5b83a6;
     color: #FFF;

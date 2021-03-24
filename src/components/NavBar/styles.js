@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const StyledNav = styled.nav`
     padding: 0.5rem 2rem;
     color: #FFF;
+    font-family: 'Roboto Condensed', sans-serif;
 `;
 
 export const StyledList = styled.ul`
