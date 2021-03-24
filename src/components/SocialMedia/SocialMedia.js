@@ -5,9 +5,9 @@ import github from "../../assets/github-icon.svg";
 import whatsapp from "../../assets/whatsapp-icon.svg";
 import instagram from "../../assets/instagram-icon.svg";
 
-const SocialMedia = () => {
+const SocialMedia = (props) => {
     return (
-        <SocialMediaWrapper>
+        <SocialMediaWrapper vertical={props.vertical}>
             <a 
                 href="https://www.linkedin.com/in/nyhvignoli/" 
                 target="_blank" 

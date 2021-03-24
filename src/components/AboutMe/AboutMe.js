@@ -24,7 +24,7 @@ const AboutMe = () => {
             </InfoSection>
             <Filter>
                 <ImageSection />
-                <SocialMedia/>
+                <SocialMedia vertical/>
             </Filter>
         </Wrapper>
     );
