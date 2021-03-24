@@ -40,8 +40,8 @@ export const StackList = styled.ul`
 export const ListItem = styled.li`
     opacity: 0.8;
     border: 1px solid #FFF;
-    padding: 0.5rem;
-    border-radius: 5px;
+    padding: 0.3rem 1rem ;
+    border-radius: 2rem;
 `;
 
 export const ImageSection = styled.div`

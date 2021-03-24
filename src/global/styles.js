@@ -17,6 +17,7 @@ export const Subtitle = styled.h2`
     font-size: 3rem;
     opacity: 0.8;
     font-family: 'Roboto Condensed', sans-serif;
+    text-align: center;
     /* font-family: 'Syne Mono', monospace; */
     /* font-family: 'Ubuntu Condensed', sans-serif;  */
     /* font-family: 'Pathway Gothic One', sans-serif; */

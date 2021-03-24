@@ -1,11 +1,29 @@
 import React from "react";
 import { Subtitle } from "../../global/styles";
+import { ListItem, StackList } from "../AboutMe/styles";
 import KnowledgesContent from "./KnowledgesContent/KnowledgesContent";
 import { Wrapper, Content } from "./styles";
 
 const Knowledges = () => {
-    const frontEndKnowledges = ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut gravida nisl, in viverra dolor. Sed ullamcorper est purus, tristique tincidunt metus molestie ut.", "Ut molestie tempus vehicula. Sed blandit quis mauris a posuere. Vestibulum bibendum dignissim nunc in vestibulum. Sed feugiat tincidunt pulvinar. "];
-    const backEndKnowledges = ["Sed interdum ornare orci, quis mollis libero cursus ut.", "Duis scelerisque orci eget malesuada molestie. Praesent eu risus mauris. Sed pellentesque, massa in lobortis pharetra, metus ante convallis eros, sit amet congue justo quam in turpis. Nunc et tortor posuere purus pellentesque luctus. Nunc in risus eget diam suscipit laoreet."];
+    const frontEndKnowledges = [
+        "Desenvolvimento de aplicações Web em HTML, CSS e Javascript",
+        "Componentização e manipulação de estado com ReactJS",
+        "Integrações com API's REST",
+        "Layouts responsivos e bibliotecas de estilização como Styled-components e Material-UI"
+    ];
+
+    const backEndKnowledges = [
+        "Desenvolvimento de API's RESTful utilizando Node.js e Typescript",
+        "Testes unitários e automatizados com Jest",
+        "Banco de dados MySQL",
+        "Familiaridade com Firebase"
+    ];
+
+    const generalKnowledges = [
+        "AWS e EC2",
+        "Metodologias Ágeis",
+        "Clean Code",
+    ];
 
     return (
         <Wrapper>
@@ -20,6 +38,17 @@ const Knowledges = () => {
                     knowledges={backEndKnowledges}
                 />
             </Content>
+            <div>
+                <Subtitle>Gerais</Subtitle>
+                <StackList>
+                    {generalKnowledges.map((item, index) => {
+                        return (
+                            <ListItem key={index}>{item}</ListItem>
+                        )
+                    })}
+                </StackList>
+            </div>
+            
         </Wrapper>
     );
 }
