@@ -12,6 +12,6 @@ export const SocialMediaWrapper = styled.aside`
         flex-direction: column;
         position: absolute;
         right: 2rem;
-        top: 40%;
+        top: 30%;
     `}
 `;

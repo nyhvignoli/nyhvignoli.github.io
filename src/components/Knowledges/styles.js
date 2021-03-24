@@ -7,6 +7,10 @@ export const Wrapper = styled.section`
     align-items: center;
     display: flex;
     background-color: #012940;
+
+    @media (max-width: 800px) {
+        padding: 1rem 2rem;
+    }
 `;
 
 export const Content = styled.div`
@@ -14,4 +18,9 @@ export const Content = styled.div`
     display: flex;
     justify-content: center;
     gap: 5rem;
+
+    @media (max-width: 800px) {
+        flex-direction: column;
+        gap: 1rem;
+    }
 `;

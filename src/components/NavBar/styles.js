@@ -11,6 +11,10 @@ export const StyledList = styled.ul`
     list-style-type: none;
     justify-content: flex-end;
     gap: 3rem;
+
+    @media (max-width: 800px) {
+        font-size: 1rem;
+    }
 `;
 
 export const ListItem = styled.li`

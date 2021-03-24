@@ -1,5 +1,5 @@
 import React from "react";
-import { Wrapper, ImageContainer, Content, ButtonGroup, StyledButton, Title } from "./styles";
+import { Wrapper, ImageContainer, Content, TextWrapper, ButtonGroup, StyledButton, Title } from "./styles";
 
 const ProjectsContent = (props) => {
     return (
@@ -8,11 +8,11 @@ const ProjectsContent = (props) => {
                 <img src={props.image.src} alt={props.image.alt}/>
             </ImageContainer>
             <Content>
-                <div>
+                <TextWrapper>
                     <Title>{props.title}</Title>
                     <h2>{props.type}</h2>
                     <p>{props.description}</p>
-                </div>
+                </TextWrapper>
                 <ButtonGroup>
                     <StyledButton>Ver no Github</StyledButton>
                     <StyledButton>{props.type === "Front-end" ? "Abri site" : "Ver documentação"}</StyledButton>
