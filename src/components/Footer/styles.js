@@ -24,12 +24,10 @@ export const ContactInfos = styled.div`
 
 export const CopyRights = styled.div`
     background-color: #012940;
-    padding: 1rem 2rem;
-    font-family: 'Roboto Condensed', sans-serif;
+    padding: 1rem 2rem;  
 
     @media (max-width: 800px) {
         padding: 0.5rem;
-        font-size: 1rem;
         text-align: center;
     }
 `;
