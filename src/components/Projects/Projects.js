@@ -1,9 +1,9 @@
 import React from "react";
-import ProjectsContent from "./ProjectsContent/ProjectsContent";
 import { Wrapper } from "./styles";
 import { Subtitle } from "../../global/styles";
 import musicatchersScreenshot from "../../assets/musicatchers.PNG";
 import labedditScreenshot from "../../assets/labeddit.PNG";
+import Gallery from "../Gallery/Gallery";
 
 const Projects = () => {
     const projects = [
@@ -40,20 +40,9 @@ const Projects = () => {
     return (
         <Wrapper id="projects">
             <Subtitle data-aos="fade-zoom-in" data-aos-duration="1500">Projetos</Subtitle>
-            {projects.map((project, index) => {
-                return (
-                    <ProjectsContent
-                        key={index}
-                        title={project.title} 
-                        type={project.type}
-                        image={project.image}
-                        description={project.description}
-                        githubLink={project.githubLink}
-                        url={project.url}
-                        tags={project.tags}
-                    />
-                )
-            })}
+            <Gallery 
+                projects={projects}
+            />
         </Wrapper>
     );
 }
