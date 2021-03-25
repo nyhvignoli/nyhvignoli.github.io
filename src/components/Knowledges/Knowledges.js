@@ -27,7 +27,7 @@ const Knowledges = () => {
 
     return (
         <Wrapper>
-            <Subtitle>Conhecimentos</Subtitle>
+            <Subtitle data-aos="fade-zoom-in" data-aos-duration="1500" data-aos-easing="ease-in-out">Conhecimentos</Subtitle>
             <Content>
                 <KnowledgesContent
                     title={"Front-end"} 
@@ -39,11 +39,11 @@ const Knowledges = () => {
                 />
             </Content>
             <div>
-                <Subtitle>Gerais</Subtitle>
+                <Subtitle data-aos="fade-zoom-in" data-aos-duration="1500">Gerais</Subtitle>
                 <StackList>
                     {generalKnowledges.map((item, index) => {
                         return (
-                            <ListItem key={index}>{item}</ListItem>
+                            <ListItem data-aos="flip-right" data-aos-duration="2000" data-aos-easing="ease-out-cubic" key={index}>{item}</ListItem>
                         )
                     })}
                 </StackList>

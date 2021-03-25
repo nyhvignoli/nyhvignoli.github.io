@@ -39,7 +39,7 @@ const Projects = () => {
 
     return (
         <Wrapper id="projects">
-            <Subtitle>Projetos</Subtitle>
+            <Subtitle data-aos="fade-zoom-in" data-aos-duration="1500">Projetos</Subtitle>
             {projects.map((project, index) => {
                 return (
                     <ProjectsContent

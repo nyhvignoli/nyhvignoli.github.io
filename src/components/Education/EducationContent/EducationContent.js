@@ -3,7 +3,11 @@ import { Wrapper, BaseContainer } from "./styles";
 
 const EducationContent = (props) => {
     return (
-        <Wrapper>
+        <Wrapper 
+            data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+        >
             <BaseContainer>
                 <h2>{props.title}</h2>
                 <span>-</span>

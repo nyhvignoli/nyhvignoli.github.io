@@ -23,7 +23,7 @@ const Education = () => {
 
     return (
         <Wrapper>
-            <Subtitle>Formação</Subtitle>
+            <Subtitle data-aos="fade-zoom-in" data-aos-duration="1500">Formação</Subtitle>
             <Content>
                 {courses.map((course, index) => {
                     return (

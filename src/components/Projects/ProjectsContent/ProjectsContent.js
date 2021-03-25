@@ -35,7 +35,7 @@ const ProjectsContent = (props) => {
             <a
                 href={props.url}
                 target="_blank"
-                rel="norefferer"
+                rel="noreferrer"
             >
                 <StyledButton>Ver documentação</StyledButton>
             </a>
@@ -54,7 +54,7 @@ const ProjectsContent = (props) => {
             <a
                 href={props.url}
                 target="_blank"
-                rel="norefferer"
+                rel="noreferrer"
             >
                 <StyledButton>Abrir site</StyledButton>
             </a>
@@ -69,15 +69,25 @@ const ProjectsContent = (props) => {
                 return backendButtonGroup;
             case "Frontend":
                 return frontendButtonGroup;
+            default:
+                return null;    
         }
     };
 
     return (
         <Wrapper>
-            <ImageContainer>
-                <Image src={props.image.src} alt={props.image.alt}/>
+            <ImageContainer
+                data-aos="fade-right"
+                data-aos-easing="ease-in-sine"
+                data-aos-offset="300"
+            >
+                <Image  src={props.image.src} alt={props.image.alt}/>
             </ImageContainer>
-            <Content>
+            <Content
+                data-aos="fade-up"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine"
+            >
                 <TextWrapper>
                     <Title>{props.title}</Title>
                     <h2>{props.type}</h2>
