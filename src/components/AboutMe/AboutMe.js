@@ -15,15 +15,26 @@ const AboutMe = () => {
         "Java",
         "Android Studio",
         "MySQL",
-        "Firebase",
-        "Metodologias Ágeis"
+        "Firebase"
     ];
     return (
         <Wrapper id="about-me">
             <InfoSection>
-                <Title>Aline "Nyh" Vignoli</Title>
-                <h2>Desenvolvedora Full Stack</h2>
-                <p>
+                <Title 
+                    data-aos="fade-right"
+                    data-aos-offset="300"
+                    data-aos-easing="ease-in-sine"
+                >
+                    Aline "Nyh" Vignoli
+                </Title>
+                <h2 
+                    data-aos="fade-right"
+                    data-aos-offset="300"
+                    data-aos-easing="ease-in-sine"
+                >
+                    Desenvolvedora Full Stack
+                </h2>
+                <p data-aos="fade-out" data-aos-duration="3000">
                     Oi tudo bem? Eu sou Aline mas pode me chamar de Nyh!<br/>
                     Descobri minha paixão por programação há mais ou menos 1 ano e hoje sou Desenvolvedora Web Full Stack recém formada.<br/>
                     Tenho um background artístico autônomo como musicista e tatuadora (profissão que excerci por 12 anos), e atualmente estou buscando incorporar essas experiências na minha carreira como programadora.<br/>
@@ -33,7 +44,7 @@ const AboutMe = () => {
                 <StackList>
                     {stacks.map((stack, index) => {
                         return (
-                            <ListItem key={index}>{stack}</ListItem>
+                            <ListItem data-aos="flip-right" data-aos-duration="2000" data-aos-easing="ease-out-cubic" data-aos-delay="1000" key={index}>{stack}</ListItem>
                         )
                     })}
                 </StackList>

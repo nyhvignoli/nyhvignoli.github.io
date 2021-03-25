@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Wrapper, Content } from "./styles";
 import AboutMe from "../../components/AboutMe/AboutMe";
 import Footer from "../../components/Footer/Footer";
@@ -9,11 +9,27 @@ import Projects from "../../components/Projects/Projects";
 
 const MainScreen = () => {
 
+    const smoothScroll = () => {
+        window.document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (event) {
+                event.preventDefault();
+        
+                window.document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    }
+
+    useEffect(() => {
+        smoothScroll();
+    },[])
+
     return (
         <Wrapper>
             <NavBar />
             <Content>
-                <AboutMe/>
+                <AboutMe />
                 <Knowledges/>
                 <Education />
                 <Projects />
