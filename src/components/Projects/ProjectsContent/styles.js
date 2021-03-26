@@ -1,15 +1,14 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-    width: 100%;
     display: flex;
     gap: 2rem;
     margin-bottom: 2rem;
-    padding: 0 12rem;
+    padding: 0 5rem;
 
     @media (max-width: 800px) {
         flex-wrap: wrap-reverse;
-        padding: 0;
+        padding: 0 1rem;
     }
 `;
 

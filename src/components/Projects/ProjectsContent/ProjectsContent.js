@@ -1,5 +1,5 @@
 import React from "react";
-import { ListItem, StackList } from "../../AboutMe/styles";
+import { ListItem, StackList } from "../../../global/styles";
 import { Wrapper, ImageContainer, Content, TextWrapper, ButtonGroup, StyledButton, Title, Image } from "./styles";
 
 const ProjectsContent = (props) => {
@@ -65,9 +65,9 @@ const ProjectsContent = (props) => {
         switch (props.type) {
             case "Full Stack":
                 return fullStackButtonGroup;
-            case "Backend":
+            case "Back-end":
                 return backendButtonGroup;
-            case "Frontend":
+            case "Front-end":
                 return frontendButtonGroup;
             default:
                 return null;    
@@ -76,24 +76,16 @@ const ProjectsContent = (props) => {
 
     return (
         <Wrapper>
-            <ImageContainer
-                data-aos="fade-right"
-                data-aos-easing="ease-in-sine"
-                data-aos-offset="300"
-            >
+            <ImageContainer>
                 <Image  src={props.image.src} alt={props.image.alt}/>
             </ImageContainer>
-            <Content
-                data-aos="fade-up"
-                data-aos-offset="300"
-                data-aos-easing="ease-in-sine"
-            >
+            <Content>
                 <TextWrapper>
                     <Title>{props.title}</Title>
                     <h2>{props.type}</h2>
                     <p>{props.description}</p>
                 </TextWrapper>
-                <StackList>
+                <StackList small>
                     {props.tags.map((tag, index) => {
                         return (
                             <ListItem small key={index}>{tag}</ListItem>

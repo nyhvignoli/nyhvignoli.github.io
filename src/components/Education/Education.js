@@ -10,14 +10,14 @@ const Education = () => {
             institution: "Labenu",
             duration: "1000h",
             period: "2020 - 2021",
-            description: "Labenu é uma startup focada em Desenvolvimento Web Full Stack. Um bootcamp com mais de 1000 horas de prática em programação de pessoas desenvolvedoras utilizando ferramentas e tecnologias sempre atualizadas."
+            description: `A Labenu é uma startup que forma Pessoas Desenvolvedoras Web Full Stack prontas para o mercado de trabalho. São mais de 1000 horas de programação que faz com que suas alunas e alunos sejam profissionais com conhecimentos adquiridos e postos em prática tanto no Back-end quanto no Front-end.`
         },
         {
-            title: "Desenvolvimento Android Nativo",
+            title: "Desenvolvimento Android",
             institution: "Udemy",
             duration: "100h",
             period: "2020 - presente",
-            description: "Desenvolvimento Android Nativo com Android Studio, linguagem Java, bancos SQLite e NoSQL com Firebase."
+            description: "Curso de Desenvolvimento Android Nativo, ministrado por Jamilton Damasceno. Aprendizado utilizando a IDE Android Studio, linguagem Java, banco de dados SQLite e NoSQL com Firebase."
         },
     ];
 

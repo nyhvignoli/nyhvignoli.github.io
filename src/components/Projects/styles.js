@@ -6,7 +6,7 @@ export const Wrapper = styled.section`
     align-items: center;
     background-color: #f2f2f2;
     color: #012940;
-    padding: 2rem 12rem 5rem 12rem;
+    padding: 2rem 2rem 5rem 2rem;
     gap: 2rem;
 
     p {
@@ -14,7 +14,7 @@ export const Wrapper = styled.section`
     }
 
     @media (max-width: 800px) {
-        padding: 2rem;
+        padding: 1rem;
         gap: 1rem;
     }
 `;

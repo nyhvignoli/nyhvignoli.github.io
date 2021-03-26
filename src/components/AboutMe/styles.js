@@ -24,34 +24,9 @@ export const InfoSection = styled.div`
     }
 
     @media (max-width: 1024px) {
+        padding: 1rem;
         width: 100%;
     }
-`;
-
-export const StackList = styled.ul`
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    list-style-type: none;
-    padding-inline-start: 0;
-    gap: 1rem;
-
-    ${props => props.small && `
-        gap: 0.5rem;
-    `}
-`;
-
-export const ListItem = styled.li`
-    opacity: 0.8;
-    border: 1px solid #FFF;
-    padding: 0.3rem 1rem ;
-    border-radius: 2rem;
-
-    ${props => props.small && `
-        font-size: 1rem;
-        padding: 0.2rem 0.8rem ;
-        border: 1px solid rgba(0, 67, 108, 0.64);
-    `}
 `;
 
 export const ImageSection = styled.div`

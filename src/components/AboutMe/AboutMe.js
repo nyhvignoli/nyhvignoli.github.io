@@ -1,7 +1,7 @@
 import React from "react";
 import SocialMedia from "../SocialMedia/SocialMedia";
-import { Wrapper, InfoSection, ImageSection, Filter, StackList, ListItem } from "./styles";
-import { Title } from "../../global/styles";
+import { Wrapper, InfoSection, ImageSection, Filter } from "./styles";
+import { Title, StackList, ListItem } from "../../global/styles";
 
 const AboutMe = () => {
     const stacks = [
