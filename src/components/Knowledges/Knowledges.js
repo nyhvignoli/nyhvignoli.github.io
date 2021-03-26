@@ -1,6 +1,6 @@
 import React from "react";
 import { Subtitle } from "../../global/styles";
-import { ListItem, StackList } from "../AboutMe/styles";
+import { ListItem, StackList } from "../../global/styles";
 import KnowledgesContent from "./KnowledgesContent/KnowledgesContent";
 import { Wrapper, Content } from "./styles";
 
