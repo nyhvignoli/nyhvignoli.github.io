@@ -1,6 +1,6 @@
 import React from "react";
-import { ListItem, StackList } from "../../../global/styles";
-import { Wrapper, ImageContainer, Content, TextWrapper, ButtonGroup, StyledButton, Title, Image } from "./styles";
+import { ListItem, StackList, StyledButton } from "../../../global/styles";
+import { Wrapper, ImageContainer, Content, TextWrapper, ButtonGroup, Title, Image } from "./styles";
 
 const ProjectsContent = (props) => {
 

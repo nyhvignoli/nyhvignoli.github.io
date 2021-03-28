@@ -64,27 +64,3 @@ export const ButtonGroup = styled.div`
         flex-direction: column;
     }
 `;
-
-export const StyledButton = styled.button`
-    padding: 0.5rem;
-    border: none;
-    box-shadow: 2px 2px 5px 1px #012940;
-    border-radius: 5px;
-    min-width: 160px;
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 1rem;
-    background-color: #5b83a6;
-    color: #FFF;
-    transition: all .2s ease-in-out;
-
-    &:hover {
-        cursor: pointer;
-        box-shadow: 2px 2px 6px 2px #012940;
-        opacity: 0.8;
-        transform: scale(1.02);
-    }
-
-    @media (max-width: 400px) {
-        width: 100%;
-    }
-`;
