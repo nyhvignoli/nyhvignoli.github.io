@@ -4,6 +4,8 @@ import { Wrapper, InfoSection, ImageSection, Filter } from "./styles";
 import { Title, StackList, ListItem, Anchor, StyledButton } from "../../global/styles";
 import cvPdf from "../../assets/cv-aline-vignoli.pdf";
 
+console.log(cvPdf);
+
 const AboutMe = () => {
     const stacks = [
         "Javascript",
@@ -50,8 +52,16 @@ const AboutMe = () => {
                         )
                     })}
                 </StackList>
-                <Anchor data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-sine" data-aos-delay="500" href={cvPdf} download>
-                    <StyledButton>Baixar CV em PDF</StyledButton>
+                <Anchor 
+                    data-aos="fade-up" 
+                    data-aos-duration="1000" 
+                    data-aos-easing="ease-in-sine" 
+                    data-aos-delay="500" 
+                    href={cvPdf} 
+                    target="_blank" 
+                    rel="noreferrer"
+                >
+                    <StyledButton orange>Visualizar currículo</StyledButton>
                 </Anchor>
             </InfoSection>
             <Filter>

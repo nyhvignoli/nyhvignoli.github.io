@@ -51,26 +51,32 @@ export const ListItem = styled.li`
 
 export const Anchor = styled.a`
     text-decoration: none;
-    display: flex;
-    padding-top: 1rem;
+    width: 160px;
+    margin-top: 1rem;
+    outline: none;
 
     @media (max-width: 800px) {
         justify-content: center;
-        padding-bottom: 1rem;
+        margin-bottom: 1rem;
     }
 `;
 
 export const StyledButton = styled.button`
     padding: 0.5rem;
     border: none;
+    outline: none;
     box-shadow: 0px 1px 5px 1px #012940;
     border-radius: 2rem;
     min-width: 160px;
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 1rem;
-    background-color: #5b83a6;
+    background-color: ${props => props.orange ? "#DE910B" : "#5b83a6"};
     color: #FFF;
     transition: all .2s ease-in-out;
+
+    &:focus {
+        background-color: ${props => props.orange ? "#E05638" : "#011726"};        
+    }
 
     &:hover {
         cursor: pointer;

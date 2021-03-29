@@ -1,63 +1,63 @@
 import React from "react";
-import { ListItem, StackList, StyledButton } from "../../../global/styles";
+import { Anchor, ListItem, StackList, StyledButton } from "../../../global/styles";
 import { Wrapper, ImageContainer, Content, TextWrapper, ButtonGroup, Title, Image } from "./styles";
 
 const ProjectsContent = (props) => {
 
     const fullStackButtonGroup = (
         <ButtonGroup>
-            <a 
+            <Anchor 
                 href={props.githubLink.frontend}
                 target="_blank"
                 rel="noreferrer"
             >
                 <StyledButton>Front-end no Github</StyledButton>
-            </a>
-            <a 
+            </Anchor>
+            <Anchor 
                 href={props.githubLink.backend}
                 target="_blank"
                 rel="noreferrer"
             >
                 <StyledButton>Back-end no Github</StyledButton>
-            </a>
+            </Anchor>
         </ButtonGroup>
     );
 
     const backendButtonGroup = (
         <ButtonGroup>
-            <a 
+            <Anchor 
                 href={props.githubLink}
                 target="_blank"
                 rel="noreferrer"
             >
                 <StyledButton>Ver no Github</StyledButton>
-            </a>
-            <a
+            </Anchor>
+            <Anchor
                 href={props.url}
                 target="_blank"
                 rel="noreferrer"
             >
                 <StyledButton>Ver documentação</StyledButton>
-            </a>
+            </Anchor>
         </ButtonGroup>
     );
 
     const frontendButtonGroup = (
         <ButtonGroup>
-            <a 
+            <Anchor 
                 href={props.githubLink}
                 target="_blank"
                 rel="noreferrer"
             >
                 <StyledButton>Ver no Github</StyledButton>
-            </a>
-            <a
+            </Anchor>
+            <Anchor
                 href={props.url}
                 target="_blank"
                 rel="noreferrer"
             >
                 <StyledButton>Abrir site</StyledButton>
-            </a>
+            </Anchor>
         </ButtonGroup>
     );
 
