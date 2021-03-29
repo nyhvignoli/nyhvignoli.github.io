@@ -48,3 +48,44 @@ export const ListItem = styled.li`
         border: 1px solid rgba(0, 67, 108, 0.64);
     `}
 `;
+
+export const Anchor = styled.a`
+    text-decoration: none;
+    width: 160px;
+    margin-top: 1rem;
+    outline: none;
+
+    @media (max-width: 800px) {
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+`;
+
+export const StyledButton = styled.button`
+    padding: 0.5rem;
+    border: none;
+    outline: none;
+    box-shadow: 0px 1px 5px 1px #012940;
+    border-radius: 2rem;
+    min-width: 160px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1rem;
+    background-color: ${props => props.orange ? "#DE910B" : "#5b83a6"};
+    color: #FFF;
+    transition: all .2s ease-in-out;
+
+    &:focus {
+        background-color: ${props => props.orange ? "#E05638" : "#011726"};        
+    }
+
+    &:hover {
+        cursor: pointer;
+        box-shadow: 2px 2px 6px 2px #012940;
+        opacity: 0.8;
+        transform: scale(1.02);
+    }
+
+    @media (max-width: 400px) {
+        width: 100%;
+    }
+`;

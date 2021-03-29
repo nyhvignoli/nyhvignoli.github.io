@@ -28,12 +28,12 @@ const Gallery = (props) => {
   return (
     <Wrapper> 
       <Button onClick={handleBack} disabled={activeStep === 0}>
-        <svg id="right" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+        <svg id="right" xmlns="http://www.w3.org/2000/svg" fillRule="evenodd" clipRule="evenodd">
           <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"/>
         </svg>
       </Button>         
       <AutoPlaySwipeableViews
-        interval="7000"
+        interval={7000}
         index={activeStep}
         onChangeIndex={handleStepChange}
         enableMouseEvents
@@ -54,7 +54,7 @@ const Gallery = (props) => {
       ))}
       </AutoPlaySwipeableViews>
       <Button onClick={handleNext} disabled={activeStep === maxSteps - 1}>
-        <svg id="left" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+        <svg id="left" xmlns="http://www.w3.org/2000/svg" fillRule="evenodd" clipRule="evenodd">
           <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"/>
         </svg>
       </Button>

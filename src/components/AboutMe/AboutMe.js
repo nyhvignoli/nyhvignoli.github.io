@@ -1,7 +1,10 @@
 import React from "react";
 import SocialMedia from "../SocialMedia/SocialMedia";
 import { Wrapper, InfoSection, ImageSection, Filter } from "./styles";
-import { Title, StackList, ListItem } from "../../global/styles";
+import { Title, StackList, ListItem, Anchor, StyledButton } from "../../global/styles";
+import cvPdf from "../../assets/cv-aline-vignoli.pdf";
+
+console.log(cvPdf);
 
 const AboutMe = () => {
     const stacks = [
@@ -17,6 +20,7 @@ const AboutMe = () => {
         "MySQL",
         "Firebase"
     ];
+
     return (
         <Wrapper id="about-me">
             <InfoSection>
@@ -44,10 +48,21 @@ const AboutMe = () => {
                 <StackList>
                     {stacks.map((stack, index) => {
                         return (
-                            <ListItem data-aos="flip-right" data-aos-duration="2000" data-aos-easing="ease-out-cubic" data-aos-delay="1000" key={index}>{stack}</ListItem>
+                            <ListItem data-aos="flip-right" data-aos-duration="2000" data-aos-easing="ease-out-cubic" data-aos-delay="100" key={index}>{stack}</ListItem>
                         )
                     })}
                 </StackList>
+                <Anchor 
+                    data-aos="fade-up" 
+                    data-aos-duration="1000" 
+                    data-aos-easing="ease-in-sine" 
+                    data-aos-delay="500" 
+                    href={cvPdf} 
+                    target="_blank" 
+                    rel="noreferrer"
+                >
+                    <StyledButton orange>Visualizar currículo</StyledButton>
+                </Anchor>
             </InfoSection>
             <Filter>
                 <ImageSection />
