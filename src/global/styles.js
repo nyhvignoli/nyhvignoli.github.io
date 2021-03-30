@@ -34,6 +34,10 @@ export const StackList = styled.ul`
     ${props => props.small && `
         gap: 0.5rem;
     `}
+
+    @media (max-width: 800px) {
+        gap: 0.5rem;
+    }   
 `;
 
 export const ListItem = styled.li`
@@ -47,6 +51,11 @@ export const ListItem = styled.li`
         padding: 0.2rem 0.8rem ;
         border: 1px solid rgba(0, 67, 108, 0.64);
     `}
+
+    @media (max-width: 800px) {
+        font-size: 1rem;
+        padding: 0.2rem 0.8rem;
+    }
 `;
 
 export const Anchor = styled.a`
@@ -55,9 +64,13 @@ export const Anchor = styled.a`
     margin-top: 1rem;
     outline: none;
 
+    @media (max-width: 400px) {
+        width: 100%;
+        margin: 0;        
+    }
+
     @media (max-width: 800px) {
-        justify-content: center;
-        margin-bottom: 1rem;
+        margin: 0;    
     }
 `;
 
@@ -87,5 +100,10 @@ export const StyledButton = styled.button`
 
     @media (max-width: 400px) {
         width: 100%;
+    }
+
+    @media (max-width: 800px) {
+        margin: auto;
+        align-self: center;
     }
 `;

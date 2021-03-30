@@ -4,8 +4,6 @@ import { Wrapper, InfoSection, ImageSection, Filter } from "./styles";
 import { Title, StackList, ListItem, Anchor, StyledButton } from "../../global/styles";
 import cvPdf from "../../assets/cv-aline-vignoli.pdf";
 
-console.log(cvPdf);
-
 const AboutMe = () => {
     const stacks = [
         "Javascript",
