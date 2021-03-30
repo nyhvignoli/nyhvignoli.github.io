@@ -20,8 +20,8 @@ export const Wrapper = styled.div`
     transform: translate(-50%, -50%);
     flex-grow: 1;
 
-    @media (max-width: 800px) {
-        width: 100%;  
+    @media (max-width: 420px) {
+        width:100%;  
     }
 `;
 
