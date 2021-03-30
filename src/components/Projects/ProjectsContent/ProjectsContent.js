@@ -61,7 +61,7 @@ const ProjectsContent = (props) => {
         </ButtonGroup>
     );
 
-    const getButtonGroup = () => {
+    const renderButtonGroup = () => {
         switch (props.type) {
             case "Full Stack":
                 return fullStackButtonGroup;
@@ -77,7 +77,11 @@ const ProjectsContent = (props) => {
     return (
         <Wrapper>
             <ImageContainer>
-                <Image  src={props.image.src} alt={props.image.alt}/>
+                <Image 
+                    onClick={() => props.handleImageDetailsOpen(props.index)} 
+                    src={props.images[0].src} 
+                    alt={props.images[0].alt}
+                />
             </ImageContainer>
             <Content>
                 <TextWrapper>
@@ -92,7 +96,7 @@ const ProjectsContent = (props) => {
                         )
                     })}
                 </StackList>
-                {getButtonGroup()}
+                {renderButtonGroup()}
             </Content>
         </Wrapper>
     );

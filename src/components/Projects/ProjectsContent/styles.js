@@ -26,7 +26,10 @@ export const Image = styled.img`
     transition: all .5s ease-in-out;
 
     &:hover {
-        transform: scale(1.1);
+        ${props => !props.zoom && `
+            transform: scale(1.1);
+            cursor: pointer;`
+        }
     }
 `
 

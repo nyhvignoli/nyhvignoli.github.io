@@ -27,7 +27,7 @@ const Gallery = (props) => {
 
   return (
     <Wrapper> 
-      <Button onClick={handleBack} disabled={activeStep === 0}>
+      <Button imageDetailsOpen={props.imageDetailsOpen} onClick={handleBack} disabled={activeStep === 0}>
         <svg id="right" xmlns="http://www.w3.org/2000/svg" fillRule="evenodd" clipRule="evenodd">
           <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"/>
         </svg>
@@ -42,18 +42,20 @@ const Gallery = (props) => {
         {props.projects.map((project, index) => (
             
         <ProjectsContent
-            key={index}
-            title={project.title} 
-            type={project.type}
-            image={project.image}
-            description={project.description}
-            githubLink={project.githubLink}
-            url={project.url}
-            tags={project.tags}
+          key={index}
+          index={index}
+          title={project.title} 
+          type={project.type}
+          images={project.images}
+          description={project.description}
+          githubLink={project.githubLink}
+          url={project.url}
+          tags={project.tags}
+          handleImageDetailsOpen={props.handleImageDetailsOpen}
         />
       ))}
       </AutoPlaySwipeableViews>
-      <Button onClick={handleNext} disabled={activeStep === maxSteps - 1}>
+      <Button imageDetailsOpen={props.imageDetailsOpen} onClick={handleNext} disabled={activeStep === maxSteps - 1}>
         <svg id="left" xmlns="http://www.w3.org/2000/svg" fillRule="evenodd" clipRule="evenodd">
           <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"/>
         </svg>

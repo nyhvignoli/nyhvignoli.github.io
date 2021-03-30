@@ -10,6 +10,7 @@ export const Button = styled.button`
   background-color: transparent;
   border: none;
   outline: none;
+  ${props => props.imageDetailsOpen && "display: none"}
 
   &:disabled {
     opacity: 0.3;

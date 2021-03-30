@@ -8,6 +8,7 @@ export const Wrapper = styled.section`
     display: flex;
     background-color: #011726;
     text-align: center;
+    z-index: -3000;
 
     @media (max-width: 800px) {
         padding: 0.5rem 1rem;
