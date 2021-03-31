@@ -7,6 +7,7 @@ import Education from "../../components/Education/Education";
 import NavBar from "../../components/NavBar/NavBar";
 import Projects from "../../components/Projects/Projects";
 import Timeline from "../../components/Timeline/Timeline";
+import Communities from "../../components/Communities/Communities";
 
 const MainScreen = () => {
 
@@ -35,6 +36,7 @@ const MainScreen = () => {
                 <Education />
                 <Projects />
                 <Timeline />
+                <Communities />
             </Content>
             <Footer/>
         </Wrapper>
