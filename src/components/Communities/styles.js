@@ -6,12 +6,12 @@ export const Wrapper = styled.section`
     justify-content: center;
     align-items: center;
     display: flex;
-    background-color: #012940;
+    background-color: #011726;
     text-align: center;
     z-index: -3000;
 
     @media (max-width: 800px) {
-        padding: 0.5rem 1rem;
+        padding: 1rem;
     }
 `;
 
@@ -19,22 +19,18 @@ export const Content = styled.div`
     padding: 0;
     display: flex;
     justify-content: center;
-    gap: 0.5rem;
+    align-items: center;
+    gap: 5rem;
+    width: 100%;
 
     @media (max-width: 1024px) {
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
     }
-`;
 
-export const Arrow = styled.img`
-    transform: rotateY(180deg);
-    width: 30px;
-    height: 30px;
-    margin-top: 12rem;
-
-    @media (max-width: 1024px) {
-        transform: rotate(270deg);
-        margin-top: 0;
-        align-self: center;
+    @media (max-width: 800px) {
+        display: flex;
+        flex-direction: column;
     }
 `;
