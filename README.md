@@ -1,7 +1,7 @@
 # Nyh Vignoli | Portfolio
 ### >>> [nyhdevignoli.surge.sh](https://www.nyhdevignoli.surge.sh/)
 
-Hey galera, esse é meu Porfolio de Desenvolvedora Web, com alguns dos meus projetos favoritos e um pouquinho da minha história./n
+Hey galera, esse é meu Porfolio de Desenvolvedora Web, com alguns dos meus projetos favoritos e um pouquinho da minha história.&nbsp;
 Espero que você goste!
 
 ---
