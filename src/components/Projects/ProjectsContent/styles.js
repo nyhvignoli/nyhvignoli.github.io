@@ -39,6 +39,10 @@ export const Content = styled.div`
     flex-direction: column;
     justify-content: space-between;
 
+    ${props => props.fullWidth && `
+        width: 100%;
+    `}
+
     @media (max-width: 800px) {
         width: auto;
     }
