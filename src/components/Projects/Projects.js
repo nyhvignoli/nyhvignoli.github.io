@@ -99,15 +99,18 @@ const Projects = () => {
         {
             title: "Labenu System",
             type: "Back-end",
-            images: [{
-                src: backend,
-                alt: "imagem de um computador com icones de código e coisas relacionadas a backend.",
-                caption: "Labenu System"
-            }],
             description: `Projeto de conclusão do Módulo 4 de Backend da Labenu. Feito em grupo, a proposta era criar um sistema da instituição de ensino trabalhando com as entidades Estudante, Docente e Turma.`,
             githubLink: "https://github.com/nyhvignoli/labenu-system",
             url: "https://documenter.getpostman.com/view/13242412/TVza9tK7",
             tags: ["express", "knex", "mysql", "uuid", "dotenv", "dayjs", "cors"]
+        },
+        {
+            title: "Labook",
+            type: "Back-end",
+            description: `Estrutura de back-end do Projeto Labook do bootcamp da escola Labenu. Trata-se de uma API com funcionalidades básicas de uma rede social.`,
+            githubLink: "https://github.com/nyhvignoli/labook",
+            url: "https://github.com/nyhvignoli/labook#endpoints",
+            tags: ["express", "knex", "mysql", "uuid", "dotenv", "jasonwebtoken", "bcrypt"]
         },
     ];
 
