@@ -12,6 +12,7 @@ import labeddit3 from "../../assets/labeddit-3.PNG";
 import labeddit4 from "../../assets/labeddit-4.PNG";
 import astromatchScreenshot from "../../assets/astromatch.PNG";
 import astromatch2 from "../../assets/astromatch-2.PNG";
+import backend from "../../assets/backend.jpg";
 import Gallery from "../Gallery/Gallery";
 import ScreenShotsGallery from "../ScreenShotsGallery/ScreenShotsGallery";
 
@@ -94,6 +95,19 @@ const Projects = () => {
             githubLink: "https://github.com/nyhvignoli/astromatch",
             url: "http://nyhv-astromatch.surge.sh/",
             tags: ["react", "axios", "styled-components", "material-ui"]
+        },
+        {
+            title: "Labenu System",
+            type: "Back-end",
+            images: [{
+                src: backend,
+                alt: "imagem de um computador com icones de código e coisas relacionadas a backend.",
+                caption: "Labenu System"
+            }],
+            description: `Projeto de conclusão do Módulo 4 de Backend da Labenu. Feito em grupo, a proposta era criar um sistema da instituição de ensino trabalhando com as entidades Estudante, Docente e Turma.`,
+            githubLink: "https://github.com/nyhvignoli/labenu-system",
+            url: "https://documenter.getpostman.com/view/13242412/TVza9tK7",
+            tags: ["express", "knex", "mysql", "uuid", "dotenv", "dayjs", "cors"]
         },
     ];
 

@@ -76,14 +76,16 @@ const ProjectsContent = (props) => {
 
     return (
         <Wrapper>
-            <ImageContainer>
-                <Image 
-                    onClick={() => props.handleImageDetailsOpen(props.index)} 
-                    src={props.images[0].src} 
-                    alt={props.images[0].alt}
-                />
-            </ImageContainer>
-            <Content>
+            {props.type !== "Back-end" && 
+                <ImageContainer>
+                    <Image 
+                        onClick={() => props.handleImageDetailsOpen(props.index)} 
+                        src={props.images[0].src} 
+                        alt={props.images[0].alt}
+                    />
+                </ImageContainer>
+            }
+            <Content fullWidth={props.type === "Back-end"}>
                 <TextWrapper>
                     <Title>{props.title}</Title>
                     <h2>{props.type}</h2>
