@@ -59,15 +59,13 @@ export const Title = styled.h1`
 
 export const ButtonGroup = styled.div`
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
 
     @media (max-width: 800px) {
-        gap: 1rem;
         justify-content: center;
     }
 
     @media (max-width: 400px) {
-        gap: 1rem;
         flex-direction: column;
     }
 `;
