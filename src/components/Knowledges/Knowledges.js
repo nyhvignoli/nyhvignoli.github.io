@@ -3,6 +3,8 @@ import { Subtitle } from "../../global/styles";
 import { ListItem, StackList } from "../../global/styles";
 import KnowledgesContent from "./KnowledgesContent/KnowledgesContent";
 import { Wrapper, Content } from "./styles";
+import backend from "../../assets/backend.png";
+import frontend from "../../assets/frontend.svg";
 
 const Knowledges = () => {
     const frontEndKnowledges = [
@@ -32,10 +34,12 @@ const Knowledges = () => {
                 <KnowledgesContent
                     title={"Front-end"} 
                     knowledges={frontEndKnowledges}
+                    icon={frontend}
                 />
                 <KnowledgesContent 
                     title={"Back-end"}
                     knowledges={backEndKnowledges}
+                    icon={backend}
                 />
             </Content>
             <div>
