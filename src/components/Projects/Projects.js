@@ -12,7 +12,6 @@ import labeddit3 from "../../assets/labeddit-3.PNG";
 import labeddit4 from "../../assets/labeddit-4.PNG";
 import astromatchScreenshot from "../../assets/astromatch.PNG";
 import astromatch2 from "../../assets/astromatch-2.PNG";
-import backend from "../../assets/backend.jpg";
 import Gallery from "../Gallery/Gallery";
 import ScreenShotsGallery from "../ScreenShotsGallery/ScreenShotsGallery";
 

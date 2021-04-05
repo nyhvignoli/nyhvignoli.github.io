@@ -10,7 +10,7 @@ export const Wrapper = styled.section`
     text-align: center;
     z-index: -3000;
 
-    @media (max-width: 800px) {
+    @media (max-width: 600px) {
         padding: 1rem;
     }
 `;
@@ -29,7 +29,7 @@ export const Content = styled.div`
         text-align: center;
     }
 
-    @media (max-width: 800px) {
+    @media (max-width: 600px) {
         display: flex;
         flex-direction: column;
     }
