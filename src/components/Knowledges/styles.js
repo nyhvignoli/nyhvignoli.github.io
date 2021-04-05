@@ -19,7 +19,7 @@ export const Content = styled.div`
     justify-content: center;
     gap: 5rem;
 
-    @media (max-width: 888px) {
+    @media (max-width: 900px) {
         flex-direction: column;
         gap: 1rem;
     }

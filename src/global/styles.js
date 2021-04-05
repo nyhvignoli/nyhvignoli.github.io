@@ -35,7 +35,7 @@ export const StackList = styled.ul`
         gap: 0.5rem;
     `}
 
-    @media (max-width: 800px) {
+    @media (max-width: 900px) {
         gap: 0.5rem;
     }   
 `;

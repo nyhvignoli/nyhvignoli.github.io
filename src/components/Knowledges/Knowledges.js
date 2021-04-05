@@ -35,11 +35,13 @@ const Knowledges = () => {
                     title={"Front-end"} 
                     knowledges={frontEndKnowledges}
                     icon={frontend}
+                    alt="Ícone de diferentes telas e dispositivos"
                 />
                 <KnowledgesContent 
                     title={"Back-end"}
                     knowledges={backEndKnowledges}
                     icon={backend}
+                    alt="Ícone de uma tela com engrenagens"
                 />
             </Content>
             <div>

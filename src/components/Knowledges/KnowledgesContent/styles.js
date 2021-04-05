@@ -22,11 +22,15 @@ export const Wrapper = styled.div`
         opacity: 0.8;
     }
 
-    @media (max-width: 888px) {
+    @media (max-width: 600px) {
         width: 100%;
 
         h1 {
-            font-size: 4rem;
+            font-size: 3rem;
         }
     }
+
+    @media (max-width: 900px) {
+        width: 100%;
+    }    
 `;
