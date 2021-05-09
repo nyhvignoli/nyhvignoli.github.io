@@ -13,7 +13,7 @@ const Footer = () => {
                 <p>Gostou do meu trabalho? Bora bater um papo!</p>
                 <p>
                     Email: nyhv.contato@gmail.com<br/>
-                    Telefone: (51) 99667-1364
+                    Telefone: (51) 99766-1364
                 </p>
                 <SocialMedia/>
                 <a href="#top"><BackToTop src={whiteArrow}/></a>
