@@ -1,6 +1,7 @@
 import React from "react";
 import { Subtitle } from "../../global/styles";
 import { Wrapper, Content } from "./styles";
+import vizirLogo from "../../assets/vizir.png";
 import labenuLogo from "../../assets/labenu.png";
 import codivasLogo from "../../assets/codivas.jpg";
 import gufersLogo from "../../assets/gufers.jpg";
@@ -9,6 +10,15 @@ import CommunitiesContent from "./CommunitiesContent/CommunitiesContent";
 
 const Communities = () => {
     const communities = [
+        {
+            name: "Vizir Software Studio",
+            logo: { 
+                image: vizirLogo,
+                alt: "Logo da Vizir, um quadrado vermelhor rotacionado com a letra Z em branco no centro" 
+            },
+            site: "https://vizir.com.br/",
+            description: `Um studio de software brasileiro com mais de 10 anos no mercado`
+        },
         {
             name: "Labenu Comunidade",
             logo: { 
