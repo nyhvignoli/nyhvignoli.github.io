@@ -1,4 +1,5 @@
 import React from "react";
+import { Text } from "../../../global/LanguagesContext";
 import { Anchor, ListItem, StackList, StyledButton } from "../../../global/styles";
 import { Wrapper, ImageContainer, Content, TextWrapper, ButtonGroup, Title, Image } from "./styles";
 
@@ -11,14 +12,14 @@ const ProjectsContent = (props) => {
                 target="_blank"
                 rel="noreferrer"
             >
-                <StyledButton>Front-end no Github</StyledButton>
+                <StyledButton><Text tid="frontendOnGithub"/></StyledButton>
             </Anchor>
             <Anchor 
                 href={props.githubLink.backend}
                 target="_blank"
                 rel="noreferrer"
             >
-                <StyledButton>Back-end no Github</StyledButton>
+                <StyledButton><Text tid="backendOnGithub"/></StyledButton>
             </Anchor>
         </ButtonGroup>
     );
@@ -30,14 +31,14 @@ const ProjectsContent = (props) => {
                 target="_blank"
                 rel="noreferrer"
             >
-                <StyledButton>Ver no Github</StyledButton>
+                <StyledButton><Text tid="viewCodeOnGithub"/></StyledButton>
             </Anchor>
             <Anchor
                 href={props.url}
                 target="_blank"
                 rel="noreferrer"
             >
-                <StyledButton>Ver documentação</StyledButton>
+                <StyledButton><Text tid="seeDocumentation"/></StyledButton>
             </Anchor>
         </ButtonGroup>
     );
@@ -49,14 +50,14 @@ const ProjectsContent = (props) => {
                 target="_blank"
                 rel="noreferrer"
             >
-                <StyledButton>Ver no Github</StyledButton>
+                <StyledButton><Text tid="viewCodeOnGithub"/></StyledButton>
             </Anchor>
             <Anchor
                 href={props.url}
                 target="_blank"
                 rel="noreferrer"
             >
-                <StyledButton>Abrir site</StyledButton>
+                <StyledButton><Text tid="openWebsite"/></StyledButton>
             </Anchor>
         </ButtonGroup>
     );

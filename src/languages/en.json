@@ -31,5 +31,17 @@
     "androidDevelopment": "Android Development",
     "present": "present",
     "labenuBootcampDescription": "Labenu is a startup which graduate Web Full Stack Developers ready for the job market. More than 1000 hours of programming make their students become professionals with practical knowledges on Back-end and Front-end.",
-    "androidDevelopmentCourseDescription": "Native Android Development Course, taught by Jamilton Damasceno. Learning process using Android Studio IDE, Java language, SQLite database and NoSQL with Firebase."
+    "androidDevelopmentCourseDescription": "Native Android Development Course, taught by Jamilton Damasceno. Learning process using Android Studio IDE, Java language, SQLite database and NoSQL with Firebase.",
+
+    "musicatchersDescription": "Full Stack Project developed at Labenu's bootcamp. It is about a web application with basic features of a music streaming Website.",
+    "labedditDescription": "Project developed at Labenu's bootcamp. A social media similar to Reddit, where the users are able to post, comment and vote in each others posts. This page uses a API developed by Labenu. Mobile responsive website.",
+    "astromatchDescription": "Project developed at Labenu's bootcamp. An app similar to Tinder, with fun celebrities from movies and TV where you may like, unlike and see if it's a match! :D This page uses a API developed by Labenu. Mobile responsive website.",
+    "labenuSystemDescription": "Project to wrap the Backend's 4º Module at Labenu. This was a team project, which the main goal was develop an education intituition system, with students, teachers and missions entities.",
+    "labookDescription": "Back-end structure of Labook Project, developed at Labenu's bootcamp. An API with social media basic features.",
+
+    "frontendOnGithub": "Front-end on Github",
+    "backendOnGithub": "Back-end on Github",
+    "viewCodeOnGithub": "View code on Github",
+    "seeDocumentation": "See documentation",
+    "openWebsite": "Open website"
 }

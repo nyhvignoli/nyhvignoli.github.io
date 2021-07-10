@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Wrapper } from "./styles";
 import { Subtitle } from "../../global/styles";
 import musicatchersScreenshot from "../../assets/musicatchers.PNG";
@@ -14,8 +14,11 @@ import astromatchScreenshot from "../../assets/astromatch.PNG";
 import astromatch2 from "../../assets/astromatch-2.PNG";
 import Gallery from "../Gallery/Gallery";
 import ScreenShotsGallery from "../ScreenShotsGallery/ScreenShotsGallery";
+import { LanguageContext, Text } from "../../global/LanguagesContext";
 
 const Projects = () => {
+    const { dictionary } = useContext(LanguageContext);
+
     const projects = [
         {
             title: "MusiCatchers",
@@ -41,8 +44,7 @@ const Projects = () => {
                 alt: "Tela de detalhes da música selecionada, com player e controles de mídia.",
                 caption: "Tela de detalhes da música"
             }],
-            description: `Projeto Full Stack do bootcamp da escola Labenu.
-                Trata-se de uma aplicação com funcionalidades básicas de um site para streaming de músicas.`,
+            description: dictionary.musicatchersDescription,
             githubLink: {
                 frontend: "https://github.com/nyhvignoli/musicatchers-frontend",
                 backend: "https://github.com/nyhvignoli/musicatchers-backend"
@@ -70,7 +72,7 @@ const Projects = () => {
                 alt: "Tela de login, com campos de e-mail e senha, botões para entrar ou criar uma conta.",
                 caption: "Tela de login"
             }],
-            description: "Projeto Labeddit do bootcamp da escola Labenu. Uma rede social similar ao Reddit, onde é possível fazer postagens, comentar nos posts de outras pessoas e votar! Essa página utiliza uma API desenvolvida pela Labenu. Site responsivo para mobile.",
+            description: dictionary.labedditDescription,
             githubLink: "https://github.com/nyhvignoli/labeddit",
             url: "http://nyhv-labeddit.surge.sh",
             tags: ["react", "axios", "styled-components", "material-ui"]
@@ -87,10 +89,7 @@ const Projects = () => {
                 alt: "tela com lista de perfis que deram match.",
                 caption: "Tela de matches"
             }],
-            description: `Projeto Astromatch do bootcamp da escola Labenu.
-            Uma aplicação similar ao Tinder, com personalidades divertidas do cinema e TV onde você pode dar like ou não pra ver se dá match! :D
-            Essa página utiliza uma API desenvolvida pela Labenu.
-            Site responsivo para mobile.`,
+            description: dictionary.astromatchDescription,
             githubLink: "https://github.com/nyhvignoli/astromatch",
             url: "http://nyhv-astromatch.surge.sh/",
             tags: ["react", "axios", "styled-components", "material-ui"]
@@ -98,7 +97,7 @@ const Projects = () => {
         {
             title: "Labenu System",
             type: "Back-end",
-            description: `Projeto de conclusão do Módulo 4 de Backend da Labenu. Feito em grupo, a proposta era criar um sistema da instituição de ensino trabalhando com as entidades Estudante, Docente e Turma.`,
+            description: dictionary.labenuSystemDescription,
             githubLink: "https://github.com/nyhvignoli/labenu-system",
             url: "https://documenter.getpostman.com/view/13242412/TVza9tK7",
             tags: ["express", "knex", "mysql", "uuid", "dotenv", "dayjs", "cors"]
@@ -106,7 +105,7 @@ const Projects = () => {
         {
             title: "Labook",
             type: "Back-end",
-            description: `Estrutura de back-end do Projeto Labook do bootcamp da escola Labenu. Trata-se de uma API com funcionalidades básicas de uma rede social.`,
+            description: dictionary.labookDescription,
             githubLink: "https://github.com/nyhvignoli/labook",
             url: "https://github.com/nyhvignoli/labook#endpoints",
             tags: ["express", "knex", "mysql", "uuid", "dotenv", "jasonwebtoken", "bcrypt"]
@@ -115,6 +114,8 @@ const Projects = () => {
 
     const [imageDetailsOpen, setImageDetailsOpen] = useState(false);
     const [selectedProject, setSelectedProject] = useState(0);
+
+    console.log(projects[0].description)
 
     const handleImageDetailsOpen = (projectIndex) => {
         setImageDetailsOpen(true);
@@ -127,7 +128,7 @@ const Projects = () => {
 
     return (
         <Wrapper imageDetailsOpen id="projects">
-            <Subtitle data-aos="fade-zoom-in" data-aos-duration="1500">Projetos</Subtitle>
+            <Subtitle data-aos="fade-zoom-in" data-aos-duration="1500"><Text tid="projects"/></Subtitle>
             <Gallery 
                 imageDetailsOpen={imageDetailsOpen}
                 projects={projects}
