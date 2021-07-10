@@ -17,7 +17,7 @@ const Communities = () => {
                 alt: "Logo da Vizir, um quadrado vermelhor rotacionado com a letra Z em branco no centro" 
             },
             site: "https://vizir.com.br/",
-            description: `Um studio de software brasileiro com mais de 10 anos no mercado`
+            description: `Studio de software com mais de 10 anos no mercado, onde trabalho atualmente.`
         },
         {
             name: "Labenu Comunidade",

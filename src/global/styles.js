@@ -64,6 +64,14 @@ export const Anchor = styled.a`
     margin-top: 1rem;
     outline: none;
 
+    ${props => props.orange && `
+        color: rgb(222, 145, 11);
+
+        &:hover {
+            opacity: 0.8;
+        }
+    `}
+
     @media (max-width: 400px) {
         width: 100%;
         margin: 0;        

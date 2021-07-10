@@ -39,9 +39,8 @@ const AboutMe = () => {
                 <p data-aos="fade-out" data-aos-duration="3000">
                     Oi tudo bem? Eu sou Aline mas pode me chamar de Nyh!<br/>
                     Descobri minha paixão por programação há mais ou menos 1 ano e hoje sou Desenvolvedora Web Full Stack recém formada.<br/>
-                    Tenho um background artístico autônomo como musicista e tatuadora (profissão que excerci por 12 anos), e atualmente estou buscando incorporar essas experiências na minha carreira como programadora.<br/>
+                    Tenho um background artístico como musicista e tatuadora (profissão que excerci por 12 anos), e atualmente trabalho como Analista Programadora na <strong><Anchor orange href="https://vizir.com.br/" target="_blank" rel="noreferrer">Vizir Software Studio</Anchor></strong>.<br/>
                     Enquanto mulher e lésbica, busco somar na inclusão e diversidade na tecnologia!
-
                 </p>
                 <StackList>
                     {stacks.map((stack, index) => {

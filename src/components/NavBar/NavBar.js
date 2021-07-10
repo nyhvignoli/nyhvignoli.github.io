@@ -4,9 +4,9 @@ import { StyledNav, StyledList, ListItem, Anchor } from "./styles";
 const NavBar = () => {
 
     return (
-        <StyledNav id="top">
+        <StyledNav>
             <StyledList>
-                <Anchor href="#about-me"><ListItem>Sobre mim</ListItem></Anchor>
+                <Anchor href="#top"><ListItem>Sobre mim</ListItem></Anchor>
                 <Anchor href="#projects"><ListItem>Projetos</ListItem></Anchor>
                 <Anchor href="#contact"><ListItem>Contato</ListItem></Anchor>
             </StyledList>
