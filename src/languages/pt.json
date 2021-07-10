@@ -5,6 +5,7 @@
     "professionTitle": "Desenvolvedora Full Stack",
     "aboutMeDescription": "Oi tudo bem? Eu sou Aline mas pode me chamar de Nyh!\n Descobri minha paixão por programação há pouco mais de 1 ano e hoje sou Desenvolvedora Web Full Stack.\n Tenho um background artístico como musicista e tatuadora (profissão que excerci por 12 anos), e atualmente trabalho como Analista Programadora na \n Enquanto mulher e lésbica, busco somar na inclusão e diversidade na tecnologia!",
     "seeResume": "Visualizar currículo",
+
     "knowledges": "Conhecimentos",
     "frontendKnowledges": [
         "Desenvolvimento de aplicações Web em HTML, CSS e Javascript",
@@ -23,5 +24,12 @@
         "Metodologias Ágeis",
         "Clean Code"
     ],
-    "general": "Gerais"
+    "general": "Gerais",
+
+    "education": "Formação",
+    "webFullStackDevelopment": "Curso Web Full Stack",
+    "androidDevelopment": "Desenvolvimento Android",
+    "present": "presente",
+    "labenuBootcampDescription": "A Labenu é uma startup que forma Pessoas Desenvolvedoras Web Full Stack prontas para o mercado de trabalho. São mais de 1000 horas de programação que faz com que suas alunas e alunos sejam profissionais com conhecimentos adquiridos e postos em prática tanto no Back-end quanto no Front-end.",
+    "androidDevelopmentCourseDescription": "Curso de Desenvolvimento Android Nativo, ministrado por Jamilton Damasceno. Aprendizado utilizando a IDE Android Studio, linguagem Java, banco de dados SQLite e NoSQL com Firebase."
 }

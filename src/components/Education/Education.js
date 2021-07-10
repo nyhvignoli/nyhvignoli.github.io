@@ -1,29 +1,32 @@
-import React from "react";
+import React, { useContext } from "react";
 import EducationContent from "./EducationContent/EducationContent";
 import { Wrapper, Content } from "./styles";
 import { Subtitle } from "../../global/styles";
+import { LanguageContext, Text } from "../../global/LanguagesContext";
 
 const Education = () => {
+    const { dictionary } = useContext(LanguageContext)
+
     const courses = [
         {
-            title: "Curso Web Full Stack",
+            title: dictionary.webFullStackDevelopment,
             institution: "Labenu",
             duration: "1000h",
             period: "2020 - 2021",
-            description: `A Labenu é uma startup que forma Pessoas Desenvolvedoras Web Full Stack prontas para o mercado de trabalho. São mais de 1000 horas de programação que faz com que suas alunas e alunos sejam profissionais com conhecimentos adquiridos e postos em prática tanto no Back-end quanto no Front-end.`
+            description: dictionary.labenuBootcampDescription
         },
         {
-            title: "Desenvolvimento Android",
+            title: dictionary.androidDevelopment,
             institution: "Udemy",
             duration: "100h",
-            period: "2020 - presente",
-            description: "Curso de Desenvolvimento Android Nativo, ministrado por Jamilton Damasceno. Aprendizado utilizando a IDE Android Studio, linguagem Java, banco de dados SQLite e NoSQL com Firebase."
+            period: `2020 - ${dictionary.present}`,
+            description: dictionary.androidDevelopmentCourseDescription
         },
     ];
 
     return (
         <Wrapper>
-            <Subtitle data-aos="fade-zoom-in" data-aos-duration="1500">Formação</Subtitle>
+            <Subtitle data-aos="fade-zoom-in" data-aos-duration="1500"><Text tid="education"/></Subtitle>
             <Content>
                 {courses.map((course, index) => {
                     return (

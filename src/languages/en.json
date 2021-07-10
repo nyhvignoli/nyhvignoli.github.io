@@ -5,6 +5,7 @@
     "professionTitle": "Full Stack Developer",
     "aboutMeDescription": "Hey there! I'm Aline but you may call me Nyh!\n I've found my passion for programming a little more than a year ago and today I'm a Web Full Stack Developer.\n I have an artistic background as a musician and tattoo artist (profession that I used to take for about 12 years), and currently I work as a Programmer Analyst at \n As a woman and a lesbian I stand for inclusion and diversity in technology!",
     "seeResume": "See resume",
+
     "knowledges": "Knowledges",
     "frontendKnowledges": [
         "Web applications development using HTML, CSS and Javascript",
@@ -23,5 +24,12 @@
         "Agile Development",
         "Clean Code"
     ],
-    "general": "General"
+    "general": "General",
+
+    "education": "Education",
+    "webFullStackDevelopment": "Web Full Stack Bootcamp",
+    "androidDevelopment": "Android Development",
+    "present": "present",
+    "labenuBootcampDescription": "Labenu is a startup which graduate Web Full Stack Developers ready for the job market. More than 1000 hours of programming make their students become professionals with practical knowledges on Back-end and Front-end.",
+    "androidDevelopmentCourseDescription": "Native Android Development Course, taught by Jamilton Damasceno. Learning process using Android Studio IDE, Java language, SQLite database and NoSQL with Firebase."
 }
