@@ -8,7 +8,7 @@ const NavBar = () => {
     return (
         <StyledNav>
             <StyledList>
-            <LanguageSelector />
+                <LanguageSelector />
                 <Anchor href="#top"><ListItem><Text tid="aboutMe"/></ListItem></Anchor>
                 <Anchor href="#projects"><ListItem><Text tid="projects"/></ListItem></Anchor>
                 <Anchor href="#contact"><ListItem><Text tid="contactMe"/></ListItem></Anchor>

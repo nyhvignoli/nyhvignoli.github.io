@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import SocialMedia from "../SocialMedia/SocialMedia";
 import { Wrapper, InfoSection, ImageSection, Filter } from "./styles";
 import { Title, StackList, ListItem, Anchor, StyledButton } from "../../global/styles";
 import cvPdf from "../../assets/cv-aline-vignoli.pdf";
+import { LanguageContext, Text } from "../../global/LanguagesContext";
 
 const AboutMe = () => {
     const stacks = [
@@ -19,6 +20,9 @@ const AboutMe = () => {
         "Firebase"
     ];
 
+    const { dictionary } = useContext(LanguageContext)
+    const phrases = string => string.split('\n')
+
     return (
         <Wrapper id="about-me">
             <InfoSection>
@@ -34,13 +38,14 @@ const AboutMe = () => {
                     data-aos-offset="300"
                     data-aos-easing="ease-in-sine"
                 >
-                    Desenvolvedora Full Stack
+                    <Text tid="professionTitle"/>
                 </h2>
                 <p data-aos="fade-out" data-aos-duration="3000">
-                    Oi tudo bem? Eu sou Aline mas pode me chamar de Nyh!<br/>
-                    Descobri minha paixão por programação há mais ou menos 1 ano e hoje sou Desenvolvedora Web Full Stack recém formada.<br/>
-                    Tenho um background artístico como musicista e tatuadora (profissão que excerci por 12 anos), e atualmente trabalho como Analista Programadora na <strong><Anchor orange href="https://vizir.com.br/" target="_blank" rel="noreferrer">Vizir Software Studio</Anchor></strong>.<br/>
-                    Enquanto mulher e lésbica, busco somar na inclusão e diversidade na tecnologia!
+                    {phrases(dictionary.aboutMeDescription)[0]}<br/>
+                    {phrases(dictionary.aboutMeDescription)[1]}<br/>
+                    {phrases(dictionary.aboutMeDescription)[2]}
+                    <strong><Anchor orange href="https://vizir.com.br/" target="_blank" rel="noreferrer">Vizir Software Studio</Anchor></strong>.<br/>
+                    {phrases(dictionary.aboutMeDescription)[3]}
                 </p>
                 <StackList>
                     {stacks.map((stack, index) => {
@@ -58,7 +63,7 @@ const AboutMe = () => {
                     target="_blank" 
                     rel="noreferrer"
                 >
-                    <StyledButton orange>Visualizar currículo</StyledButton>
+                    <StyledButton orange><Text tid="seeResume"/></StyledButton>
                 </Anchor>
             </InfoSection>
             <Filter>
