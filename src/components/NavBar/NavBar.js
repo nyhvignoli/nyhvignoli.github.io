@@ -1,4 +1,6 @@
 import React from "react";
+import { Text } from "../../global/LanguagesContext";
+import LanguageSelector from "../LanguageSelector/LanguageSelector";
 import { StyledNav, StyledList, ListItem, Anchor } from "./styles";
 
 const NavBar = () => {
@@ -6,9 +8,10 @@ const NavBar = () => {
     return (
         <StyledNav>
             <StyledList>
-                <Anchor href="#top"><ListItem>Sobre mim</ListItem></Anchor>
-                <Anchor href="#projects"><ListItem>Projetos</ListItem></Anchor>
-                <Anchor href="#contact"><ListItem>Contato</ListItem></Anchor>
+            <LanguageSelector />
+                <Anchor href="#top"><ListItem><Text tid="aboutMe"/></ListItem></Anchor>
+                <Anchor href="#projects"><ListItem><Text tid="projects"/></ListItem></Anchor>
+                <Anchor href="#contact"><ListItem><Text tid="contactMe"/></ListItem></Anchor>
             </StyledList>
         </StyledNav>
     );
