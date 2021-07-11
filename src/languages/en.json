@@ -50,5 +50,9 @@
     "labenuCommunityDescription": "Slack workspace with forum and culture for Labenu's students and former students",
     "codivasDescription": "Corporate agency of women in tech",
     "compiladorasDescription": "Community of women in tech, with programming booktcamps, lives and workshops",
-    "gufersDescription": "Front End Users Group from Rio Grande do Sul"
+    "gufersDescription": "Front End Users Group from Rio Grande do Sul",
+
+    "callToActionContactText": "Did you like my work? Let's chat!",
+    "phone": "Phone",
+    "developedBy": "Developed by"
 }

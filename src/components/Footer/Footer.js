@@ -3,22 +3,23 @@ import { Subtitle } from "../../global/styles";
 import SocialMedia from "../SocialMedia/SocialMedia";
 import { StyledFooter, ContactInfos , CopyRights, BackToTop } from "./styles";
 import whiteArrow from "../../assets/white-arrow.png";
+import { Text } from "../../global/LanguagesContext";
 
 const Footer = () => {
 
     return (
         <StyledFooter id="contact">
             <ContactInfos>
-                <Subtitle>Contato</Subtitle>
-                <p>Gostou do meu trabalho? Bora bater um papo!</p>
+                <Subtitle><Text tid="contactMe"/></Subtitle>
+                <p><Text tid="callToActionContactText"/></p>
                 <p>
-                    Email: nyhv.contato@gmail.com<br/>
-                    Telefone: (51) 99766-1364
+                    E-mail: nyhv.contato@gmail.com<br/>
+                    {Text({ tid: "phone" })}: (51) 99766-1364
                 </p>
                 <SocialMedia/>
                 <a href="#top"><BackToTop src={whiteArrow}/></a>
             </ContactInfos>
-            <CopyRights><p>© 2021 ~ Desenvolvido por Aline "Nyh" Vignoli</p></CopyRights>
+            <CopyRights><p>© 2021 ~ {Text({ tid: "developedBy" })} Aline "Nyh" Vignoli</p></CopyRights>
         </StyledFooter>
     );
 }

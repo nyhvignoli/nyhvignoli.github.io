@@ -50,5 +50,9 @@
     "labenuCommunityDescription": "Comunidade no Slack com fórum e cultura para estudantes e ex-estudantes da Labenu",
     "codivasDescription": "Agencia coletiva de mulheres em tecnologia",
     "compiladorasDescription": "Comunidade de mulheres na tecnologia com cursos de programação, lives e workshops",
-    "gufersDescription": "Grupo de Usuários de Front End do Rio Grande do Sul"
+    "gufersDescription": "Grupo de Usuários de Front End do Rio Grande do Sul",
+
+    "callToActionContactText": "Gostou do meu trabalho? Bora bater um papo!",
+    "phone": "Telefone",
+    "developedBy": "Desenvolvido por"
 }
