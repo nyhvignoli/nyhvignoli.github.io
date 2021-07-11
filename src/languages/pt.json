@@ -43,5 +43,12 @@
     "backendOnGithub": "Back-end no Github",
     "viewCodeOnGithub": "Ver no Github",
     "seeDocumentation": "Ver documentação",
-    "openWebsite": "Abrir site"
+    "openWebsite": "Abrir site",
+
+    "communities": "Comunidades",
+    "vizirDescription": "Studio de software com mais de 10 anos no mercado, onde trabalho atualmente",
+    "labenuCommunityDescription": "Comunidade no Slack com fórum e cultura para estudantes e ex-estudantes da Labenu",
+    "codivasDescription": "Agencia coletiva de mulheres em tecnologia",
+    "compiladorasDescription": "Comunidade de mulheres na tecnologia com cursos de programação, lives e workshops",
+    "gufersDescription": "Grupo de Usuários de Front End do Rio Grande do Sul"
 }
