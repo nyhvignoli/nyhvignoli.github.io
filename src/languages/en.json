@@ -54,5 +54,10 @@
 
     "callToActionContactText": "Did you like my work? Let's chat!",
     "phone": "Phone",
-    "developedBy": "Developed by"
+    "developedBy": "Developed by",
+
+    "myJourney": "My journey",
+    "music": "Music",
+    "tattoo": "Tattoo",
+    "programming": "Programming"
 }
