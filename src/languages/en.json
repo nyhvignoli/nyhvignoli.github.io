@@ -1,0 +1,66 @@
+{
+    "aboutMe": "About me",
+    "projects": "Projects",
+    "contactMe": "Contact me",
+    "professionTitle": "Full Stack Developer",
+    "aboutMeDescription": "Hey there! I'm Aline but you may call me Nyh!\n I've found my passion for programming a little more than a year ago and today I'm a Web Full Stack Developer.\n I have an artistic background as a musician and tattoo artist (profession that I used to take for about 12 years), and currently I work as a Programmer Analyst at \n As a woman and a lesbian I stand for inclusion and diversity in technology!",
+    "seeResume": "See resume",
+
+    "knowledges": "Knowledges",
+    "frontendKnowledges": [
+        "Web applications development using HTML, CSS and Javascript",
+        "Componentization and state management using ReactJS",
+        "REST API's integration",
+        "Responsive layouts and styling libraries such as Styled-components and Material-UI"
+    ],
+    "backendKnowledges": [
+        "RESTful API's development using Node.js and Typescript",
+        "Unit and automated tests with Jest and Mocha",
+        "MySQL database",
+        "Comfortable with Firebase"
+    ],
+    "generalKnowledges": [
+        "AWS and EC2",
+        "Agile Development",
+        "Clean Code"
+    ],
+    "general": "General",
+
+    "education": "Education",
+    "webFullStackDevelopment": "Web Full Stack Bootcamp",
+    "androidDevelopment": "Android Development",
+    "present": "present",
+    "labenuBootcampDescription": "Labenu is a startup which graduate Web Full Stack Developers ready for the job market. More than 1000 hours of programming make their students become professionals with practical knowledges on Back-end and Front-end.",
+    "androidDevelopmentCourseDescription": "Native Android Development Course, taught by Jamilton Damasceno. Learning process using Android Studio IDE, Java language, SQLite database and NoSQL with Firebase.",
+
+    "musicatchersDescription": "Full Stack Project developed at Labenu's bootcamp. It is about a web application with basic features of a music streaming Website.",
+    "labedditDescription": "Project developed at Labenu's bootcamp. A social media similar to Reddit, where the users are able to post, comment and vote in each others posts. This page uses a API developed by Labenu. Mobile responsive website.",
+    "astromatchDescription": "Project developed at Labenu's bootcamp. An app similar to Tinder, with fun celebrities from movies and TV where you may like, unlike and see if it's a match! :D This page uses a API developed by Labenu. Mobile responsive website.",
+    "labenuSystemDescription": "Project to wrap the Backend's 4º Module at Labenu. This was a team project, which the main goal was develop an education intituition system, with students, teachers and missions entities.",
+    "labookDescription": "Back-end structure of Labook Project, developed at Labenu's bootcamp. An API with social media basic features.",
+
+    "frontendOnGithub": "Front-end on Github",
+    "backendOnGithub": "Back-end on Github",
+    "viewCodeOnGithub": "View code on Github",
+    "seeDocumentation": "See documentation",
+    "openWebsite": "Open website",
+
+    "communities": "Communities",
+    "vizirDescription": "Software studio with over 10 years on the market, my current job",
+    "labenuCommunityDescription": "Slack workspace with forum and culture for Labenu's students and former students",
+    "codivasDescription": "Corporate agency of women in tech",
+    "compiladorasDescription": "Community of women in tech, with programming booktcamps, lives and workshops",
+    "gufersDescription": "Front End Users Group from Rio Grande do Sul",
+
+    "callToActionContactText": "Did you like my work? Let's chat!",
+    "phone": "Phone",
+    "developedBy": "Developed by",
+
+    "myJourney": "My journey",
+    "music": "Music",
+    "tattoo": "Tattoo",
+    "programming": "Programming",
+    "musicJourney": "I was born in Rio Grande's suburb, in the inland of Rio Grande do Sul. I'm the youngest daugther of a single mother and I have two brothers and one sister. My oldest brother is a musician, and that's how I had my first contact with musical instruments. When I was 15, I've learned how to play acoustic guitar by myself. In high school, I started my first all female band, with tow of my friends: A New Metal band called Cacofonia, where I used to sing and play guitar. When the band was over, I moved on doing acoustic concerts at pub's around the city. Besides my music interest in music, I've always liked to sketch and draw (my middle brother is a very talent artist). Yeah, I'm lucky that I was born in a very talented family, but unfortunately, with low opportunities. My sister always been very great at handicraft, sewing and creative stuff. Today she makes beautiful and fun candies and chocolates to sell over there. I know that I'm been kind of prolix talking about my family, but I wouldn't make my journey's justice if I didn't mention where I came from and how I've become who I am. When I was 18 I came out as a lesbian. My mother was awesome and very supportive. When I was 19, my mother gave me a tattoo machine as a gift and I've move to Tramandaí, close to Porto Alegre, to be near the capital and try to make a live as a musician and tattoo artist, which takes me to the next step of my story...",
+    "tattooJourney": "In Tramandaí I lived for about 1 year with my cousin. I was a tattoo artist self-employee at the time, and by the internet I've met Kika, a woman guitarrist from Porto Alegre that said she has listened to my songs at MySpace and enjoyed it. I've met her in person and we started a female band called Electric Mind. I know I'm mixing music and tattoo altogether, but these two passions were with me for a while. With Electri Mind we played at Porto Alegre/Brazil, São Paulo/Brazil and Buenos Aires/Argentina, we had a very great time, but unfortunately we didn't get any money out of it. That's when I started to officialy work as a tattoo artist at a studio, in Porto Alegre. I've had comings and goings at the studio, because it's owner was a very narrow-minded person and I didn't feel comfortable there. By the end of 2013, I've met and fell in love with Germana, my partner. She has always been by my side and supported me in everything I did. At some point, we felt that Porto Alegre didn't have anything to offer to us anymore. The governament changed, the city got violent, so we've decided to try our lucky in Florianópolis/Brazil. There we founded a tattoo studio called Feminink. The idea was to be a safe and welcoming space to minorities, with all female staff. We were able to keep the studio alive for about 2 years, with me as a tattoo artist and Gê running the business, social medias, events, hosting our costumers, eticetera. With the new governament ruining our country, the economy wasn't going well and we were also going through a lot of lesbophobia and misoginy episodes, the things at the studio weren't doing fine. We decided to change the studio's name to Corpo Fechado, since we noticed that the name Feminink was scaring rather than attracting people. Soon Corpo Fechado also weren't doing and we had to close the doors. With the pandemic my career as a tattoo artist went down the toilet and I've decided to use the lockdown to seek a new career...",
+    "programmingJourney": "I started my developer journey by buying a Android Development Course at the Udemy and started studying on my own. This course had about 100 hours of duration, and when I was getting close to 50% of progress I saw on Instagram a publication about a Programming School called Labenu. I remember that it was about encouraging women and underrepresented minorities to start a technology career and that's when I fell in love with their values. This course was very different from what I was studying before, its main focus were in Web Programming and Employability, which really got my atention since I was looking for something more professional. I've applied for their selective process through ISA(Income Share Agreement) and was aproved. I've had 6 intense months of practical learnship on programming and Labenu has always been a very cozy and safe environment. This school didn't only made me grow as a developer, but also as a person, since one of their principals and values is that the emotional intelligence comes first. Today I feel confident and qualified to face the market challanges, of course I still have so much to evolve and grow, but I'm already happy with my journey so far and ready to dive head first on this new universe! :) "
+}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Subtitle } from "../../global/styles";
 import { Wrapper, Content } from "./styles";
 import vizirLogo from "../../assets/vizir.png";
@@ -7,8 +7,11 @@ import codivasLogo from "../../assets/codivas.jpg";
 import gufersLogo from "../../assets/gufers.jpg";
 import compiladorasLogo from "../../assets/compiladoras.jpg";
 import CommunitiesContent from "./CommunitiesContent/CommunitiesContent";
+import { LanguageContext, Text } from "../../global/LanguagesContext";
 
 const Communities = () => {
+    const { dictionary } = useContext(LanguageContext);
+
     const communities = [
         {
             name: "Vizir Software Studio",
@@ -17,7 +20,7 @@ const Communities = () => {
                 alt: "Logo da Vizir, um quadrado vermelhor rotacionado com a letra Z em branco no centro" 
             },
             site: "https://vizir.com.br/",
-            description: `Studio de software com mais de 10 anos no mercado, onde trabalho atualmente.`
+            description: dictionary.vizirDescription
         },
         {
             name: "Labenu Comunidade",
@@ -26,7 +29,7 @@ const Communities = () => {
                 alt: "Logo da Labenu, uma chame minimalista e poligonal nas cores laranja, amarelo a azul acinzentado" 
             },
             site: "https://www.labenu.com.br/",
-            description: `Comunidade no Slack com fórum e cultura para estudantes e ex-estudantes da Labenu`
+            description: dictionary.labenuCommunityDescription
         },
         {
             name: "Codivas",
@@ -35,7 +38,7 @@ const Communities = () => {
                 alt: "Logo da Codivas, escrito codivas em preto e roxo" 
             },
             site: "https://www.codivas.com.br/",
-            description: `Agencia coletiva de mulheres em tecnologia`
+            description: dictionary.codivasDescription
         },
         {
             name: "Compiladoras de Cafeína",
@@ -44,7 +47,7 @@ const Communities = () => {
                 alt: "Logo das Compiladoras, com fundo preto e um xícara de café com um coração vermelho dentro" 
             },
             site: "https://www.instagram.com/compiladoras/",
-            description: `Comunidade de mulheres na tecnologia com cursos de programação, lives e workshops`
+            description: dictionary.compiladorasDescription
         },
         {
             name: "Gufers",
@@ -53,13 +56,13 @@ const Communities = () => {
                 alt: "Logo dos Gufers, quadrado preto escrito Gufers em branco" 
             },
             site: "https://osgufers.github.io/",
-            description: `Grupo de Usuários de Front End do Rio Grande do Sul`
+            description: dictionary.gufersDescription
         }
     ]
 
     return (
         <Wrapper>
-            <Subtitle data-aos="fade-zoom-in" data-aos-duration="1500" data-aos-easing="ease-in-out">Comunidades</Subtitle>
+            <Subtitle data-aos="fade-zoom-in" data-aos-duration="1500" data-aos-easing="ease-in-out"><Text tid="communities"/></Subtitle>
             <Content> 
                 {communities.map((community, index) => {
                     return (
@@ -76,5 +79,4 @@ const Communities = () => {
         </Wrapper>
     );
 }
-
 export default Communities;

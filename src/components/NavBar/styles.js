@@ -10,7 +10,6 @@ export const StyledNav = styled.nav`
     color: #FFF;
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: bold;
-    height: 3em;
 `;
 
 export const StyledList = styled.ul`

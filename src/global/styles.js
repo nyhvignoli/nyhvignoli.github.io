@@ -115,3 +115,13 @@ export const StyledButton = styled.button`
         align-self: center;
     }
 `;
+
+export const BaseFlex = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 600px) {
+        flex-direction: column;
+    }
+`
