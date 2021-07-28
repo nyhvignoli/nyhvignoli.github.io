@@ -7,7 +7,7 @@ import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import Close from '@material-ui/icons/Close';
 import { Image } from '../Projects/ProjectsContent/styles';
-import { Wrapper, Header, Background } from "./styles";
+import { Wrapper, ImageWrapper, Header, Background } from "./styles";
 import { IconButton } from '@material-ui/core';
 
 const ScreenShotsGallery = (props) => {
@@ -30,11 +30,14 @@ const ScreenShotsGallery = (props) => {
           <Typography variant="caption">{props.images[activeStep].caption}</Typography>
           <IconButton onClick={props.handleImageDetailsClose}><Close/></IconButton>
         </Header>
-        <Image 
-          zoom
-          src={props.images[activeStep].src}
-          alt={props.images[activeStep].alt}
-        />
+        <ImageWrapper>
+          <Image 
+            zoom
+            src={props.images[activeStep].src}
+            alt={props.images[activeStep].alt}
+          />
+        </ImageWrapper>
+        
         <MobileStepper
           steps={maxSteps}
           position="static"

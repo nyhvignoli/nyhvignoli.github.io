@@ -6,6 +6,7 @@ import { Wrapper, ImageContainer, Content, TextWrapper, ButtonGroup, Title, Imag
 const ProjectsContent = (props) => {
 
     const fullStackButtonGroup = (
+       props.githubLink ?
         <ButtonGroup>
             <Anchor 
                 href={props.githubLink.frontend}
@@ -21,7 +22,15 @@ const ProjectsContent = (props) => {
             >
                 <StyledButton><Text tid="backendOnGithub"/></StyledButton>
             </Anchor>
-        </ButtonGroup>
+        </ButtonGroup> :
+        <Anchor
+            href={props.url}
+            target="_blank"
+            rel="noreferrer"
+        >
+            <StyledButton><Text tid="openWebsite"/></StyledButton>
+        </Anchor>
+
     );
 
     const backendButtonGroup = (
@@ -45,13 +54,13 @@ const ProjectsContent = (props) => {
 
     const frontendButtonGroup = (
         <ButtonGroup>
-            <Anchor 
+            {props.githubLink && <Anchor 
                 href={props.githubLink}
                 target="_blank"
                 rel="noreferrer"
             >
                 <StyledButton><Text tid="viewCodeOnGithub"/></StyledButton>
-            </Anchor>
+            </Anchor>}
             <Anchor
                 href={props.url}
                 target="_blank"

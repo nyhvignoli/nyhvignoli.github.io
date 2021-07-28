@@ -12,6 +12,9 @@ import labeddit3 from "../../assets/labeddit-3.PNG";
 import labeddit4 from "../../assets/labeddit-4.PNG";
 import astromatchScreenshot from "../../assets/astromatch.PNG";
 import astromatch2 from "../../assets/astromatch-2.PNG";
+import shoppingOmni1 from "../../assets/shoppingomni-1.png";
+import shoppingOmni2 from "../../assets/shoppingomni-2.png";
+import shoppingOmni3 from "../../assets/shoppingomni-3.png";
 import Gallery from "../Gallery/Gallery";
 import ScreenShotsGallery from "../ScreenShotsGallery/ScreenShotsGallery";
 import { LanguageContext, Text } from "../../global/LanguagesContext";
@@ -20,6 +23,26 @@ const Projects = () => {
     const { dictionary } = useContext(LanguageContext);
 
     const projects = [
+        {
+            title: "Shopping Omni",
+            type: "Full Stack",
+            images: [{
+                src: shoppingOmni1,
+                alt: "foto da tela de Etiquetas, onde listam pedidos com informações de código, nome do cliente, valor do pedido e método de entrega",
+                caption: "Tela Etiquetas, aba 'Gerar etiqueta'"
+            },{
+                src: shoppingOmni2,
+                alt: "foto da tela de Minhas Etiquetas, lista de PLP's com botão para imprimir e botão para desagrupar",
+                caption: "Tela Etiquetas, aba 'Minhas etiquetas'"
+            },{
+                src: shoppingOmni3,
+                alt: "foto da tela de Minhas Etiquetas, aba para solicitar coleta, listando código do pedido, nome do cliente e valor do pedido",
+                caption: "Tela Etiquetas, aba 'Coleta'"
+            }],
+            description: dictionary.shoppingOmniDescription,
+            url: "https://shoppingomni.com.br/",
+            tags: ["react", "redux", "styled-components", "bootstrap", "jest", "nodejs", "mysql", "mocha", "docker", "AWS"]
+        },
         {
             title: "MusiCatchers",
             type: "Full Stack",
