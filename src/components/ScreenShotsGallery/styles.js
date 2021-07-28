@@ -31,3 +31,9 @@ export const Header = styled(Paper)`
     align-items: center;
     padding-left: 20px;
 `;
+
+export const ImageWrapper = styled.div`
+  width: 100%;
+  max-height: calc(100vh - 100px);
+  overflow: auto;
+`;
