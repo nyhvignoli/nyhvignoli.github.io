@@ -12,9 +12,22 @@ import labeddit3 from "../../assets/labeddit-3.PNG";
 import labeddit4 from "../../assets/labeddit-4.PNG";
 import astromatchScreenshot from "../../assets/astromatch.PNG";
 import astromatch2 from "../../assets/astromatch-2.PNG";
-import shoppingOmni1 from "../../assets/shoppingomni-1.png";
-import shoppingOmni2 from "../../assets/shoppingomni-2.png";
-import shoppingOmni3 from "../../assets/shoppingomni-3.png";
+import shoppingOmni1 from "../../assets/shopping-omni/shoppingomni-1.png";
+import shoppingOmni2 from "../../assets/shopping-omni/shoppingomni-2.png";
+import shoppingOmni3 from "../../assets/shopping-omni/shoppingomni-3.png";
+import backgroundImgBefore from "../../assets/mongo-db/background-img-before.png";
+import backgroundImgAfter from "../../assets/mongo-db/background-img-after.png";
+import cardGridBefore from "../../assets/mongo-db/card-grid-before.png";
+import cardGridSmallAfter from "../../assets/mongo-db/card-grid-small-after.png";
+import cardGridLargeAfter from "../../assets/mongo-db/card-grid-large-after.png";
+import detailsBefore from "../../assets/mongo-db/details-before.png";
+import detailsAfter from "../../assets/mongo-db/details-after.png";
+import lpNavBefore from "../../assets/mongo-db/lp-nav-before.png";
+import lpNavAfter from "../../assets/mongo-db/lp-nav-after.png";
+import segaBefore from "../../assets/mongo-db/sega-before.png";
+import segaAfter from "../../assets/mongo-db/sega-after.png";
+import segaBeforeMobile from "../../assets/mongo-db/sega-before-mobile.png";
+import segaAfterMobile from "../../assets/mongo-db/sega-after-mobile.png";
 import Gallery from "../Gallery/Gallery";
 import ScreenShotsGallery from "../ScreenShotsGallery/ScreenShotsGallery";
 import { LanguageContext, Text } from "../../global/LanguagesContext";
@@ -23,6 +36,66 @@ const Projects = () => {
     const { dictionary } = useContext(LanguageContext);
 
     const projects = [
+        {
+            title: "MongoDB Website",
+            type: "Full Stack",
+            images: [{
+                src: backgroundImgAfter,
+                alt: "foto da tela de Etiquetas, onde listam pedidos com informações de código, nome do cliente, valor do pedido e método de entrega",
+                caption: "BackgroundImage, depois do fix (imagem de fundo na sessão 'Helping you stay ahead' estava cortando)"
+            },{
+                src: backgroundImgBefore,
+                alt: "foto da tela de Minhas Etiquetas, lista de PLP's com botão para imprimir e botão para desagrupar",
+                caption: "BackgroundImage, antes do fix (imagem de fundo na sessão 'Helping you stay ahead' estava cortando)"
+            },{
+                src: cardGridBefore,
+                alt: "foto da tela de Etiquetas, onde listam pedidos com informações de código, nome do cliente, valor do pedido e método de entrega",
+                caption: "CardGrid, antes do fix (sem espaçamento entre os cards e com a propriedade cards per row sem funcionar)"
+            },{
+                src: cardGridLargeAfter,
+                alt: "foto da tela de Minhas Etiquetas, lista de PLP's com botão para imprimir e botão para desagrupar",
+                caption: "CardGrid, depois do fix (tamanho large)"
+            },{
+                src: cardGridSmallAfter,
+                alt: "foto da tela de Minhas Etiquetas, lista de PLP's com botão para imprimir e botão para desagrupar",
+                caption: "CardGrid, depois do fix (tamanho small, onde é possível definir a quantidade de cards per row)"
+            },{
+                src: detailsBefore,
+                alt: "foto da tela de Minhas Etiquetas, lista de PLP's com botão para imprimir e botão para desagrupar",
+                caption: "AccordionGroup, antes do fix (margin branca indesejada no componente)"
+            },{
+                src: detailsAfter,
+                alt: "foto da tela de Minhas Etiquetas, lista de PLP's com botão para imprimir e botão para desagrupar",
+                caption: "AccordianGroup, depois do fix"
+            },{
+                src: lpNavBefore,
+                alt: "foto da tela de Minhas Etiquetas, lista de PLP's com botão para imprimir e botão para desagrupar",
+                caption: "NavBar, antes do fix (botão estava sobrepondo logo)"
+            },{
+                src: lpNavAfter,
+                alt: "foto da tela de Minhas Etiquetas, lista de PLP's com botão para imprimir e botão para desagrupar",
+                caption: "NavBar, depois do fix"
+            },{
+                src: segaBefore,
+                alt: "foto da tela de Minhas Etiquetas, lista de PLP's com botão para imprimir e botão para desagrupar",
+                caption: "NavBar, antes do fix (estava sobrepondo o título, na página em japonês)"
+            },{
+                src: segaBeforeMobile,
+                alt: "foto da tela de Minhas Etiquetas, lista de PLP's com botão para imprimir e botão para desagrupar",
+                caption: "NavBar, antes do fix (versão mobile)"
+            },{
+                src: segaAfter,
+                alt: "foto da tela de Minhas Etiquetas, lista de PLP's com botão para imprimir e botão para desagrupar",
+                caption: "NavBar, depois do fix"
+            },{
+                src: segaAfterMobile,
+                alt: "foto da tela de Minhas Etiquetas, lista de PLP's com botão para imprimir e botão para desagrupar",
+                caption: "NavBar, depois do fix (versão mobile)"
+            }],
+            description: dictionary.mongoDBDescription,
+            url: "https://www.mongodb.com/",
+            tags: ["react", "preact", "react-imgix", "svelte", "styled-components", "express", "jest", "nodejs", "noSql","mongoDB"]
+        },
         {
             title: "Shopping Omni",
             type: "Full Stack",
