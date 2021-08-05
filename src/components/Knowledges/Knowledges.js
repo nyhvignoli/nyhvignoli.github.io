@@ -12,7 +12,9 @@ const Knowledges = () => {
 
     return (
         <Wrapper>
-            <Subtitle data-aos="fade-zoom-in" data-aos-duration="1500" data-aos-easing="ease-in-out"><Text tid="knowledges"/></Subtitle>
+            <Subtitle data-aos="fade-zoom-in" data-aos-duration="1500" data-aos-easing="ease-in-out">
+                <Text tid="knowledges"/>
+            </Subtitle>
             <Content>
                 <KnowledgesContent
                     title={"Front-end"} 
@@ -28,11 +30,20 @@ const Knowledges = () => {
                 />
             </Content>
             <div>
-                <Subtitle data-aos="fade-zoom-in" data-aos-duration="1500"><Text tid="general"/></Subtitle>
+                <Subtitle data-aos="fade-zoom-in" data-aos-duration="1500">
+                    <Text tid="general"/>
+                </Subtitle>
                 <StackList>
                     {dictionary.generalKnowledges.map((item, index) => {
                         return (
-                            <ListItem data-aos="flip-right" data-aos-duration="2000" data-aos-easing="ease-out-cubic" key={index}>{item}</ListItem>
+                            <ListItem 
+                                key={index}
+                                data-aos="flip-right" 
+                                data-aos-duration="2000" 
+                                data-aos-easing="ease-out-cubic"
+                            >
+                                {item}
+                            </ListItem>
                         )
                     })}
                 </StackList>

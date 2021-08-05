@@ -44,13 +44,25 @@ const AboutMe = () => {
                     {phrases(dictionary.aboutMeDescription)[0]}<br/>
                     {phrases(dictionary.aboutMeDescription)[1]}<br/>
                     {phrases(dictionary.aboutMeDescription)[2]}
-                    <strong><Anchor orange href="https://vizir.com.br/" target="_blank" rel="noreferrer">Vizir Software Studio</Anchor></strong>.<br/>
+                    <strong>
+                        <Anchor orange href="https://vizir.com.br/" target="_blank" rel="noreferrer">
+                            Vizir Software Studio
+                        </Anchor>
+                    </strong>.<br/>
                     {phrases(dictionary.aboutMeDescription)[3]}
                 </p>
                 <StackList>
                     {stacks.map((stack, index) => {
                         return (
-                            <ListItem data-aos="flip-right" data-aos-duration="2000" data-aos-easing="ease-out-cubic" data-aos-delay="100" key={index}>{stack}</ListItem>
+                            <ListItem
+                                key={index} 
+                                data-aos="flip-right" 
+                                data-aos-duration="2000" 
+                                data-aos-easing="ease-out-cubic" 
+                                data-aos-delay="100" 
+                            >
+                                {stack}
+                            </ListItem>
                         )
                     })}
                 </StackList>
