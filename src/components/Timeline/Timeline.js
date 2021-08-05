@@ -40,7 +40,9 @@ const Timeline = () => {
 
     return (
         <Wrapper>
-            <Subtitle data-aos="fade-zoom-in" data-aos-duration="1500" data-aos-easing="ease-in-out"><Text tid="myJourney"/></Subtitle>
+            <Subtitle data-aos="fade-zoom-in" data-aos-duration="1500" data-aos-easing="ease-in-out">
+                <Text tid="myJourney"/>
+            </Subtitle>
             <Content>
                 <TimelineContent 
                     step={music}

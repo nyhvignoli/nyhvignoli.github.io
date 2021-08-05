@@ -64,5 +64,126 @@
     "programming": "Programming",
     "musicJourney": "I was born in Rio Grande's suburb, in the inland of Rio Grande do Sul. I'm the youngest daugther of a single mother and I have two brothers and one sister. My oldest brother is a musician, and that's how I had my first contact with musical instruments. When I was 15, I've learned how to play acoustic guitar by myself. In high school, I started my first all female band, with two of my friends: A New Metal band called Cacofonia, where I used to sing and play guitar. When the band was over, I moved on doing acoustic concerts at pub's around the city. Besides my interest in music, I've always liked to sketch and draw (my middle brother is a very talent artist). Yeah, I'm lucky that I was born in a very talented family, but unfortunately, with low opportunities. My sister has always been very great at handicraft, sewing and creative stuff. Today she makes beautiful and fun candies and chocolates to sell over there. I know that I'm been kind of prolix talking about my family, but I wouldn't make my journey's justice if I didn't mention where I came from and how I've became who I am. When I was 18 I came out as a lesbian. My mother was awesome and very supportive. When I was 19, she gave me a tattoo machine as a gift and I've moved to Tramandaí, close to Porto Alegre, to be near the capital and try to make a living as a musician and tattoo artist, which takes me to the next step of my story...",
     "tattooJourney": "In Tramandaí I lived with my cousin for about 1 year. I was a tattoo artist self-employee at the time, and by the internet I've met Kika, a woman guitarrist from Porto Alegre that said she has listened to my songs at MySpace and enjoyed it. I've met her in person and we started a female band called Electric Mind. I know I'm mixing music and tattoo altogether, but these two passions were with me for a while. With Electric Mind we played at Porto Alegre/Brazil, São Paulo/Brazil and Buenos Aires/Argentina, we had a very great time, but unfortunately we didn't get any money out of it. That's when I started to officialy work as a tattoo artist at a studio, in Porto Alegre. I've had comings and goings at the studio, because it's owner was a very narrow-minded person and I didn't feel comfortable there. By the end of 2013, I've met and fell in love with Germana, my partner. She has always been by my side and supported me in everything I did. At some point, we felt that Porto Alegre didn't have anything else to offer us. The governament changed, the city got violent, so we've decided to try our lucky in Florianópolis/Brazil. There we founded a tattoo studio called Feminink. The idea was to be a safe and welcoming space to minorities, with all female staff. We were able to keep the studio alive for about 2 years, with me as a tattoo artist and Gê running the business, social medias, events, hosting our costumers, eticetera. With the new governament ruining our country, the economy wasn't going well and we were also going through a lot of lesbophobia and misoginy episodes, the things at the studio weren't doing fine. We decided to change the studio's name to Corpo Fechado, since we've noticed that the name Feminink was scaring rather than attracting people. Soon, Corpo Fechado also weren't working and we had to close the doors. With the pandemic my career as a tattoo artist went down the toilet and I've decided to use the lockdown to seek out a new career...",
-    "programmingJourney": "I started my developer journey by buying an Android Development Course at the Udemy and started studying on my own. This course had about 100 hours of duration, and when I was getting close to 50% of progress I saw on Instagram a publication about a Programming School called Labenu. I remember that it was about encouraging women and underrepresented minorities to start a technology career and that's when I fell in love with their values. This course was very different from what I was studying before, its main focus were in Web Programming and Employability, which really got my atention, since I was looking for something more professional. I've applied for their selective process through ISA(Income Share Agreement) and was aproved. I've had 6 intense months of practical learnship on programming and Labenu has always been a very cozy and safe environment. This school didn't only made me grow as a developer, but also as a person, since one of their principals and values is that the emotional intelligence comes first. Today I feel confident and qualified to face the market challanges, of course I still have so much to evolve and grow, but I'm already happy with my journey so far and ready to dive head first on this new universe! :) "
+    "programmingJourney": "I started my developer journey by buying an Android Development Course at the Udemy and started studying on my own. This course had about 100 hours of duration, and when I was getting close to 50% of progress I saw on Instagram a publication about a Programming School called Labenu. I remember that it was about encouraging women and underrepresented minorities to start a technology career and that's when I fell in love with their values. This course was very different from what I was studying before, its main focus were in Web Programming and Employability, which really got my atention, since I was looking for something more professional. I've applied for their selective process through ISA(Income Share Agreement) and was aproved. I've had 6 intense months of practical learnship on programming and Labenu has always been a very cozy and safe environment. This school didn't only made me grow as a developer, but also as a person, since one of their principals and values is that the emotional intelligence comes first. Today I feel confident and qualified to face the market challanges, of course I still have so much to evolve and grow, but I'm already happy with my journey so far and ready to dive head first on this new universe! :) ",
+
+    "images": {
+        "mongoDB": {
+            "backgroundImgAfter": {
+                "alt": "MongoDB website screen, background with blue tones and circular shapes.",
+                "caption": "BackgroundImage, after the fix (background image on 'Helping you stay ahead' section was cutting off)"
+            },
+            "backgroundImgBefore": {
+                "alt": "MongoDB website screen, background with blue tones and circular shapes. Background image was cutting off.",
+                "caption": "BackgroundImage, before the fix (background image on 'Helping you stay ahead' section was cutting off)"
+            },
+            "cardGridBefore": {
+                "alt": "CardGrid screen. Cards without gap between them, causing an odd behavior.",
+                "caption": "CardGrid, before the fix (without gap between cards and cards per row property wasn't working)"
+            },
+            "cardGridLargeAfter": {
+                "alt": "CardGrid screen with large cards. The gap between the cards were fixed.",
+                "caption": "CardGrid, after the fix (large size)"
+            },
+            "cardGridSmallAfter": {
+                "alt": "CardGrid screen with small cards. The gap between the cards were fixed.",
+                "caption": "CardGrid, after the fix (small size, is possible to set the cards per row property)"
+            },
+            "detailsBefore": {
+                "alt": "AccordionGroup component. There was an unwelcome white bottom and top margin on the component.",
+                "caption": "AccordionGroup, before the fix (unwelcome white margin on the component)"
+            },
+            "detailsAfter": {
+                "alt": "AccordionGroup component. Whitout the white margins.",
+                "caption": "AccordianGroup, after the fix"
+            },
+            "lpNavBefore": {
+                "alt": "Navbar, green button was overlapping the logo.",
+                "caption": "NavBar, before the fix (button was overlapping the logo)"
+            },
+            "lpNavAfter": {
+                "alt": "Navbar, after the fix. Button and logo appears correctly.",
+                "caption": "NavBar, after the fix"
+            },
+            "segaBefore": {
+                "alt": "Navbar was overlapping the title, on japanese page. Desktop version.",
+                "caption": "NavBar, before the fix (was overlapping the title, on japanese page)"
+            },
+            "segaBeforeMobile": {
+                "alt": "Navbar was overlapping the title, on japanese page. Mobile version.",
+                "caption": "NavBar, before the fix (mobile version)"
+            },
+            "segaAfter": {
+                "alt": "Navbar and title on japanese page appears correctly. Desktop version.",
+                "caption": "NavBar, after the fix"
+            },
+            "segaAfterMobile": {
+                "alt": "Navbar and title on japanese page appears correctly. Mobile version.",
+                "caption": "NavBar, after the fix (mobile version)"
+            }
+        },
+        "shoppingOmni": {
+            "shoppingOmni1": {
+                "alt": "screenshot of 'Etiquetas' screen, listing the orders with information about code, name, costumer name, order price and shipment method",
+                "caption": "'Etiquetas' screen, 'Gerar etiqueta' tab"
+            },
+            "shoppingOmni2": {
+                "alt": "screenshot of 'Minhas Etiquetas' screen, it lists PLP's with print button and ungroup button",
+                "caption": "'Etiquetas' screen, 'Minhas etiquetas' tab"
+            },
+            "shoppingOmni3": {
+                "alt": "screenshot of 'Minhas Etiquetas', tab to request collect, listing order code, costumer name and order price",
+                "caption": "'Etiquetas' screen, 'Coleta' tab"
+            }
+        },
+        "musicatchers": {
+            "musicatchersScreenshot": {
+                "alt": "screenshot of login screen. Purple tones sound waves",
+                "caption": "Login screen"
+            },
+            "musicatchers2": {
+                "alt": "screen with music cards, purple gradient background, player and media controls.",
+                "caption": "Musics screen"
+            },
+            "musicatchers3": {
+                "alt": "Add music screen, purple gradient background.",
+                "caption": "Add music screen"
+            },
+            "musicatchers4": {
+                "alt": "Playlists screen, purple gradient background.",
+                "caption": "Playlists screen"
+            },
+            "musicatchers5": {
+                "alt": "Selected music details screen, with player and media controls.",
+                "caption": "Music details screen"
+            }
+        },
+        "labeddit": {
+            "labedditScreenshot": {
+                "alt": "Feed screen, white background with Navbar in red tones.",
+                "caption": "Feed with all posts"
+            },
+            "labeddit2": {
+                "alt": "Post details screen, with comment box visible.",
+                "caption": "Post details screen"
+            },
+            "labeddit3": {
+                "alt": "Create post Modal, with cancel and publish buttons",
+                "caption": "Create new post Modal"
+            },
+            "labeddit4": {
+                "alt": "Login screen, with email and password inputs, buttons to login or signup.",
+                "caption": "Login screen"
+            }
+        },
+        "astromatch": {
+            "astromatchScreenshot": {
+                "alt": "screenshot of main screen. A Card with Dory, from Finding Nemo.",
+                "caption": "Main screen, shows random profiles"
+            },
+            "astromatch2": {
+                "alt": "Matches screen, listing only the matching profiles.",
+                "caption": "Matches screen"
+            }
+        }
+    }
 }
