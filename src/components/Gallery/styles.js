@@ -1,16 +1,16 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Wrapper = styled.div`
   display: flex;
   width: 100%;
   gap: 2rem;
-`;
+`
 
 export const Button = styled.button`
   background-color: transparent;
   border: none;
   outline: none;
-  ${props => props.imageDetailsOpen && "display: none"}
+  ${(props) => props.imageDetailsOpen && 'display: none'}
 
   &:disabled {
     opacity: 0.3;
@@ -31,14 +31,14 @@ export const Button = styled.button`
     -moz-transform: scaleX(-1);
     -o-transform: scaleX(-1);
     -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);    
+    transform: scaleX(-1);
 
     &:hover {
       margin-left: -50%;
     }
   }
 
-  #left { 
+  #left {
     &:hover {
       margin-left: 20%;
     }
@@ -51,4 +51,4 @@ export const Button = styled.button`
   @media (max-width: 1024px) {
     display: none;
   }
-`;
+`
