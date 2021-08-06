@@ -1,11 +1,14 @@
 import styled from 'styled-components'
 import profilePic from '../../assets/profile-aline-vignoli.jpg'
+import { theme } from '../../theme'
+
+const { colors } = theme
 
 export const Wrapper = styled.section`
   width: 100%;
   display: flex;
-  color: #fff;
-  background-color: rgba(0, 67, 108, 0.64);
+  color: ${colors.white};
+  background-color: ${colors.blue};
 
   @media (max-width: 1024px) {
     flex-wrap: wrap;
@@ -47,7 +50,7 @@ export const ImageSection = styled.div`
 `
 
 export const Filter = styled.div`
-  background-color: rgba(78, 164, 217, 0.38);
+  background-color: ${colors.lightBlue};
   width: 45%;
   height: 592px;
   position: relative;
@@ -55,6 +58,5 @@ export const Filter = styled.div`
   @media (max-width: 1024px) {
     width: 592px;
     margin: auto;
-    /* border-radius: 5px; */
   }
 `

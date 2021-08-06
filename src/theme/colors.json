@@ -1,0 +1,10 @@
+{
+  "blue": "rgba(0, 67, 108, 0.64)",
+  "lightBlue": "rgba(78, 164, 217, 0.38)",
+  "babyBlue": "#5B83A6",
+  "deepBlue": "#012940",
+  "darkBlue": "#011726",
+  "transparentBlue": "rgba(0, 67, 108, 0.9)",
+  "lightOrange": "#DE910B",
+  "white": "#FFFFF"
+}

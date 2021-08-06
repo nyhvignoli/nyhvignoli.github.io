@@ -1,7 +1,10 @@
 import styled from 'styled-components'
+import { theme } from '../../theme'
+
+const { colors } = theme
 
 export const StyledFooter = styled.footer`
-  background-color: #de910b;
+  background-color: ${colors.lightOrange};
 `
 
 export const ContactInfos = styled.div`
@@ -71,7 +74,7 @@ export const BackToTop = styled.img`
 `
 
 export const CopyRights = styled.div`
-  background-color: #012940;
+  background-color: ${colors.deepBlue};
   padding: 1rem 2rem;
 
   @media (max-width: 800px) {

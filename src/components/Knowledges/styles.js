@@ -1,4 +1,7 @@
 import styled from 'styled-components'
+import { theme } from '../../theme'
+
+const { colors } = theme
 
 export const Wrapper = styled.section`
   padding: 2rem;
@@ -6,7 +9,7 @@ export const Wrapper = styled.section`
   justify-content: center;
   align-items: center;
   display: flex;
-  background-color: #012940;
+  background-color: ${colors.deepBlue};
 
   @media (max-width: 800px) {
     padding: 1rem 2rem;

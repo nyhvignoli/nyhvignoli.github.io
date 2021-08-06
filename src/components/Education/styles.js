@@ -1,10 +1,13 @@
 import styled from 'styled-components'
+import { theme } from '../../theme'
+
+const { colors } = theme
 
 export const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #5b83a6;
+  background-color: ${colors.babyBlue};
   padding: 2rem 5rem;
 
   @media (max-width: 800px) {

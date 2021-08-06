@@ -1,11 +1,14 @@
 import styled from 'styled-components'
+import { theme } from '../../theme'
+
+const { colors } = theme
 
 export const StyledNav = styled.nav`
   position: sticky;
   top: 0;
   z-index: 1000;
   padding: 0.5rem 2rem;
-  background-color: rgba(0, 67, 108, 0.9);
+  background-color: ${colors.transparentBlue};
   box-shadow: 2px 4px 6px 2px rgba(0, 0, 0, 0.2);
   color: #fff;
   font-family: 'Roboto Condensed', sans-serif;
@@ -28,18 +31,26 @@ export const StyledList = styled.ul`
 export const ListItem = styled.li``
 
 export const Anchor = styled.a`
+  box-sizing: border-box;
   text-decoration: none;
   color: inherit;
   transform: scale(1);
   transition: all 0.2s ease-in-out 0.1s;
 
-  &:hover {
-    opacity: 0.8;
-    transform: scale(1.2);
-    transition: all 0.2s ease-in-out 0.1s;
+  &:active {
+    color: ${colors.lightOrange};
   }
 
-  &:active {
-    color: #f2b33e;
-  }
+  ${(props) =>
+    props.active
+      ? `
+    transform: scale(1.1);
+    transition: all 0.4s ease-in-out 0.1s;
+    border-bottom: 2px solid ${colors.lightOrange}`
+      : `&:hover {
+    opacity: 0.6;
+    transform: scale(1.1);
+    transition: all 0.4s ease-in-out 0.1s;
+    border-bottom: 2px solid ${colors.lightOrange}
+  }`}
 `
