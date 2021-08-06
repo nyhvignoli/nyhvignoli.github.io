@@ -4,11 +4,11 @@ import { Subtitle } from '../../global/styles'
 import Gallery from '../Gallery/Gallery'
 import ScreenShotsGallery from '../ScreenShotsGallery/ScreenShotsGallery'
 import { LanguageContext, Text } from '../../global/LanguagesContext'
-import { getProjects } from '../../data/projects/projects'
+import { DATA_TYPE, getData } from '../../data'
 
 const Projects = () => {
   const { dictionary } = useContext(LanguageContext)
-  const projects = getProjects(dictionary)
+  const projects = getData(dictionary, DATA_TYPE.projects)
 
   const [imageDetailsOpen, setImageDetailsOpen] = useState(false)
   const [selectedProject, setSelectedProject] = useState(0)

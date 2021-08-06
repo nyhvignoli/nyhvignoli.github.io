@@ -3,26 +3,11 @@ import EducationContent from './EducationContent/EducationContent'
 import { Wrapper, Content } from './styles'
 import { Subtitle } from '../../global/styles'
 import { LanguageContext, Text } from '../../global/LanguagesContext'
+import { DATA_TYPE, getData } from '../../data'
 
 const Education = () => {
   const { dictionary } = useContext(LanguageContext)
-
-  const courses = [
-    {
-      title: dictionary.webFullStackDevelopment,
-      institution: 'Labenu',
-      duration: '1000h',
-      period: '2020 - 2021',
-      description: dictionary.labenuBootcampDescription
-    },
-    {
-      title: dictionary.androidDevelopment,
-      institution: 'Udemy',
-      duration: '100h',
-      period: `2020 - ${dictionary.present}`,
-      description: dictionary.androidDevelopmentCourseDescription
-    }
-  ]
+  const courses = getData(dictionary, DATA_TYPE.courses)
 
   return (
     <Wrapper>
