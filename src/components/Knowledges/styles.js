@@ -10,6 +10,10 @@ export const Wrapper = styled.section`
 
   @media (max-width: 800px) {
     padding: 1rem 2rem;
+
+    h2 {
+      font-size: 2.5rem;
+    }
   }
 `
 
