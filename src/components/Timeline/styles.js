@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.section`
-  padding: 2rem;
+  padding: 2.5rem;
+  padding-bottom: 3rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -11,7 +12,8 @@ export const Wrapper = styled.section`
   z-index: -3000;
 
   @media (max-width: 800px) {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1.5rem;
+    padding-bottom: 2rem;
   }
 `
 
@@ -19,7 +21,7 @@ export const Content = styled.div`
   padding: 0;
   display: flex;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 1rem;
 
   @media (max-width: 1024px) {
     flex-direction: column;
