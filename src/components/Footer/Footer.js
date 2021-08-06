@@ -18,7 +18,7 @@ const Footer = () => {
         <p>
           E-mail: nyhv.contato@gmail.com
           <br />
-          {Text({ tid: 'phone' })}: (51) 99766-1364
+          {Text({ tid: 'phone' })}: +55 (51)99766-1364
         </p>
         <SocialMedia />
         <a href="#top">

@@ -57,6 +57,10 @@ export const Title = styled.h1`
   font-family: 'Roboto Condensed', sans-serif;
   margin: 0;
   font-size: 3rem;
+
+  @media (max-width: 800px) {
+    font-size: 2.5rem;
+  }
 `
 
 export const ButtonGroup = styled.div`

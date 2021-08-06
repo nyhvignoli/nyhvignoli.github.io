@@ -7,6 +7,7 @@ export const Wrapper = styled.div`
     display: flex;
     gap: 1rem;
     align-items: center;
+    margin-bottom: 2rem;
   }
 
   h1 {
@@ -18,15 +19,17 @@ export const Wrapper = styled.div`
     width: 30%;
   }
 
-  p {
+  li {
     opacity: 0.8;
+    font-size: 1.3rem;
+    padding: 0.5rem 0;
   }
 
   @media (max-width: 600px) {
     width: 100%;
 
     h1 {
-      font-size: 3rem;
+      font-size: 2.5rem;
     }
   }
 

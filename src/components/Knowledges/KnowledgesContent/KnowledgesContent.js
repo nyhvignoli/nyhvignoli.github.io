@@ -10,7 +10,7 @@ const KnowledgesContent = (props) => {
         <Title>{props.title}</Title>
       </div>
       {props.knowledges.map((item, index) => {
-        return <p key={index}>{item}</p>
+        return <li key={index}>{item}</li>
       })}
     </Wrapper>
   )
