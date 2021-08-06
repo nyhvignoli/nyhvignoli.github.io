@@ -2,41 +2,13 @@ import React, { useContext } from 'react'
 import { Subtitle } from '../../global/styles'
 import { Wrapper, Content, Arrow } from './styles'
 import TimelineContent from './TimelineContent/TimelineContent'
-import guitarIcon from '../../assets/guitar-128.png'
-import tattooIcon from '../../assets/tattoo-machine-128.png'
-import devIcon from '../../assets/notebook-128.png'
 import whiteArrow from '../../assets/white-arrow.png'
 import { LanguageContext, Text } from '../../global/LanguagesContext'
+import { DATA_TYPE, getData } from '../../data'
 
 const Timeline = () => {
   const { dictionary } = useContext(LanguageContext)
-
-  const music = {
-    title: dictionary.music,
-    icon: {
-      image: guitarIcon,
-      alt: 'Um ícone de violão branco'
-    },
-    description: dictionary.musicJourney
-  }
-
-  const tattoo = {
-    title: dictionary.tattoo,
-    icon: {
-      image: tattooIcon,
-      alt: 'Um ícone de uma máquina de tatuar branca'
-    },
-    description: dictionary.tattooJourney
-  }
-
-  const development = {
-    title: dictionary.programming,
-    icon: {
-      image: devIcon,
-      alt: 'Um ícone de um notebook branco'
-    },
-    description: dictionary.programmingJourney
-  }
+  const steps = getData(dictionary, DATA_TYPE.timelineSteps)
 
   return (
     <Wrapper>
@@ -48,11 +20,11 @@ const Timeline = () => {
         <Text tid="myJourney" />
       </Subtitle>
       <Content>
-        <TimelineContent step={music} />
+        <TimelineContent step={steps[0]} />
         <Arrow src={whiteArrow} />
-        <TimelineContent step={tattoo} />
+        <TimelineContent step={steps[1]} />
         <Arrow src={whiteArrow} />
-        <TimelineContent step={development} />
+        <TimelineContent step={steps[2]} />
       </Content>
     </Wrapper>
   )

@@ -1,43 +1,41 @@
-import musicatchersScreenshot from '../../assets/musicatchers.PNG'
-import musicatchers2 from '../../assets/musicatchers-2.PNG'
-import musicatchers3 from '../../assets/musicatchers-3.PNG'
-import musicatchers4 from '../../assets/musicatchers-4.PNG'
-import musicatchers5 from '../../assets/musicatchers-5.PNG'
-import labedditScreenshot from '../../assets/labeddit.PNG'
-import labeddit2 from '../../assets/labeddit-2.PNG'
-import labeddit3 from '../../assets/labeddit-3.PNG'
-import labeddit4 from '../../assets/labeddit-4.PNG'
-import astromatchScreenshot from '../../assets/astromatch.PNG'
-import astromatch2 from '../../assets/astromatch-2.PNG'
-import shoppingOmni1 from '../../assets/shopping-omni/shoppingomni-1.png'
-import shoppingOmni2 from '../../assets/shopping-omni/shoppingomni-2.png'
-import shoppingOmni3 from '../../assets/shopping-omni/shoppingomni-3.png'
-import backgroundImgBefore from '../../assets/mongo-db/background-img-before.png'
-import backgroundImgAfter from '../../assets/mongo-db/background-img-after.png'
-import cardGridBefore from '../../assets/mongo-db/card-grid-before.png'
-import cardGridSmallAfter from '../../assets/mongo-db/card-grid-small-after.png'
-import cardGridLargeAfter from '../../assets/mongo-db/card-grid-large-after.png'
-import detailsBefore from '../../assets/mongo-db/details-before.png'
-import detailsAfter from '../../assets/mongo-db/details-after.png'
-import lpNavBefore from '../../assets/mongo-db/lp-nav-before.png'
-import lpNavAfter from '../../assets/mongo-db/lp-nav-after.png'
-import segaBefore from '../../assets/mongo-db/sega-before.png'
-import segaAfter from '../../assets/mongo-db/sega-after.png'
-import segaBeforeMobile from '../../assets/mongo-db/sega-before-mobile.png'
-import segaAfterMobile from '../../assets/mongo-db/sega-after-mobile.png'
+import musicatchersScreenshot from '../assets/musicatchers.PNG'
+import musicatchers2 from '../assets/musicatchers-2.PNG'
+import musicatchers3 from '../assets/musicatchers-3.PNG'
+import musicatchers4 from '../assets/musicatchers-4.PNG'
+import musicatchers5 from '../assets/musicatchers-5.PNG'
+import labedditScreenshot from '../assets/labeddit.PNG'
+import labeddit2 from '../assets/labeddit-2.PNG'
+import labeddit3 from '../assets/labeddit-3.PNG'
+import labeddit4 from '../assets/labeddit-4.PNG'
+import astromatchScreenshot from '../assets/astromatch.PNG'
+import astromatch2 from '../assets/astromatch-2.PNG'
+import shoppingOmni1 from '../assets/shopping-omni/shoppingomni-1.png'
+import shoppingOmni2 from '../assets/shopping-omni/shoppingomni-2.png'
+import shoppingOmni3 from '../assets/shopping-omni/shoppingomni-3.png'
+import backgroundImgBefore from '../assets/mongo-db/background-img-before.png'
+import backgroundImgAfter from '../assets/mongo-db/background-img-after.png'
+import cardGridBefore from '../assets/mongo-db/card-grid-before.png'
+import cardGridSmallAfter from '../assets/mongo-db/card-grid-small-after.png'
+import cardGridLargeAfter from '../assets/mongo-db/card-grid-large-after.png'
+import detailsBefore from '../assets/mongo-db/details-before.png'
+import detailsAfter from '../assets/mongo-db/details-after.png'
+import lpNavBefore from '../assets/mongo-db/lp-nav-before.png'
+import lpNavAfter from '../assets/mongo-db/lp-nav-after.png'
+import segaBefore from '../assets/mongo-db/sega-before.png'
+import segaAfter from '../assets/mongo-db/sega-after.png'
+import segaBeforeMobile from '../assets/mongo-db/sega-before-mobile.png'
+import segaAfterMobile from '../assets/mongo-db/sega-after-mobile.png'
 
-export const getProjects = (dictionary) => {
-  const {
-    mongoDBDescription,
-    shoppingOmniDescription,
-    musicatchersDescription,
-    labedditDescription,
-    astromatchDescription,
-    labenuSystemDescription,
-    labookDescription,
-    images
-  } = dictionary
-
+export const getProjects = ({
+  mongoDBDescription,
+  shoppingOmniDescription,
+  musicatchersDescription,
+  labedditDescription,
+  astromatchDescription,
+  labenuSystemDescription,
+  labookDescription,
+  images
+}) => {
   const { mongoDB, shoppingOmni, musicatchers, labeddit, astromatch } = images
 
   const projects = [

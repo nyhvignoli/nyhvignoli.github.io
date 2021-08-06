@@ -10,22 +10,9 @@ import {
 } from '../../global/styles'
 import cvPdf from '../../assets/cv-aline-vignoli.pdf'
 import { LanguageContext, Text } from '../../global/LanguagesContext'
+import { stacks } from '../../data/stacks'
 
 const AboutMe = () => {
-  const stacks = [
-    'Javascript',
-    'Typescript',
-    'React',
-    'HTML5',
-    'CSS3',
-    'GIT',
-    'Node',
-    'Java',
-    'Android Studio',
-    'MySQL',
-    'Firebase'
-  ]
-
   const { dictionary } = useContext(LanguageContext)
   const phrases = (string) => string.split('\n')
 
