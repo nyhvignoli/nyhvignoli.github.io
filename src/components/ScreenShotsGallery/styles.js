@@ -1,8 +1,11 @@
 import styled from 'styled-components'
 import Paper from '@material-ui/core/Paper'
+import { theme } from '../../theme'
+
+const { colors } = theme
 
 export const Background = styled.div`
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: ${colors.modalTransparent};
   width: 100vw;
   height: 100vh;
   position: fixed;

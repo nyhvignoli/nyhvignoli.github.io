@@ -1,4 +1,7 @@
 import styled from 'styled-components'
+import { theme } from '../theme'
+
+const { colors } = theme
 
 export const Title = styled.h1`
   font-size: 4rem;
@@ -18,9 +21,6 @@ export const Subtitle = styled.h2`
   opacity: 0.8;
   font-family: 'Roboto Condensed', sans-serif;
   text-align: center;
-  /* font-family: 'Syne Mono', monospace; */
-  /* font-family: 'Ubuntu Condensed', sans-serif;  */
-  /* font-family: 'Pathway Gothic One', sans-serif; */
 `
 
 export const StackList = styled.ul`
@@ -34,7 +34,7 @@ export const StackList = styled.ul`
   ${(props) =>
     props.small &&
     `
-        gap: 0.5rem;
+      gap: 0.5rem;
     `}
 
   @media (max-width: 900px) {
@@ -71,10 +71,10 @@ export const Anchor = styled.a`
   ${(props) =>
     props.orange &&
     `
-        color: rgb(222, 145, 11);
+        color: ${colors.orange};
 
         &:hover {
-            opacity: 0.8;
+          opacity: 0.8;
         }
     `}
 
@@ -97,12 +97,14 @@ export const StyledButton = styled.button`
   min-width: 160px;
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 1rem;
-  background-color: ${(props) => (props.orange ? '#DE910B' : '#5b83a6')};
-  color: #fff;
+  background-color: ${(props) =>
+    props.orange ? colors.lightOrange : colors.babyBlue};
+  color: ${colors.white};
   transition: all 0.2s ease-in-out;
 
   &:focus {
-    background-color: ${(props) => (props.orange ? '#E05638' : '#011726')};
+    background-color: ${(props) =>
+      props.orange ? colors.deepOrange : colors.darkBlue};
   }
 
   &:hover {

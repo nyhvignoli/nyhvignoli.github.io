@@ -77,6 +77,10 @@ export const CopyRights = styled.div`
   background-color: ${colors.deepBlue};
   padding: 1rem 2rem;
 
+  p {
+    font-size: 1rem;
+  }
+
   @media (max-width: 800px) {
     padding: 0.5rem;
     text-align: center;

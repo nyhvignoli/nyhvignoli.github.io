@@ -6,5 +6,9 @@
   "darkBlue": "#011726",
   "transparentBlue": "rgba(0, 67, 108, 0.9)",
   "lightOrange": "#DE910B",
-  "white": "#FFFFF"
+  "orange": "rgb(222, 145, 11)",
+  "deepOrange": "#E05638",
+  "white": "#FFF",
+  "lightGrey": "#F2F2F2",
+  "modalTransparent": "rgba(0, 0, 0, 0.8)"
 }

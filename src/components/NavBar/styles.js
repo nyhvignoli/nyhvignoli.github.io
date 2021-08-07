@@ -10,7 +10,7 @@ export const StyledNav = styled.nav`
   padding: 0.5rem 2rem;
   background-color: ${colors.transparentBlue};
   box-shadow: 2px 4px 6px 2px rgba(0, 0, 0, 0.2);
-  color: #fff;
+  color: ${colors.white};
   font-family: 'Roboto Condensed', sans-serif;
   font-weight: bold;
 `

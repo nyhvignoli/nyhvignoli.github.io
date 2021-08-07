@@ -22,8 +22,8 @@ export const InfoSection = styled.div`
   padding: 2rem;
   width: 55%;
 
-  h2,
   p {
+    font-size: 1.4rem;
     opacity: 0.8;
   }
 
