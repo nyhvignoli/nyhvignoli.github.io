@@ -10,7 +10,7 @@ const Education = () => {
   const courses = getData(dictionary, DATA_TYPE.courses)
 
   return (
-    <Wrapper>
+    <Wrapper data-testid="education">
       <Subtitle data-aos="fade-zoom-in" data-aos-duration="1500">
         <Text tid="education" />
       </Subtitle>

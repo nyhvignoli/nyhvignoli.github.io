@@ -10,7 +10,7 @@ const Communities = () => {
   const communities = getData(dictionary, DATA_TYPE.communities)
 
   return (
-    <Wrapper>
+    <Wrapper data-testid="communities">
       <Subtitle
         data-aos="fade-zoom-in"
         data-aos-duration="1500"
