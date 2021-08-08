@@ -29,7 +29,7 @@ const MainScreen = () => {
   }, [])
 
   return (
-    <Wrapper id="top">
+    <Wrapper id="top" data-testid="main-screen-wrapper">
       <NavBar />
       <Content>
         <AboutMe />
