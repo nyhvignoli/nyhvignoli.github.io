@@ -10,10 +10,10 @@ import { Image } from '../Projects/ProjectsContent/styles'
 import { Wrapper, ImageWrapper, Header, Background } from './styles'
 import { IconButton } from '@material-ui/core'
 
-const ScreenShotsGallery = (props) => {
+const ScreenShotsGallery = ({ images, handleImageDetailsClose }) => {
   const theme = useTheme()
   const [activeStep, setActiveStep] = useState(0)
-  const maxSteps = props.images.length
+  const maxSteps = images.length
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1)
@@ -28,17 +28,17 @@ const ScreenShotsGallery = (props) => {
       <Wrapper>
         <Header square elevation={0}>
           <Typography variant="caption">
-            {props.images[activeStep].caption}
+            {images[activeStep].caption}
           </Typography>
-          <IconButton onClick={props.handleImageDetailsClose}>
+          <IconButton onClick={handleImageDetailsClose}>
             <Close />
           </IconButton>
         </Header>
         <ImageWrapper>
           <Image
             zoom
-            src={props.images[activeStep].src}
-            alt={props.images[activeStep].alt}
+            src={images[activeStep].src}
+            alt={images[activeStep].alt}
           />
         </ImageWrapper>
 

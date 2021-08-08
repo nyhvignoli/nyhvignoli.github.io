@@ -7,8 +7,8 @@ export const SocialMediaWrapper = styled.aside`
   align-items: center;
   justify-content: center;
 
-  ${(props) =>
-    props.vertical &&
+  ${({ vertical }) =>
+    vertical &&
     `
       flex-direction: column;
       position: absolute;

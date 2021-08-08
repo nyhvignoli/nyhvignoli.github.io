@@ -1,15 +1,13 @@
 import React, { useContext } from 'react'
-
 import { languageOptions } from '../../languages'
 import { LanguageContext } from '../../global/LanguagesContext'
-
 import { Select, Option } from './styles'
 
-export default function LanguageSelector() {
+const LanguageSelector = () => {
   const { userLanguage, userLanguageChange } = useContext(LanguageContext)
 
   // set selected language by calling context method
-  const handleLanguageChange = (e) => userLanguageChange(e.target.value)
+  const handleLanguageChange = (event) => userLanguageChange(event.target.value)
 
   return (
     <Select onChange={handleLanguageChange} value={userLanguage}>
@@ -21,3 +19,5 @@ export default function LanguageSelector() {
     </Select>
   )
 }
+
+export default LanguageSelector

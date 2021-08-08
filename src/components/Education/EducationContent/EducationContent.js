@@ -1,7 +1,13 @@
 import React from 'react'
 import { Wrapper, BaseContainer } from './styles'
 
-const EducationContent = (props) => {
+const EducationContent = ({
+  title,
+  institution,
+  period,
+  duration,
+  description
+}) => {
   return (
     <Wrapper
       data-aos="fade-right"
@@ -9,16 +15,16 @@ const EducationContent = (props) => {
       data-aos-easing="ease-in-sine"
     >
       <BaseContainer>
-        <h2>{props.title}</h2>
+        <h2>{title}</h2>
         <span>-</span>
-        <h2>{props.institution}</h2>
+        <h2>{institution}</h2>
       </BaseContainer>
       <BaseContainer>
-        <p>{props.period}</p>
+        <p>{period}</p>
         <span>|</span>
-        <p>{props.duration}</p>
+        <p>{duration}</p>
       </BaseContainer>
-      <p>{props.description}</p>
+      <p>{description}</p>
     </Wrapper>
   )
 }
