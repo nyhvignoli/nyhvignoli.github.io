@@ -1,10 +1,11 @@
 import styled from 'styled-components'
+import { theme } from '../../theme'
 
 export const Wrapper = styled.div`
-  background-color: rgba(0, 67, 108, 0.64);
+  background-color: ${theme.colors.blue};
 
   p {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
 `
 

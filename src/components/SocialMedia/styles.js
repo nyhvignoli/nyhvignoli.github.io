@@ -10,9 +10,9 @@ export const SocialMediaWrapper = styled.aside`
   ${(props) =>
     props.vertical &&
     `
-        flex-direction: column;
-        position: absolute;
-        right: 2rem;
-        top: 30%;
+      flex-direction: column;
+      position: absolute;
+      right: 2rem;
+      top: 30%;
     `}
 `
