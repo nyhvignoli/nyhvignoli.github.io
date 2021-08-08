@@ -41,8 +41,8 @@ export const Anchor = styled.a`
     color: ${colors.lightOrange};
   }
 
-  ${(props) =>
-    props.active
+  ${({ active }) =>
+    active
       ? `
     transform: scale(1.1);
     transition: all 0.4s ease-in-out 0.1s;

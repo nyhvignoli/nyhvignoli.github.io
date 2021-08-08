@@ -2,14 +2,14 @@ import React from 'react'
 import { Wrapper } from './styles'
 import { Subtitle } from '../../../global/styles'
 
-const CommunitiesContent = (props) => {
+const CommunitiesContent = ({ site, logo, name, description }) => {
   return (
     <Wrapper data-aos="zoom-in-up" data-aos-duration="500">
-      <a href={props.site} target="_blank" rel="noreferrer">
-        <img src={props.logo.image} alt={props.logo.alt} />
-        <Subtitle>{props.name}</Subtitle>
+      <a href={site} target="_blank" rel="noreferrer">
+        <img src={logo.image} alt={logo.alt} />
+        <Subtitle>{name}</Subtitle>
       </a>
-      <p>{props.description}</p>
+      <p>{description}</p>
     </Wrapper>
   )
 }

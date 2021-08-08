@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
-  width: ${(props) => (props.full ? '100%' : '40%')};
+  width: ${({ full }) => (full ? '100%' : '40%')};
 
   h2 {
     opacity: 10;

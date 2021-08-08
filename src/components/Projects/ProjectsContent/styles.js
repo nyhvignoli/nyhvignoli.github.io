@@ -26,11 +26,12 @@ export const Image = styled.img`
   transition: all 0.5s ease-in-out;
 
   &:hover {
-    ${(props) =>
-      !props.zoom &&
+    ${({ zoom }) =>
+      !zoom &&
       `
-            transform: scale(1.1);
-            cursor: pointer;`}
+        transform: scale(1.1);
+        cursor: pointer;
+      `}
   }
 `
 
@@ -40,11 +41,7 @@ export const Content = styled.div`
   flex-direction: column;
   justify-content: space-between;
 
-  ${(props) =>
-    props.fullWidth &&
-    `
-        width: 100%;
-    `}
+  ${({ fullWidth }) => fullWidth && `width: 100%;`}
 
   @media (max-width: 800px) {
     width: auto;

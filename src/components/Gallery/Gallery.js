@@ -6,9 +6,9 @@ import ProjectsContent from '../Projects/ProjectsContent/ProjectsContent'
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews)
 
-const Gallery = (props) => {
+const Gallery = ({ projects, imageDetailsOpen, handleImageDetailsOpen }) => {
   const [activeStep, setActiveStep] = React.useState(0)
-  const maxSteps = props.projects.length
+  const maxSteps = projects.length
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1)
@@ -31,7 +31,7 @@ const Gallery = (props) => {
   return (
     <Wrapper>
       <Button
-        imageDetailsOpen={props.imageDetailsOpen}
+        imageDetailsOpen={imageDetailsOpen}
         onClick={handleBack}
         disabled={activeStep === 0}
       >
@@ -51,7 +51,7 @@ const Gallery = (props) => {
         enableMouseEvents
         springConfig={springConfig}
       >
-        {props.projects.map((project, index) => (
+        {projects.map((project, index) => (
           <ProjectsContent
             key={index}
             index={index}
@@ -62,12 +62,12 @@ const Gallery = (props) => {
             githubLink={project.githubLink}
             url={project.url}
             tags={project.tags}
-            handleImageDetailsOpen={props.handleImageDetailsOpen}
+            handleImageDetailsOpen={handleImageDetailsOpen}
           />
         ))}
       </AutoPlaySwipeableViews>
       <Button
-        imageDetailsOpen={props.imageDetailsOpen}
+        imageDetailsOpen={imageDetailsOpen}
         onClick={handleNext}
         disabled={activeStep === maxSteps - 1}
       >

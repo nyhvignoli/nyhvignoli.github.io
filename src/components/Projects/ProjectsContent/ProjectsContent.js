@@ -16,22 +16,32 @@ import {
   Image
 } from './styles'
 
-const ProjectsContent = (props) => {
-  const fullStackButtonGroup = props.githubLink ? (
+const ProjectsContent = ({
+  githubLink,
+  url,
+  type,
+  images,
+  handleImageDetailsOpen,
+  index,
+  title,
+  description,
+  tags
+}) => {
+  const fullStackButtonGroup = githubLink ? (
     <ButtonGroup>
-      <Anchor href={props.githubLink.frontend} target="_blank" rel="noreferrer">
+      <Anchor href={githubLink.frontend} target="_blank" rel="noreferrer">
         <StyledButton>
           <Text tid="frontendOnGithub" />
         </StyledButton>
       </Anchor>
-      <Anchor href={props.githubLink.backend} target="_blank" rel="noreferrer">
+      <Anchor href={githubLink.backend} target="_blank" rel="noreferrer">
         <StyledButton>
           <Text tid="backendOnGithub" />
         </StyledButton>
       </Anchor>
     </ButtonGroup>
   ) : (
-    <Anchor href={props.url} target="_blank" rel="noreferrer">
+    <Anchor href={url} target="_blank" rel="noreferrer">
       <StyledButton>
         <Text tid="openWebsite" />
       </StyledButton>
@@ -40,12 +50,12 @@ const ProjectsContent = (props) => {
 
   const backendButtonGroup = (
     <ButtonGroup>
-      <Anchor href={props.githubLink} target="_blank" rel="noreferrer">
+      <Anchor href={githubLink} target="_blank" rel="noreferrer">
         <StyledButton>
           <Text tid="viewCodeOnGithub" />
         </StyledButton>
       </Anchor>
-      <Anchor href={props.url} target="_blank" rel="noreferrer">
+      <Anchor href={url} target="_blank" rel="noreferrer">
         <StyledButton>
           <Text tid="seeDocumentation" />
         </StyledButton>
@@ -55,14 +65,14 @@ const ProjectsContent = (props) => {
 
   const frontendButtonGroup = (
     <ButtonGroup>
-      {props.githubLink && (
-        <Anchor href={props.githubLink} target="_blank" rel="noreferrer">
+      {githubLink && (
+        <Anchor href={githubLink} target="_blank" rel="noreferrer">
           <StyledButton>
             <Text tid="viewCodeOnGithub" />
           </StyledButton>
         </Anchor>
       )}
-      <Anchor href={props.url} target="_blank" rel="noreferrer">
+      <Anchor href={url} target="_blank" rel="noreferrer">
         <StyledButton>
           <Text tid="openWebsite" />
         </StyledButton>
@@ -71,7 +81,7 @@ const ProjectsContent = (props) => {
   )
 
   const renderButtonGroup = () => {
-    switch (props.type) {
+    switch (type) {
       case 'Full Stack':
         return fullStackButtonGroup
       case 'Back-end':
@@ -85,23 +95,23 @@ const ProjectsContent = (props) => {
 
   return (
     <Wrapper>
-      {props.type !== 'Back-end' && (
+      {type !== 'Back-end' && (
         <ImageContainer>
           <Image
-            onClick={() => props.handleImageDetailsOpen(props.index)}
-            src={props.images[0].src}
-            alt={props.images[0].alt}
+            onClick={() => handleImageDetailsOpen(index)}
+            src={images[0].src}
+            alt={images[0].alt}
           />
         </ImageContainer>
       )}
-      <Content fullWidth={props.type === 'Back-end'}>
+      <Content fullWidth={type === 'Back-end'}>
         <TextWrapper>
-          <Title>{props.title}</Title>
-          <h2>{props.type}</h2>
-          <p>{props.description}</p>
+          <Title>{title}</Title>
+          <h2>{type}</h2>
+          <p>{description}</p>
         </TextWrapper>
         <StackList small>
-          {props.tags.map((tag, index) => {
+          {tags.map((tag, index) => {
             return (
               <ListItem small key={index}>
                 {tag}

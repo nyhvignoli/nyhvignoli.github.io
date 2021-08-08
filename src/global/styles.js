@@ -31,11 +31,7 @@ export const StackList = styled.ul`
   padding-inline-start: 0;
   gap: 1rem;
 
-  ${(props) =>
-    props.small &&
-    `
-      gap: 0.5rem;
-    `}
+  ${({ small }) => small && `gap: 0.5rem;`}
 
   @media (max-width: 900px) {
     gap: 0.5rem;
@@ -48,12 +44,12 @@ export const ListItem = styled.li`
   padding: 0.3rem 1rem;
   border-radius: 2rem;
 
-  ${(props) =>
-    props.small &&
+  ${({ small }) =>
+    small &&
     `
-        font-size: 1rem;
-        padding: 0.2rem 0.8rem ;
-        border: 1px solid rgba(0, 67, 108, 0.64);
+      font-size: 1rem;
+      padding: 0.2rem 0.8rem ;
+      border: 1px solid rgba(0, 67, 108, 0.64);
     `}
 
   @media (max-width: 800px) {
@@ -68,14 +64,14 @@ export const Anchor = styled.a`
   margin-top: 1rem;
   outline: none;
 
-  ${(props) =>
-    props.orange &&
+  ${({ orange }) =>
+    orange &&
     `
-        color: ${colors.orange};
+      color: ${colors.orange};
 
-        &:hover {
-          opacity: 0.8;
-        }
+      &:hover {
+        opacity: 0.8;
+      }
     `}
 
   @media (max-width: 400px) {
@@ -97,14 +93,14 @@ export const StyledButton = styled.button`
   min-width: 160px;
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 1rem;
-  background-color: ${(props) =>
-    props.orange ? colors.lightOrange : colors.babyBlue};
+  background-color: ${({ orange }) =>
+    orange ? colors.lightOrange : colors.babyBlue};
   color: ${colors.white};
   transition: all 0.2s ease-in-out;
 
   &:focus {
-    background-color: ${(props) =>
-      props.orange ? colors.deepOrange : colors.darkBlue};
+    background-color: ${({ orange }) =>
+      orange ? colors.deepOrange : colors.darkBlue};
   }
 
   &:hover {
