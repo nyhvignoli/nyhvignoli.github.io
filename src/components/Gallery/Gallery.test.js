@@ -12,9 +12,9 @@ describe('Gallery', () => {
       type: 'Full Stack',
       images: [
         {
-          src: 'src',
-          alt: 'alt',
-          caption: 'caption'
+          src: 'src-1',
+          alt: 'alt-1',
+          caption: 'caption-1'
         }
       ],
       description: 'foo',
@@ -30,9 +30,9 @@ describe('Gallery', () => {
       type: 'Front-end',
       images: [
         {
-          src: 'src',
-          alt: 'alt',
-          caption: 'caption'
+          src: 'src-2',
+          alt: 'alt-2',
+          caption: 'caption-2'
         }
       ],
       description: 'bar',
@@ -119,5 +119,21 @@ describe('Gallery', () => {
 
     expect(previousButton).toHaveProperty('disabled', true)
     expect(nextButton).toHaveProperty('disabled', false)
+  })
+
+  test('should call handleImageDetailsOpen function', () => {
+    const props = {
+      projects,
+      imageDetailsOpen: false,
+      handleImageDetailsOpen: jest.fn()
+    }
+
+    render(<Gallery {...props} />)
+    const selectedImage = screen.getByRole('img', { src: 'src-1' })
+
+    fireEvent.click(selectedImage)
+
+    expect(props.handleImageDetailsOpen).toHaveBeenCalled()
+    expect(props.handleImageDetailsOpen).toHaveBeenCalledWith(0)
   })
 })
