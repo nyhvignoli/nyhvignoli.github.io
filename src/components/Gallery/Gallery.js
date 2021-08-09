@@ -29,8 +29,9 @@ const Gallery = ({ projects, imageDetailsOpen, handleImageDetailsOpen }) => {
   }
 
   return (
-    <Wrapper>
+    <Wrapper data-testid="gallery-wrapper">
       <Button
+        data-testid="previous-button"
         imageDetailsOpen={imageDetailsOpen}
         onClick={handleBack}
         disabled={activeStep === 0}
@@ -45,6 +46,7 @@ const Gallery = ({ projects, imageDetailsOpen, handleImageDetailsOpen }) => {
         </svg>
       </Button>
       <AutoPlaySwipeableViews
+        data-testid="auto-play-swipeable-views"
         interval={7000}
         index={activeStep}
         onChangeIndex={handleStepChange}
@@ -67,6 +69,7 @@ const Gallery = ({ projects, imageDetailsOpen, handleImageDetailsOpen }) => {
         ))}
       </AutoPlaySwipeableViews>
       <Button
+        data-testid="next-button"
         imageDetailsOpen={imageDetailsOpen}
         onClick={handleNext}
         disabled={activeStep === maxSteps - 1}
