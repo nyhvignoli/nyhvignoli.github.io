@@ -3,15 +3,20 @@ import labenuLogo from '../assets/labenu.png'
 import codivasLogo from '../assets/codivas.jpg'
 import gufersLogo from '../assets/gufers.jpg'
 import compiladorasLogo from '../assets/compiladoras.jpg'
+import { getCommunities } from './communities'
 
-export const getCommunities = ({
-  vizirDescription,
-  labenuCommunityDescription,
-  codivasDescription,
-  compiladorasDescription,
-  gufersDescription
-}) => {
-  const communities = [
+test('getCommunities function', () => {
+  const dictionaryMock = {
+    vizirDescription: 'foo',
+    labenuCommunityDescription: 'bar',
+    codivasDescription: 'foo bar',
+    compiladorasDescription: 'bar foo',
+    gufersDescription: 'foo bar foo'
+  }
+
+  const communities = getCommunities(dictionaryMock)
+
+  const expectedResult = [
     {
       name: 'Vizir Software Studio',
       logo: {
@@ -19,7 +24,7 @@ export const getCommunities = ({
         alt: 'Logo da Vizir, um quadrado vermelho rotacionado com a letra Z em branco no centro'
       },
       site: 'https://vizir.com.br/',
-      description: vizirDescription
+      description: dictionaryMock.vizirDescription
     },
     {
       name: 'Labenu Comunidade',
@@ -28,7 +33,7 @@ export const getCommunities = ({
         alt: 'Logo da Labenu, uma chame minimalista e poligonal nas cores laranja, amarelo a azul acinzentado'
       },
       site: 'https://www.labenu.com.br/',
-      description: labenuCommunityDescription
+      description: dictionaryMock.labenuCommunityDescription
     },
     {
       name: 'Codivas',
@@ -37,7 +42,7 @@ export const getCommunities = ({
         alt: 'Logo da Codivas, escrito codivas em preto e roxo'
       },
       site: 'https://www.codivas.com.br/',
-      description: codivasDescription
+      description: dictionaryMock.codivasDescription
     },
     {
       name: 'Compiladoras de Cafeína',
@@ -46,7 +51,7 @@ export const getCommunities = ({
         alt: 'Logo das Compiladoras, com fundo preto e um xícara de café com um coração vermelho dentro'
       },
       site: 'https://www.instagram.com/compiladoras/',
-      description: compiladorasDescription
+      description: dictionaryMock.compiladorasDescription
     },
     {
       name: 'Gufers',
@@ -55,9 +60,10 @@ export const getCommunities = ({
         alt: 'Logo dos Gufers, quadrado preto escrito Gufers em branco'
       },
       site: 'https://osgufers.github.io/',
-      description: gufersDescription
+      description: dictionaryMock.gufersDescription
     }
   ]
 
-  return communities
-}
+  expect(communities.length).toEqual(5)
+  expect(communities).toEqual(expectedResult)
+})
