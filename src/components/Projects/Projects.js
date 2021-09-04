@@ -23,7 +23,7 @@ const Projects = () => {
   }
 
   return (
-    <Wrapper imageDetailsOpen id="projects">
+    <Wrapper imageDetailsOpen id="projects" data-testid="projects">
       <Subtitle data-aos="fade-zoom-in" data-aos-duration="1500">
         <Text tid="projects" />
       </Subtitle>

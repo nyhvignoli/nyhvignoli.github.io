@@ -17,7 +17,7 @@ const AboutMe = () => {
   const phrases = (string) => string.split('\n')
 
   return (
-    <Wrapper id="about-me">
+    <Wrapper id="about-me" data-testid="about-me">
       <InfoSection>
         <Title
           data-aos="fade-right"

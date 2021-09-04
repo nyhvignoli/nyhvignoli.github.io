@@ -17,6 +17,7 @@ const NavBar = () => {
         <LanguageSelector />
         <StyledList>
           <Anchor
+            data-testid="about-me-item"
             onClick={() => handleActive('about-me')}
             active={active === 'about-me'}
             href="#top"
@@ -26,6 +27,7 @@ const NavBar = () => {
             </ListItem>
           </Anchor>
           <Anchor
+            data-testid="projects-item"
             onClick={() => handleActive('projects')}
             active={active === 'projects'}
             href="#projects"
@@ -35,6 +37,7 @@ const NavBar = () => {
             </ListItem>
           </Anchor>
           <Anchor
+            data-testid="contact-me-item"
             onClick={() => handleActive('contact-me')}
             active={active === 'contact-me'}
             href="#contact"

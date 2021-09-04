@@ -10,7 +10,11 @@ const LanguageSelector = () => {
   const handleLanguageChange = (event) => userLanguageChange(event.target.value)
 
   return (
-    <Select onChange={handleLanguageChange} value={userLanguage}>
+    <Select
+      aria-label="language-selector"
+      onChange={handleLanguageChange}
+      value={userLanguage}
+    >
       {Object.entries(languageOptions).map(([id, name]) => (
         <Option key={id} value={id}>
           {name}

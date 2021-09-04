@@ -1,0 +1,106 @@
+import { fireEvent, render, screen } from '@testing-library/react'
+import { theme } from '../../theme'
+import NavBar from './NavBar'
+
+describe('NavBar', () => {
+  test('renders a nav tag', () => {
+    render(<NavBar />)
+    const navElement = screen.getByRole('navigation')
+    expect(navElement).toBeInTheDocument()
+    expect(navElement.nodeName.toLowerCase()).toEqual('nav')
+  })
+
+  test('renders LanguageSelector component', () => {
+    render(<NavBar />)
+    const selectElement = screen.getByLabelText('language-selector')
+    expect(selectElement).toBeInTheDocument()
+    expect(selectElement.nodeName.toLowerCase()).toEqual('select')
+  })
+
+  test('renders an Unordered List', () => {
+    render(<NavBar />)
+    const listElement = screen.getByRole('list')
+    expect(listElement).toBeInTheDocument()
+    expect(listElement.nodeName.toLowerCase()).toEqual('ul')
+  })
+
+  describe('renders menu items with appropriate texts', () => {
+    test('# About Me item', () => {
+      render(<NavBar />)
+      const item = screen.getByText('Sobre mim')
+      expect(item).toBeInTheDocument()
+      expect(item.nodeName.toLowerCase()).toEqual('li')
+    })
+
+    test('# Projects item', () => {
+      render(<NavBar />)
+      const item = screen.getByText('Projetos')
+      expect(item).toBeInTheDocument()
+      expect(item.nodeName.toLowerCase()).toEqual('li')
+    })
+
+    test('# Contact item', () => {
+      render(<NavBar />)
+      const item = screen.getByText('Contato')
+      expect(item).toBeInTheDocument()
+      expect(item.nodeName.toLowerCase()).toEqual('li')
+    })
+  })
+
+  describe('should have the correct references', () => {
+    test('"About Me" menu item should reference to #top', () => {
+      render(<NavBar />)
+      const aboutMeMenuItem = screen.getByTestId('about-me-item')
+      expect(aboutMeMenuItem).toHaveAttribute('href', '#top')
+    })
+
+    test('"Projects" menu item should reference to #projects', () => {
+      render(<NavBar />)
+      const projectsMenuItem = screen.getByTestId('projects-item')
+      expect(projectsMenuItem).toHaveAttribute('href', '#projects')
+    })
+
+    test('"Contact" menu item should reference to #contact', () => {
+      render(<NavBar />)
+      const contactMeMenuItem = screen.getByTestId('contact-me-item')
+      expect(contactMeMenuItem).toHaveAttribute('href', '#contact')
+    })
+  })
+
+  describe('should change item style if is active', () => {
+    const beforeStyle = { 'border-bottom': 'none' }
+    const afterStyle = {
+      'border-bottom': `2px solid ${theme.colors.lightOrange}`
+    }
+
+    test('# About Me item', () => {
+      render(<NavBar />)
+      const item = screen.getByTestId('about-me-item')
+      expect(item).toHaveStyle(beforeStyle)
+
+      fireEvent.click(item)
+
+      expect(item).toHaveStyle(afterStyle)
+    })
+
+    test('# Projects item', () => {
+      render(<NavBar />)
+      const item = screen.getByTestId('projects-item')
+      expect(item).toHaveStyle(beforeStyle)
+
+      fireEvent.click(item)
+
+      expect(item).toHaveStyle(afterStyle)
+    })
+
+    test('# Contact item', () => {
+      render(<NavBar />)
+      const item = screen.getByTestId('contact-me-item')
+      expect(item).toHaveStyle(beforeStyle)
+
+      fireEvent.click(item)
+
+      expect(item).toHaveStyle(afterStyle)
+    })
+  })
+})

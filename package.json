@@ -21,8 +21,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:coverage": "npm test -- --coverage --watchAll",
     "eject": "react-scripts eject",
-    "check": "npx prettier --c .",
+    "lint": "npx prettier --c .",
     "fix": "npx prettier --write ."
   },
   "eslintConfig": {
@@ -44,6 +45,8 @@
     ]
   },
   "devDependencies": {
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
     "prettier": "2.3.2"
   }
 }

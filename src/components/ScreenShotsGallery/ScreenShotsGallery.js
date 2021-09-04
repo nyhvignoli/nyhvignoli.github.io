@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { useTheme } from '@material-ui/core/styles'
 import MobileStepper from '@material-ui/core/MobileStepper'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
@@ -11,7 +10,6 @@ import { Wrapper, ImageWrapper, Header, Background } from './styles'
 import { IconButton } from '@material-ui/core'
 
 const ScreenShotsGallery = ({ images, handleImageDetailsClose }) => {
-  const theme = useTheme()
   const [activeStep, setActiveStep] = useState(0)
   const maxSteps = images.length
 
@@ -24,13 +22,16 @@ const ScreenShotsGallery = ({ images, handleImageDetailsClose }) => {
   }
 
   return (
-    <Background>
+    <Background data-testid="screenshot-gallery-bg">
       <Wrapper>
         <Header square elevation={0}>
           <Typography variant="caption">
             {images[activeStep].caption}
           </Typography>
-          <IconButton onClick={handleImageDetailsClose}>
+          <IconButton
+            data-testid="sg-close-button"
+            onClick={handleImageDetailsClose}
+          >
             <Close />
           </IconButton>
         </Header>
@@ -48,21 +49,21 @@ const ScreenShotsGallery = ({ images, handleImageDetailsClose }) => {
           variant="text"
           activeStep={activeStep}
           nextButton={
-            <Button onClick={handleNext} disabled={activeStep === maxSteps - 1}>
-              {theme.direction === 'rtl' ? (
-                <KeyboardArrowLeft />
-              ) : (
-                <KeyboardArrowRight />
-              )}
+            <Button
+              data-testid="sg-next-button"
+              onClick={handleNext}
+              disabled={activeStep === maxSteps - 1}
+            >
+              <KeyboardArrowRight />
             </Button>
           }
           backButton={
-            <Button onClick={handleBack} disabled={activeStep === 0}>
-              {theme.direction === 'rtl' ? (
-                <KeyboardArrowRight />
-              ) : (
-                <KeyboardArrowLeft />
-              )}
+            <Button
+              data-testid="sg-back-button"
+              onClick={handleBack}
+              disabled={activeStep === 0}
+            >
+              <KeyboardArrowLeft />
             </Button>
           }
         />

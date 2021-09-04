@@ -7,7 +7,7 @@ import { Text } from '../../global/LanguagesContext'
 
 const Footer = () => {
   return (
-    <StyledFooter id="contact">
+    <StyledFooter id="contact" data-testid="footer">
       <ContactInfos>
         <Subtitle>
           <Text tid="contactMe" />

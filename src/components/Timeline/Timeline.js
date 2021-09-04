@@ -11,7 +11,7 @@ const Timeline = () => {
   const steps = getData(dictionary, DATA_TYPE.timelineSteps)
 
   return (
-    <Wrapper>
+    <Wrapper data-testid="timeline">
       <Subtitle
         data-aos="fade-zoom-in"
         data-aos-duration="1500"

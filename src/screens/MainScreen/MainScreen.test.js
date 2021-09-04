@@ -1,0 +1,60 @@
+import { render, screen } from '@testing-library/react'
+import MainScreen from './MainScreen'
+
+describe('MainScreen', () => {
+  test('renders a NavBar', () => {
+    render(<MainScreen />)
+    const navbarComponent = screen.getByRole('navigation')
+    expect(navbarComponent).toBeInTheDocument()
+  })
+
+  test('renders a Footer', () => {
+    render(<MainScreen />)
+    const footer = screen.getByTestId('footer')
+    expect(footer).toBeInTheDocument()
+  })
+
+  describe('Content', () => {
+    test('renders Main section', () => {
+      render(<MainScreen />)
+      const content = screen.getByRole('main')
+      expect(content).toBeInTheDocument()
+    })
+
+    test('renders AboutMe section', () => {
+      render(<MainScreen />)
+      const aboutMeSection = screen.getByTestId('about-me')
+      expect(aboutMeSection).toBeInTheDocument()
+    })
+
+    test('renders Knowledges section', () => {
+      render(<MainScreen />)
+      const knowledgesSection = screen.getByTestId('knowledges')
+      expect(knowledgesSection).toBeInTheDocument()
+    })
+
+    test('renders Education section', () => {
+      render(<MainScreen />)
+      const educationSection = screen.getByTestId('education')
+      expect(educationSection).toBeInTheDocument()
+    })
+
+    test('renders Projects section', () => {
+      render(<MainScreen />)
+      const projectsSection = screen.getByTestId('projects')
+      expect(projectsSection).toBeInTheDocument()
+    })
+
+    test('renders Timeline section', () => {
+      render(<MainScreen />)
+      const timelineSection = screen.getByTestId('timeline')
+      expect(timelineSection).toBeInTheDocument()
+    })
+
+    test('renders Communities section', () => {
+      render(<MainScreen />)
+      const communitiesSection = screen.getByTestId('communities')
+      expect(communitiesSection).toBeInTheDocument()
+    })
+  })
+})
