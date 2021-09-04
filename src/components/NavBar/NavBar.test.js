@@ -12,7 +12,7 @@ describe('NavBar', () => {
 
   test('renders LanguageSelector component', () => {
     render(<NavBar />)
-    const selectElement = screen.getByTestId('language-selector')
+    const selectElement = screen.getByLabelText('language-selector')
     expect(selectElement).toBeInTheDocument()
     expect(selectElement.nodeName.toLowerCase()).toEqual('select')
   })

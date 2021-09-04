@@ -11,7 +11,7 @@ const LanguageSelector = () => {
 
   return (
     <Select
-      data-testid="language-selector"
+      aria-label="language-selector"
       onChange={handleLanguageChange}
       value={userLanguage}
     >
