@@ -2,19 +2,32 @@ import React, { useState } from 'react'
 import { Text } from '../../global/LanguagesContext'
 import { BaseFlex } from '../../global/styles'
 import LanguageSelector from '../LanguageSelector/LanguageSelector'
-import { StyledNav, StyledList, ListItem, Anchor } from './styles'
+import { StyledNav, LanguageMenu, StyledList, ListItem, Anchor } from './styles'
+import languagesIcon from '../../assets/languages.png'
 
 const NavBar = () => {
   const [active, setActive] = useState(undefined)
+  const [open, setOpen] = useState(false)
 
   const handleActive = (menuItem) => {
     setActive(menuItem)
   }
 
+  const showSelect = () => {
+    setOpen(true)
+  }
+
+  const hideSelect = () => {
+    setOpen(false)
+  }
+
   return (
     <StyledNav>
       <BaseFlex>
-        <LanguageSelector />
+        <LanguageMenu onMouseOver={showSelect} onMouseLeave={hideSelect}>
+          <img src={languagesIcon} alt="World map icon" />
+          <LanguageSelector show={open} hideSelect={hideSelect} />
+        </LanguageMenu>
         <StyledList>
           <Anchor
             data-testid="about-me-item"

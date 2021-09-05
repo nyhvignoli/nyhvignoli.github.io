@@ -15,6 +15,13 @@ export const StyledNav = styled.nav`
   font-weight: bold;
 `
 
+export const LanguageMenu = styled.div`
+  position: relative;
+  img {
+    width: 38px;
+  }
+`
+
 export const StyledList = styled.ul`
   display: flex;
   list-style-type: none;

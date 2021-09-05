@@ -12,9 +12,9 @@ describe('NavBar', () => {
 
   test('renders LanguageSelector component', () => {
     render(<NavBar />)
-    const selectElement = screen.getByLabelText('language-selector')
-    expect(selectElement).toBeInTheDocument()
-    expect(selectElement.nodeName.toLowerCase()).toEqual('select')
+    const menuElement = screen.getByLabelText('language-menu')
+    expect(menuElement).toBeInTheDocument()
+    expect(menuElement.nodeName.toLowerCase()).toEqual('div')
   })
 
   test('renders an Unordered List', () => {

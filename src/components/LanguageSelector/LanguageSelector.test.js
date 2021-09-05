@@ -1,59 +1,63 @@
 import { fireEvent, render, screen } from '@testing-library/react'
 import LanguageSelector from './LanguageSelector'
 import { LanguageProvider } from '../../global/LanguagesContext'
+import { theme } from '../../theme'
+
+const { colors } = theme
 
 describe('LanguageSelector', () => {
-  test('renders a Select element', () => {
+  test('renders a LanguageSelector menu', () => {
     render(<LanguageSelector />)
-    const selectElement = screen.getByLabelText('language-selector')
-    expect(selectElement).toBeInTheDocument()
-    expect(selectElement.nodeName.toLowerCase()).toEqual('select')
+    const menuElement = screen.getByLabelText('language-menu')
+    expect(menuElement).toBeInTheDocument()
+    expect(menuElement.nodeName.toLowerCase()).toEqual('div')
   })
 
   test('renders a PT language as default value', () => {
     render(<LanguageSelector />)
-    const selectElement = screen.getByLabelText('language-selector')
-    expect(selectElement).toBeInTheDocument()
-    expect(selectElement).toHaveProperty('value', 'pt')
-  })
+    const menuElement = screen.getByLabelText('language-menu')
+    const ptMenuItem = screen.getByText('Português')
 
-  test('Português option should have "pt" as value', () => {
-    render(<LanguageSelector />)
-    const option = screen.getByText('Português')
-    expect(option).toBeInTheDocument()
-    expect(option).toHaveProperty('value', 'pt')
-  })
-
-  test('English option should have "en" as value', () => {
-    render(<LanguageSelector />)
-    const option = screen.getByText('English')
-    expect(option).toBeInTheDocument()
-    expect(option).toHaveProperty('value', 'en')
+    expect(menuElement).toBeInTheDocument()
+    expect(ptMenuItem).toBeInTheDocument()
+    expect(ptMenuItem).toHaveStyle({
+      color: colors.babyBlue
+    })
   })
 
   test('should change the language to "English" when click on English option', () => {
+    const hideSelect = jest.fn()
     render(
       <LanguageProvider>
-        <LanguageSelector />
+        <LanguageSelector hideSelect={hideSelect} />
       </LanguageProvider>
     )
 
-    const selectElement = screen.getByLabelText('language-selector')
-    fireEvent.change(selectElement, { target: { value: 'en' } })
+    const enMenuItem = screen.getByText('English')
 
-    expect(selectElement).toHaveProperty('value', 'en')
+    fireEvent.click(enMenuItem)
+
+    expect(hideSelect).toHaveBeenCalled()
+    expect(enMenuItem).toHaveStyle({
+      color: colors.babyBlue
+    })
   })
 
   test('should change the language to "Português" when click on Português option', () => {
+    const hideSelect = jest.fn()
     render(
       <LanguageProvider>
-        <LanguageSelector />
+        <LanguageSelector hideSelect={hideSelect} />
       </LanguageProvider>
     )
 
-    const selectElement = screen.getByLabelText('language-selector')
-    fireEvent.change(selectElement, { target: { value: 'pt' } })
+    const ptMenuItem = screen.getByText('Português')
 
-    expect(selectElement).toHaveProperty('value', 'pt')
+    fireEvent.click(ptMenuItem)
+
+    expect(hideSelect).toHaveBeenCalled()
+    expect(ptMenuItem).toHaveStyle({
+      color: colors.babyBlue
+    })
   })
 })
