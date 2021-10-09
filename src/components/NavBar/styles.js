@@ -11,6 +11,7 @@ export const StyledNav = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 2rem;
+  max-height: 56px;
   background-color: ${colors.transparentBlue};
   box-shadow: 2px 4px 6px 2px rgba(0, 0, 0, 0.2);
   color: ${colors.white};
