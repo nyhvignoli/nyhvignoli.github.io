@@ -1,10 +1,49 @@
 import styled from 'styled-components'
+import { theme } from '../../theme'
 
-export const Select = styled.select`
+const { colors } = theme
+
+export const LanguageMenu = styled.div`
   padding: 0.5%;
-  alig-self: center;
+  left: 18px;
+  border-radius: 5px;
+  position: absolute;
+  background-color: #f1f1f1;
+  width: 150px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  color: ${colors.darkBlue};
+
+  ${({ show }) =>
+    show
+      ? `
+      display: block;
+      visibility: visible;
+      opacity: 1;
+      transition: visibility 0s linear 0s, opacity 300ms;
+      `
+      : `
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s linear 300ms, opacity 300ms;
+      `}
 `
 
-export const Option = styled.option`
-  font-size: 1rem;
+export const MenuItem = styled.li`
+  list-style-type: none;
+  padding: 10px;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out 0.1s;
+
+  &:hover {
+    background-color: #cdcdcd;
+    cursor: default;
+  }
+
+  ${({ selected }) =>
+    selected &&
+    `
+  color:${colors.babyBlue};
+  transition: all 0.2s ease-in-out 0.1s;
+`}
 `

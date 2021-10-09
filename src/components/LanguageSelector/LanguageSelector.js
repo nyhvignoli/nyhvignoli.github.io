@@ -1,26 +1,30 @@
 import React, { useContext } from 'react'
-import { languageOptions } from '../../languages'
 import { LanguageContext } from '../../global/LanguagesContext'
-import { Select, Option } from './styles'
+import { LanguageMenu, MenuItem } from './styles'
 
-const LanguageSelector = () => {
+const LanguageSelector = ({ show, hideSelect }) => {
   const { userLanguage, userLanguageChange } = useContext(LanguageContext)
 
-  // set selected language by calling context method
-  const handleLanguageChange = (event) => userLanguageChange(event.target.value)
+  const handleItemClick = (selectedLanguage) => {
+    userLanguageChange(selectedLanguage)
+    hideSelect()
+  }
 
   return (
-    <Select
-      aria-label="language-selector"
-      onChange={handleLanguageChange}
-      value={userLanguage}
-    >
-      {Object.entries(languageOptions).map(([id, name]) => (
-        <Option key={id} value={id}>
-          {name}
-        </Option>
-      ))}
-    </Select>
+    <LanguageMenu aria-label="language-menu" show={show}>
+      <MenuItem
+        selected={userLanguage === 'en'}
+        onClick={() => handleItemClick('en')}
+      >
+        English
+      </MenuItem>
+      <MenuItem
+        selected={userLanguage === 'pt'}
+        onClick={() => handleItemClick('pt')}
+      >
+        Português
+      </MenuItem>
+    </LanguageMenu>
   )
 }
 
