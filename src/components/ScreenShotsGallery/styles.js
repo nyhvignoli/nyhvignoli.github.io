@@ -12,7 +12,7 @@ export const Background = styled.div`
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  z-index: 1000;
+  z-index: 2000;
 `
 
 export const Wrapper = styled.div`
