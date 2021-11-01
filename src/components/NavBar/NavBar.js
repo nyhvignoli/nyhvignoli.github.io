@@ -53,6 +53,16 @@ const NavBar = () => {
           </ListItem>
         </Anchor>
         <Anchor
+          data-testid="knowledges"
+          onClick={() => handleActive('knowledges')}
+          active={active === 'knowledges'}
+          href="#knowledges"
+        >
+          <ListItem>
+            <Text tid="knowledges" />
+          </ListItem>
+        </Anchor>
+        <Anchor
           data-testid="projects-item"
           onClick={() => handleActive('projects')}
           active={active === 'projects'}

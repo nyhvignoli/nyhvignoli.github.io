@@ -11,7 +11,7 @@ const Knowledges = () => {
   const { dictionary } = useContext(LanguageContext)
 
   return (
-    <Wrapper data-testid="knowledges">
+    <Wrapper id="knowledges" data-testid="knowledges-wrapper">
       <Subtitle
         data-aos="fade-zoom-in"
         data-aos-duration="1500"

@@ -29,7 +29,7 @@ describe('MainScreen', () => {
 
     test('renders Knowledges section', () => {
       render(<MainScreen />)
-      const knowledgesSection = screen.getByTestId('knowledges')
+      const knowledgesSection = screen.getByTestId('knowledges-wrapper')
       expect(knowledgesSection).toBeInTheDocument()
     })
 

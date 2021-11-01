@@ -22,7 +22,7 @@ export const StyledNav = styled.nav`
     width: 38px;
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 580px) {
     padding: 0.5rem;
   }
 `
@@ -35,7 +35,7 @@ export const LanguageMenu = styled.div`
 export const MenuIcon = styled.img`
   transition: all 0.4s ease-in-out 0.1s;
 
-  @media (min-width: 480px) {
+  @media (min-width: 580px) {
     display: none;
   }
 `
@@ -47,7 +47,7 @@ export const StyledList = styled.ul`
   padding-inline-start: 0;
   gap: 3rem;
 
-  @media (max-width: 480px) {
+  @media (max-width: 580px) {
     font-size: 2rem;
     justify-content: center;
     align-items: center;
