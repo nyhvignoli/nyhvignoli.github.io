@@ -60,7 +60,6 @@ export const ListItem = styled.li`
 
 export const Anchor = styled.a`
   text-decoration: none;
-  width: 160px;
   margin-top: 1rem;
   outline: none;
 
@@ -85,7 +84,8 @@ export const Anchor = styled.a`
 `
 
 export const StyledButton = styled.button`
-  padding: 0.5rem;
+  width: fit-content;
+  padding: 0.5rem 1rem;
   border: none;
   outline: none;
   box-shadow: 0px 1px 5px 1px #012940;

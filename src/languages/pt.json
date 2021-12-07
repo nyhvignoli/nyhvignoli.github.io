@@ -4,7 +4,8 @@
   "contactMe": "Contato",
   "professionTitle": "Desenvolvedora Full Stack",
   "aboutMeDescription": "Oi tudo bem? Eu sou Aline mas pode me chamar de Nyh!\n Descobri minha paixão por programação há pouco mais de 1 ano e hoje sou Desenvolvedora Web Full Stack.\n Tenho um background artístico como musicista e tatuadora (profissão que excerci por 12 anos), e atualmente trabalho como Analista Programadora na \n Enquanto mulher e lésbica, busco somar na inclusão e diversidade na tecnologia!",
-  "seeResume": "Visualizar currículo",
+  "viewResume": "Visualizar currículo",
+  "viewSkillsClockwork": "Ver tempo de experiência por habilidade",
 
   "knowledges": "Conhecimentos",
   "frontendKnowledges": [
@@ -40,7 +41,7 @@
   "frontendOnGithub": "Front-end no Github",
   "backendOnGithub": "Back-end no Github",
   "viewCodeOnGithub": "Ver no Github",
-  "seeDocumentation": "Ver documentação",
+  "viewDocumentation": "Ver documentação",
   "openWebsite": "Abrir site",
 
   "communities": "Comunidades",
