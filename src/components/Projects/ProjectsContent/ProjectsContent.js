@@ -57,7 +57,7 @@ const ProjectsContent = ({
       </Anchor>
       <Anchor href={url} target="_blank" rel="noreferrer">
         <StyledButton>
-          <Text tid="seeDocumentation" />
+          <Text tid="viewDocumentation" />
         </StyledButton>
       </Anchor>
     </ButtonGroup>

@@ -1,6 +1,12 @@
 import React, { useContext } from 'react'
 import SocialMedia from '../SocialMedia/SocialMedia'
-import { Wrapper, InfoSection, ImageSection, Filter } from './styles'
+import {
+  Wrapper,
+  InfoSection,
+  ImageSection,
+  Filter,
+  ButtonsLockup
+} from './styles'
 import {
   Title,
   StackList,
@@ -67,19 +73,34 @@ const AboutMe = () => {
             )
           })}
         </StackList>
-        <Anchor
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-easing="ease-in-sine"
-          data-aos-delay="500"
-          href={cvPdf}
-          target="_blank"
-          rel="noreferrer"
-        >
-          <StyledButton orange>
-            <Text tid="seeResume" />
-          </StyledButton>
-        </Anchor>
+        <ButtonsLockup>
+          <Anchor
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-sine"
+            data-aos-delay="500"
+            href={cvPdf}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <StyledButton orange>
+              <Text tid="viewResume" />
+            </StyledButton>
+          </Anchor>
+          <Anchor
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-sine"
+            data-aos-delay="500"
+            href="https://nyhdevignoli-hsc.surge.sh/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <StyledButton>
+              <Text tid="viewSkillsClockwork" />
+            </StyledButton>
+          </Anchor>
+        </ButtonsLockup>
       </InfoSection>
       <Filter>
         <ImageSection />

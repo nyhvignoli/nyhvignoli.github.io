@@ -60,3 +60,11 @@ export const Filter = styled.div`
     margin: auto;
   }
 `
+
+export const ButtonsLockup = styled.div`
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+`
