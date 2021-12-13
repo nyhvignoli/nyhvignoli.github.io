@@ -14,12 +14,12 @@ import {
   Anchor,
   StyledButton
 } from '../../global/styles'
-import cvPdf from '../../assets/cv-aline-vignoli.pdf'
+import { resumePT, resumeEN } from '../../assets/resume'
 import { LanguageContext, Text } from '../../global/LanguagesContext'
 import { stacks } from '../../data/stacks'
 
 const AboutMe = () => {
-  const { dictionary } = useContext(LanguageContext)
+  const { dictionary, userLanguage } = useContext(LanguageContext)
   const phrases = (string) => string.split('\n')
 
   return (
@@ -79,7 +79,7 @@ const AboutMe = () => {
             data-aos-duration="1000"
             data-aos-easing="ease-in-sine"
             data-aos-delay="500"
-            href={cvPdf}
+            href={userLanguage === 'pt' ? resumePT : resumeEN}
             target="_blank"
             rel="noreferrer"
           >
