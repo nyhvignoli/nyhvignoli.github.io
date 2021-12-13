@@ -1,9 +1,11 @@
 import React from 'react'
 import { SocialMediaWrapper } from './styles'
-import linkedin from '../../assets/linkedin-icon.svg'
-import github from '../../assets/github-icon.svg'
-import whatsapp from '../../assets/whatsapp-icon.svg'
-import instagram from '../../assets/instagram-icon.svg'
+import {
+  linkedin,
+  github,
+  whatsapp,
+  instagram
+} from '../../assets/social-media-icons'
 
 const SocialMedia = ({ vertical }) => {
   return (
