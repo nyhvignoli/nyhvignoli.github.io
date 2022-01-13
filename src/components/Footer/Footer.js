@@ -2,7 +2,7 @@ import React from 'react'
 import { Subtitle } from '../../global/styles'
 import SocialMedia from '../SocialMedia/SocialMedia'
 import { StyledFooter, ContactInfos, CopyRights, BackToTop } from './styles'
-import whiteArrow from '../../assets/white-arrow.png'
+import { whiteArrow } from '../../assets/system-icons'
 import { Text } from '../../global/LanguagesContext'
 
 const Footer = () => {

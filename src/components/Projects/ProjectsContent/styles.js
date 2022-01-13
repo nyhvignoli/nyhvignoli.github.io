@@ -23,7 +23,7 @@ export const ImageContainer = styled.div`
 
 export const Image = styled.img`
   width: 100%;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.2s ease-in-out;
 
   &:hover {
     ${({ zoom }) =>

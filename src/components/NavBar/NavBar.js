@@ -9,9 +9,7 @@ import {
   ListItem,
   Anchor
 } from './styles'
-import languagesIcon from '../../assets/languages.png'
-import menuIcon from '../../assets/menu.png'
-import closeIcon from '../../assets/cancel.png'
+import { languagesIcon, menuIcon, cancelIcon } from '../../assets/system-icons'
 
 const NavBar = () => {
   const [active, setActive] = useState(undefined)
@@ -85,7 +83,7 @@ const NavBar = () => {
       </StyledList>
       <MenuIcon
         onClick={showDrawer}
-        src={drawerOpen ? closeIcon : menuIcon}
+        src={drawerOpen ? cancelIcon : menuIcon}
         alt="menu icon"
       />
     </StyledNav>

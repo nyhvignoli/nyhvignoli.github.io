@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { Subtitle } from '../../global/styles'
 import { Wrapper, Content, Arrow } from './styles'
 import TimelineContent from './TimelineContent/TimelineContent'
-import whiteArrow from '../../assets/white-arrow.png'
+import { whiteArrow } from '../../assets/system-icons'
 import { LanguageContext, Text } from '../../global/LanguagesContext'
 import { DATA_TYPE, getData } from '../../data'
 

@@ -79,7 +79,7 @@ export const Anchor = styled.a`
   text-decoration: none;
   color: inherit;
   transform: scale(1);
-  transition: all 0.2s ease-in-out 0.1s;
+  transition: all 0.1s ease-in-out 0.1s;
 
   &:active {
     color: ${colors.lightOrange};
@@ -89,12 +89,12 @@ export const Anchor = styled.a`
     active
       ? `
     transform: scale(1.1);
-    transition: all 0.4s ease-in-out 0.1s;
+    transition: all 0.2s ease-in-out 0.1s;
     border-bottom: 2px solid ${colors.lightOrange}`
       : `&:hover {
     opacity: 0.6;
     transform: scale(1.1);
-    transition: all 0.4s ease-in-out 0.1s;
+    transition: all 0.2s ease-in-out 0.1s;
     border-bottom: 2px solid ${colors.lightOrange}
   }`}
 `
