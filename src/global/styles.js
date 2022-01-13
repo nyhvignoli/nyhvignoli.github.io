@@ -96,7 +96,7 @@ export const StyledButton = styled.button`
   background-color: ${({ orange }) =>
     orange ? colors.lightOrange : colors.babyBlue};
   color: ${colors.white};
-  transition: all 0.2s ease-in-out;
+  transition: all 0.1s ease;
 
   &:focus {
     background-color: ${({ orange }) =>
@@ -108,6 +108,7 @@ export const StyledButton = styled.button`
     box-shadow: 2px 2px 6px 2px #012940;
     opacity: 0.8;
     transform: scale(1.02);
+    transition: all 0.1s ease;
   }
 
   @media (max-width: 400px) {

@@ -20,9 +20,9 @@ export const Button = styled.button`
     fill: #012940;
     width: 30px;
     height: 30px;
-    transition: all 0.4s ease 0s;
+    transition: all 0.2s ease 0s;
     transition-property: all;
-    transition-duration: 0.4s;
+    transition-duration: 0.2s;
     transition-timing-function: ease;
     transition-delay: 0s;
   }
