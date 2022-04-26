@@ -1,14 +1,22 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { Subtitle } from '../../global/styles'
-import { Wrapper, Content, Arrow } from './styles'
-import TimelineContent from './TimelineContent/TimelineContent'
-import { whiteArrow } from '../../assets/system-icons'
+import { Wrapper, Content } from './styles'
 import { LanguageContext, Text } from '../../global/LanguagesContext'
 import { DATA_TYPE, getData } from '../../data'
+import Accordion from '../Accordion/Accordion'
 
 const Timeline = () => {
   const { dictionary } = useContext(LanguageContext)
   const steps = getData(dictionary, DATA_TYPE.timelineSteps)
+  const [active, setActive] = useState(-1)
+
+  const handleActive = (index) => {
+    if (index === active) {
+      setActive(!active)
+    } else {
+      setActive(index)
+    }
+  }
 
   return (
     <Wrapper data-testid="timeline">
@@ -20,11 +28,20 @@ const Timeline = () => {
         <Text tid="myJourney" />
       </Subtitle>
       <Content>
-        <TimelineContent step={steps[0]} />
-        <Arrow src={whiteArrow} />
-        <TimelineContent step={steps[1]} />
-        <Arrow src={whiteArrow} />
-        <TimelineContent step={steps[2]} />
+        {steps.map(({ title, icon, description }, index) => {
+          return (
+            <Accordion
+              key={index}
+              header={{
+                title,
+                icon
+              }}
+              body={description}
+              handleActive={() => handleActive(index)}
+              active={active === index}
+            />
+          )
+        })}
       </Content>
     </Wrapper>
   )
