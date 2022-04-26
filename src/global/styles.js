@@ -10,6 +10,8 @@ export const Title = styled.h1`
   /* font-family: 'Syne Mono', monospace; */
   /* font-family: 'Ubuntu Condensed', sans-serif;  */
   /* font-family: 'Pathway Gothic One', sans-serif; */
+  /* font-family: 'Nunito', sans-serif; */
+  /* font-family: 'Barlow Condensed', sans-serif; */
 
   @media (max-width: 800px) {
     font-size: 2.5rem;

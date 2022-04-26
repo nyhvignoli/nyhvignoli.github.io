@@ -4,8 +4,7 @@ import { theme } from '../../theme'
 const { colors } = theme
 
 export const Wrapper = styled.section`
-  padding: 2.5rem;
-  padding-bottom: 3rem;
+  padding: 2rem 5rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -15,7 +14,7 @@ export const Wrapper = styled.section`
   z-index: -3000;
 
   @media (max-width: 800px) {
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 2rem;
     padding-bottom: 2rem;
   }
 `
@@ -23,8 +22,9 @@ export const Wrapper = styled.section`
 export const Content = styled.div`
   padding: 0;
   display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
   justify-content: center;
-  gap: 1rem;
 
   @media (max-width: 1024px) {
     flex-direction: column;
