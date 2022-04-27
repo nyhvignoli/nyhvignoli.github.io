@@ -48,11 +48,11 @@ const AboutMe = () => {
           <strong>
             <Anchor
               orange
-              href="https://vizir.com.br/"
+              href="https://www.questrade.com/home"
               target="_blank"
               rel="noreferrer"
             >
-              Vizir Software Studio
+              Questrade Financial Group
             </Anchor>
           </strong>
           .<br />
