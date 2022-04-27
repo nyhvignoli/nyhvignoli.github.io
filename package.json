@@ -25,7 +25,7 @@
     "eject": "react-scripts eject",
     "lint": "npx prettier --c .",
     "fix": "npx prettier --write .",
-    "deploy": "npm run build && surge ./build"
+    "deploy": "npm run build && surge ./build --domain nyhdevignoli.surge.sh"
   },
   "eslintConfig": {
     "extends": [
