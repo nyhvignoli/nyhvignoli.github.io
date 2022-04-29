@@ -1,18 +1,25 @@
-export const getCourses = (dictionary) => {
+export const getCourses = ({
+  webFullStackDevelopment,
+  months,
+  labenuBootcampDescription,
+  androidDevelopment,
+  androidDevelopmentCourseDescription,
+  present
+}) => {
   const courses = [
     {
-      title: dictionary.webFullStackDevelopment,
+      title: webFullStackDevelopment,
       institution: 'Labenu',
       duration: '1000h',
-      period: '2020 - 2021',
-      description: dictionary.labenuBootcampDescription
+      period: `${months.september} 2020 - ${months.april} 2021`,
+      description: labenuBootcampDescription
     },
     {
-      title: dictionary.androidDevelopment,
+      title: androidDevelopment,
       institution: 'Udemy',
       duration: '100h',
-      period: `2020 - ${dictionary.present}`,
-      description: dictionary.androidDevelopmentCourseDescription
+      period: `${months.march} 2020 - ${present}`,
+      description: androidDevelopmentCourseDescription
     }
   ]
 

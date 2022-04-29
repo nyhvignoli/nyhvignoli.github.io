@@ -6,7 +6,20 @@ test('getCourses function', () => {
     labenuBootcampDescription: 'bar',
     androidDevelopment: 'foo bar',
     androidDevelopmentCourseDescription: 'bar foo',
-    present: 'foo bar foo'
+    months: {
+      january: 'january',
+      february: 'february',
+      march: 'march',
+      april: 'april',
+      may: 'may',
+      june: 'june',
+      july: 'july',
+      august: 'august',
+      september: 'september',
+      november: 'november',
+      december: 'december'
+    },
+    present: 'present'
   }
 
   const courses = getCourses(dictionaryMock)
@@ -16,14 +29,14 @@ test('getCourses function', () => {
       title: dictionaryMock.webFullStackDevelopment,
       institution: 'Labenu',
       duration: '1000h',
-      period: '2020 - 2021',
+      period: `${dictionaryMock.months.september} 2020 - ${dictionaryMock.months.april} 2021`,
       description: dictionaryMock.labenuBootcampDescription
     },
     {
       title: dictionaryMock.androidDevelopment,
       institution: 'Udemy',
       duration: '100h',
-      period: `2020 - ${dictionaryMock.present}`,
+      period: `${dictionaryMock.months.march} 2020 - ${dictionaryMock.present}`,
       description: dictionaryMock.androidDevelopmentCourseDescription
     }
   ]
