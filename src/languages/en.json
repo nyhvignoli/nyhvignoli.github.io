@@ -9,18 +9,22 @@
 
   "knowledges": "Knowledges",
   "frontendKnowledges": [
-    "Web applications development using HTML, CSS and Javascript",
-    "Componentization and state management using ReactJS",
-    "REST API's integration",
-    "Responsive layouts and styling libraries such as Styled-components and Material-UI"
+    "Responsive Web applications development",
+    "Componentization and state management using React",
+    "Styling libraries such as Styled-components and Material-UI",
+    "Component library development using React and Storybook",
+    "Unit test using Jest and React Testing Librabry",
+    "Sitefinity CMS, pages and MVC widgets building using .NET/C#",
+    "REST API's integration"
   ],
   "backendKnowledges": [
-    "RESTful API's development using Node.js and Typescript",
+    "RESTful API's development using Node and Typescript",
     "Unit and automated tests with Jest and Mocha",
     "MySQL database",
+    "MongoDB database",
     "Comfortable with Firebase"
   ],
-  "generalKnowledges": ["AWS and EC2", "Agile Development", "Clean Code"],
+  "generalKnowledges": ["Clean Code", "Google Cloud Platform (GCP)", "AWS", "Agile Development"],
   "general": "General",
 
   "education": "Education",
