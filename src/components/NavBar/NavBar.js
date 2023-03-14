@@ -7,9 +7,11 @@ import {
   MenuIcon,
   StyledList,
   ListItem,
-  Anchor
+  Anchor,
+  Wrapper
 } from './styles'
 import { languagesIcon, menuIcon, cancelIcon } from '../../assets/system-icons'
+import { GridLayout } from '../GridLayout'
 
 const NavBar = () => {
   const [active, setActive] = useState(undefined)
@@ -35,57 +37,61 @@ const NavBar = () => {
 
   return (
     <StyledNav>
-      <LanguageMenu onMouseOver={showSelect} onMouseLeave={hideSelect}>
-        <img src={languagesIcon} alt="World map icon" />
-        <LanguageSelector show={open} hideSelect={hideSelect} />
-      </LanguageMenu>
-      <StyledList hide={!drawerOpen}>
-        <Anchor
-          data-testid="about-me-item"
-          onClick={() => handleActive('about-me')}
-          active={active === 'about-me'}
-          href="#top"
-        >
-          <ListItem>
-            <Text tid="aboutMe" />
-          </ListItem>
-        </Anchor>
-        <Anchor
-          data-testid="knowledges"
-          onClick={() => handleActive('knowledges')}
-          active={active === 'knowledges'}
-          href="#knowledges"
-        >
-          <ListItem>
-            <Text tid="knowledges" />
-          </ListItem>
-        </Anchor>
-        <Anchor
-          data-testid="projects-item"
-          onClick={() => handleActive('projects')}
-          active={active === 'projects'}
-          href="#projects"
-        >
-          <ListItem>
-            <Text tid="projects" />
-          </ListItem>
-        </Anchor>
-        <Anchor
-          data-testid="contact-me-item"
-          onClick={() => handleActive('contact-me')}
-          active={active === 'contact-me'}
-          href="#contact"
-        >
-          <ListItem>
-            <Text tid="contactMe" />
-          </ListItem>
-        </Anchor>
-      </StyledList>
-      <MenuIcon
-        onClick={showDrawer}
-        src={drawerOpen ? cancelIcon : menuIcon}
-        alt="menu icon"
-      />
+      <GridLayout>
+        <Wrapper>
+          <LanguageMenu onMouseOver={showSelect} onMouseLeave={hideSelect}>
+            <img src={languagesIcon} alt="World map icon" />
+            <LanguageSelector show={open} hideSelect={hideSelect} />
+          </LanguageMenu>
+          <StyledList hide={!drawerOpen}>
+            <Anchor
+              data-testid="about-me-item"
+              onClick={() => handleActive('about-me')}
+              active={active === 'about-me'}
+              href="#top"
+            >
+              <ListItem>
+                <Text tid="aboutMe" />
+              </ListItem>
+            </Anchor>
+            <Anchor
+              data-testid="knowledges"
+              onClick={() => handleActive('knowledges')}
+              active={active === 'knowledges'}
+              href="#knowledges"
+            >
+              <ListItem>
+                <Text tid="knowledges" />
+              </ListItem>
+            </Anchor>
+            <Anchor
+              data-testid="projects-item"
+              onClick={() => handleActive('projects')}
+              active={active === 'projects'}
+              href="#projects"
+            >
+              <ListItem>
+                <Text tid="projects" />
+              </ListItem>
+            </Anchor>
+            <Anchor
+              data-testid="contact-me-item"
+              onClick={() => handleActive('contact-me')}
+              active={active === 'contact-me'}
+              href="#contact"
+            >
+              <ListItem>
+                <Text tid="contactMe" />
+              </ListItem>
+            </Anchor>
+          </StyledList>
+          <MenuIcon
+            onClick={showDrawer}
+            src={drawerOpen ? cancelIcon : menuIcon}
+            alt="menu icon"
+          />
+        </Wrapper>
+      </GridLayout>
     </StyledNav>
   )
 }
