@@ -18,7 +18,7 @@
     "Integrações com API's REST"
   ],
   "backendKnowledges": [
-    "Desenvolvimento de API's RESTful utilizando Node e Typescript",
+    "Desenvolvimento de API's RESTful utilizando Node e TypeScript",
     "Testes unitários e automatizados com Jest e Mocha",
     "Banco de dados MySQL",
     "Banco de dados MongoDB",

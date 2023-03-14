@@ -13,12 +13,12 @@
     "Componentization and state management using React",
     "Styling libraries such as Styled-components and Material-UI",
     "Component library development using React and Storybook",
-    "Unit test using Jest and React Testing Librabry",
+    "Unit test using Jest and React Testing Library",
     "Sitefinity CMS, pages and MVC widgets building using .NET/C#",
     "REST API's integration"
   ],
   "backendKnowledges": [
-    "RESTful API's development using Node and Typescript",
+    "RESTful API's development using Node and TypeScript",
     "Unit and automated tests with Jest and Mocha",
     "MySQL database",
     "MongoDB database",
