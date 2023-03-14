@@ -16,6 +16,6 @@ export const Border = {
     X_LARGE: '24px',
     XX_LARGE: '32px',
     PILL: '999px',
-    CIRCLE: '50%'   
+    CIRCLE: '50%'
   }
 }

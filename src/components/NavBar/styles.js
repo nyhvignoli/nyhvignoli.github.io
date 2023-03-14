@@ -1,7 +1,22 @@
 import styled from 'styled-components'
-import { theme } from '../../theme'
+import { theme, Breakpoints, Color, Shadow, Spacing } from '../../theme'
 
 const { colors } = theme
+
+export const Wrapper = styled.div`
+  grid-column: 1/7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (${Breakpoints.TABLET.REGULAR.MIN}) {
+    grid-column: 1/9;
+  }
+
+  @media (${Breakpoints.DESKTOP.LARGE}) {
+    grid-column: 1/13;
+  }
+`
 
 export const StyledNav = styled.nav`
   position: sticky;
@@ -10,10 +25,10 @@ export const StyledNav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 2rem;
+  padding: ${Spacing.MOBILE.XX_SMALL} ${Spacing.MOBILE.X_SMALL};
   max-height: 56px;
-  background-color: ${colors.transparentBlue};
-  box-shadow: 2px 4px 6px 2px rgba(0, 0, 0, 0.2);
+  background-color: ${Color.GREY_600};
+  box-shadow: ${Shadow.NAV};
   color: ${colors.white};
   font-family: 'Roboto Condensed', sans-serif;
   font-weight: bold;
@@ -22,8 +37,12 @@ export const StyledNav = styled.nav`
     width: 38px;
   }
 
-  @media (max-width: 580px) {
-    padding: 0.5rem;
+  @media (${Breakpoints.TABLET.REGULAR.MIN}) {
+    padding: ${Spacing.MOBILE.XX_SMALL} ${Spacing.TABLET.X_SMALL};
+  }
+
+  @media (${Breakpoints.DESKTOP.LARGE}) {
+    padding: ${Spacing.MOBILE.XX_SMALL} ${Spacing.DESKTOP.X_SMALL};
   }
 `
 
@@ -35,7 +54,7 @@ export const LanguageMenu = styled.div`
 export const MenuIcon = styled.img`
   transition: all 0.4s ease-in-out 0.1s;
 
-  @media (min-width: 580px) {
+  @media (${Breakpoints.TABLET.REGULAR.MIN}) {
     display: none;
   }
 `
@@ -45,9 +64,13 @@ export const StyledList = styled.ul`
   list-style-type: none;
   justify-content: flex-end;
   padding-inline-start: 0;
-  gap: 3rem;
+  gap: ${Spacing.DESKTOP.XX_SMALL};
 
-  @media (max-width: 580px) {
+  @media (${Breakpoints.TABLET.REGULAR.MAX}) {
+    gap: ${Spacing.TABLET.XX_SMALL};
+  }
+
+  @media (${Breakpoints.MOBILE.LARGE.MAX}) {
     font-size: 2rem;
     justify-content: center;
     align-items: center;
