@@ -1,7 +1,7 @@
 export const FontFamilly = {}
 
 export const FontSize = {
-  DESKTOP: {    
+  DESKTOP: {
     HEADING_1: '64px',
     HEADING_2: '36px',
     HEADING_3: '26px',
@@ -46,7 +46,7 @@ export const FontSize = {
 }
 
 export const LineHeight = {
-  DESKTOP: {    
+  DESKTOP: {
     HEADING_1: '88px',
     HEADING_2: '48px',
     HEADING_3: '40px',
