@@ -9,18 +9,22 @@
 
   "knowledges": "Conhecimentos",
   "frontendKnowledges": [
-    "Desenvolvimento de aplicações Web em HTML, CSS e Javascript",
-    "Componentização e manipulação de estado com ReactJS",
-    "Integrações com API's REST",
-    "Layouts responsivos e bibliotecas de estilização como Styled-components e Material-UI"
+    "Desenvolvimento de aplicações Web responsivas",
+    "Componentização e manipulação de estado com React",
+    "Bibliotecas de estilização como Styled-components e Material-UI",
+    "Desenvolvimento de biblioteca de componentes com React e Storybook",
+    "Testes unitários com Jest e React Testing Library",
+    "Sitefinity CMS, criação de páginas e MVC widgets com .NET/C#",
+    "Integrações com API's REST"
   ],
   "backendKnowledges": [
-    "Desenvolvimento de API's RESTful utilizando Node.js e Typescript",
+    "Desenvolvimento de API's RESTful utilizando Node e TypeScript",
     "Testes unitários e automatizados com Jest e Mocha",
     "Banco de dados MySQL",
+    "Banco de dados MongoDB",
     "Familiaridade com Firebase"
   ],
-  "generalKnowledges": ["AWS e EC2", "Metodologias Ágeis", "Clean Code"],
+  "generalKnowledges": ["Clean Code", "Google Cloud Platform (GCP)", "AWS", "Metodologias Ágeis"],
   "general": "Gerais",
 
   "education": "Formação",
