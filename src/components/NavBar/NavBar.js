@@ -39,7 +39,13 @@ const NavBar = () => {
     <StyledNav>
       <GridLayout>
         <Wrapper>
-          <LanguageMenu onMouseOver={showSelect} onMouseLeave={hideSelect}>
+          <LanguageMenu
+            aria-label="Language menu button"
+            onMouseOver={showSelect}
+            onMouseLeave={hideSelect}
+            onFocus={showSelect}
+            onBlur={hideSelect}
+          >
             <img src={languagesIcon} alt="World map icon" />
             <LanguageSelector show={open} hideSelect={hideSelect} />
           </LanguageMenu>

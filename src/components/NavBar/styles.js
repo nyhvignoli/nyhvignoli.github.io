@@ -1,9 +1,17 @@
 import styled from 'styled-components'
-import { theme, Breakpoints, Color, Shadow, Spacing } from '../../theme'
-
-const { colors } = theme
+import {
+  Breakpoints,
+  Color,
+  Shadow,
+  Spacing,
+  Sizes,
+  FontWeight,
+  FontSize,
+  Transition
+} from '../../theme'
 
 export const Wrapper = styled.div`
+  height: ${Sizes.NAV.HEIGHT.DESKTOP.REGULAR};
   grid-column: 1/7;
   display: flex;
   justify-content: space-between;
@@ -25,33 +33,41 @@ export const StyledNav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: ${Spacing.MOBILE.XX_SMALL} ${Spacing.MOBILE.X_SMALL};
-  max-height: 56px;
+  padding: 0px ${Spacing.MOBILE.X_SMALL};
   background-color: ${Color.GREY_600};
   box-shadow: ${Shadow.NAV};
-  color: ${colors.white};
-  font-family: 'Roboto Condensed', sans-serif;
-  font-weight: bold;
+  color: ${Color.GREY_50};
+  font-weight: ${FontWeight.SEMI_BOLD};
+  font-size: ${FontSize.MOBILE.BODY_2};
 
   img {
-    width: 38px;
+    width: ${Sizes.ICON.WIDTH.DESKTOP.SMALL};
   }
 
   @media (${Breakpoints.TABLET.REGULAR.MIN}) {
-    padding: ${Spacing.MOBILE.XX_SMALL} ${Spacing.TABLET.X_SMALL};
+    padding: 0px ${Spacing.TABLET.X_SMALL};
   }
 
   @media (${Breakpoints.DESKTOP.LARGE}) {
-    padding: ${Spacing.MOBILE.XX_SMALL} ${Spacing.DESKTOP.X_SMALL};
+    font-size: ${FontSize.DESKTOP.BODY_2};
+    padding: 0px ${Spacing.DESKTOP.X_SMALL};
   }
 `
 
-export const LanguageMenu = styled.div`
+export const LanguageMenu = styled.button`
   justify-self: flex-start;
   position: relative;
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 4px;
+  font: inherit;
+  cursor: pointer;
 `
 
 export const MenuIcon = styled.img`
+  z-index: 1;
+  width: ${Sizes.ICON.WIDTH.DESKTOP.SMALL};
   transition: all 0.4s ease-in-out 0.1s;
 
   @media (${Breakpoints.TABLET.REGULAR.MIN}) {
@@ -62,35 +78,41 @@ export const MenuIcon = styled.img`
 export const StyledList = styled.ul`
   display: flex;
   list-style-type: none;
-  justify-content: flex-end;
+  justify-content: space-between;
   padding-inline-start: 0;
-  gap: ${Spacing.DESKTOP.XX_SMALL};
+  width: 100%;
+  max-width: 500px;
+  min-width: 370px;
+  height: 100%;
+  align-items: center;
 
   @media (${Breakpoints.TABLET.REGULAR.MAX}) {
-    gap: ${Spacing.TABLET.XX_SMALL};
+    max-width: 370px;
   }
 
   @media (${Breakpoints.MOBILE.LARGE.MAX}) {
-    font-size: 2rem;
+    gap: ${Spacing.MOBILE.REGULAR};
+    font-size: ${FontSize.MOBILE.BODY_1};
     justify-content: center;
     align-items: center;
     position: fixed;
     right: 0;
     bottom: 0;
-    left: 30%;
+    left: 0;
     flex-direction: column;
     background-color: black;
     height: 100vh;
-    width: 80vw;
+    max-width: 100%;
     margin: 0;
-    z-index: -1;
-    transition: all 0.2s ease-in-out 0.1s;
+    transition: all ${Transition.DURATION.FAST} ease-in-out ${
+  Transition.DURATION.SUPER_FAST
+};
     text-align: center;
 
     ${({ hide }) =>
       hide &&
       `
-        transition: all 0.4s ease-in-out 0.1s;
+        transition: all ${Transition.DURATION.SLOW} ease-in-out ${Transition.DURATION.SUPER_FAST};
         left: 100%;
       `}
 `
@@ -98,26 +120,33 @@ export const StyledList = styled.ul`
 export const ListItem = styled.li``
 
 export const Anchor = styled.a`
+  padding: ${Spacing.MOBILE.TINY};
   box-sizing: border-box;
   text-decoration: none;
-  color: inherit;
+  color: ${Color.GREY_100};
   transform: scale(1);
-  transition: all 0.1s ease-in-out 0.1s;
+  transition: all ${Transition.DURATION.FAST} ease;
 
   &:active {
-    color: ${colors.lightOrange};
+    color: ${Color.JADE_GREEN_400};
   }
 
   ${({ active }) =>
     active
       ? `
     transform: scale(1.1);
-    transition: all 0.2s ease-in-out 0.1s;
-    border-bottom: 2px solid ${colors.lightOrange}`
+    transition: all ${Transition.DURATION.FAST} ease;
+    border-bottom: 2px solid ${Color.JADE_GREEN_400};`
       : `&:hover {
     opacity: 0.6;
-    transform: scale(1.1);
-    transition: all 0.2s ease-in-out 0.1s;
-    border-bottom: 2px solid ${colors.lightOrange}
-  }`}
+    transform: scale(1.1) translateY(1px);
+    transition: all ${Transition.DURATION.FAST} ease;
+    border-bottom: 2px solid ${Color.JADE_GREEN_400};
+  }
+  &:focus {
+    opacity: 0.6;
+    transform: scale(1.1) translateY(1px);
+    transition: all ${Transition.DURATION.FAST} ease;
+  }
+  `}
 `
