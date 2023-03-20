@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import EducationContent from './EducationContent/EducationContent'
 import { Wrapper, Content } from './styles'
-import { Subtitle } from '../../global/styles'
+import { Subhead } from '../../global/styles'
 import { LanguageContext, Text } from '../../global/LanguagesContext'
 import { DATA_TYPE, getData } from '../../data'
 
@@ -11,9 +11,9 @@ const Education = () => {
 
   return (
     <Wrapper data-testid="education">
-      <Subtitle data-aos="fade-zoom-in" data-aos-duration="1500">
+      <Subhead data-aos="fade-zoom-in" data-aos-duration="1500">
         <Text tid="education" />
-      </Subtitle>
+      </Subhead>
       <Content>
         {courses.map((course, index) => {
           return (

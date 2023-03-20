@@ -8,6 +8,10 @@ body {
   color: #fff;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 @font-face {
   font-family: 'Andada Pro';
   src: local('Andada Pro'), url(./fonts/Andada_Pro/AndadaPro-VariableFont_wght.ttf) format('truetype');

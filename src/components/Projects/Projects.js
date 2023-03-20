@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { Wrapper } from './styles'
-import { Subtitle } from '../../global/styles'
+import { Subhead } from '../../global/styles'
 import Gallery from '../Gallery/Gallery'
 import ScreenShotsGallery from '../ScreenShotsGallery/ScreenShotsGallery'
 import { LanguageContext, Text } from '../../global/LanguagesContext'
@@ -24,9 +24,9 @@ const Projects = () => {
 
   return (
     <Wrapper imageDetailsOpen id="projects" data-testid="projects">
-      <Subtitle data-aos="fade-zoom-in" data-aos-duration="1500">
+      <Subhead data-aos="fade-zoom-in" data-aos-duration="1500">
         <Text tid="projects" />
-      </Subtitle>
+      </Subhead>
       <Gallery
         imageDetailsOpen={imageDetailsOpen}
         projects={projects}

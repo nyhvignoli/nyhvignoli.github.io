@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-import { Subtitle } from '../../global/styles'
+import { Subhead } from '../../global/styles'
 import { Wrapper, Content } from './styles'
 import { LanguageContext, Text } from '../../global/LanguagesContext'
 import { DATA_TYPE, getData } from '../../data'
@@ -20,13 +20,13 @@ const Timeline = () => {
 
   return (
     <Wrapper data-testid="timeline">
-      <Subtitle
+      <Subhead
         data-aos="fade-zoom-in"
         data-aos-duration="1500"
         data-aos-easing="ease-in-out"
       >
         <Text tid="myJourney" />
-      </Subtitle>
+      </Subhead>
       <Content>
         {steps.map(({ title, icon, description }, index) => {
           return (

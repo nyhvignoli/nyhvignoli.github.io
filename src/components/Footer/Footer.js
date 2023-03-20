@@ -1,5 +1,5 @@
 import React from 'react'
-import { Subtitle } from '../../global/styles'
+import { Subhead } from '../../global/styles'
 import SocialMedia from '../SocialMedia/SocialMedia'
 import { StyledFooter, ContactInfos, CopyRights, BackToTop } from './styles'
 import { whiteArrow } from '../../assets/system-icons'
@@ -9,9 +9,9 @@ const Footer = () => {
   return (
     <StyledFooter id="contact" data-testid="footer">
       <ContactInfos>
-        <Subtitle>
+        <Subhead>
           <Text tid="contactMe" />
-        </Subtitle>
+        </Subhead>
         <p>
           <Text tid="callToActionContactText" />
         </p>
