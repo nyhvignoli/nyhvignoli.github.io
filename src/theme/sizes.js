@@ -1,4 +1,11 @@
 export const Sizes = {
+  BUTTON: {
+    WIDTH: {
+      DESKTOP: {
+        REGULAR: '230px'
+      }
+    }
+  },
   GENERIC: {},
   NAV: {
     HEIGHT: {
