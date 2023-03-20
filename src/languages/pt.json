@@ -197,5 +197,12 @@
     "october": "Outubro",
     "november": "Novembro",
     "december": "Dezembro"
+  },
+
+  "ariaLabels": {
+    "opensInANewTab": "Abre em uma nova aba",
+    "opensAPDFDocumentInANewTab": "Abre um documento PDF em uma nova aba",
+    "questrade": "Link para o website da Questrade",
+    "viewResume": "Visualizar o currículo de Aline Vignoli"
   }
 }

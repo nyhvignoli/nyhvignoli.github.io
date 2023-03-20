@@ -1,30 +1,72 @@
 import styled from 'styled-components'
-import { theme } from '../theme'
+import {
+  Border,
+  Breakpoints,
+  Color,
+  FontSize,
+  FontWeight,
+  LineHeight,
+  Shadow,
+  Sizes,
+  Spacing,
+  theme,
+  Transition
+} from '../theme'
 
 const { colors } = theme
 
-export const Title = styled.h1`
-  font-size: 4rem;
-  font-family: 'Roboto Condensed', sans-serif;
-  margin: 0;
-  /* font-family: 'Syne Mono', monospace; */
-  /* font-family: 'Ubuntu Condensed', sans-serif;  */
-  /* font-family: 'Pathway Gothic One', sans-serif; */
-  /* font-family: 'Nunito', sans-serif; */
-  /* font-family: 'Barlow Condensed', sans-serif; */
+/* Container */
+export const BaseFlex = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-  @media (max-width: 800px) {
-    font-size: 2.5rem;
+  @media (max-width: 600px) {
+    flex-direction: column;
   }
 `
 
-export const Subtitle = styled.h2`
-  font-size: 3rem;
-  opacity: 0.8;
-  font-family: 'Roboto Condensed', sans-serif;
-  text-align: center;
+/* Typography */
+export const Title = styled.h1`
+  font-size: ${FontSize.MOBILE.HEADING_1};
+  line-height: ${LineHeight.MOBILE.HEADING_1};
+  font-family: 'Andada Pro', sans-serif;
+  margin: 0;
+
+  @media (${Breakpoints.DESKTOP.LARGE}) {
+    font-size: ${FontSize.DESKTOP.HEADING_1};
+    line-height: ${LineHeight.DESKTOP.HEADING_1};
+  }
 `
 
+export const Subhead = styled.h2`
+  font-size: ${FontSize.MOBILE.SUBHEAD_1};
+  line-height: ${LineHeight.MOBILE.SUBHEAD_1};
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-family: 'Anek Odia', sans-serif;
+  text-align: center;
+  color: ${Color.GREY_100};
+
+  @media (${Breakpoints.DESKTOP.LARGE}) {
+    font-size: ${FontSize.DESKTOP.SUBHEAD_1};
+    line-height: ${LineHeight.DESKTOP.SUBHEAD_1};
+  }
+`
+
+export const Body = styled.span`
+  font-size: ${FontSize.MOBILE.BODY_3};
+  line-height: ${LineHeight.MOBILE.BODY_3};
+  text-align: center;
+  color: ${Color.GREY_100};
+
+  @media (${Breakpoints.DESKTOP.LARGE}) {
+    font-size: ${FontSize.DESKTOP.BODY_3};
+    line-height: ${LineHeight.DESKTOP.BODY_3};
+  }
+`
+
+/* List */
 export const StackList = styled.ul`
   width: 100%;
   display: flex;
@@ -60,28 +102,64 @@ export const ListItem = styled.li`
   }
 `
 
-export const Anchor = styled.a`
-  text-decoration: none;
-  margin-top: 1rem;
-  outline: none;
+/* CTA */
+const buttonCommon = `
+  border: none;
+  background-color: ${Color.JADE_GREEN_400};
+  padding: ${Spacing.DESKTOP.TINY} ${Spacing.DESKTOP.REGULAR};
+  border-radius: ${Border.RADIUS.REGULAR};
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: ${FontWeight.SEMI_BOLD};
+  min-width: ${Sizes.BUTTON.WIDTH.DESKTOP.REGULAR};
+  cursor: pointer;
+  transition: all ${Transition.DURATION.SUPER_FAST} ease;
 
-  ${({ orange }) =>
-    orange &&
-    `
-      color: ${colors.orange};
-
-      &:hover {
-        opacity: 0.8;
-      }
-    `}
-
-  @media (max-width: 400px) {
-    width: 100%;
-    margin: 0;
+  &:hover {
+    opacity: 0.8;
+    box-shadow: ${Shadow.GENERIC.LIGHT};
+    transition: all ${Transition.DURATION.SUPER_FAST} ease;
   }
 
-  @media (max-width: 800px) {
-    margin: 0;
+  @media (${Breakpoints.MOBILE.LARGE.MAX}) {
+    width: 100%;
+  }
+`
+
+export const PrimaryButton = styled.button`
+  ${buttonCommon}
+  outline: none;
+`
+
+export const ButtonLink = styled.a`
+  ${buttonCommon}
+  color: ${Color.GREY_900};
+  text-decoration: none;
+  text-align: center;
+`
+
+export const InlineLink = styled.a`
+  color: ${Color.JADE_GREEN_300};
+  transition: all ${Transition.DURATION.SUPER_FAST} ease;
+
+  &:hover {
+    text-decoration: none;
+    opacity: 0.8;
+    transition: all ${Transition.DURATION.SUPER_FAST} ease;
+  }
+`
+
+/* TO BE DEPRACATED */
+export const Anchor = styled.a`
+  color: ${Color.JADE_GREEN_300};
+
+  &:hover {
+    text-decoration: none;
+    opacity: 0.8;
+  }
+
+  @media (${Breakpoints.MOBILE.LARGE.MAX}) {
+    width: 100%;
   }
 `
 
@@ -99,6 +177,7 @@ export const StyledButton = styled.button`
     orange ? colors.lightOrange : colors.babyBlue};
   color: ${colors.white};
   transition: all 0.1s ease;
+  width: 100%;
 
   &:focus {
     background-color: ${({ orange }) =>
@@ -113,22 +192,8 @@ export const StyledButton = styled.button`
     transition: all 0.1s ease;
   }
 
-  @media (max-width: 400px) {
-    width: 100%;
-  }
-
   @media (max-width: 800px) {
     margin: auto;
     align-self: center;
-  }
-`
-
-export const BaseFlex = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  @media (max-width: 600px) {
-    flex-direction: column;
   }
 `

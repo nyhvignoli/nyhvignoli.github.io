@@ -37,7 +37,7 @@ const NavBar = () => {
 
   return (
     <StyledNav>
-      <GridLayout>
+      <GridLayout width="100%">
         <Wrapper>
           <LanguageMenu
             aria-label="Language menu button"

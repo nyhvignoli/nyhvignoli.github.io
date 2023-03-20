@@ -197,5 +197,12 @@
     "october": "October",
     "november": "November",
     "december": "December"
+  },
+
+  "ariaLabels": {
+    "opensInANewTab": "Opens in a new tab",
+    "opensAPDFDocumentInANewTab": "Opens a PDF document in a new tab",
+    "questrade": "Questrade website link",
+    "viewResume": "View Aline Vignoli's resume"
   }
 }

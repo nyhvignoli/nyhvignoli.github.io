@@ -33,7 +33,6 @@ export const StyledNav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px ${Spacing.MOBILE.X_SMALL};
   background-color: ${Color.GREY_600};
   box-shadow: ${Shadow.NAV};
   color: ${Color.GREY_50};
@@ -45,12 +44,10 @@ export const StyledNav = styled.nav`
   }
 
   @media (${Breakpoints.TABLET.REGULAR.MIN}) {
-    padding: 0px ${Spacing.TABLET.X_SMALL};
   }
 
   @media (${Breakpoints.DESKTOP.LARGE}) {
     font-size: ${FontSize.DESKTOP.BODY_2};
-    padding: 0px ${Spacing.DESKTOP.X_SMALL};
   }
 `
 
@@ -100,14 +97,14 @@ export const StyledList = styled.ul`
     bottom: 0;
     left: 0;
     flex-direction: column;
-    background-color: black;
+    background-color: ${Color.GREY_900};
     height: 100vh;
     max-width: 100%;
     margin: 0;
+    text-align: center;
     transition: all ${Transition.DURATION.FAST} ease-in-out ${
   Transition.DURATION.SUPER_FAST
 };
-    text-align: center;
 
     ${({ hide }) =>
       hide &&

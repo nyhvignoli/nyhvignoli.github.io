@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { Subtitle } from '../../global/styles'
+import { Subhead } from '../../global/styles'
 import { ListItem, StackList } from '../../global/styles'
 import KnowledgesContent from './KnowledgesContent/KnowledgesContent'
 import { Wrapper, Content } from './styles'
@@ -12,13 +12,13 @@ const Knowledges = () => {
 
   return (
     <Wrapper id="knowledges" data-testid="knowledges-wrapper">
-      <Subtitle
+      <Subhead
         data-aos="fade-zoom-in"
         data-aos-duration="1500"
         data-aos-easing="ease-in-out"
       >
         <Text tid="knowledges" />
-      </Subtitle>
+      </Subhead>
       <Content>
         <KnowledgesContent
           title={'Front-end'}
@@ -34,9 +34,9 @@ const Knowledges = () => {
         />
       </Content>
       <div>
-        <Subtitle data-aos="fade-zoom-in" data-aos-duration="1500">
+        <Subhead data-aos="fade-zoom-in" data-aos-duration="1500">
           <Text tid="general" />
-        </Subtitle>
+        </Subhead>
         <StackList>
           {dictionary.generalKnowledges.map((item, index) => {
             return (

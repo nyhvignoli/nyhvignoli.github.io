@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { Subtitle } from '../../global/styles'
+import { Subhead } from '../../global/styles'
 import { Wrapper, Content } from './styles'
 import CommunitiesContent from './CommunitiesContent/CommunitiesContent'
 import { LanguageContext, Text } from '../../global/LanguagesContext'
@@ -11,13 +11,13 @@ const Communities = () => {
 
   return (
     <Wrapper data-testid="communities">
-      <Subtitle
+      <Subhead
         data-aos="fade-zoom-in"
         data-aos-duration="1500"
         data-aos-easing="ease-in-out"
       >
         <Text tid="communities" />
-      </Subtitle>
+      </Subhead>
       <Content>
         {communities.map((community, index) => {
           return (
