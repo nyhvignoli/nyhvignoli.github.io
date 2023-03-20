@@ -8,7 +8,7 @@ export const Grid = styled.div`
     position: ${position};
     grid-template-columns: repeat(6, 1fr);
     grid-gap: ${Spacing.MOBILE.SMALL};
-    max-width: 1024px;
+    max-width: 1124px;
     margin: auto;
     padding: 0px ${Spacing.MOBILE.X_SMALL};
 
