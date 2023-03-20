@@ -103,16 +103,15 @@ export const StyledList = styled.ul`
     margin: 0;
     text-align: center;
     transition: all ${Transition.DURATION.FAST} ease-in-out ${
-      Transition.DURATION.SUPER_FAST
-    };
+  Transition.DURATION.SUPER_FAST
+};
 
     ${({ hide }) =>
       hide &&
       `
         transition: all ${Transition.DURATION.SLOW} ease-in-out ${Transition.DURATION.SUPER_FAST};
         left: 100%;
-      `
-    }
+      `}
 `
 
 export const ListItem = styled.li``

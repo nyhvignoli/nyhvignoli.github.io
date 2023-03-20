@@ -6,7 +6,13 @@ export const BackgroundImages = ({ images }) => {
     <>
       {images.map(({ src, alt = '', ariaHidden = true, styles }, index) => {
         return (
-          <Image key={`${src}-${index}`} src={src} alt={alt} aria-hidden={ariaHidden} styles={styles} />
+          <Image
+            key={`${src}-${index}`}
+            src={src}
+            alt={alt}
+            aria-hidden={ariaHidden}
+            styles={styles}
+          />
         )
       })}
     </>
