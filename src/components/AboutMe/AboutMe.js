@@ -20,9 +20,9 @@ const AboutMe = () => {
   const phrases = (string) => string.split('\n')
 
   return (
-    <BackgroundWrapper>
+    <BackgroundWrapper id="about-me" data-testid="about-me">
       <BackgroundImages images={backgroundImages} />
-      <GridLayout id="about-me" data-testid="about-me" position="relative">
+      <GridLayout position="relative">
         <Wrapper>
           <Content>
             <Title>Aline Vignoli</Title>
