@@ -9,8 +9,12 @@ export const Breakpoints = {
     } // between 411px and 480px
   },
   TABLET: {
-    REGULAR: {
+    SMALL: {
       MIN: 'min-width: 481px',
+      MAX: 'max-width: 658px'
+    },
+    REGULAR: {
+      MIN: 'min-width: 659px',
       MAX: 'max-width: 768px'
     }
     // between 481px and 768px
