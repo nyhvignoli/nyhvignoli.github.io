@@ -3,6 +3,7 @@ import {
   Border,
   Breakpoints,
   Color,
+  FontFamily,
   FontSize,
   FontWeight,
   LineHeight,
@@ -28,7 +29,7 @@ export const BaseFlex = styled.div`
 
 /* Typography */
 const headingCommon = `
-  font-family: 'Andada Pro', sans-serif;
+  font-family: ${FontFamily.HEADING};
 `
 
 export const Title = styled.h1`
@@ -68,7 +69,7 @@ export const Heading2 = styled.h2`
 const subheadCommon = `
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  font-family: 'Anek Odia', sans-serif;
+  font-family: ${FontFamily.SUBHEAD};
   text-align: center;
   color: ${Color.GREY_100};
   font-weight: ${FontWeight.MEDIUM};
@@ -122,6 +123,7 @@ export const StackList = styled.ul`
   list-style-type: none;
   padding-inline-start: 0;
   gap: 1rem;
+  align-self: self-start;
 
   ${({ small }) => small && `gap: 0.5rem;`}
 
