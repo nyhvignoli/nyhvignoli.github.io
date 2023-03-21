@@ -4,12 +4,11 @@ import { Wrapper } from './styles'
 import { Heading2 } from '../../global/styles'
 import { GridLayout } from '../GridLayout'
 import { BaseCard } from '../Cards'
-import backend from '../../assets/backend.png'
-import frontend from '../../assets/frontend.svg'
-import general from '../../assets/general-knowledges.jpg'
+import { getKnowledges } from '../../data/knowledges'
 
 const Knowledges = () => {
   const { dictionary } = useContext(LanguageContext)
+  const knowledges = getKnowledges(dictionary)
 
   return (
     <Wrapper id="knowledges" data-testid="knowledges-wrapper">
@@ -21,39 +20,15 @@ const Knowledges = () => {
         <Text tid="knowledges" />
       </Heading2>
       <GridLayout width="100%">
-        <BaseCard
-          headerProps={{
-            title: 'Front-end',
-            icon: {
-              src: frontend,
-              alt: 'Ícone de diferentes telas e dispositivos'
-            }
-          }}
-          contentProps={{
-            list: dictionary.frontendKnowledges
-          }}
-        />
-        <BaseCard
-          headerProps={{
-            title: 'Back-end',
-            icon: { src: backend, alt: 'Ícone de uma tela com engrenagens' }
-          }}
-          contentProps={{
-            list: dictionary.backendKnowledges
-          }}
-        />
-        <BaseCard
-          headerProps={{
-            title: dictionary.general,
-            icon: {
-              src: general,
-              alt: 'Ícone de um cérebro como se fosse uma lâmpada'
-            }
-          }}
-          contentProps={{
-            list: dictionary.generalKnowledges
-          }}
-        />
+        {knowledges.map(({ title, icon, list }, index) => {
+          return (
+            <BaseCard
+              key={`${title}-${index}`}
+              headerProps={{ title, icon }}
+              contentProps={{ list }}
+            />
+          )
+        })}
       </GridLayout>
     </Wrapper>
   )
