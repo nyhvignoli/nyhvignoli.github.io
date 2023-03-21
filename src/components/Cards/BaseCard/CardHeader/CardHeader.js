@@ -3,9 +3,13 @@ import { Header, Icon, Wrapper } from './styles'
 import { Subhead2 } from '../../../../global/styles'
 import { Sizes } from '../../../../theme'
 
-export const CardHeader = ({ title, subtitle, icon = {} }) => {
+export const CardHeader = ({
+  title,
+  subtitle,
+  icon = { src: '', alt: '' }
+}) => {
   return (
-    <Wrapper>
+    <Wrapper data-testid="base-card-header">
       <Header>
         {!!icon.src && (
           <Icon
