@@ -27,30 +27,78 @@ export const BaseFlex = styled.div`
 `
 
 /* Typography */
+const headingCommon = `
+  font-family: 'Andada Pro', sans-serif;
+`
+
 export const Title = styled.h1`
+  ${headingCommon}
   font-size: ${FontSize.MOBILE.HEADING_1};
   line-height: ${LineHeight.MOBILE.HEADING_1};
-  font-family: 'Andada Pro', sans-serif;
-  margin: 0;
+  margin-bottom: ${Spacing.MOBILE.X_SMALL};
+
+  @media (${Breakpoints.TABLET.REGULAR.MIN}) {
+    margin-bottom: ${Spacing.TABLET.X_SMALL};
+  }
 
   @media (${Breakpoints.DESKTOP.LARGE}) {
     font-size: ${FontSize.DESKTOP.HEADING_1};
     line-height: ${LineHeight.DESKTOP.HEADING_1};
+    margin-bottom: ${Spacing.DESKTOP.X_SMALL};
   }
 `
 
-export const Subhead = styled.h2`
-  font-size: ${FontSize.MOBILE.SUBHEAD_1};
-  line-height: ${LineHeight.MOBILE.SUBHEAD_1};
+export const Heading2 = styled.h2`
+  ${headingCommon}
+  font-size: ${FontSize.MOBILE.HEADING_2};
+  line-height: ${LineHeight.MOBILE.HEADING_2};
+  margin-bottom: ${Spacing.MOBILE.HUGE};
+
+  @media (${Breakpoints.TABLET.REGULAR.MIN}) {
+    margin-bottom: ${Spacing.TABLET.HUGE};
+  }
+
+  @media (${Breakpoints.DESKTOP.LARGE}) {
+    font-size: ${FontSize.DESKTOP.HEADING_2};
+    line-height: ${LineHeight.DESKTOP.HEADING_2};
+    margin-bottom: ${Spacing.DESKTOP.HUGE};
+  }
+`
+
+const subheadCommon = `
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-family: 'Anek Odia', sans-serif;
   text-align: center;
   color: ${Color.GREY_100};
+  font-weight: ${FontWeight.MEDIUM};
+`
+
+export const Subhead = styled.h2`
+  ${subheadCommon}
+  font-size: ${FontSize.MOBILE.SUBHEAD_1};
+  line-height: ${LineHeight.MOBILE.SUBHEAD_1};
+  margin-bottom: ${Spacing.MOBILE.SMALL};
+
+  @media (${Breakpoints.TABLET.REGULAR.MIN}) {
+    margin-bottom: ${Spacing.TABLET.SMALL};
+  }
 
   @media (${Breakpoints.DESKTOP.LARGE}) {
     font-size: ${FontSize.DESKTOP.SUBHEAD_1};
     line-height: ${LineHeight.DESKTOP.SUBHEAD_1};
+    margin-bottom: ${Spacing.DESKTOP.SMALL};
+  }
+`
+
+export const Subhead2 = styled.h3`
+  ${subheadCommon}
+  font-size: ${FontSize.MOBILE.SUBHEAD_2};
+  line-height: ${LineHeight.MOBILE.SUBHEAD_2};
+
+  @media (${Breakpoints.DESKTOP.LARGE}) {
+    font-size: ${FontSize.DESKTOP.SUBHEAD_2};
+    line-height: ${LineHeight.DESKTOP.SUBHEAD_2};
   }
 `
 

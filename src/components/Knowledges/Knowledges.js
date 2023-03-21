@@ -1,57 +1,35 @@
 import React, { useContext } from 'react'
-import { Subhead } from '../../global/styles'
-import { ListItem, StackList } from '../../global/styles'
-import KnowledgesContent from './KnowledgesContent/KnowledgesContent'
-import { Wrapper, Content } from './styles'
-import backend from '../../assets/backend.png'
-import frontend from '../../assets/frontend.svg'
 import { LanguageContext, Text } from '../../global/LanguagesContext'
+import { Wrapper } from './styles'
+import { Heading2 } from '../../global/styles'
+import { GridLayout } from '../GridLayout'
+import { BaseCard } from '../Cards'
+import { getKnowledges } from '../../data/knowledges'
 
 const Knowledges = () => {
   const { dictionary } = useContext(LanguageContext)
+  const knowledges = getKnowledges(dictionary)
 
   return (
     <Wrapper id="knowledges" data-testid="knowledges-wrapper">
-      <Subhead
+      <Heading2
         data-aos="fade-zoom-in"
         data-aos-duration="1500"
         data-aos-easing="ease-in-out"
       >
         <Text tid="knowledges" />
-      </Subhead>
-      <Content>
-        <KnowledgesContent
-          title={'Front-end'}
-          knowledges={dictionary.frontendKnowledges}
-          icon={frontend}
-          alt="Ícone de diferentes telas e dispositivos"
-        />
-        <KnowledgesContent
-          title={'Back-end'}
-          knowledges={dictionary.backendKnowledges}
-          icon={backend}
-          alt="Ícone de uma tela com engrenagens"
-        />
-      </Content>
-      <div>
-        <Subhead data-aos="fade-zoom-in" data-aos-duration="1500">
-          <Text tid="general" />
-        </Subhead>
-        <StackList>
-          {dictionary.generalKnowledges.map((item, index) => {
-            return (
-              <ListItem
-                key={index}
-                data-aos="flip-right"
-                data-aos-duration="2000"
-                data-aos-easing="ease-out-cubic"
-              >
-                {item}
-              </ListItem>
-            )
-          })}
-        </StackList>
-      </div>
+      </Heading2>
+      <GridLayout width="100%">
+        {knowledges.map(({ title, icon, list }, index) => {
+          return (
+            <BaseCard
+              key={`${title}-${index}`}
+              headerProps={{ title, icon }}
+              contentProps={{ list }}
+            />
+          )
+        })}
+      </GridLayout>
     </Wrapper>
   )
 }

@@ -67,7 +67,7 @@ export const MenuIcon = styled.img`
   width: ${Sizes.ICON.WIDTH.DESKTOP.SMALL};
   transition: all 0.4s ease-in-out 0.1s;
 
-  @media (${Breakpoints.TABLET.REGULAR.MIN}) {
+  @media (${Breakpoints.TABLET.SMALL.MIN}) {
     display: none;
   }
 `
