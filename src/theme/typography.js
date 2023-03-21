@@ -1,4 +1,8 @@
-export const FontFamilly = {}
+export const FontFamily = {
+  HEADING: "'Andada Pro', sans-serif",
+  SUBHEAD: "'Anek Odia', sans-serif",
+  BODY: "'Open Sans', sans-serif"
+}
 
 export const FontSize = {
   DESKTOP: {
