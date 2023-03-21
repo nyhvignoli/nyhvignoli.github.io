@@ -4,11 +4,11 @@ import { Wrapper } from './styles'
 import { Heading2 } from '../../global/styles'
 import { GridLayout } from '../GridLayout'
 import { BaseCard } from '../Cards'
-import { getKnowledges } from '../../data/knowledges'
+import { getData, DATA_TYPE } from '../../data'
 
 const Knowledges = () => {
   const { dictionary } = useContext(LanguageContext)
-  const knowledges = getKnowledges(dictionary)
+  const knowledges = getData(dictionary, DATA_TYPE.knowledges)
 
   return (
     <Wrapper id="knowledges" data-testid="knowledges-wrapper">

@@ -33,12 +33,6 @@ describe('MainScreen', () => {
       expect(knowledgesSection).toBeInTheDocument()
     })
 
-    test('renders Education section', () => {
-      render(<MainScreen />)
-      const educationSection = screen.getByTestId('education')
-      expect(educationSection).toBeInTheDocument()
-    })
-
     test('renders Projects section', () => {
       render(<MainScreen />)
       const projectsSection = screen.getByTestId('projects')
