@@ -6,7 +6,7 @@ export const getBackgroundImages = () => {
       src: profile,
       styles: {
         desktop: { opacity: '0.06', left: '0' },
-        mobile: { opacity: '0.03', top: 0 }
+        mobile: { opacity: '0.06', top: 0 }
       }
     },
     {
