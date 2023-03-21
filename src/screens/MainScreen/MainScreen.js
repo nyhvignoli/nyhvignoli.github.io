@@ -3,7 +3,6 @@ import { Wrapper, Content } from './styles'
 import AboutMe from '../../components/AboutMe/AboutMe'
 import Footer from '../../components/Footer/Footer'
 import Knowledges from '../../components/Knowledges/Knowledges'
-import Education from '../../components/Education/Education'
 import NavBar from '../../components/NavBar/NavBar'
 import Projects from '../../components/Projects/Projects'
 import Timeline from '../../components/Timeline/Timeline'
@@ -34,7 +33,6 @@ const MainScreen = () => {
       <Content>
         <AboutMe />
         <Knowledges />
-        <Education />
         <Projects />
         <Timeline />
         <Communities />
