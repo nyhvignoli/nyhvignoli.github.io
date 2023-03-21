@@ -30,13 +30,13 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: ${Spacing.MOBILE.X_SMALL};
+  margin-bottom: ${Spacing.MOBILE.SMALL};
 
   @media (${Breakpoints.TABLET.REGULAR.MIN}) {
-    margin-bottom: ${Spacing.TABLET.X_SMALL};
+    margin-bottom: ${Spacing.TABLET.SMALL};
   }
 
   @media (${Breakpoints.DESKTOP.LARGE}) {
-    margin-bottom: ${Spacing.DESKTOP.X_SMALL};
+    margin-bottom: ${Spacing.DESKTOP.SMALL};
   }
 `
