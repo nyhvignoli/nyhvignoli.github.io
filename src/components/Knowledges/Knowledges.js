@@ -1,57 +1,60 @@
 import React, { useContext } from 'react'
-import { Subhead } from '../../global/styles'
-import { ListItem, StackList } from '../../global/styles'
-import KnowledgesContent from './KnowledgesContent/KnowledgesContent'
-import { Wrapper, Content } from './styles'
+import { LanguageContext, Text } from '../../global/LanguagesContext'
+import { Wrapper } from './styles'
+import { Heading2 } from '../../global/styles'
+import { GridLayout } from '../GridLayout'
+import { BaseCard } from '../Cards'
 import backend from '../../assets/backend.png'
 import frontend from '../../assets/frontend.svg'
-import { LanguageContext, Text } from '../../global/LanguagesContext'
+import general from '../../assets/general-knowledges.jpg'
 
 const Knowledges = () => {
   const { dictionary } = useContext(LanguageContext)
 
   return (
     <Wrapper id="knowledges" data-testid="knowledges-wrapper">
-      <Subhead
+      <Heading2
         data-aos="fade-zoom-in"
         data-aos-duration="1500"
         data-aos-easing="ease-in-out"
       >
         <Text tid="knowledges" />
-      </Subhead>
-      <Content>
-        <KnowledgesContent
-          title={'Front-end'}
-          knowledges={dictionary.frontendKnowledges}
-          icon={frontend}
-          alt="Ícone de diferentes telas e dispositivos"
+      </Heading2>
+      <GridLayout width="100%">
+        <BaseCard
+          headerProps={{
+            title: 'Front-end',
+            icon: {
+              src: frontend,
+              alt: 'Ícone de diferentes telas e dispositivos'
+            }
+          }}
+          contentProps={{
+            list: dictionary.frontendKnowledges
+          }}
         />
-        <KnowledgesContent
-          title={'Back-end'}
-          knowledges={dictionary.backendKnowledges}
-          icon={backend}
-          alt="Ícone de uma tela com engrenagens"
+        <BaseCard
+          headerProps={{
+            title: 'Back-end',
+            icon: { src: backend, alt: 'Ícone de uma tela com engrenagens' }
+          }}
+          contentProps={{
+            list: dictionary.backendKnowledges
+          }}
         />
-      </Content>
-      <div>
-        <Subhead data-aos="fade-zoom-in" data-aos-duration="1500">
-          <Text tid="general" />
-        </Subhead>
-        <StackList>
-          {dictionary.generalKnowledges.map((item, index) => {
-            return (
-              <ListItem
-                key={index}
-                data-aos="flip-right"
-                data-aos-duration="2000"
-                data-aos-easing="ease-out-cubic"
-              >
-                {item}
-              </ListItem>
-            )
-          })}
-        </StackList>
-      </div>
+        <BaseCard
+          headerProps={{
+            title: dictionary.general,
+            icon: {
+              src: general,
+              alt: 'Ícone de um cérebro como se fosse uma lâmpada'
+            }
+          }}
+          contentProps={{
+            list: dictionary.generalKnowledges
+          }}
+        />
+      </GridLayout>
     </Wrapper>
   )
 }
