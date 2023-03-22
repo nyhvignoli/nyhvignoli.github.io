@@ -29,7 +29,7 @@ export const getKnowledges = ({
       title: generalTitle,
       icon: {
         src: general,
-        alt: 'Ícone de diferentes telas e dispositivos'
+        alt: 'Ícone de um cérebro representando uma lâmpada'
       },
       list: generalKnowledges
     }
