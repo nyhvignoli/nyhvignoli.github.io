@@ -12,8 +12,8 @@ export const Wrapper = styled.div`
   ${({ size }) => `
     border: ${Border.WIDTH.THIN} solid ${Color.GREY_100};
     border-radius: ${Border.RADIUS.PILL};
-    font-size: ${FontSize.MOBILE.BODY_4};
-    padding: ${Spacing.MOBILE.TINY} ${Spacing.MOBILE.X_SMALL};
+    font-size: ${FontSize.MOBILE.BODY_3};
+    padding: ${Spacing.MOBILE.XX_SMALL} ${Spacing.MOBILE.SMALL};
     background-color: ${Color.GREY_700};
     color: ${Color.GREY_100};
 
