@@ -5,7 +5,7 @@
   "professionTitle": "Full Stack Developer",
   "aboutMeDescription": "Hey there! I'm Aline but you may call me Nyh!\n I've found my passion for programming in the beginning of 2020 and today I'm a Web Full Stack Developer.\n I have an artistic background as a musician and tattoo artist (profession that I used to take for about 12 years), and currently I work as a Software Engineer at \n As a woman and a lesbian I stand for inclusion and diversity in technology!",
   "viewResume": "View resume",
-  "viewSkillsClockwork": "View skills experience time",
+  "viewSkillsClockwork": "Learn more about my experience time in each technology by visiting ",
 
   "knowledges": "Knowledges",
   "frontendKnowledges": [
@@ -32,12 +32,7 @@
   ],
   "general": "General",
 
-  "education": "Education",
-  "webFullStackDevelopment": "Web Full Stack Bootcamp",
-  "androidDevelopment": "Android Development",
-  "present": "present",
-  "labenuBootcampDescription": "Labenu is a startup which graduate Web Full Stack Developers ready for the job market. More than 1000 hours of programming make their students become professionals with practical knowledges on Back-end and Front-end.",
-  "androidDevelopmentCourseDescription": "Native Android Development Course, taught by Jamilton Damasceno. Learning process using Android Studio IDE, Java language, SQLite database and NoSQL with Firebase.",
+  "technologies": "Technologies",
 
   "mongoDBDescription": "I've worked as a contractor for the international agile development team at MongoDB. Team responsible for maintain, sustain and develop new features for all websites under the mongodb.com domain. In this project I've worked specially developing bug fixes and improvements, both as a Backender and Frontender, but mostly as a Frontend developer.",
   "shoppingOmniDescription": "I was part of the agile development team (front-end and back-end) of Shopping Omni project, for about 2 months. This project is sort of a plataform to sellers, with management and integration with stores, marketplaces, products, orders, among others features. Right now the website is beeing used only for registered sellers.",
@@ -212,6 +207,7 @@
     "opensInANewTab": "Opens in a new tab",
     "opensAPDFDocumentInANewTab": "Opens a PDF document in a new tab",
     "questrade": "Questrade website link",
-    "viewResume": "View Aline Vignoli's resume"
+    "viewResume": "View Aline Vignoli's resume",
+    "skillsClockworkLink": "Nyh Vignoli - Hard Skills Clockwork website"
   }
 }
