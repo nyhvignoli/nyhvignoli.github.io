@@ -5,6 +5,8 @@ import { Heading2 } from '../../global/styles'
 import { GridLayout } from '../GridLayout'
 import { BaseCard } from '../Cards'
 import { getData, DATA_TYPE } from '../../data'
+import { Technologies } from '../Technologies'
+import { stacks } from '../../data/stacks'
 
 const Knowledges = () => {
   const { dictionary } = useContext(LanguageContext)
@@ -29,6 +31,7 @@ const Knowledges = () => {
             />
           )
         })}
+        <Technologies title={dictionary.technologies} list={stacks} />
       </GridLayout>
     </Wrapper>
   )
