@@ -101,6 +101,18 @@ export const Subhead2 = styled.h3`
     font-size: ${FontSize.DESKTOP.SUBHEAD_2};
     line-height: ${LineHeight.DESKTOP.SUBHEAD_2};
   }
+
+  ${({ styles }) => styles}
+`
+
+const bodySmallStyles = `
+  font-size: ${FontSize.DESKTOP.BODY_4};
+  line-height: ${LineHeight.DESKTOP.BODY_4};
+
+  @media (${Breakpoints.DESKTOP.LARGE}) {
+    font-size: ${FontSize.DESKTOP.BODY_4};
+    line-height: ${LineHeight.DESKTOP.BODY_4};
+  }
 `
 
 export const Body = styled.span`
@@ -113,6 +125,8 @@ export const Body = styled.span`
     font-size: ${FontSize.DESKTOP.BODY_3};
     line-height: ${LineHeight.DESKTOP.BODY_3};
   }
+
+  ${({ small }) => small && bodySmallStyles}
 `
 
 /* List */
