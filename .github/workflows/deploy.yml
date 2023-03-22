@@ -24,7 +24,6 @@ jobs:
       - run: npm run lint
       - run: npm install -g surge
       - if: github.ref == 'refs/heads/redesign'
-        run: surge ./build ${{ secrets.TEST_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}   
+        run: surge ./build ${{ secrets.TEST_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
       - if: github.ref == 'refs/heads/main'
         run: surge ./build ${{ secrets.DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
-

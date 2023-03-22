@@ -24,7 +24,12 @@
     "MongoDB database",
     "Comfortable with Firebase"
   ],
-  "generalKnowledges": ["Clean Code", "Google Cloud Platform (GCP)", "AWS", "Agile Development"],
+  "generalKnowledges": [
+    "Clean Code",
+    "Google Cloud Platform (GCP)",
+    "AWS",
+    "Agile Development"
+  ],
   "general": "General",
 
   "education": "Education",
