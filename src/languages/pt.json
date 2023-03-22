@@ -5,7 +5,7 @@
   "professionTitle": "Desenvolvedora Full Stack",
   "aboutMeDescription": "Oi tudo bem? Eu sou Aline mas pode me chamar de Nyh!\n Descobri minha paixão por programação no início de 2020 e hoje sou Desenvolvedora Web Full Stack.\n Tenho um background artístico como musicista e tatuadora (profissão que excerci por 12 anos), e atualmente trabalho como Engenheira de Software na \n Enquanto mulher e lésbica, busco somar na inclusão e diversidade na tecnologia!",
   "viewResume": "Visualizar currículo",
-  "viewSkillsClockwork": "Ver tempo de experiência por habilidade",
+  "viewSkillsClockwork": "Saiba mais sobre meu tempo de experiência em cada technologia visitando ",
 
   "knowledges": "Conhecimentos",
   "frontendKnowledges": [
@@ -32,12 +32,7 @@
   ],
   "general": "Gerais",
 
-  "education": "Formação",
-  "webFullStackDevelopment": "Curso Web Full Stack",
-  "androidDevelopment": "Desenvolvimento Android",
-  "present": "presente",
-  "labenuBootcampDescription": "A Labenu é uma startup que forma Pessoas Desenvolvedoras Web Full Stack prontas para o mercado de trabalho. São mais de 1000 horas de programação que faz com que suas alunas e alunos sejam profissionais com conhecimentos adquiridos e postos em prática tanto no Back-end quanto no Front-end.",
-  "androidDevelopmentCourseDescription": "Curso de Desenvolvimento Android Nativo, ministrado por Jamilton Damasceno. Aprendizado utilizando a IDE Android Studio, linguagem Java, banco de dados SQLite e NoSQL com Firebase.",
+  "technologies": "Tecnologias",
 
   "mongoDBDescription": "Fiz parte do time de desenvolvimento ágil internacional da MongoDB. Time responsável por dar manutenção, sustentação e desenvolvimento de novas funcionalidades para todos os sites que estão sob domínio mongodb.com. Nesse projeto trabalhei especialmente desenvolvendo bug fixes e melhorias, tanto no Backend e Front-end, mas com foco em Front-end.",
   "shoppingOmniDescription": "Fiz parte do time de desenvolvimento ágil (front-end e back-end) do projeto Shopping Omni, por cerca de 2 meses. Trata-se de uma plataforma direcionada à lojistas, com gerenciamento e integração de lojas, marketplaces, produtos, pedidos e outras funcionalidades. No momento o site está sendo utilizado apenas para lojistas cadastrados.",
@@ -212,6 +207,7 @@
     "opensInANewTab": "Abre em uma nova aba",
     "opensAPDFDocumentInANewTab": "Abre um documento PDF em uma nova aba",
     "questrade": "Link para o website da Questrade",
-    "viewResume": "Visualizar o currículo de Aline Vignoli"
+    "viewResume": "Visualizar o currículo de Aline Vignoli",
+    "skillsClockworkLink": "Website Nyh Vignoli - Hard Skills Clockwork"
   }
 }
