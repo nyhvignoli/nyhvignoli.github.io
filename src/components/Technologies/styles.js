@@ -27,6 +27,4 @@ export const ListWrapper = styled.ul`
   list-style-type: none;
   padding-inline-start: 0;
   gap: ${Spacing.MOBILE.XX_SMALL};
-
-  ${({ styles }) => styles}
 `
