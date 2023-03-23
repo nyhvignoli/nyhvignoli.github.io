@@ -11,7 +11,7 @@ const listCommon = `
 
 const checkMarkLI = `
   li {
-    padding-left: ${Spacing.MOBILE.X_SMALL};
+    padding-left: ${Spacing.MOBILE.XX_SMALL};
   }
 
   li::marker {
