@@ -139,7 +139,10 @@ export const Body = styled.span`
     line-height: ${LineHeight.DESKTOP.BODY_3};
   }
 
-  ${({ small }) => small && bodySmallStyles}
+  ${({ small, align }) => `
+    ${small && bodySmallStyles};
+    text-align: ${align};
+  `}
 `
 
 export const Body4 = styled.span`
