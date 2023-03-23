@@ -1,14 +1,11 @@
 import styled from 'styled-components'
-import { theme } from '../../theme'
-
-const { colors } = theme
+import { Color } from '../../theme'
 
 export const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: ${colors.lightGrey};
-  color: ${colors.deepBlue};
+  background-color: ${Color.GREY_700};
   padding: 2rem 2rem 5rem 2rem;
   gap: 2rem;
 

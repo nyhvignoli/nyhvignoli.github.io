@@ -70,7 +70,6 @@ const subheadCommon = `
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-family: ${FontFamily.SUBHEAD};
-  text-align: center;
   color: ${Color.GREY_100};
   font-weight: ${FontWeight.MEDIUM};
 `

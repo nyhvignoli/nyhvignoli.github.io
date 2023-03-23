@@ -34,6 +34,11 @@
 
   "technologies": "Technologies",
 
+  "certificates": "certificates",
+  "css3Animations": "CSS3 Animations, Transforms, Transitions",
+  "gcpFundamentals": "Google Cloud Fundamentals",
+  "fullStackDevelopment": "Full Stack Web Development",
+
   "mongoDBDescription": "I've worked as a contractor for the international agile development team at MongoDB. Team responsible for maintain, sustain and develop new features for all websites under the mongodb.com domain. In this project I've worked specially developing bug fixes and improvements, both as a Backender and Frontender, but mostly as a Frontend developer.",
   "shoppingOmniDescription": "I was part of the agile development team (front-end and back-end) of Shopping Omni project, for about 2 months. This project is sort of a plataform to sellers, with management and integration with stores, marketplaces, products, orders, among others features. Right now the website is beeing used only for registered sellers.",
   "musicatchersDescription": "Full Stack Project developed at Labenu's bootcamp. It is about a web application with basic features of a music streaming Website.",
@@ -208,6 +213,9 @@
     "opensAPDFDocumentInANewTab": "Opens a PDF document in a new tab",
     "questrade": "Questrade website link",
     "viewResume": "View Aline Vignoli's resume",
-    "skillsClockworkLink": "Nyh Vignoli - Hard Skills Clockwork website"
+    "skillsClockworkLink": "Nyh Vignoli - Hard Skills Clockwork website",
+    "css3Animations": "'CSS3 Animations, Transforms and Transitions Ultimate Guide' course certificate",
+    "gcpFundamentals": "'Google Cloud Fundamentals: Core Infrastructure' course certificate",
+    "fullStackDevelopment": "'Web Full - Stack' course certificate"
   }
 }
