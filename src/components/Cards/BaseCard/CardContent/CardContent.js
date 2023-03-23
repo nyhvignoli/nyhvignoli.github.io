@@ -1,15 +1,15 @@
 import React from 'react'
-import { UnorderedList } from './styles'
+import { List } from '../../../List'
 
 export const CardContent = ({ list }) => {
   return (
     <div data-testid="base-card-content">
       {!!list.length && (
-        <UnorderedList>
+        <List>
           {list.map((item, index) => {
             return <li key={index}>{item}</li>
           })}
-        </UnorderedList>
+        </List>
       )}
     </div>
   )
