@@ -7,8 +7,6 @@ import labedditScreenshot from '../assets/labeddit.PNG'
 import labeddit2 from '../assets/labeddit-2.PNG'
 import labeddit3 from '../assets/labeddit-3.PNG'
 import labeddit4 from '../assets/labeddit-4.PNG'
-import astromatchScreenshot from '../assets/astromatch.PNG'
-import astromatch2 from '../assets/astromatch-2.PNG'
 import shoppingOmni1 from '../assets/shopping-omni/shoppingomni-1.png'
 import shoppingOmni2 from '../assets/shopping-omni/shoppingomni-2.png'
 import shoppingOmni3 from '../assets/shopping-omni/shoppingomni-3.png'
@@ -36,7 +34,7 @@ export const getProjects = ({
   labookDescription,
   images
 }) => {
-  const { mongoDB, shoppingOmni, musicatchers, labeddit, astromatch } = images
+  const { mongoDB, shoppingOmni, musicatchers, labeddit } = images
 
   const projects = [
     {
@@ -110,17 +108,14 @@ export const getProjects = ({
         }
       ],
       description: mongoDBDescription,
-      url: 'https://www.mongodb.com/',
+      ctas: [{ href: 'https://www.mongodb.com/' }],
       tags: [
         'react',
         'preact',
-        'react-imgix',
-        'svelte',
         'styled-components',
-        'express',
+        'svelte',
         'jest',
-        'nodejs',
-        'noSql',
+        'node',
         'mongoDB'
       ]
     },
@@ -145,7 +140,7 @@ export const getProjects = ({
         }
       ],
       description: shoppingOmniDescription,
-      url: 'https://shoppingomni.com.br/',
+      ctas: [{ href: 'https://shoppingomni.com.br/' }],
       tags: [
         'react',
         'redux',
@@ -190,11 +185,16 @@ export const getProjects = ({
         }
       ],
       description: musicatchersDescription,
-      githubLink: {
-        frontend: 'https://github.com/nyhvignoli/musicatchers-frontend',
-        backend: 'https://github.com/nyhvignoli/musicatchers-backend'
-      },
-      url: '',
+      ctas: [
+        {
+          text: 'Front-end (GitHub)',
+          href: 'https://github.com/nyhvignoli/musicatchers-frontend'
+        },
+        {
+          text: 'Back-end (GitHub)',
+          href: 'https://github.com/nyhvignoli/musicatchers-backend'
+        }
+      ],
       tags: [
         'react',
         'axios',
@@ -231,44 +231,45 @@ export const getProjects = ({
         }
       ],
       description: labedditDescription,
-      githubLink: 'https://github.com/nyhvignoli/labeddit',
-      url: 'http://nyhv-labeddit.surge.sh',
-      tags: ['react', 'axios', 'styled-components', 'material-ui']
-    },
-    {
-      title: 'Astromatch',
-      type: 'Front-end',
-      images: [
+      ctas: [
+        { href: 'http://nyhv-labeddit.surge.sh' },
         {
-          src: astromatchScreenshot,
-          alt: astromatch.astromatchScreenshot.alt,
-          caption: astromatch.astromatchScreenshot.caption
-        },
-        {
-          src: astromatch2,
-          alt: astromatch.astromatch2.alt,
-          caption: astromatch.astromatch2.caption
+          text: 'Front-end (GitHub)',
+          href: 'https://github.com/nyhvignoli/labeddit'
         }
       ],
-      description: astromatchDescription,
-      githubLink: 'https://github.com/nyhvignoli/astromatch',
-      url: 'http://nyhv-astromatch.surge.sh/',
       tags: ['react', 'axios', 'styled-components', 'material-ui']
     },
     {
       title: 'Labenu System',
       type: 'Back-end',
       description: labenuSystemDescription,
-      githubLink: 'https://github.com/nyhvignoli/labenu-system',
-      url: 'https://documenter.getpostman.com/view/13242412/TVza9tK7',
+      ctas: [
+        {
+          text: 'Back-end (GitHub)',
+          href: 'https://github.com/nyhvignoli/labenu-system'
+        },
+        {
+          text: 'Documentação',
+          href: 'https://documenter.getpostman.com/view/13242412/TVza9tK7'
+        }
+      ],
       tags: ['express', 'knex', 'mysql', 'uuid', 'dotenv', 'dayjs', 'cors']
     },
     {
       title: 'Labook',
       type: 'Back-end',
       description: labookDescription,
-      githubLink: 'https://github.com/nyhvignoli/labook',
-      url: 'https://github.com/nyhvignoli/labook#endpoints',
+      ctas: [
+        {
+          text: 'Back-end (GitHub)',
+          href: 'https://github.com/nyhvignoli/labook'
+        },
+        {
+          text: 'Documentação',
+          href: 'https://github.com/nyhvignoli/labook#endpoints'
+        }
+      ],
       tags: [
         'express',
         'knex',

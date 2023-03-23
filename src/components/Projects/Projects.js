@@ -1,10 +1,14 @@
 import React, { useContext, useState } from 'react'
 import { Wrapper } from './styles'
-import { Subhead } from '../../global/styles'
-import Gallery from '../Gallery/Gallery'
+import { Body4, Subhead } from '../../global/styles'
 import ScreenShotsGallery from '../ScreenShotsGallery/ScreenShotsGallery'
 import { LanguageContext, Text } from '../../global/LanguagesContext'
 import { DATA_TYPE, getData } from '../../data'
+import { GalleryCard } from '../Cards/GalleryCard'
+import { ListWrapper } from '../Technologies/styles'
+import { Pill, PILL_SIZES } from '../Pill'
+import { Space } from '../Space'
+import { Spacing } from '../../theme'
 
 const Projects = () => {
   const { dictionary } = useContext(LanguageContext)
@@ -27,11 +31,42 @@ const Projects = () => {
       <Subhead data-aos="fade-zoom-in" data-aos-duration="1500">
         <Text tid="projects" />
       </Subhead>
-      <Gallery
-        imageDetailsOpen={imageDetailsOpen}
-        projects={projects}
-        handleImageDetailsOpen={handleImageDetailsOpen}
-      />
+      {projects.map((project, index) => {
+        return (
+          <GalleryCard
+            key={`${project.title}-${index}`}
+            headerProps={{
+              title: project.title,
+              subtitle: project.type,
+              cover: !!project.images?.length && {
+                src: project.images[0].src,
+                alt: project.images[0].alt
+              },
+              cta: {
+                text: 'Galeria',
+                onClick: () => handleImageDetailsOpen(index)
+              }
+            }}
+            footerProps={{ ctas: project.ctas }}
+          >
+            <Space mobile={{ marginBottom: Spacing.MOBILE.X_SMALL }}>
+              <Body4>{project.description}</Body4>
+            </Space>
+            <ListWrapper>
+              {project.tags.map((item, index) => {
+                return (
+                  <Pill
+                    key={`${item}-${index}`}
+                    noBackground
+                    size={PILL_SIZES.small}
+                    text={item}
+                  />
+                )
+              })}
+            </ListWrapper>
+          </GalleryCard>
+        )
+      })}
       {imageDetailsOpen && (
         <ScreenShotsGallery
           handleImageDetailsClose={handleImageDetailsClose}
