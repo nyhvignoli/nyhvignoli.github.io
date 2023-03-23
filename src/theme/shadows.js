@@ -6,7 +6,7 @@ export const Shadow = {
   },
   CARD: {
     normal: (color = '#CDCDCD') =>
-      `0 0 0 1px ${color}, 0 5px 5px rgba(12, 12, 12, 0.05), 0 0 40px rgba(12, 12, 12, 0.015)`,
+      `0 0 0 1px ${color}, 0 5px 5px rgba(12, 12, 12, 0.05), 0 0 24px rgba(12, 12, 12, 0.015)`,
     hover: (color = '#CDCDCD') =>
       `0 0 0 1px ${color}, 0 5px 10px rgba(12, 12, 12, 0.5), 0 0 40px rgba(12, 12, 12, 0.015)`,
     FOCUS: '',
