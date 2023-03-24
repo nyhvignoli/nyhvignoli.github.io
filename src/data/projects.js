@@ -29,7 +29,7 @@ export const getProjects = ({
   shoppingOmniDescription,
   musicatchersDescription,
   labedditDescription,
-  astromatchDescription,
+  viewDocumentation,
   labenuSystemDescription,
   labookDescription,
   images
@@ -140,7 +140,7 @@ export const getProjects = ({
         }
       ],
       description: shoppingOmniDescription,
-      ctas: [{ href: 'https://shoppingomni.com.br/' }],
+      ctas: [],
       tags: [
         'react',
         'redux',
@@ -250,7 +250,7 @@ export const getProjects = ({
           href: 'https://github.com/nyhvignoli/labenu-system'
         },
         {
-          text: 'Documentação',
+          text: viewDocumentation,
           href: 'https://documenter.getpostman.com/view/13242412/TVza9tK7'
         }
       ],
@@ -266,7 +266,7 @@ export const getProjects = ({
           href: 'https://github.com/nyhvignoli/labook'
         },
         {
-          text: 'Documentação',
+          text: viewDocumentation,
           href: 'https://github.com/nyhvignoli/labook#endpoints'
         }
       ],

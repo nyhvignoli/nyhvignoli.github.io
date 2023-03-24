@@ -39,6 +39,7 @@
   "gcpFundamentals": "Google Cloud Fundamentals",
   "fullStackDevelopment": "Desenvolvimento Web Full Stack",
 
+  "gallery": "Ver galeria",
   "mongoDBDescription": "Fiz parte do time de desenvolvimento ágil internacional da MongoDB. Time responsável por dar manutenção, sustentação e desenvolvimento de novas funcionalidades para todos os sites que estão sob domínio mongodb.com. Nesse projeto trabalhei especialmente desenvolvendo bug fixes e melhorias, tanto no Backend e Front-end, mas com foco em Front-end.",
   "shoppingOmniDescription": "Fiz parte do time de desenvolvimento ágil (front-end e back-end) do projeto Shopping Omni, por cerca de 2 meses. Trata-se de uma plataforma direcionada à lojistas, com gerenciamento e integração de lojas, marketplaces, produtos, pedidos e outras funcionalidades. No momento o site está sendo utilizado apenas para lojistas cadastrados.",
   "musicatchersDescription": "Projeto Full Stack do bootcamp da escola Labenu. Trata-se de uma aplicação com funcionalidades básicas de um site para streaming de músicas.",
@@ -51,7 +52,7 @@
   "backendOnGithub": "Back-end no Github",
   "viewCodeOnGithub": "Ver no Github",
   "viewDocumentation": "Ver documentação",
-  "openWebsite": "Abrir site",
+  "viewWebsite": "Ver site",
 
   "communities": "Comunidades",
   "vizirDescription": "Studio de software com mais de 10 anos no mercado, onde trabalho atualmente",
