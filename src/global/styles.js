@@ -221,6 +221,10 @@ const buttonCommon = `
     transition: all ${Transition.DURATION.SUPER_FAST} ease;
   }
 
+  &:active {
+    background-color: ${Color.JADE_GREEN_300};
+  }
+
   @media (${Breakpoints.MOBILE.LARGE.MAX}) {
     width: 100%;
   }
@@ -228,7 +232,6 @@ const buttonCommon = `
 
 export const PrimaryButton = styled.button`
   ${buttonCommon}
-  outline: none;
 `
 
 export const SecondaryButton = styled.button`
@@ -236,7 +239,13 @@ export const SecondaryButton = styled.button`
   background-color: transparent;
   border: ${Border.WIDTH.LIGHT} solid ${Color.GREY_100};
   color: ${Color.GREY_100};
-  outline: none;
+  outline-offset: 2px;
+
+  &:focus,
+  &:hover {
+    border: ${Border.WIDTH.LIGHT} solid ${Color.JADE_GREEN_300};
+    background-color: ${Color.GREY_700};
+  }
 
   ${({ small }) =>
     small &&
@@ -255,6 +264,7 @@ export const ButtonLink = styled.a`
 `
 
 export const InlineLink = styled.a`
+  ${({ flex }) => flex && `display: flex; width: fit-content;`};
   color: ${Color.JADE_GREEN_300};
   transition: all ${Transition.DURATION.SUPER_FAST} ease;
 
