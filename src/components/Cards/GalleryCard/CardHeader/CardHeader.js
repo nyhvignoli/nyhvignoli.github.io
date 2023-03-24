@@ -7,7 +7,7 @@ export const CardHeader = ({
   title,
   subtitle,
   cover = { src: '', alt: '' },
-  cta = { text: '', arialLabel: '', onClick: () => {} }
+  cta = { text: '', arialLabel: '', onClick: null }
 }) => {
   return (
     <Wrapper data-testid="gallery-card-header">

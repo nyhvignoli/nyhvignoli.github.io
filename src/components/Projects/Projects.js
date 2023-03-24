@@ -8,7 +8,10 @@ import { GalleryCard } from '../Cards/GalleryCard'
 import { ListWrapper } from '../Technologies/styles'
 import { Pill, PILL_SIZES } from '../Pill'
 import { Space } from '../Space'
-import { Spacing } from '../../theme'
+import { Color, Spacing } from '../../theme'
+import { IconButton } from '../Buttons'
+import { Chevron } from '../Icons'
+import { DIRECTIONS } from '../Icons/Chevron'
 
 const Projects = () => {
   const { dictionary } = useContext(LanguageContext)
@@ -31,6 +34,19 @@ const Projects = () => {
       <Subhead data-aos="fade-zoom-in" data-aos-duration="1500">
         <Text tid="projects" />
       </Subhead>
+      <IconButton>
+        <Chevron
+          color={Color.GREY_800}
+          dimensions={{ width: '36', height: '36' }}
+        />
+      </IconButton>
+      <IconButton disabled>
+        <Chevron
+          direction={DIRECTIONS.left}
+          color={Color.GREY_800}
+          dimensions={{ width: '36', height: '36' }}
+        />
+      </IconButton>
       {projects.map((project, index) => {
         return (
           <GalleryCard

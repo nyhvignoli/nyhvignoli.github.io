@@ -3,6 +3,7 @@ import { Wrapper } from './styles'
 import { InlineLink } from '../../../../global/styles'
 import { Space } from '../../../Space'
 import { LanguageContext } from '../../../../global/LanguagesContext'
+import { Chevron } from '../../../Icons'
 
 export const CardFooter = ({ ctas = [] }) => {
   const { dictionary } = useContext(LanguageContext)
@@ -13,8 +14,9 @@ export const CardFooter = ({ ctas = [] }) => {
         return (
           !!cta.href && (
             <Space key={`${cta.href}-${index}`} mobile={{ marginTop: 'auto' }}>
-              <InlineLink href={cta.href} aria-label={cta.ariaLabel}>
+              <InlineLink flex href={cta.href} aria-label={cta.ariaLabel}>
                 {cta.text || dictionary.viewWebsite}
+                <Chevron />
               </InlineLink>
             </Space>
           )
