@@ -11,6 +11,7 @@ import { Space } from '../Space'
 import { Color, Spacing } from '../../theme'
 import { IconButton } from '../Buttons'
 import { Chevron } from '../Icons'
+import { DIRECTIONS } from '../Icons/Chevron'
 
 const Projects = () => {
   const { dictionary } = useContext(LanguageContext)
@@ -41,7 +42,7 @@ const Projects = () => {
       </IconButton>
       <IconButton disabled>
         <Chevron
-          direction="left"
+          direction={DIRECTIONS.left}
           color={Color.GREY_800}
           dimensions={{ width: '36', height: '36' }}
         />
