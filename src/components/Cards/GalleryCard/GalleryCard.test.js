@@ -19,4 +19,13 @@ describe('GalleryCard', () => {
     const cardFooter = screen.getByTestId('gallery-card-footer')
     expect(cardFooter).toBeInTheDocument()
   })
+
+  test('renders a GalleryCard with no background', () => {
+    render(<GalleryCard noBackground />)
+    const galleryCardWrapper = screen.getByTestId('gallery-card-wrapper')
+    expect(galleryCardWrapper).toHaveStyle({
+      backgroundColor: 'transparent',
+      boxShadow: 'none'
+    })
+  })
 })
