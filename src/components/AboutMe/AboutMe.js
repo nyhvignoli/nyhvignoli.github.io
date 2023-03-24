@@ -29,7 +29,7 @@ const AboutMe = () => {
             <Subhead>
               <Text tid="professionTitle" />
             </Subhead>
-            <Body align="center" >
+            <Body align="center">
               {phrases(aboutMeDescription)[0]}
               <br />
               <br />

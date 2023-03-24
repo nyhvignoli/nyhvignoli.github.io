@@ -15,11 +15,13 @@ export const CardHeader = ({
       <Header>
         <Subhead2>{title}</Subhead2>
         <Subhead3>{`{ ${subtitle} }`}</Subhead3>
-        <Space mobile={{ marginTop: 'auto' }}>
-          <SecondaryButton small onClick={cta.onClick}>
-            {cta.text}
-          </SecondaryButton>
-        </Space>
+        {!!cta.text && (
+          <Space mobile={{ marginTop: 'auto' }}>
+            <SecondaryButton small onClick={cta.onClick}>
+              {cta.text}
+            </SecondaryButton>
+          </Space>
+        )}
       </Header>
     </Wrapper>
   )

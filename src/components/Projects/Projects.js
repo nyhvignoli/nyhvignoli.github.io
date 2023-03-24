@@ -42,8 +42,8 @@ const Projects = () => {
                 src: project.images[0].src,
                 alt: project.images[0].alt
               },
-              cta: {
-                text: 'Galeria',
+              cta: project.type !== 'Back-end' && {
+                text: dictionary.gallery,
                 onClick: () => handleImageDetailsOpen(index)
               }
             }}
