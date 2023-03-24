@@ -6,6 +6,10 @@ export const PILL_SIZES = {
   medium: 'medium'
 }
 
-export const Pill = ({ size = PILL_SIZES.medium, text }) => {
-  return <Wrapper size={size}>{text}</Wrapper>
+export const Pill = ({ size = PILL_SIZES.medium, text, noBackground }) => {
+  return (
+    <Wrapper size={size} noBackground={noBackground}>
+      {text}
+    </Wrapper>
+  )
 }

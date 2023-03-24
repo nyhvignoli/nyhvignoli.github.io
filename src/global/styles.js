@@ -67,7 +67,6 @@ export const Heading2 = styled.h2`
 `
 
 const subheadCommon = `
-  text-transform: uppercase;
   letter-spacing: 0.1em;
   font-family: ${FontFamily.SUBHEAD};
   color: ${Color.GREY_100};
@@ -76,6 +75,7 @@ const subheadCommon = `
 
 export const Subhead = styled.h2`
   ${subheadCommon}
+  text-transform: uppercase;
   font-size: ${FontSize.MOBILE.SUBHEAD_1};
   line-height: ${LineHeight.MOBILE.SUBHEAD_1};
   margin-bottom: ${Spacing.MOBILE.SMALL};
@@ -93,12 +93,27 @@ export const Subhead = styled.h2`
 
 export const Subhead2 = styled.h3`
   ${subheadCommon}
+  text-transform: uppercase;
   font-size: ${FontSize.MOBILE.SUBHEAD_2};
   line-height: ${LineHeight.MOBILE.SUBHEAD_2};
 
   @media (${Breakpoints.DESKTOP.LARGE}) {
     font-size: ${FontSize.DESKTOP.SUBHEAD_2};
     line-height: ${LineHeight.DESKTOP.SUBHEAD_2};
+  }
+
+  ${({ styles }) => styles}
+`
+
+export const Subhead3 = styled.h4`
+  ${subheadCommon}
+  letter-spacing: 0;
+  font-size: ${FontSize.MOBILE.SUBHEAD_3};
+  line-height: ${LineHeight.MOBILE.SUBHEAD_3};
+
+  @media (${Breakpoints.DESKTOP.LARGE}) {
+    font-size: ${FontSize.DESKTOP.SUBHEAD_3};
+    line-height: ${LineHeight.DESKTOP.SUBHEAD_3};
   }
 
   ${({ styles }) => styles}
@@ -117,7 +132,6 @@ const bodySmallStyles = `
 export const Body = styled.span`
   font-size: ${FontSize.MOBILE.BODY_3};
   line-height: ${LineHeight.MOBILE.BODY_3};
-  text-align: center;
   color: ${Color.GREY_100};
 
   @media (${Breakpoints.DESKTOP.LARGE}) {
@@ -125,7 +139,30 @@ export const Body = styled.span`
     line-height: ${LineHeight.DESKTOP.BODY_3};
   }
 
-  ${({ small }) => small && bodySmallStyles}
+  ${({ small, align }) => `
+    ${small && bodySmallStyles};
+    text-align: ${align};
+  `}
+`
+
+export const Body4 = styled.span`
+  font-size: ${FontSize.MOBILE.BODY_4};
+  line-height: ${LineHeight.MOBILE.BODY_4};
+
+  @media (${Breakpoints.DESKTOP.LARGE}) {
+    font-size: ${FontSize.DESKTOP.BODY_4};
+    line-height: ${LineHeight.DESKTOP.BODY_4};
+  }
+`
+
+export const Body5 = styled.span`
+  font-size: ${FontSize.MOBILE.BODY_5};
+  line-height: ${LineHeight.MOBILE.BODY_5};
+
+  @media (${Breakpoints.DESKTOP.LARGE}) {
+    font-size: ${FontSize.DESKTOP.BODY_5};
+    line-height: ${LineHeight.DESKTOP.BODY_5};
+  }
 `
 
 /* List */
@@ -192,6 +229,22 @@ const buttonCommon = `
 export const PrimaryButton = styled.button`
   ${buttonCommon}
   outline: none;
+`
+
+export const SecondaryButton = styled.button`
+  ${buttonCommon}
+  background-color: transparent;
+  border: ${Border.WIDTH.LIGHT} solid ${Color.GREY_100};
+  color: ${Color.GREY_100};
+  outline: none;
+
+  ${({ small }) =>
+    small &&
+    `
+    padding: ${Spacing.DESKTOP.X_TINY} ${Spacing.DESKTOP.SMALL};
+    border-radius: ${Border.RADIUS.SMALL};
+    min-width: ${Sizes.BUTTON.WIDTH.DESKTOP.SMALL};
+  `}
 `
 
 export const ButtonLink = styled.a`

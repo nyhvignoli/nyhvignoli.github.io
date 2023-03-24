@@ -2,6 +2,7 @@ export const Sizes = {
   BUTTON: {
     WIDTH: {
       DESKTOP: {
+        SMALL: '100px',
         REGULAR: '230px'
       }
     }
