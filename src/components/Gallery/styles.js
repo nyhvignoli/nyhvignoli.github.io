@@ -1,54 +1,39 @@
 import styled from 'styled-components'
+import { Breakpoints, Spacing } from '../../theme'
 
 export const Wrapper = styled.div`
+  overflow: hidden;
   display: flex;
+  align-items: center;
   width: 100%;
-  gap: 2rem;
+  gap: ${Spacing.MOBILE.SMALL};
+  grid-column: 1/7;
+
+  @media (${Breakpoints.TABLET.REGULAR.MIN}) {
+    grid-column: 1/9;
+  }
+
+  @media (${Breakpoints.DESKTOP.LARGE}) {
+    grid-column: 1/13;
+  }
 `
 
-export const Button = styled.button`
-  background-color: transparent;
-  border: none;
-  outline: none;
-  ${({ imageDetailsOpen }) => imageDetailsOpen && 'display: none'}
+export const Slides = styled.div`
+  display: flex;
+  gap: ${Spacing.MOBILE.SMALL};
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
 
-  &:disabled {
-    opacity: 0.3;
-  }
-
-  svg {
-    fill: #012940;
-    width: 30px;
-    height: 30px;
-    transition: all 0.2s ease 0s;
-    transition-property: all;
-    transition-duration: 0.2s;
-    transition-timing-function: ease;
-    transition-delay: 0s;
-  }
-
-  #right {
-    -moz-transform: scaleX(-1);
-    -o-transform: scaleX(-1);
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
-
-    &:hover {
-      margin-left: -50%;
-    }
-  }
-
-  #left {
-    &:hover {
-      margin-left: 20%;
-    }
-  }
-
-  &:hover {
-    cursor: pointer;
-  }
-
-  @media (max-width: 1024px) {
+  &::-webkit-scrollbar {
     display: none;
+  }
+
+  & > div {
+    scroll-snap-align: center;
+    flex-shrink: 0;
+    transition: transform 0.5s;
+    position: relative;
   }
 `

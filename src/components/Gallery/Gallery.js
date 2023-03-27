@@ -1,88 +1,104 @@
-import React from 'react'
-import SwipeableViews from 'react-swipeable-views'
-import { autoPlay } from 'react-swipeable-views-utils'
-import { Wrapper, Button } from './styles'
-import ProjectsContent from '../Projects/ProjectsContent/ProjectsContent'
+import React, { useContext, useEffect, useState } from 'react'
+import { Wrapper, Slides } from './styles'
+import { IconButton } from '../Buttons'
+import { Chevron } from '../Icons'
+import { DIRECTIONS } from '../Icons/Chevron'
+import { Body4 } from '../../global/styles'
+import { LanguageContext } from '../../global/LanguagesContext'
+import { GalleryCard } from '../Cards/GalleryCard'
+import { ListWrapper } from '../Technologies/styles'
+import { Pill, PILL_SIZES } from '../Pill'
+import { Space } from '../Space'
+import { Color, Spacing } from '../../theme'
 
-const AutoPlaySwipeableViews = autoPlay(SwipeableViews)
-
-const Gallery = ({ projects, imageDetailsOpen, handleImageDetailsOpen }) => {
-  const [activeStep, setActiveStep] = React.useState(0)
+const Gallery = ({ projects, handleImageDetailsOpen }) => {
+  const { dictionary } = useContext(LanguageContext)
+  const [firstRender, setFirstRender] = useState(true)
+  const [activeStep, setActiveStep] = useState(0)
   const maxSteps = projects.length
 
-  const handleNext = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep + 1)
+  const handleStepChange = (newStep) => {
+    if (firstRender) setFirstRender(false)
+    setActiveStep(newStep)
   }
 
-  const handleBack = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep - 1)
+  const scrollTo = (activeStep) => {
+    const element = document.getElementById(`slide-${activeStep}`)
+    if (!!element)
+      element.scrollIntoView({ block: 'center', behavior: 'smooth' })
   }
 
-  const handleStepChange = (step) => {
-    setActiveStep(step)
-  }
-
-  const springConfig = {
-    duration: '1s',
-    easeFunction: 'ease-in',
-    delay: '0s'
-  }
+  useEffect(() => {
+    if (!firstRender) scrollTo(activeStep)
+  }, [activeStep, firstRender])
 
   return (
     <Wrapper data-testid="gallery-wrapper">
-      <Button
-        data-testid="previous-button"
-        imageDetailsOpen={imageDetailsOpen}
-        onClick={handleBack}
+      <IconButton
+        testId="previous"
+        onClick={() => handleStepChange(activeStep - 1)}
         disabled={activeStep === 0}
+        hideOnMobile
       >
-        <svg
-          id="right"
-          xmlns="http://www.w3.org/2000/svg"
-          fillRule="evenodd"
-          clipRule="evenodd"
-        >
-          <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z" />
-        </svg>
-      </Button>
-      <AutoPlaySwipeableViews
-        data-testid="auto-play-swipeable-views"
-        interval={7000}
-        index={activeStep}
-        onChangeIndex={handleStepChange}
-        enableMouseEvents
-        springConfig={springConfig}
-      >
-        {projects.map((project, index) => (
-          <ProjectsContent
-            key={index}
-            index={index}
-            title={project.title}
-            type={project.type}
-            images={project.images}
-            description={project.description}
-            githubLink={project.githubLink}
-            url={project.url}
-            tags={project.tags}
-            handleImageDetailsOpen={handleImageDetailsOpen}
-          />
-        ))}
-      </AutoPlaySwipeableViews>
-      <Button
-        data-testid="next-button"
-        imageDetailsOpen={imageDetailsOpen}
-        onClick={handleNext}
+        <Chevron
+          direction={DIRECTIONS.left}
+          color={Color.GREY_800}
+          dimensions={{ width: '36', height: '36' }}
+        />
+      </IconButton>
+      <Slides>
+        {projects.map((project, index, array) => {
+          const id = `slide-${index}`
+          return (
+            <GalleryCard
+              id={id}
+              key={id}
+              hasMarginLeftOnMobile={index === 0}
+              hasMarginRightOnMobile={index === array.length - 1}
+              headerProps={{
+                title: project.title,
+                subtitle: project.type,
+                cover: !!project.images?.length && {
+                  src: project.images[0].src,
+                  alt: project.images[0].alt
+                },
+                cta: project.type !== 'Back-end' && {
+                  text: dictionary.gallery,
+                  onClick: () => handleImageDetailsOpen(index)
+                }
+              }}
+              footerProps={{ ctas: project.ctas }}
+            >
+              <Space mobile={{ marginBottom: Spacing.MOBILE.X_SMALL }}>
+                <Body4>{project.description}</Body4>
+              </Space>
+              <ListWrapper>
+                {project.tags.map((item, index) => {
+                  return (
+                    <Pill
+                      key={`${item}-${index}`}
+                      noBackground
+                      size={PILL_SIZES.small}
+                      text={item}
+                    />
+                  )
+                })}
+              </ListWrapper>
+            </GalleryCard>
+          )
+        })}
+      </Slides>
+      <IconButton
+        testId="next"
+        onClick={() => handleStepChange(activeStep + 1)}
         disabled={activeStep === maxSteps - 1}
+        hideOnMobile
       >
-        <svg
-          id="left"
-          xmlns="http://www.w3.org/2000/svg"
-          fillRule="evenodd"
-          clipRule="evenodd"
-        >
-          <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z" />
-        </svg>
-      </Button>
+        <Chevron
+          color={Color.GREY_800}
+          dimensions={{ width: '36', height: '36' }}
+        />
+      </IconButton>
     </Wrapper>
   )
 }

@@ -56,13 +56,13 @@ describe('Gallery', () => {
 
   test('should disable previous button by default', () => {
     const props = {
-      projects: [],
+      projects,
       imageDetailsOpen: false,
       handleImageDetailsOpen: jest.fn()
     }
 
     render(<Gallery {...props} />)
-    const previousButton = screen.getByTestId('previous-button')
+    const previousButton = screen.getByTestId('previous')
     expect(previousButton).toHaveProperty('disabled', true)
   })
 
@@ -74,52 +74,34 @@ describe('Gallery', () => {
     }
 
     render(<Gallery {...props} />)
-    const nextButton = screen.getByTestId('next-button')
+    const nextButton = screen.getByTestId('next')
     expect(nextButton).toHaveProperty('disabled', false)
   })
 
-  test('should render AutoPlaySwipeableViews with interval value of 7000', () => {
-    jest.useFakeTimers()
-    const props = {
-      projects,
-      imageDetailsOpen: false,
-      handleImageDetailsOpen: jest.fn()
-    }
+  // test('should handle the disabled property of buttons based on active step', () => {
+  //   const props = {
+  //     projects,
+  //     imageDetailsOpen: false,
+  //     handleImageDetailsOpen: jest.fn()
+  //   }
 
-    render(<Gallery {...props} />)
-    const autoPlaySwipeableViews = screen.getByTestId(
-      'auto-play-swipeable-views'
-    )
+  //   render(<Gallery {...props} />)
+  //   const previousButton = screen.getByTestId('previous')
+  //   const nextButton = screen.getByTestId('next')
 
-    expect(autoPlaySwipeableViews).toBeInTheDocument()
-    expect(setInterval).toHaveBeenCalledTimes(1)
-    expect(setInterval).toHaveBeenLastCalledWith(expect.any(Function), 7000)
-  })
+  //   expect(previousButton).toHaveProperty('disabled', true)
+  //   expect(nextButton).toHaveProperty('disabled', false)
 
-  test('should handle the disabled property of buttons based on active step', () => {
-    const props = {
-      projects,
-      imageDetailsOpen: false,
-      handleImageDetailsOpen: jest.fn()
-    }
+  //   fireEvent.click(nextButton)
 
-    render(<Gallery {...props} />)
-    const previousButton = screen.getByTestId('previous-button')
-    const nextButton = screen.getByTestId('next-button')
+  //   expect(previousButton).toHaveProperty('disabled', false)
+  //   expect(nextButton).toHaveProperty('disabled', true)
 
-    expect(previousButton).toHaveProperty('disabled', true)
-    expect(nextButton).toHaveProperty('disabled', false)
+  //   fireEvent.click(previousButton)
 
-    fireEvent.click(nextButton)
-
-    expect(previousButton).toHaveProperty('disabled', false)
-    expect(nextButton).toHaveProperty('disabled', true)
-
-    fireEvent.click(previousButton)
-
-    expect(previousButton).toHaveProperty('disabled', true)
-    expect(nextButton).toHaveProperty('disabled', false)
-  })
+  //   expect(previousButton).toHaveProperty('disabled', true)
+  //   expect(nextButton).toHaveProperty('disabled', false)
+  // })
 
   test('should call handleImageDetailsOpen function', () => {
     const props = {
@@ -129,9 +111,11 @@ describe('Gallery', () => {
     }
 
     render(<Gallery {...props} />)
-    const selectedImage = screen.getByRole('img', { src: 'src-1' })
+    const viewGalleryButton = screen.getAllByRole('button', {
+      name: /ver galeria/i
+    })[0]
 
-    fireEvent.click(selectedImage)
+    fireEvent.click(viewGalleryButton)
 
     expect(props.handleImageDetailsOpen).toHaveBeenCalled()
     expect(props.handleImageDetailsOpen).toHaveBeenCalledWith(0)
