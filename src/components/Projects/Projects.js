@@ -4,7 +4,7 @@ import { Heading2 } from '../../global/styles'
 import ScreenShotsGallery from '../ScreenShotsGallery/ScreenShotsGallery'
 import { LanguageContext, Text } from '../../global/LanguagesContext'
 import { DATA_TYPE, getData } from '../../data'
-import Gallery from '../Gallery/Gallery'
+import Carousel from '../Carousel/Carousel'
 import { GridLayout } from '../GridLayout'
 
 const Projects = () => {
@@ -28,7 +28,7 @@ const Projects = () => {
         <Text tid="projects" />
       </Heading2>
       <GridLayout noPaddingOnMobile>
-        <Gallery
+        <Carousel
           projects={projects}
           handleImageDetailsOpen={handleImageDetailsOpen}
         />

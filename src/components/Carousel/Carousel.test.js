@@ -1,7 +1,7 @@
 import { fireEvent, render, screen } from '@testing-library/react'
-import Gallery from './Gallery'
+import Carousel from './Carousel'
 
-describe('Gallery', () => {
+describe('Carousel', () => {
   afterEach(() => {
     jest.useRealTimers()
   })
@@ -42,16 +42,16 @@ describe('Gallery', () => {
     }
   ]
 
-  test('renders a Gallery Wrapper', () => {
+  test('renders a Carousel Wrapper', () => {
     const props = {
       projects: [],
       imageDetailsOpen: false,
       handleImageDetailsOpen: jest.fn()
     }
 
-    render(<Gallery {...props} />)
-    const galleryWrapper = screen.getByTestId('gallery-wrapper')
-    expect(galleryWrapper).toBeInTheDocument()
+    render(<Carousel {...props} />)
+    const carouselWrapper = screen.getByTestId('carousel-wrapper')
+    expect(carouselWrapper).toBeInTheDocument()
   })
 
   test('should disable previous button by default', () => {
@@ -61,7 +61,7 @@ describe('Gallery', () => {
       handleImageDetailsOpen: jest.fn()
     }
 
-    render(<Gallery {...props} />)
+    render(<Carousel {...props} />)
     const previousButton = screen.getByTestId('previous')
     expect(previousButton).toHaveProperty('disabled', true)
   })
@@ -73,7 +73,7 @@ describe('Gallery', () => {
       handleImageDetailsOpen: jest.fn()
     }
 
-    render(<Gallery {...props} />)
+    render(<Carousel {...props} />)
     const nextButton = screen.getByTestId('next')
     expect(nextButton).toHaveProperty('disabled', false)
   })
@@ -110,7 +110,7 @@ describe('Gallery', () => {
       handleImageDetailsOpen: jest.fn()
     }
 
-    render(<Gallery {...props} />)
+    render(<Carousel {...props} />)
     const viewGalleryButton = screen.getAllByRole('button', {
       name: /ver galeria/i
     })[0]

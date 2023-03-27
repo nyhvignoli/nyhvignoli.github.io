@@ -11,7 +11,7 @@ import { Pill, PILL_SIZES } from '../Pill'
 import { Space } from '../Space'
 import { Color, Spacing } from '../../theme'
 
-const Gallery = ({ projects, handleImageDetailsOpen }) => {
+const Carousel = ({ projects, handleImageDetailsOpen }) => {
   const { dictionary } = useContext(LanguageContext)
   const [firstRender, setFirstRender] = useState(true)
   const [activeStep, setActiveStep] = useState(0)
@@ -33,7 +33,7 @@ const Gallery = ({ projects, handleImageDetailsOpen }) => {
   }, [activeStep, firstRender])
 
   return (
-    <Wrapper data-testid="gallery-wrapper">
+    <Wrapper data-testid="carousel-wrapper">
       <IconButton
         testId="previous"
         onClick={() => handleStepChange(activeStep - 1)}
@@ -103,4 +103,4 @@ const Gallery = ({ projects, handleImageDetailsOpen }) => {
   )
 }
 
-export default Gallery
+export default Carousel
