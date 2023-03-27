@@ -1,91 +1,38 @@
 import React, { useContext, useState } from 'react'
 import { Wrapper } from './styles'
-import { Body4, Subhead } from '../../global/styles'
+import { Heading2 } from '../../global/styles'
 import ScreenShotsGallery from '../ScreenShotsGallery/ScreenShotsGallery'
 import { LanguageContext, Text } from '../../global/LanguagesContext'
 import { DATA_TYPE, getData } from '../../data'
-import { GalleryCard } from '../Cards/GalleryCard'
-import { ListWrapper } from '../Technologies/styles'
-import { Pill, PILL_SIZES } from '../Pill'
-import { Space } from '../Space'
-import { Color, Spacing } from '../../theme'
-import { IconButton } from '../Buttons'
-import { Chevron } from '../Icons'
-import { DIRECTIONS } from '../Icons/Chevron'
+import Carousel from '../Carousel/Carousel'
+import { GridLayout } from '../GridLayout'
 
 const Projects = () => {
   const { dictionary } = useContext(LanguageContext)
   const projects = getData(dictionary, DATA_TYPE.projects)
-
-  const [imageDetailsOpen, setImageDetailsOpen] = useState(false)
+  const [galleryOpen, setGalleryOpen] = useState(false)
   const [selectedProject, setSelectedProject] = useState(0)
 
-  const handleImageDetailsOpen = (projectIndex) => {
-    setImageDetailsOpen(true)
+  const handleGalleryOpen = (projectIndex) => {
+    setGalleryOpen(true)
     setSelectedProject(projectIndex)
   }
 
-  const handleImageDetailsClose = () => {
-    setImageDetailsOpen(false)
+  const handleGalleryClose = () => {
+    setGalleryOpen(false)
   }
 
   return (
-    <Wrapper imageDetailsOpen id="projects" data-testid="projects">
-      <Subhead data-aos="fade-zoom-in" data-aos-duration="1500">
+    <Wrapper galleryOpen id="projects" data-testid="projects">
+      <Heading2 data-aos="fade-zoom-in" data-aos-duration="1500">
         <Text tid="projects" />
-      </Subhead>
-      <IconButton>
-        <Chevron
-          color={Color.GREY_800}
-          dimensions={{ width: '36', height: '36' }}
-        />
-      </IconButton>
-      <IconButton disabled>
-        <Chevron
-          direction={DIRECTIONS.left}
-          color={Color.GREY_800}
-          dimensions={{ width: '36', height: '36' }}
-        />
-      </IconButton>
-      {projects.map((project, index) => {
-        return (
-          <GalleryCard
-            key={`${project.title}-${index}`}
-            headerProps={{
-              title: project.title,
-              subtitle: project.type,
-              cover: !!project.images?.length && {
-                src: project.images[0].src,
-                alt: project.images[0].alt
-              },
-              cta: project.type !== 'Back-end' && {
-                text: dictionary.gallery,
-                onClick: () => handleImageDetailsOpen(index)
-              }
-            }}
-            footerProps={{ ctas: project.ctas }}
-          >
-            <Space mobile={{ marginBottom: Spacing.MOBILE.X_SMALL }}>
-              <Body4>{project.description}</Body4>
-            </Space>
-            <ListWrapper>
-              {project.tags.map((item, index) => {
-                return (
-                  <Pill
-                    key={`${item}-${index}`}
-                    noBackground
-                    size={PILL_SIZES.small}
-                    text={item}
-                  />
-                )
-              })}
-            </ListWrapper>
-          </GalleryCard>
-        )
-      })}
-      {imageDetailsOpen && (
+      </Heading2>
+      <GridLayout noPaddingOnMobile>
+        <Carousel projects={projects} handleGalleryOpen={handleGalleryOpen} />
+      </GridLayout>
+      {galleryOpen && (
         <ScreenShotsGallery
-          handleImageDetailsClose={handleImageDetailsClose}
+          handleGalleryClose={handleGalleryClose}
           images={projects[selectedProject].images}
         />
       )}

@@ -1,9 +1,20 @@
 import React from 'react'
 import { Button } from './styles'
 
-export const IconButton = ({ children, disabled, onClick = () => {} }) => {
+export const IconButton = ({
+  children,
+  testId,
+  hideOnMobile,
+  disabled,
+  onClick = () => {}
+}) => {
   return (
-    <Button disabled={disabled} onClick={onClick}>
+    <Button
+      data-testid={testId}
+      hideOnMobile={hideOnMobile}
+      disabled={disabled}
+      onClick={onClick}
+    >
       {children}
     </Button>
   )

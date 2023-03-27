@@ -1,15 +1,30 @@
 import styled from 'styled-components'
-import { Color, Border, Transition, Shadow } from '../../../theme'
+import {
+  Color,
+  Border,
+  Transition,
+  Shadow,
+  Breakpoints,
+  Spacing
+} from '../../../theme'
 
 export const Button = styled.button`
-  border: none;
-  background-color: ${Color.JADE_GREEN_400};
-  border-radius: ${Border.RADIUS.CIRCLE};
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
-  transition: all ${Transition.DURATION.SUPER_FAST} ease;
+  ${({ hideOnMobile }) =>
+    hideOnMobile &&
+    `
+    display: none;
+  `}
 
+  @media (${Breakpoints.TABLET.REGULAR.MIN}) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: ${Color.JADE_GREEN_400};
+    border-radius: ${Border.RADIUS.CIRCLE};
+    cursor: pointer;
+    transition: all ${Transition.DURATION.SUPER_FAST} ease;
+    padding: ${Spacing.TABLET.X_TINY};
   ${({ disabled }) =>
     disabled
       ? `
@@ -27,4 +42,7 @@ export const Button = styled.button`
       background-color: ${Color.JADE_GREEN_300};
     }
   `}
+
+  @media (${Breakpoints.DESKTOP.LARGE}) {
+    padding: ${Spacing.DESKTOP.X_TINY};
 `
