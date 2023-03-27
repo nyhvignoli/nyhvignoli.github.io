@@ -11,7 +11,7 @@ import { Pill, PILL_SIZES } from '../Pill'
 import { Space } from '../Space'
 import { Color, Spacing } from '../../theme'
 
-const Carousel = ({ projects, handleImageDetailsOpen }) => {
+const Carousel = ({ projects, handleGalleryOpen }) => {
   const { dictionary } = useContext(LanguageContext)
   const [firstRender, setFirstRender] = useState(true)
   const [activeStep, setActiveStep] = useState(0)
@@ -64,7 +64,7 @@ const Carousel = ({ projects, handleImageDetailsOpen }) => {
                 },
                 cta: project.type !== 'Back-end' && {
                   text: dictionary.gallery,
-                  onClick: () => handleImageDetailsOpen(index)
+                  onClick: () => handleGalleryOpen(index)
                 }
               }}
               footerProps={{ ctas: project.ctas }}

@@ -10,32 +10,32 @@ import { GridLayout } from '../GridLayout'
 const Projects = () => {
   const { dictionary } = useContext(LanguageContext)
   const projects = getData(dictionary, DATA_TYPE.projects)
-  const [imageDetailsOpen, setImageDetailsOpen] = useState(false)
+  const [galleryOpen, setGalleryOpen] = useState(false)
   const [selectedProject, setSelectedProject] = useState(0)
 
-  const handleImageDetailsOpen = (projectIndex) => {
-    setImageDetailsOpen(true)
+  const handleGalleryOpen = (projectIndex) => {
+    setGalleryOpen(true)
     setSelectedProject(projectIndex)
   }
 
-  const handleImageDetailsClose = () => {
-    setImageDetailsOpen(false)
+  const handleGalleryClose = () => {
+    setGalleryOpen(false)
   }
 
   return (
-    <Wrapper imageDetailsOpen id="projects" data-testid="projects">
+    <Wrapper galleryOpen id="projects" data-testid="projects">
       <Heading2 data-aos="fade-zoom-in" data-aos-duration="1500">
         <Text tid="projects" />
       </Heading2>
       <GridLayout noPaddingOnMobile>
         <Carousel
           projects={projects}
-          handleImageDetailsOpen={handleImageDetailsOpen}
+          handleGalleryOpen={handleGalleryOpen}
         />
       </GridLayout>
-      {imageDetailsOpen && (
+      {galleryOpen && (
         <ScreenShotsGallery
-          handleImageDetailsClose={handleImageDetailsClose}
+          handleGalleryClose={handleGalleryClose}
           images={projects[selectedProject].images}
         />
       )}

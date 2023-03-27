@@ -46,7 +46,7 @@ describe('Carousel', () => {
     const props = {
       projects: [],
       imageDetailsOpen: false,
-      handleImageDetailsOpen: jest.fn()
+      handleGalleryOpen: jest.fn()
     }
 
     render(<Carousel {...props} />)
@@ -58,7 +58,7 @@ describe('Carousel', () => {
     const props = {
       projects,
       imageDetailsOpen: false,
-      handleImageDetailsOpen: jest.fn()
+      handleGalleryOpen: jest.fn()
     }
 
     render(<Carousel {...props} />)
@@ -70,7 +70,7 @@ describe('Carousel', () => {
     const props = {
       projects,
       imageDetailsOpen: false,
-      handleImageDetailsOpen: jest.fn()
+      handleGalleryOpen: jest.fn()
     }
 
     render(<Carousel {...props} />)
@@ -82,7 +82,7 @@ describe('Carousel', () => {
   //   const props = {
   //     projects,
   //     imageDetailsOpen: false,
-  //     handleImageDetailsOpen: jest.fn()
+  //     handleGalleryOpen: jest.fn()
   //   }
 
   //   render(<Gallery {...props} />)
@@ -103,11 +103,11 @@ describe('Carousel', () => {
   //   expect(nextButton).toHaveProperty('disabled', false)
   // })
 
-  test('should call handleImageDetailsOpen function', () => {
+  test('should call handleGalleryOpen function', () => {
     const props = {
       projects,
       imageDetailsOpen: false,
-      handleImageDetailsOpen: jest.fn()
+      handleGalleryOpen: jest.fn()
     }
 
     render(<Carousel {...props} />)
@@ -117,7 +117,7 @@ describe('Carousel', () => {
 
     fireEvent.click(viewGalleryButton)
 
-    expect(props.handleImageDetailsOpen).toHaveBeenCalled()
-    expect(props.handleImageDetailsOpen).toHaveBeenCalledWith(0)
+    expect(props.handleGalleryOpen).toHaveBeenCalled()
+    expect(props.handleGalleryOpen).toHaveBeenCalledWith(0)
   })
 })

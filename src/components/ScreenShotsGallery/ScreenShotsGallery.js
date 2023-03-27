@@ -9,7 +9,7 @@ import { Image } from '../Projects/ProjectsContent/styles'
 import { Wrapper, ImageWrapper, Header, Background } from './styles'
 import { IconButton } from '@material-ui/core'
 
-const ScreenShotsGallery = ({ images, handleImageDetailsClose }) => {
+const ScreenShotsGallery = ({ images, handleGalleryClose }) => {
   const [activeStep, setActiveStep] = useState(0)
   const maxSteps = images.length
 
@@ -30,7 +30,7 @@ const ScreenShotsGallery = ({ images, handleImageDetailsClose }) => {
           </Typography>
           <IconButton
             data-testid="sg-close-button"
-            onClick={handleImageDetailsClose}
+            onClick={handleGalleryClose}
           >
             <Close />
           </IconButton>
