@@ -7,6 +7,7 @@ export const GalleryCard = ({
   headerProps = { title: '', subtitle: '', image: {}, cta: {} },
   footerProps = { ctas: [] },
   children,
+  active,
   noBackground,
   hasMarginLeftOnMobile,
   hasMarginRightOnMobile
@@ -18,6 +19,7 @@ export const GalleryCard = ({
       noBackground={noBackground}
       hasMarginLeftOnMobile={hasMarginLeftOnMobile}
       hasMarginRightOnMobile={hasMarginRightOnMobile}
+      active={active}
     >
       <CardHeader {...headerProps} />
       <CardContent>{children}</CardContent>

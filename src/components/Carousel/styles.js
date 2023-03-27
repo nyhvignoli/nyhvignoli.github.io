@@ -33,7 +33,6 @@ export const Slides = styled.div`
   & > div {
     scroll-snap-align: center;
     flex-shrink: 0;
-    transition: transform 0.5s;
     position: relative;
   }
 `

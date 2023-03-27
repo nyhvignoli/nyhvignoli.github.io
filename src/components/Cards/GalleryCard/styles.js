@@ -5,11 +5,17 @@ import {
   Shadow,
   Breakpoints,
   FontSize,
-  Spacing
+  Spacing,
+  Transition
 } from '../../../theme'
 
 export const Wrapper = styled.div`
-  ${({ noBackground, hasMarginLeftOnMobile, hasMarginRightOnMobile }) => `
+  ${({
+    noBackground,
+    hasMarginLeftOnMobile,
+    hasMarginRightOnMobile,
+    active
+  }) => `
     width: 70%;
     min-width: 287px;
     max-width: 694px;
@@ -21,8 +27,10 @@ export const Wrapper = styled.div`
     grid-column: span 7;
     font-size: ${FontSize.MOBILE.BODY_3};
     color: ${Color.GREY_100};
+    transition: all ${Transition.DURATION.SUPER_SLOW}; 
     ${hasMarginLeftOnMobile && `margin-left: ${Spacing.MOBILE.SMALL}`};
     ${hasMarginRightOnMobile && `margin-right: ${Spacing.MOBILE.SMALL}`};
+    ${!active && `opacity: 0.4;`};
 
     @media (${Breakpoints.TABLET.SMALL.MIN}) {
       grid-column: span 7;

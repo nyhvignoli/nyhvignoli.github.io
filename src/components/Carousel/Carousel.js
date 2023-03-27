@@ -51,6 +51,7 @@ const Carousel = ({ projects, handleGalleryOpen }) => {
           const id = `slide-${index}`
           return (
             <GalleryCard
+              active={index === activeStep}
               id={id}
               key={id}
               hasMarginLeftOnMobile={index === 0}
