@@ -4,10 +4,15 @@ import { Grid } from './styles'
 export const GridLayout = ({
   children,
   width = 'auto',
-  position = 'initial'
+  position = 'initial',
+  noPaddingOnMobile
 }) => {
   return (
-    <Grid width={width} position={position}>
+    <Grid
+      noPaddingOnMobile={noPaddingOnMobile}
+      width={width}
+      position={position}
+    >
       {children}
     </Grid>
   )

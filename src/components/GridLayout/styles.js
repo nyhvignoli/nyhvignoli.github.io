@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { Breakpoints, Spacing } from '../../theme'
 
 export const Grid = styled.div`
-  ${({ width, position }) => `
+  ${({ width, position, noPaddingOnMobile }) => `
     display: grid;
     width: ${width};
     position: ${position};
@@ -10,7 +10,7 @@ export const Grid = styled.div`
     grid-gap: ${Spacing.MOBILE.SMALL};
     max-width: 1124px;
     margin: auto;
-    padding: 0px ${Spacing.MOBILE.X_SMALL};
+    padding: ${noPaddingOnMobile ? 0 : `0px ${Spacing.MOBILE.X_SMALL}`};
 
     @media (${Breakpoints.TABLET.REGULAR.MIN}) {
       grid-template-columns: repeat(8, 1fr);
