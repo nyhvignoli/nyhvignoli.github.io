@@ -28,10 +28,7 @@ const Projects = () => {
         <Text tid="projects" />
       </Heading2>
       <GridLayout noPaddingOnMobile>
-        <Carousel
-          projects={projects}
-          handleGalleryOpen={handleGalleryOpen}
-        />
+        <Carousel projects={projects} handleGalleryOpen={handleGalleryOpen} />
       </GridLayout>
       {galleryOpen && (
         <ScreenShotsGallery
