@@ -5,9 +5,9 @@ import { LanguageContext, Text } from '../../global/LanguagesContext'
 import { DATA_TYPE, getData } from '../../data'
 import Accordion from '../Accordion/Accordion'
 
-const Timeline = () => {
+const MyJourney = () => {
   const { dictionary } = useContext(LanguageContext)
-  const steps = getData(dictionary, DATA_TYPE.timelineSteps)
+  const steps = getData(dictionary, DATA_TYPE.myJourneySteps)
   const [active, setActive] = useState(-1)
 
   const handleActive = (index) => {
@@ -19,7 +19,7 @@ const Timeline = () => {
   }
 
   return (
-    <Wrapper data-testid="timeline">
+    <Wrapper data-testid="my-journey">
       <Subhead
         data-aos="fade-zoom-in"
         data-aos-duration="1500"
@@ -47,4 +47,4 @@ const Timeline = () => {
   )
 }
 
-export default Timeline
+export default MyJourney

@@ -5,7 +5,7 @@ import Footer from '../../components/Footer/Footer'
 import Knowledges from '../../components/Knowledges/Knowledges'
 import NavBar from '../../components/NavBar/NavBar'
 import Projects from '../../components/Projects/Projects'
-import Timeline from '../../components/Timeline/Timeline'
+import MyJourney from '../../components/MyJourney/MyJourney'
 import Communities from '../../components/Communities/Communities'
 import Certificate from '../../components/Certificate/Certificate'
 
@@ -36,7 +36,7 @@ const MainScreen = () => {
         <Knowledges />
         <Certificate />
         <Projects />
-        <Timeline />
+        <MyJourney />
         <Communities />
       </Content>
       <Footer />

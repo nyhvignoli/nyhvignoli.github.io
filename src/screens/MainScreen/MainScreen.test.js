@@ -39,10 +39,10 @@ describe('MainScreen', () => {
       expect(projectsSection).toBeInTheDocument()
     })
 
-    test('renders Timeline section', () => {
+    test('renders MyJourney section', () => {
       render(<MainScreen />)
-      const timelineSection = screen.getByTestId('timeline')
-      expect(timelineSection).toBeInTheDocument()
+      const myJourneySection = screen.getByTestId('my-journey')
+      expect(myJourneySection).toBeInTheDocument()
     })
 
     test('renders Communities section', () => {
