@@ -2,11 +2,12 @@ import styled from 'styled-components'
 import { Breakpoints, Spacing } from '../../theme'
 
 export const Wrapper = styled.div`
-  overflow: hidden;
   display: flex;
+  flex-direction: column;
   align-items: center;
   width: 100%;
   gap: ${Spacing.MOBILE.SMALL};
+
   grid-column: 1/7;
 
   @media (${Breakpoints.TABLET.REGULAR.MIN}) {
@@ -18,21 +19,32 @@ export const Wrapper = styled.div`
   }
 `
 
+export const CarouselWrapper = styled.div`
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: ${Spacing.MOBILE.SMALL};
+`
+
 export const Slides = styled.div`
   display: flex;
   gap: ${Spacing.MOBILE.SMALL};
-  overflow-x: auto;
+  overflow-x: scroll;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
 
   &::-webkit-scrollbar {
     display: none;
   }
 
   & > div {
-    scroll-snap-align: center;
     flex-shrink: 0;
     position: relative;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    -webkit-scroll-snap-stop: always;
   }
 `
