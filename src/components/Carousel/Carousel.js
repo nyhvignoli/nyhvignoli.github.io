@@ -35,8 +35,8 @@ const Carousel = ({ projects, handleGalleryOpen }) => {
 
   const scrollTo = (activeStep) => {
     const element = document.getElementById(`slide-${activeStep}`)
-    if (!!element)
-      element.scrollIntoView({
+    if (!!element.scrollIntoView)
+      element?.scrollIntoView({
         inline: 'center',
         block: 'nearest',
         behavior: 'smooth'
