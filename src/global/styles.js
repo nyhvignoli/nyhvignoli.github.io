@@ -53,16 +53,10 @@ export const Heading2 = styled.h2`
   ${headingCommon}
   font-size: ${FontSize.MOBILE.HEADING_2};
   line-height: ${LineHeight.MOBILE.HEADING_2};
-  margin-bottom: ${Spacing.MOBILE.HUGE};
-
-  @media (${Breakpoints.TABLET.REGULAR.MIN}) {
-    margin-bottom: ${Spacing.TABLET.HUGE};
-  }
 
   @media (${Breakpoints.DESKTOP.LARGE}) {
     font-size: ${FontSize.DESKTOP.HEADING_2};
     line-height: ${LineHeight.DESKTOP.HEADING_2};
-    margin-bottom: ${Spacing.DESKTOP.HUGE};
   }
 `
 
