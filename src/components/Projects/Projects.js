@@ -6,6 +6,8 @@ import { LanguageContext, Text } from '../../global/LanguagesContext'
 import { DATA_TYPE, getData } from '../../data'
 import Carousel from '../Carousel/Carousel'
 import { GridLayout } from '../GridLayout'
+import { Space } from '../Space'
+import { Spacing } from '../../theme'
 
 const Projects = () => {
   const { dictionary } = useContext(LanguageContext)
@@ -24,9 +26,15 @@ const Projects = () => {
 
   return (
     <Wrapper galleryOpen id="projects" data-testid="projects">
-      <Heading2 data-aos="fade-zoom-in" data-aos-duration="1500">
-        <Text tid="projects" />
-      </Heading2>
+      <Space
+        mobile={{ marginBottom: Spacing.MOBILE.SMALL }}
+        tablet={{ marginBottom: Spacing.TABLET.SMALL }}
+        desktop={{ marginBottom: Spacing.DESKTOP.SMALL }}
+      >
+        <Heading2>
+          <Text tid="projects" />
+        </Heading2>
+      </Space>
       <GridLayout noPaddingOnMobile>
         <Carousel projects={projects} handleGalleryOpen={handleGalleryOpen} />
       </GridLayout>

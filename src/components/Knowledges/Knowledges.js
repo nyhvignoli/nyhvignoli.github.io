@@ -7,6 +7,8 @@ import { BaseCard } from '../Cards'
 import { getData, DATA_TYPE } from '../../data'
 import { Technologies } from '../Technologies'
 import { stacks } from '../../data/stacks'
+import { Space } from '../Space'
+import { Spacing } from '../../theme'
 
 const Knowledges = () => {
   const { dictionary } = useContext(LanguageContext)
@@ -14,13 +16,15 @@ const Knowledges = () => {
 
   return (
     <Wrapper id="knowledges" data-testid="knowledges-wrapper">
-      <Heading2
-        data-aos="fade-zoom-in"
-        data-aos-duration="1500"
-        data-aos-easing="ease-in-out"
+      <Space
+        mobile={{ marginBottom: Spacing.MOBILE.LARGE }}
+        tablet={{ marginBottom: Spacing.TABLET.LARGE }}
+        desktop={{ marginBottom: Spacing.DESKTOP.LARGE }}
       >
-        <Text tid="knowledges" />
-      </Heading2>
+        <Heading2>
+          <Text tid="knowledges" />
+        </Heading2>
+      </Space>
       <GridLayout width="100%">
         {knowledges.map(({ title, icon, list }, index) => {
           return (
