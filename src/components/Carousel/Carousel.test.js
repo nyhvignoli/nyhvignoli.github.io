@@ -78,30 +78,30 @@ describe('Carousel', () => {
     expect(nextButton).toHaveProperty('disabled', false)
   })
 
-  // test('should handle the disabled property of buttons based on active step', () => {
-  //   const props = {
-  //     projects,
-  //     imageDetailsOpen: false,
-  //     handleGalleryOpen: jest.fn()
-  //   }
+  test('should handle the disabled property of buttons based on active step', () => {
+    const props = {
+      projects,
+      imageDetailsOpen: false,
+      handleGalleryOpen: jest.fn()
+    }
 
-  //   render(<Gallery {...props} />)
-  //   const previousButton = screen.getByTestId('previous')
-  //   const nextButton = screen.getByTestId('next')
+    render(<Carousel {...props} />)
+    const previousButton = screen.getByTestId('previous')
+    const nextButton = screen.getByTestId('next')
 
-  //   expect(previousButton).toHaveProperty('disabled', true)
-  //   expect(nextButton).toHaveProperty('disabled', false)
+    expect(previousButton).toHaveProperty('disabled', true)
+    expect(nextButton).toHaveProperty('disabled', false)
 
-  //   fireEvent.click(nextButton)
+    fireEvent.click(nextButton)
 
-  //   expect(previousButton).toHaveProperty('disabled', false)
-  //   expect(nextButton).toHaveProperty('disabled', true)
+    expect(previousButton).toHaveProperty('disabled', false)
+    expect(nextButton).toHaveProperty('disabled', true)
 
-  //   fireEvent.click(previousButton)
+    fireEvent.click(previousButton)
 
-  //   expect(previousButton).toHaveProperty('disabled', true)
-  //   expect(nextButton).toHaveProperty('disabled', false)
-  // })
+    expect(previousButton).toHaveProperty('disabled', true)
+    expect(nextButton).toHaveProperty('disabled', false)
+  })
 
   test('should call handleGalleryOpen function', () => {
     const props = {

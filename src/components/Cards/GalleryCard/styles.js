@@ -6,6 +6,7 @@ import {
   Breakpoints,
   FontSize,
   Spacing,
+  Sizes,
   Transition
 } from '../../../theme'
 
@@ -16,9 +17,9 @@ export const Wrapper = styled.div`
     hasMarginRightOnMobile,
     active
   }) => `
-    width: 70%;
-    min-width: 287px;
-    max-width: 694px;
+    width: 80%;
+    min-width: ${Sizes.CARD.GALLERY.MIN_WIDTH};
+    max-width: ${Sizes.CARD.GALLERY.MAX_WIDTH};
     background-color: ${noBackground ? 'transparent' : Color.GREY_600};
     border-radius: ${Border.RADIUS.REGULAR};
     box-shadow: ${noBackground ? 'none' : Shadow.CARD.normal(Color.GREY_700)};
@@ -27,7 +28,7 @@ export const Wrapper = styled.div`
     grid-column: span 7;
     font-size: ${FontSize.MOBILE.BODY_3};
     color: ${Color.GREY_100};
-    transition: all ${Transition.DURATION.SUPER_SLOW}; 
+    transition: all ${Transition.DURATION.FAST}; 
     ${hasMarginLeftOnMobile && `margin-left: ${Spacing.MOBILE.SMALL}`};
     ${hasMarginRightOnMobile && `margin-right: ${Spacing.MOBILE.SMALL}`};
     ${!active && `opacity: 0.4;`};

@@ -40,3 +40,8 @@ export const ImageWrapper = styled.div`
   max-height: calc(100vh - 100px);
   overflow: auto;
 `
+
+export const Image = styled.img`
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+`
