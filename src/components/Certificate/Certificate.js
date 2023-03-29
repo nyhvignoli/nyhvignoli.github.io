@@ -5,8 +5,9 @@ import { DarkBox, GreyBox, Wrapper } from './styles'
 import { GridLayout } from '../GridLayout'
 import { CalloutCard } from '../Cards'
 import { List, LIST_VARIANTS } from '../List'
-import { InlineLink } from '../../global/styles'
-import { Color } from '../../theme'
+import { InlineLink, Subhead2 } from '../../global/styles'
+import { Color, Spacing } from '../../theme'
+import { Space } from '../Space'
 
 const Certification = () => {
   const { dictionary } = useContext(LanguageContext)
@@ -16,7 +17,10 @@ const Certification = () => {
     <Wrapper data-testid="certificates-wrapper">
       <DarkBox />
       <GridLayout width="100%" position="absolute">
-        <CalloutCard title={dictionary.certificates}>
+        <CalloutCard>
+          <Space mobile={{ marginBottom: Spacing.MOBILE.SMALL }}>
+            <Subhead2>{dictionary.certificates}</Subhead2>
+          </Space>
           <List
             variant={LIST_VARIANTS.checkmark}
             color={Color.JADE_GREEN_300}
