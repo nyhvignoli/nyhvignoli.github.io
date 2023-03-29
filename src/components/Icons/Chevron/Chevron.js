@@ -1,5 +1,5 @@
 import React from 'react'
-import { Color } from '../../../theme'
+import { Color, Sizes } from '../../../theme'
 import { Svg } from './styles'
 
 export const DIRECTIONS = {
@@ -12,7 +12,10 @@ export const DIRECTIONS = {
 export const Chevron = ({
   direction = DIRECTIONS.right,
   color = Color.JADE_GREEN_300,
-  dimensions = { width: '24', height: '24' }
+  dimensions = {
+    width: Sizes.ICON.SQUARE.XX_SMALL,
+    height: Sizes.ICON.SQUARE.XX_SMALL
+  }
 }) => {
   const { width, height } = dimensions
 
