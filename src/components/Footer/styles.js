@@ -1,10 +1,8 @@
 import styled from 'styled-components'
-import { theme } from '../../theme'
-
-const { colors } = theme
+import { Color } from '../../theme'
 
 export const StyledFooter = styled.footer`
-  background-color: ${colors.lightOrange};
+  background-color: ${Color.GREY_900};
 `
 
 export const ContactInfos = styled.div`
@@ -14,15 +12,8 @@ export const ContactInfos = styled.div`
   text-align: center;
   position: relative;
 
-  p {
-    font-size: 2rem;
-  }
-
   @media (max-width: 800px) {
     padding: 2rem;
-    p {
-      font-size: 1.5rem;
-    }
   }
 `
 
@@ -74,7 +65,6 @@ export const BackToTop = styled.img`
 `
 
 export const CopyRights = styled.div`
-  background-color: ${colors.deepBlue};
   padding: 1rem 2rem;
 
   p {

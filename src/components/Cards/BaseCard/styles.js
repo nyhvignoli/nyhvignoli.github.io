@@ -18,7 +18,7 @@ export const Wrapper = styled.div`
     flex-direction: column;
     grid-column: span 7;
     font-size: ${FontSize.MOBILE.BODY_3};
-    color: ${Color.GREY_100};
+    color: ${Color.GREY_200};
 
     @media (${Breakpoints.TABLET.SMALL.MIN}) {
       padding: ${Spacing.DESKTOP.XX_SMALL};

@@ -1,26 +1,15 @@
-import vizirLogo from '../assets/vizir.png'
 import labenuLogo from '../assets/labenu.png'
 import codivasLogo from '../assets/codivas.jpg'
 import gufersLogo from '../assets/gufers.jpg'
 import compiladorasLogo from '../assets/compiladoras.jpg'
 
 export const getCommunities = ({
-  vizirDescription,
   labenuCommunityDescription,
   codivasDescription,
   compiladorasDescription,
   gufersDescription
 }) => {
   const communities = [
-    {
-      name: 'Vizir Software Studio',
-      logo: {
-        image: vizirLogo,
-        alt: 'Logo da Vizir, um quadrado vermelho rotacionado com a letra Z em branco no centro'
-      },
-      site: 'https://vizir.com.br/',
-      description: vizirDescription
-    },
     {
       name: 'Labenu Comunidade',
       logo: {

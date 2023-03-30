@@ -1,15 +1,21 @@
 import React from 'react'
 import { Wrapper } from './styles'
-import { Space } from '../../Space'
-import { Spacing } from '../../../theme'
-import { Subhead2 } from '../../../global/styles'
 
-export const CalloutCard = ({ title, children }) => {
+export const CalloutCard = ({
+  alignment = 'left',
+  border = { color: '', width: '' },
+  backgroundColor = '',
+  color = '',
+  children
+}) => {
   return (
-    <Wrapper data-testid="callout-card-wrapper">
-      <Space mobile={{ marginBottom: Spacing.MOBILE.SMALL }}>
-        <Subhead2>{title}</Subhead2>
-      </Space>
+    <Wrapper
+      data-testid="callout-card-wrapper"
+      alignment={alignment}
+      border={border}
+      backgroundColor={backgroundColor}
+      color={color}
+    >
       {children}
     </Wrapper>
   )

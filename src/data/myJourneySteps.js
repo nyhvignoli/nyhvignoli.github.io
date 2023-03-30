@@ -2,7 +2,7 @@ import guitarIcon from '../assets/guitar-128.png'
 import tattooIcon from '../assets/tattoo-machine-128.png'
 import devIcon from '../assets/notebook-128.png'
 
-export const getTimelineSteps = ({
+export const getMyJourneySteps = ({
   music,
   tattoo,
   programming,
@@ -10,7 +10,7 @@ export const getTimelineSteps = ({
   tattooJourney,
   programmingJourney
 }) => {
-  const timelineSteps = [
+  const myJourneySteps = [
     {
       title: music,
       icon: {
@@ -37,5 +37,5 @@ export const getTimelineSteps = ({
     }
   ]
 
-  return timelineSteps
+  return myJourneySteps
 }
