@@ -1,13 +1,21 @@
 import React from 'react'
 import { Wrapper } from './styles'
-import { Color, Border } from '../../../theme'
 
 export const CalloutCard = ({
-  border = { color: Color.JADE_GREEN_500, width: Border.WIDTH.MEDIUM },
+  alignment = 'left',
+  border = { color: '', width: '' },
+  backgroundColor = '',
+  color = '',
   children
 }) => {
   return (
-    <Wrapper data-testid="callout-card-wrapper" border={border}>
+    <Wrapper
+      data-testid="callout-card-wrapper"
+      alignment={alignment}
+      border={border}
+      backgroundColor={backgroundColor}
+      color={color}
+    >
       {children}
     </Wrapper>
   )

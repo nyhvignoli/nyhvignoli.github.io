@@ -9,29 +9,28 @@ import {
 } from '../../../theme'
 
 export const Wrapper = styled.div`
-  ${({ border }) => `
-    border-left: ${border.width} solid ${border.color};
-    background-color: ${Color.GREY_600};
+  ${({ alignment, border, backgroundColor, color }) => `
+    border-left: ${border.width || Border.WIDTH.MEDIUM} solid ${
+    border.color || Color.JADE_GREEN_500
+  };
+    background-color: ${backgroundColor || Color.GREY_600};
     border-radius: ${Border.RADIUS.X_SMALL};
     box-shadow: ${Shadow.CARD.normal(Color.GREY_700)};
     padding: ${Spacing.TABLET.XX_SMALL};
     display: flex;
     flex-direction: column;
-    grid-column: span 7;
+    text-align: ${alignment || 'left'};
     font-size: ${FontSize.MOBILE.BODY_3};
-    color: ${Color.GREY_100};
+    color: ${color || Color.GREY_100};
 
     @media (${Breakpoints.TABLET.SMALL.MIN}) {
       padding: ${Spacing.DESKTOP.XX_SMALL};
-      grid-column: span 7;
     }
 
     @media (${Breakpoints.TABLET.REGULAR.MIN}) {
-      grid-column: 2 / span 6;
     }
 
     @media (${Breakpoints.DESKTOP.LARGE}) {
-      grid-column: 2 / span 10;
       font-size: ${FontSize.DESKTOP.BODY_3};
     }
   `}
