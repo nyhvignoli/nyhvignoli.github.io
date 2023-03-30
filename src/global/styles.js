@@ -60,6 +60,18 @@ export const Heading2 = styled.h2`
   }
 `
 
+export const Heading3 = styled.h3`
+  ${headingCommon}
+  font-size: ${FontSize.MOBILE.HEADING_3};
+  line-height: ${LineHeight.MOBILE.HEADING_3};
+  color: ${Color.GREY_200};
+
+  @media (${Breakpoints.DESKTOP.LARGE}) {
+    font-size: ${FontSize.DESKTOP.HEADING_3};
+    line-height: ${LineHeight.DESKTOP.HEADING_3};
+  }
+`
+
 const subheadCommon = `
   letter-spacing: 0.1em;
   font-family: ${FontFamily.SUBHEAD};
@@ -126,7 +138,6 @@ const bodySmallStyles = `
 export const Body = styled.span`
   font-size: ${FontSize.MOBILE.BODY_3};
   line-height: ${LineHeight.MOBILE.BODY_3};
-  color: ${Color.GREY_100};
 
   @media (${Breakpoints.DESKTOP.LARGE}) {
     font-size: ${FontSize.DESKTOP.BODY_3};

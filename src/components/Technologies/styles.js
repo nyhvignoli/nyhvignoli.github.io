@@ -4,7 +4,7 @@ import { Spacing, Color, FontSize, Breakpoints } from '../../theme'
 export const Wrapper = styled.div`
   grid-column: span 7;
   font-size: ${FontSize.MOBILE.BODY_3};
-  color: ${Color.GREY_100};
+  color: ${Color.GREY_200};
 
   @media (${Breakpoints.TABLET.SMALL.MIN}) {
     grid-column: span 7;

@@ -1,7 +1,5 @@
 import styled from 'styled-components'
-import { theme } from '../../theme'
-
-const { colors } = theme
+import { Color } from '../../theme'
 
 export const Wrapper = styled.section`
   padding: 2rem;
@@ -9,7 +7,7 @@ export const Wrapper = styled.section`
   justify-content: center;
   align-items: center;
   display: flex;
-  background-color: ${colors.darkBlue};
+  background-color: ${Color.GREY_700};
   text-align: center;
   z-index: -3000;
 

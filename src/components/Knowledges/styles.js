@@ -7,7 +7,6 @@ export const Wrapper = styled.section`
   align-items: center;
   display: flex;
   background-color: ${Color.GREY_800};
-
   padding: ${Spacing.MOBILE.HUGE} 0px;
 
   @media (${Breakpoints.TABLET.REGULAR.MIN}) {
