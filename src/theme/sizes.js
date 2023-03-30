@@ -60,7 +60,7 @@ export const Sizes = {
   CARD: {
     GALLERY: {
       MIN_WIDTH: '287px',
-      MAX_WIDTH: '694px'
+      MAX_WIDTH: '586px'
     }
   }
 }
