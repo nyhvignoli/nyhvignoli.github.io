@@ -143,14 +143,13 @@ export const getProjects = ({
       ctas: [],
       tags: [
         'react',
-        'redux',
         'styled-components',
         'bootstrap',
         'jest',
-        'nodejs',
-        'mysql',
+        'redux',
+        'node',
+        'postgreSQL',
         'mocha',
-        'docker',
         'AWS'
       ]
     },

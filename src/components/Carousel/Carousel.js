@@ -3,7 +3,7 @@ import { Wrapper, Slides, CarouselWrapper } from './styles'
 import { IconButton } from '../Buttons'
 import { Chevron } from '../Icons'
 import { DIRECTIONS } from '../Icons/Chevron'
-import { Body4 } from '../../global/styles'
+import { Body } from '../../global/styles'
 import { LanguageContext } from '../../global/LanguagesContext'
 import { GalleryCard } from '../Cards/GalleryCard'
 import { ListWrapper } from '../Technologies/styles'
@@ -92,7 +92,7 @@ const Carousel = ({ projects, handleGalleryOpen }) => {
                 footerProps={{ ctas: project.ctas }}
               >
                 <Space mobile={{ marginBottom: Spacing.MOBILE.X_SMALL }}>
-                  <Body4>{project.description}</Body4>
+                  <Body>{project.description}</Body>
                 </Space>
                 <ListWrapper>
                   {project.tags.map((item, index) => {

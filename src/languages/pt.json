@@ -40,11 +40,10 @@
   "fullStackDevelopment": "Desenvolvimento Web Full Stack",
 
   "gallery": "Ver galeria",
-  "mongoDBDescription": "Fiz parte do time de desenvolvimento ágil internacional da MongoDB. Time responsável por dar manutenção, sustentação e desenvolvimento de novas funcionalidades para todos os sites que estão sob domínio mongodb.com. Nesse projeto trabalhei especialmente desenvolvendo bug fixes e melhorias, tanto no Backend e Front-end, mas com foco em Front-end.",
-  "shoppingOmniDescription": "Fiz parte do time de desenvolvimento ágil (front-end e back-end) do projeto Shopping Omni, por cerca de 2 meses. Trata-se de uma plataforma direcionada à lojistas, com gerenciamento e integração de lojas, marketplaces, produtos, pedidos e outras funcionalidades. No momento o site está sendo utilizado apenas para lojistas cadastrados.",
+  "mongoDBDescription": "Fiz parte do time responsável pela manutenção e desenvolvimento de novas funcionalidades para todos os sites sob domínio mongodb.com. Nesse projeto trabalhei especialmente desenvolvendo bug fixes e melhorias.",
+  "shoppingOmniDescription": "Fiz parte do time de desenvolvimento do projeto Shopping Omni, por cerca de 2 meses. Trata-se de uma plataforma direcionada à lojistas, para facilitar o gerenciamento e integração de lojas, marketplaces, produtos, pedidos e outras funcionalidades.",
   "musicatchersDescription": "Projeto Full Stack do bootcamp da escola Labenu. Trata-se de uma aplicação com funcionalidades básicas de um site para streaming de músicas.",
-  "labedditDescription": "Projeto feito no bootcamp da escola Labenu. Uma rede social similar ao Reddit, onde é possível fazer postagens, comentar nos posts de outras pessoas e votar! Essa página utiliza uma API desenvolvida pela Labenu. Site responsivo para mobile.",
-  "astromatchDescription": "Projeto Astromatch do bootcamp da escola Labenu. Uma aplicação similar ao Tinder, com personalidades divertidas do cinema e TV onde você pode dar like ou não pra ver se dá match! :D Essa página utiliza uma API desenvolvida pela Labenu. Site responsivo para mobile.",
+  "labedditDescription": "Projeto feito no bootcamp da escola Labenu. Uma rede social similar ao Reddit, onde é possível fazer postagens, comentar nos posts de outras pessoas e votar!",
   "labenuSystemDescription": "Projeto de conclusão do Módulo 4 de Backend da Labenu. Feito em grupo, a proposta era criar um sistema da instituição de ensino trabalhando com as entidades Estudante, Docente e Turma.",
   "labookDescription": "Estrutura de back-end do Projeto Labook do bootcamp da escola Labenu. Trata-se de uma API com funcionalidades básicas de uma rede social.",
 
