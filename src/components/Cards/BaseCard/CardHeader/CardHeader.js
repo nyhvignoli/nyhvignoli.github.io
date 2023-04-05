@@ -6,11 +6,12 @@ import { Sizes } from '../../../../theme'
 export const CardHeader = ({
   title,
   subtitle,
-  icon = { src: '', alt: '' }
+  icon = { src: '', alt: '' },
+  flexDirection = 'row'
 }) => {
   return (
     <Wrapper data-testid="base-card-header">
-      <Header>
+      <Header flexDirection={flexDirection}>
         {!!icon.src && (
           <Icon
             src={icon.src}

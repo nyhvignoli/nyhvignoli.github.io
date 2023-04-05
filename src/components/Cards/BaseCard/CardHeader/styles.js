@@ -10,9 +10,13 @@ export const Wrapper = styled.div`
 `
 
 export const Header = styled.div`
-  display: flex;
-  align-items: center;
-  gap: ${Spacing.DESKTOP.TINY};
+  ${({ flexDirection }) => `
+    display: flex;
+    flex-direction: ${flexDirection || 'row'};
+    align-items: center;
+    gap: ${Spacing.DESKTOP.TINY};
+
+  `}
 `
 
 export const Icon = styled.img`
