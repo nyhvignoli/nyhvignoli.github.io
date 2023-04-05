@@ -54,9 +54,9 @@
   "viewWebsite": "Ver site",
 
   "communities": "Comunidades",
-  "labenuCommunityDescription": "Comunidade no Slack com fórum e cultura para estudantes e ex-estudantes da Labenu",
+  "labenuCommunityDescription": "Comunidade no Discord para estudantes e ex-estudantes da Labenu",
   "codivasDescription": "Agencia coletiva de mulheres em tecnologia",
-  "compiladorasDescription": "Comunidade de mulheres na tecnologia com cursos de programação, lives e workshops",
+  "compiladorasDescription": "Comunidade de mulheres em tecnologia.",
   "gufersDescription": "Grupo de Usuários de Front End do Rio Grande do Sul",
 
   "callToActionContactText": "Gostou do meu trabalho? Bora bater um papo!",
@@ -216,6 +216,10 @@
     "css3Animations": "Certificado de conclusão do curso 'CSS3 Animations, Transforms and Transitions Ultimate Guide'",
     "gcpFundamentals": "Certificado de conclusão do curso 'Google Cloud Fundamentals: Core Infrastructure'",
     "fullStackDevelopment": "Certificado de conclusão do curso 'Web Full - Stack'",
-    "goTo": "Ir para"
+    "goTo": "Ir para",
+    "labenu": "Link para o website da escola Labenu",
+    "codivas": "Link para o website Codivas",
+    "compiladoras": "Link para o Instagram do grupo Compiladoras de Cafeína",
+    "gufers": "Link para o canal do Youtube do grupo Gufers"
   }
 }

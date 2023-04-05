@@ -7,16 +7,18 @@ export const getCommunities = ({
   labenuCommunityDescription,
   codivasDescription,
   compiladorasDescription,
-  gufersDescription
+  gufersDescription,
+  ariaLabels
 }) => {
   const communities = [
     {
-      name: 'Labenu Comunidade',
+      name: 'Labenu',
       logo: {
         image: labenuLogo,
         alt: 'Logo da Labenu, uma chame minimalista e poligonal nas cores laranja, amarelo a azul acinzentado'
       },
-      site: 'https://www.labenu.com.br/',
+      href: 'https://www.labenu.com.br/',
+      ariaLabel: ariaLabels.labenu,
       description: labenuCommunityDescription
     },
     {
@@ -25,7 +27,8 @@ export const getCommunities = ({
         image: codivasLogo,
         alt: 'Logo da Codivas, escrito codivas em preto e roxo'
       },
-      site: 'https://www.codivas.com.br/',
+      href: 'https://www.codivas.com.br/',
+      ariaLabel: ariaLabels.codivas,
       description: codivasDescription
     },
     {
@@ -34,7 +37,8 @@ export const getCommunities = ({
         image: compiladorasLogo,
         alt: 'Logo das Compiladoras, com fundo preto e um xícara de café com um coração vermelho dentro'
       },
-      site: 'https://www.instagram.com/compiladoras/',
+      href: 'https://www.instagram.com/compiladoras/',
+      ariaLabel: ariaLabels.compiladoras,
       description: compiladorasDescription
     },
     {
@@ -43,7 +47,8 @@ export const getCommunities = ({
         image: gufersLogo,
         alt: 'Logo dos Gufers, quadrado preto escrito Gufers em branco'
       },
-      site: 'https://osgufers.github.io/',
+      href: 'https://osgufers.github.io/',
+      ariaLabel: ariaLabels.gufers,
       description: gufersDescription
     }
   ]
