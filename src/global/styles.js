@@ -280,6 +280,10 @@ export const InlineLink = styled.a`
   }
 `
 
+export const CleanLink = styled.a`
+  text-decoration: none;
+`
+
 /* TO BE DEPRACATED */
 export const Anchor = styled.a`
   color: ${Color.JADE_GREEN_300};
