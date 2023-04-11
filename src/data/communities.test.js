@@ -55,7 +55,7 @@ test('getCommunities function', () => {
       name: 'Gufers',
       logo: {
         image: gufersLogo,
-        alt: 'Logo dos Gufers, quadrado preto escrito Gufers em branco'
+        alt: 'Logo dos Gufers, círculo de fundo preto com um foguete branco'
       },
       href: 'https://www.youtube.com/channel/UCcL_lGqZNsa_9cR4ckjy07A',
       ariaLabel: dictionaryMock.ariaLabels.gufers,
