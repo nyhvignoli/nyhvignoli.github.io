@@ -1,6 +1,6 @@
 import labenuLogo from '../assets/labenu.png'
 import codivasLogo from '../assets/codivas.jpg'
-import gufersLogo from '../assets/gufers.jpg'
+import gufersLogo from '../assets/gufers.png'
 import compiladorasLogo from '../assets/compiladoras.jpg'
 import { getCommunities } from './communities'
 
@@ -9,19 +9,26 @@ test('getCommunities function', () => {
     labenuCommunityDescription: 'bar',
     codivasDescription: 'foo bar',
     compiladorasDescription: 'bar foo',
-    gufersDescription: 'foo bar foo'
+    gufersDescription: 'foo bar foo',
+    ariaLabels: {
+      labenu: 'foo',
+      codivas: 'bar',
+      compiladoras: 'foo',
+      gufers: 'bar'
+    }
   }
 
   const communities = getCommunities(dictionaryMock)
 
   const expectedResult = [
     {
-      name: 'Labenu Comunidade',
+      name: 'Labenu',
       logo: {
         image: labenuLogo,
         alt: 'Logo da Labenu, uma chame minimalista e poligonal nas cores laranja, amarelo a azul acinzentado'
       },
-      site: 'https://www.labenu.com.br/',
+      href: 'https://www.labenu.com.br/',
+      ariaLabel: dictionaryMock.ariaLabels.labenu,
       description: dictionaryMock.labenuCommunityDescription
     },
     {
@@ -30,7 +37,8 @@ test('getCommunities function', () => {
         image: codivasLogo,
         alt: 'Logo da Codivas, escrito codivas em preto e roxo'
       },
-      site: 'https://www.codivas.com.br/',
+      href: 'https://www.codivas.com.br/',
+      ariaLabel: dictionaryMock.ariaLabels.codivas,
       description: dictionaryMock.codivasDescription
     },
     {
@@ -39,16 +47,18 @@ test('getCommunities function', () => {
         image: compiladorasLogo,
         alt: 'Logo das Compiladoras, com fundo preto e um xícara de café com um coração vermelho dentro'
       },
-      site: 'https://www.instagram.com/compiladoras/',
+      href: 'https://www.instagram.com/comunidadecafeina/',
+      ariaLabel: dictionaryMock.ariaLabels.compiladoras,
       description: dictionaryMock.compiladorasDescription
     },
     {
       name: 'Gufers',
       logo: {
         image: gufersLogo,
-        alt: 'Logo dos Gufers, quadrado preto escrito Gufers em branco'
+        alt: 'Logo dos Gufers, círculo de fundo preto com um foguete branco'
       },
-      site: 'https://osgufers.github.io/',
+      href: 'https://www.youtube.com/channel/UCcL_lGqZNsa_9cR4ckjy07A',
+      ariaLabel: dictionaryMock.ariaLabels.gufers,
       description: dictionaryMock.gufersDescription
     }
   ]

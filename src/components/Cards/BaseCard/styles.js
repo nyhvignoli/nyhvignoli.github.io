@@ -9,7 +9,8 @@ import {
 } from '../../../theme'
 
 export const Wrapper = styled.div`
-  ${({ noBackground }) => `
+  ${({ noBackground, align }) => `
+    height: 100%;
     background-color: ${noBackground ? 'transparent' : Color.GREY_700};
     border-radius: ${Border.RADIUS.X_SMALL};
     box-shadow: ${noBackground ? 'none' : Shadow.CARD.normal(Color.GREY_700)};
@@ -17,6 +18,7 @@ export const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     grid-column: span 7;
+    justify-content: ${align || 'start'};
     font-size: ${FontSize.MOBILE.BODY_3};
     color: ${Color.GREY_200};
 

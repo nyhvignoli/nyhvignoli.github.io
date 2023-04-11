@@ -54,9 +54,9 @@
   "viewWebsite": "View website",
 
   "communities": "Communities",
-  "labenuCommunityDescription": "Slack workspace with forum and culture for Labenu's students and former students",
-  "codivasDescription": "Corporate agency of women in tech",
-  "compiladorasDescription": "Community of women in tech, with programming bootcamps, lives and workshops",
+  "labenuCommunityDescription": "Discord community for Labenu's students and former students",
+  "codivasDescription": "Corporate agency of women in technology",
+  "compiladorasDescription": "Community of women in technology",
   "gufersDescription": "Front End Users Group from Rio Grande do Sul",
 
   "callToActionContactText": "Did you like my work? Let's chat!",
@@ -216,6 +216,10 @@
     "css3Animations": "'CSS3 Animations, Transforms and Transitions Ultimate Guide' course certificate",
     "gcpFundamentals": "'Google Cloud Fundamentals: Core Infrastructure' course certificate",
     "fullStackDevelopment": "'Web Full - Stack' course certificate",
-    "goTo": "Go to"
+    "goTo": "Go to",
+    "labenu": "Labenu school website link",
+    "codivas": "Codivas agency website link",
+    "compiladoras": "Compiladoras de Cafeína Instagram profile",
+    "gufers": "Gufers group YouTube channel"
   }
 }

@@ -9,6 +9,7 @@ import { Technologies } from '../Technologies'
 import { stacks } from '../../data/stacks'
 import { Space } from '../Space'
 import { Spacing } from '../../theme'
+import { List } from '../List'
 
 const Knowledges = () => {
   const { dictionary } = useContext(LanguageContext)
@@ -32,7 +33,15 @@ const Knowledges = () => {
               key={`${title}-${index}`}
               headerProps={{ title, icon }}
               contentProps={{ list }}
-            />
+            >
+              {!!list.length && (
+                <List>
+                  {list.map((item, index) => {
+                    return <li key={index}>{item}</li>
+                  })}
+                </List>
+              )}
+            </BaseCard>
           )
         })}
         <Technologies title={dictionary.technologies} list={stacks} />
