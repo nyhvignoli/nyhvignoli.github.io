@@ -1,41 +1,56 @@
 import React from 'react'
-import { SocialMediaWrapper } from './styles'
+import { SocialMediaWrapper, Icon } from './styles'
 import {
   linkedin,
   github,
-  whatsapp,
-  instagram
+  instagram,
+  twitter
 } from '../../assets/social-media-icons'
+import { Body4, CleanLink } from '../../global/styles'
 
-const SocialMedia = ({ vertical }) => {
+export const SocialMedia = () => {
   return (
-    <SocialMediaWrapper vertical={vertical}>
-      <a
+    <SocialMediaWrapper>
+      <CleanLink
+        flex
+        decorationOnHover="underline"
+        href="https://github.com/nyhvignoli"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <Icon src={github} alt="github icon" />
+        <Body4>GitHub</Body4>
+      </CleanLink>
+      <CleanLink
+        flex
+        decorationOnHover="underline"
         href="https://www.linkedin.com/in/nyhvignoli/"
         target="_blank"
         rel="noreferrer"
       >
-        <img src={linkedin} alt="linkedin icon" />
-      </a>
-      <a href="https://github.com/nyhvignoli" target="_blank" rel="noreferrer">
-        <img src={github} alt="github icon" />
-      </a>
-      <a
-        href="http://api.whatsapp.com/send?phone=55051997661364"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <img src={whatsapp} alt="whatsapp icon" />
-      </a>
-      <a
+        <Icon src={linkedin} alt="linkedin icon" />
+        <Body4>LinkedIn</Body4>
+      </CleanLink>
+      <CleanLink
+        flex
+        decorationOnHover="underline"
         href="https://www.instagram.com/nyh_v/"
         target="_blank"
         rel="noreferrer"
       >
-        <img src={instagram} alt="instagram icon" />
-      </a>
+        <Icon src={instagram} alt="instagram icon" />
+        <Body4>Instagram</Body4>
+      </CleanLink>
+      <CleanLink
+        flex
+        decorationOnHover="underline"
+        href="https://twitter.com/nyhdevignoli"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <Icon src={twitter} alt="twitter icon" />
+        <Body4>Twitter</Body4>
+      </CleanLink>
     </SocialMediaWrapper>
   )
 }
-
-export default SocialMedia

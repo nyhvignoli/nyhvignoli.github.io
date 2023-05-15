@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { Breakpoints } from '../../../theme'
 
 export const Wrapper = styled.div`
-  ${({ gridColumn, marginRightOverflow }) => `
+  ${({ gridColumn, marginRightOverflow, styles }) => `
     grid-column: ${gridColumn?.mobile || 'span 7'};
     margin-right: ${marginRightOverflow.mobile || 0};
 
@@ -16,7 +16,9 @@ export const Wrapper = styled.div`
     }
 
     @media (${Breakpoints.DESKTOP.LARGE}) {
-      grid-column: ${gridColumn?.desktop || 'span 13'};
+      grid-column: ${gridColumn?.desktop || 'span 12'};
     }
+
+    ${styles}
   `}
 `
