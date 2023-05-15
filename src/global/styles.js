@@ -81,7 +81,8 @@ const subheadCommon = `
 
 export const Subhead = styled.h2`
   ${subheadCommon}
-  text-transform: uppercase;
+  ${({ noTextTransform }) =>
+    `text-transform: ${noTextTransform ? 'inherit' : 'uppercase'}`};
   font-size: ${FontSize.MOBILE.SUBHEAD_1};
   line-height: ${LineHeight.MOBILE.SUBHEAD_1};
   margin-bottom: ${Spacing.MOBILE.SMALL};
@@ -281,7 +282,19 @@ export const InlineLink = styled.a`
 `
 
 export const CleanLink = styled.a`
+  ${({ flex }) => flex && `display: flex; align-items: center;`};
   text-decoration: none;
+  color: inherit;
+  width: fit-content;
+
+  &:visited {
+    color: ${Color.JADE_GREEN_500};
+  }
+
+  &:hover {
+    ${({ decorationOnHover }) =>
+      decorationOnHover && `text-decoration: ${decorationOnHover};`}
+  }
 `
 
 /* TO BE DEPRACATED */
