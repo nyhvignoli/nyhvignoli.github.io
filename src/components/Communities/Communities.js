@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { Body, Heading2 } from '../../global/styles'
+import { Body, Heading2, InlineLink } from '../../global/styles'
 import { Wrapper } from './styles'
 import { BaseCard } from '../../components/Cards'
 import { LanguageContext, Text } from '../../global/LanguagesContext'
@@ -7,6 +7,7 @@ import { DATA_TYPE, getData } from '../../data'
 import { GridItem, GridLayout } from '../GridLayout'
 import { Space } from '../Space'
 import { Spacing } from '../../theme'
+import { Chevron } from '../Icons'
 
 const Communities = () => {
   const { dictionary } = useContext(LanguageContext)
@@ -37,7 +38,6 @@ const Communities = () => {
                 }}
               >
                 <BaseCard
-                  linkProps={{ href, ariaLabel }}
                   noBackground
                   headerProps={{
                     title: name,
@@ -45,6 +45,18 @@ const Communities = () => {
                     flexDirection: 'column'
                   }}
                   name={name}
+                  footerChildren={
+                    <Space
+                      mobile={{ marginTop: Spacing.MOBILE.XX_SMALL }}
+                      tablet={{ marginTop: Spacing.TABLET.TINY }}
+                      desktop={{ marginTop: Spacing.DESKTOP.X_TINY }}
+                    >
+                      <InlineLink flex href={href} aria-label={ariaLabel}>
+                        {dictionary.cta.learnMore}
+                        <Chevron />
+                      </InlineLink>
+                    </Space>
+                  }
                 >
                   <Body>{description}</Body>
                 </BaseCard>

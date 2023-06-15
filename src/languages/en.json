@@ -207,6 +207,10 @@
     "december": "December"
   },
 
+  "cta": {
+    "learnMore": "Learn more"
+  },
+
   "ariaLabels": {
     "opensInANewTab": "Opens in a new tab",
     "opensAPDFDocumentInANewTab": "Opens a PDF document in a new tab",
