@@ -9,6 +9,7 @@ export const BaseCard = ({
   align = 'start',
   linkProps = { href: '', target: '_blank', ariaLabel: '' },
   children,
+  footerChildren,
   noBackground
 }) => {
   const { dictionary } = useContext(LanguageContext)
@@ -28,7 +29,7 @@ export const BaseCard = ({
         flexDirection={flexDirection}
       />
       <CardContent>{children}</CardContent>
-      <CardFooter />
+      <CardFooter>{footerChildren}</CardFooter>
     </Wrapper>
   )
 

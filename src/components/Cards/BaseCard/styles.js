@@ -37,3 +37,11 @@ export const Wrapper = styled.div`
     }
   `}
 `
+
+export const Footer = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: flex-end;
+  ${({ alignment }) => `align-items: ${alignment}`}
+`
