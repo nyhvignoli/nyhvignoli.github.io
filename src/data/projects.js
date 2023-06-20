@@ -12,9 +12,6 @@ import shoppingOmni2 from '../assets/shopping-omni/shoppingomni-2.png'
 import shoppingOmni3 from '../assets/shopping-omni/shoppingomni-3.png'
 import backgroundImgBefore from '../assets/mongo-db/background-img-before.png'
 import backgroundImgAfter from '../assets/mongo-db/background-img-after.png'
-import cardGridBefore from '../assets/mongo-db/card-grid-before.png'
-import cardGridSmallAfter from '../assets/mongo-db/card-grid-small-after.png'
-import cardGridLargeAfter from '../assets/mongo-db/card-grid-large-after.png'
 import detailsBefore from '../assets/mongo-db/details-before.png'
 import detailsAfter from '../assets/mongo-db/details-after.png'
 import lpNavBefore from '../assets/mongo-db/lp-nav-before.png'
@@ -50,21 +47,6 @@ export const getProjects = ({
           src: backgroundImgBefore,
           alt: mongoDB.backgroundImgBefore.alt,
           caption: mongoDB.backgroundImgBefore.caption
-        },
-        {
-          src: cardGridBefore,
-          alt: mongoDB.cardGridBefore.alt,
-          caption: mongoDB.cardGridBefore.caption
-        },
-        {
-          src: cardGridLargeAfter,
-          alt: mongoDB.cardGridLargeAfter.alt,
-          caption: mongoDB.cardGridLargeAfter.caption
-        },
-        {
-          src: cardGridSmallAfter,
-          alt: mongoDB.cardGridSmallAfter.alt,
-          caption: mongoDB.cardGridSmallAfter.caption
         },
         {
           src: detailsBefore,
