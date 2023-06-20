@@ -59,8 +59,8 @@ export const Sizes = {
   },
   CARD: {
     GALLERY: {
-      MIN_WIDTH: '287px',
-      MAX_WIDTH: '586px'
+      MIN_WIDTH: '260px',
+      MAX_WIDTH: '580px'
     }
   }
 }

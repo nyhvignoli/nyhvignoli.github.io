@@ -29,8 +29,8 @@ export const Wrapper = styled.div`
     font-size: ${FontSize.MOBILE.BODY_3};
     color: ${Color.GREY_100};
     transition: all ${Transition.DURATION.FAST}; 
-    ${hasMarginLeftOnMobile && `margin-left: ${Spacing.MOBILE.SMALL}`};
-    ${hasMarginRightOnMobile && `margin-right: ${Spacing.MOBILE.SMALL}`};
+    ${hasMarginLeftOnMobile && `margin-left: ${Spacing.MOBILE.X_SMALL}`};
+    ${hasMarginRightOnMobile && `margin-right: ${Spacing.MOBILE.X_SMALL}`};
     ${!active && `opacity: 0.4;`};
 
     @media (${Breakpoints.TABLET.SMALL.MIN}) {
