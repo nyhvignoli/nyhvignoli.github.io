@@ -7,9 +7,6 @@ import labedditScreenshot from '../assets/labeddit.PNG'
 import labeddit2 from '../assets/labeddit-2.PNG'
 import labeddit3 from '../assets/labeddit-3.PNG'
 import labeddit4 from '../assets/labeddit-4.PNG'
-import shoppingOmni1 from '../assets/shopping-omni/shoppingomni-1.png'
-import shoppingOmni2 from '../assets/shopping-omni/shoppingomni-2.png'
-import shoppingOmni3 from '../assets/shopping-omni/shoppingomni-3.png'
 import backgroundImgBefore from '../assets/mongo-db/background-img-before.png'
 import backgroundImgAfter from '../assets/mongo-db/background-img-after.png'
 import detailsBefore from '../assets/mongo-db/details-before.png'
@@ -31,7 +28,7 @@ export const getProjects = ({
   labookDescription,
   images
 }) => {
-  const { mongoDB, shoppingOmni, musicatchers, labeddit } = images
+  const { mongoDB, musicatchers, labeddit } = images
 
   const projects = [
     {
@@ -104,23 +101,7 @@ export const getProjects = ({
     {
       title: 'Shopping Omni',
       type: 'Full Stack',
-      images: [
-        {
-          src: shoppingOmni1,
-          alt: shoppingOmni.shoppingOmni1.alt,
-          caption: shoppingOmni.shoppingOmni1.caption
-        },
-        {
-          src: shoppingOmni2,
-          alt: shoppingOmni.shoppingOmni2.alt,
-          caption: shoppingOmni.shoppingOmni2.caption
-        },
-        {
-          src: shoppingOmni3,
-          alt: shoppingOmni.shoppingOmni3.alt,
-          caption: shoppingOmni.shoppingOmni3.caption
-        }
-      ],
+      images: [],
       description: shoppingOmniDescription,
       ctas: [],
       tags: [
