@@ -51,7 +51,13 @@ const Communities = () => {
                       tablet={{ marginTop: Spacing.TABLET.TINY }}
                       desktop={{ marginTop: Spacing.DESKTOP.X_TINY }}
                     >
-                      <InlineLink flex href={href} aria-label={ariaLabel}>
+                      <InlineLink
+                        flex
+                        href={href}
+                        aria-label={ariaLabel}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         {dictionary.cta.learnMore}
                         <Chevron />
                       </InlineLink>
