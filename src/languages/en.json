@@ -10,11 +10,9 @@
   "knowledges": "Knowledges",
   "frontendKnowledges": [
     "Responsive Web applications development",
-    "Componentization and state management using React",
-    "Styling libraries such as Styled-components and Material-UI",
-    "Component library development using React and Storybook",
+    "Components libraries development using React and Storybook",
     "Unit test using Jest and React Testing Library",
-    "Sitefinity CMS, pages and MVC widgets building using .NET/C#",
+    "Sitefinity CMS, pages and MVC widgets building using .NET",
     "REST API's integration"
   ],
   "backendKnowledges": [
@@ -26,6 +24,7 @@
   ],
   "generalKnowledges": [
     "Clean Code",
+    "Test automation using Robot Framework",
     "Google Cloud Platform (GCP)",
     "AWS",
     "Agile Development"

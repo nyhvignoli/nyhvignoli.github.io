@@ -10,11 +10,9 @@
   "knowledges": "Conhecimentos",
   "frontendKnowledges": [
     "Desenvolvimento de aplicações Web responsivas",
-    "Componentização e manipulação de estado com React",
-    "Bibliotecas de estilização como Styled-components e Material-UI",
-    "Desenvolvimento de biblioteca de componentes com React e Storybook",
+    "Desenvolvimento de bibliotecas de componentes com React e Storybook",
     "Testes unitários com Jest e React Testing Library",
-    "Sitefinity CMS, criação de páginas e MVC widgets com .NET/C#",
+    "Sitefinity CMS, criação de páginas e MVC widgets com .NET",
     "Integrações com API's REST"
   ],
   "backendKnowledges": [
@@ -26,6 +24,7 @@
   ],
   "generalKnowledges": [
     "Clean Code",
+    "Automação de testes com Robot Framework",
     "Google Cloud Platform (GCP)",
     "AWS",
     "Metodologias Ágeis"
