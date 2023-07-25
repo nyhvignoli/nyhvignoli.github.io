@@ -79,6 +79,7 @@ const Carousel = ({ projects, handleGalleryOpen }) => {
                 hasMarginRightOnMobile={index === array.length - 1}
                 headerProps={{
                   title: project.title,
+                  titleStyles: `text-align: center;`,
                   subtitle: project.type,
                   cover: !!project.images?.length && {
                     src: project.images[0].src,

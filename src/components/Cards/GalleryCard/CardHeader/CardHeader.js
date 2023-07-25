@@ -6,6 +6,7 @@ import { Space } from '../../../Space'
 export const CardHeader = ({
   title,
   subtitle,
+  titleStyles = '',
   cover = { src: '', alt: '' },
   cta = { text: '', arialLabel: '', onClick: null }
 }) => {
@@ -13,7 +14,7 @@ export const CardHeader = ({
     <Wrapper data-testid="gallery-card-header">
       {!!cover.src && <Cover src={cover.src} alt={cover.alt} />}
       <Header>
-        <Subhead2>{title}</Subhead2>
+        <Subhead2 styles={titleStyles}>{title}</Subhead2>
         <Subhead3>{`{ ${subtitle} }`}</Subhead3>
         {!!cta.text && (
           <Space mobile={{ marginTop: 'auto' }}>

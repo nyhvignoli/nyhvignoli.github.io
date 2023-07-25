@@ -1,25 +1,37 @@
-import musicatchersScreenshot from '../assets/musicatchers.PNG'
-import musicatchers2 from '../assets/musicatchers-2.PNG'
-import musicatchers3 from '../assets/musicatchers-3.PNG'
-import musicatchers4 from '../assets/musicatchers-4.PNG'
-import musicatchers5 from '../assets/musicatchers-5.PNG'
-import labedditScreenshot from '../assets/labeddit.PNG'
-import labeddit2 from '../assets/labeddit-2.PNG'
-import labeddit3 from '../assets/labeddit-3.PNG'
-import labeddit4 from '../assets/labeddit-4.PNG'
-import backgroundImgBefore from '../assets/mongo-db/background-img-before.png'
-import backgroundImgAfter from '../assets/mongo-db/background-img-after.png'
-import detailsBefore from '../assets/mongo-db/details-before.png'
-import detailsAfter from '../assets/mongo-db/details-after.png'
-import lpNavBefore from '../assets/mongo-db/lp-nav-before.png'
-import lpNavAfter from '../assets/mongo-db/lp-nav-after.png'
-import segaBefore from '../assets/mongo-db/sega-before.png'
-import segaAfter from '../assets/mongo-db/sega-after.png'
-import segaBeforeMobile from '../assets/mongo-db/sega-before-mobile.png'
-import segaAfterMobile from '../assets/mongo-db/sega-after-mobile.png'
+import {
+  musicatchersScreenshot,
+  musicatchers2,
+  musicatchers3,
+  musicatchers4,
+  musicatchers5
+} from '../assets/musicatchers'
+import {
+  labedditScreenshot,
+  labeddit2,
+  labeddit3,
+  labeddit4
+} from '../assets/labeddit'
+import {
+  mongoDBComponentLibCover,
+  masonryCards,
+  formComponents
+} from '../assets/mondo-db-component-lib'
+import {
+  backgroundImgBefore,
+  backgroundImgAfter,
+  detailsBefore,
+  detailsAfter,
+  lpNavBefore,
+  lpNavAfter,
+  segaBefore,
+  segaAfter,
+  segaBeforeMobile,
+  segaAfterMobile
+} from '../assets/mongo-db'
 
 export const getProjects = ({
   mongoDBDescription,
+  mongoDBComponentLibDescription,
   shoppingOmniDescription,
   musicatchersDescription,
   labedditDescription,
@@ -28,7 +40,7 @@ export const getProjects = ({
   labookDescription,
   images
 }) => {
-  const { mongoDB, musicatchers, labeddit } = images
+  const { mongoDB, mongoDBComponentLib, musicatchers, labeddit } = images
 
   const projects = [
     {
@@ -97,6 +109,30 @@ export const getProjects = ({
         'node',
         'mongoDB'
       ]
+    },
+    {
+      title: 'MongoDB Component Library',
+      type: 'Front-end',
+      images: [
+        {
+          src: mongoDBComponentLibCover,
+          alt: mongoDBComponentLib.webinarsPresentation.alt,
+          caption: mongoDBComponentLib.webinarsPresentation.caption
+        },
+        {
+          src: masonryCards,
+          alt: mongoDBComponentLib.cardGrid.alt,
+          caption: mongoDBComponentLib.cardGrid.caption
+        },
+        {
+          src: formComponents,
+          alt: mongoDBComponentLib.form.alt,
+          caption: mongoDBComponentLib.form.caption
+        }
+      ],
+      description: mongoDBComponentLibDescription,
+      ctas: [{ href: 'https://www.mongodb.com/' }],
+      tags: ['react', 'theme-ui', 'storybook', 'rollup', 'jest', 'node']
     },
     {
       title: 'Shopping Omni',
