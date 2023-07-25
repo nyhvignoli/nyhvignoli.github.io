@@ -1,8 +1,3 @@
-// import colors from './colors.json'
-
-// export const theme = { colors }
-
-// NEW
 export { Breakpoints } from './breakpoints'
 export { Color } from './colors'
 export { Spacing } from './spacing'
