@@ -1,31 +1,37 @@
-import musicatchersScreenshot from '../assets/musicatchers.PNG'
-import musicatchers2 from '../assets/musicatchers-2.PNG'
-import musicatchers3 from '../assets/musicatchers-3.PNG'
-import musicatchers4 from '../assets/musicatchers-4.PNG'
-import musicatchers5 from '../assets/musicatchers-5.PNG'
-import labedditScreenshot from '../assets/labeddit.PNG'
-import labeddit2 from '../assets/labeddit-2.PNG'
-import labeddit3 from '../assets/labeddit-3.PNG'
-import labeddit4 from '../assets/labeddit-4.PNG'
-import shoppingOmni1 from '../assets/shopping-omni/shoppingomni-1.png'
-import shoppingOmni2 from '../assets/shopping-omni/shoppingomni-2.png'
-import shoppingOmni3 from '../assets/shopping-omni/shoppingomni-3.png'
-import backgroundImgBefore from '../assets/mongo-db/background-img-before.png'
-import backgroundImgAfter from '../assets/mongo-db/background-img-after.png'
-import cardGridBefore from '../assets/mongo-db/card-grid-before.png'
-import cardGridSmallAfter from '../assets/mongo-db/card-grid-small-after.png'
-import cardGridLargeAfter from '../assets/mongo-db/card-grid-large-after.png'
-import detailsBefore from '../assets/mongo-db/details-before.png'
-import detailsAfter from '../assets/mongo-db/details-after.png'
-import lpNavBefore from '../assets/mongo-db/lp-nav-before.png'
-import lpNavAfter from '../assets/mongo-db/lp-nav-after.png'
-import segaBefore from '../assets/mongo-db/sega-before.png'
-import segaAfter from '../assets/mongo-db/sega-after.png'
-import segaBeforeMobile from '../assets/mongo-db/sega-before-mobile.png'
-import segaAfterMobile from '../assets/mongo-db/sega-after-mobile.png'
+import {
+  musicatchersScreenshot,
+  musicatchers2,
+  musicatchers3,
+  musicatchers4,
+  musicatchers5
+} from '../assets/musicatchers'
+import {
+  labedditScreenshot,
+  labeddit2,
+  labeddit3,
+  labeddit4
+} from '../assets/labeddit'
+import {
+  mongoDBComponentLibCover,
+  masonryCards,
+  formComponents
+} from '../assets/mondo-db-component-lib'
+import {
+  backgroundImgBefore,
+  backgroundImgAfter,
+  detailsBefore,
+  detailsAfter,
+  lpNavBefore,
+  lpNavAfter,
+  segaBefore,
+  segaAfter,
+  segaBeforeMobile,
+  segaAfterMobile
+} from '../assets/mongo-db'
 
 export const getProjects = ({
   mongoDBDescription,
+  mongoDBComponentLibDescription,
   shoppingOmniDescription,
   musicatchersDescription,
   labedditDescription,
@@ -34,7 +40,7 @@ export const getProjects = ({
   labookDescription,
   images
 }) => {
-  const { mongoDB, shoppingOmni, musicatchers, labeddit } = images
+  const { mongoDB, mongoDBComponentLib, musicatchers, labeddit } = images
 
   const projects = [
     {
@@ -50,21 +56,6 @@ export const getProjects = ({
           src: backgroundImgBefore,
           alt: mongoDB.backgroundImgBefore.alt,
           caption: mongoDB.backgroundImgBefore.caption
-        },
-        {
-          src: cardGridBefore,
-          alt: mongoDB.cardGridBefore.alt,
-          caption: mongoDB.cardGridBefore.caption
-        },
-        {
-          src: cardGridLargeAfter,
-          alt: mongoDB.cardGridLargeAfter.alt,
-          caption: mongoDB.cardGridLargeAfter.caption
-        },
-        {
-          src: cardGridSmallAfter,
-          alt: mongoDB.cardGridSmallAfter.alt,
-          caption: mongoDB.cardGridSmallAfter.caption
         },
         {
           src: detailsBefore,
@@ -120,25 +111,33 @@ export const getProjects = ({
       ]
     },
     {
-      title: 'Shopping Omni',
-      type: 'Full Stack',
+      title: 'MongoDB Component Library',
+      type: 'Front-end',
       images: [
         {
-          src: shoppingOmni1,
-          alt: shoppingOmni.shoppingOmni1.alt,
-          caption: shoppingOmni.shoppingOmni1.caption
+          src: mongoDBComponentLibCover,
+          alt: mongoDBComponentLib.webinarsPresentation.alt,
+          caption: mongoDBComponentLib.webinarsPresentation.caption
         },
         {
-          src: shoppingOmni2,
-          alt: shoppingOmni.shoppingOmni2.alt,
-          caption: shoppingOmni.shoppingOmni2.caption
+          src: masonryCards,
+          alt: mongoDBComponentLib.cardGrid.alt,
+          caption: mongoDBComponentLib.cardGrid.caption
         },
         {
-          src: shoppingOmni3,
-          alt: shoppingOmni.shoppingOmni3.alt,
-          caption: shoppingOmni.shoppingOmni3.caption
+          src: formComponents,
+          alt: mongoDBComponentLib.form.alt,
+          caption: mongoDBComponentLib.form.caption
         }
       ],
+      description: mongoDBComponentLibDescription,
+      ctas: [{ href: 'https://www.mongodb.com/' }],
+      tags: ['react', 'theme-ui', 'storybook', 'rollup', 'jest', 'node']
+    },
+    {
+      title: 'Shopping Omni',
+      type: 'Full Stack',
+      images: [],
       description: shoppingOmniDescription,
       ctas: [],
       tags: [

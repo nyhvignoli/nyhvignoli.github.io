@@ -10,11 +10,10 @@ import {
   Shadow,
   Sizes,
   Spacing,
-  theme,
   Transition
 } from '../theme'
 
-const { colors } = theme
+// const { colors } = theme
 
 /* Container */
 export const BaseFlex = styled.div`
@@ -308,40 +307,5 @@ export const Anchor = styled.a`
 
   @media (${Breakpoints.MOBILE.LARGE.MAX}) {
     width: 100%;
-  }
-`
-
-export const StyledButton = styled.button`
-  width: fit-content;
-  padding: 0.5rem 1rem;
-  border: none;
-  outline: none;
-  box-shadow: 0px 1px 5px 1px #012940;
-  border-radius: 2rem;
-  min-width: 160px;
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: 1rem;
-  background-color: ${({ orange }) =>
-    orange ? colors.lightOrange : colors.babyBlue};
-  color: ${colors.white};
-  transition: all 0.1s ease;
-  width: 100%;
-
-  &:focus {
-    background-color: ${({ orange }) =>
-      orange ? colors.deepOrange : colors.darkBlue};
-  }
-
-  &:hover {
-    cursor: pointer;
-    box-shadow: 2px 2px 6px 2px #012940;
-    opacity: 0.8;
-    transform: scale(1.02);
-    transition: all 0.1s ease;
-  }
-
-  @media (max-width: 800px) {
-    margin: auto;
-    align-self: center;
   }
 `

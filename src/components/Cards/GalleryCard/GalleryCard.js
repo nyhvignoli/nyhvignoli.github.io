@@ -4,7 +4,13 @@ import { CardHeader, CardContent, CardFooter } from '.'
 
 export const GalleryCard = ({
   id = '',
-  headerProps = { title: '', subtitle: '', image: {}, cta: {} },
+  headerProps = {
+    title: '',
+    subtitle: '',
+    titleStyles: '',
+    image: {},
+    cta: {}
+  },
   footerProps = { ctas: [] },
   children,
   active,

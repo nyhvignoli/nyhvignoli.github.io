@@ -9,6 +9,7 @@ export const Color = {
   GREY_700: '#101010',
   GREY_800: '#050505',
   GREY_900: '#000000',
+  TRANSPARENT: (alpha) => `rgba(0,0,0,${alpha})`,
   JADE_GREEN_50: '#DCFEEA',
   JADE_GREEN_100: '#B9F6D2',
   JADE_GREEN_200: '#95F3BB',

@@ -40,6 +40,7 @@
 
   "gallery": "View gallery",
   "mongoDBDescription": "I worked as a contractor for the team responsible for maintenance and development of new features for all websites under the mongodb.com domain. In this project I worked mostly developing bug fixes and improvements.",
+  "mongoDBComponentLibDescription": "I've contribuited in developing MongoDB internal component library. Participating in development and documentation of reusables components, implementing Design System based of Atomic Design principles.",
   "shoppingOmniDescription": "I was part of the agile development team of Shopping Omni project, for about 2 months. This project is sort of a plataform to sellers, to enable management and integration with stores, marketplaces, products, orders, among others features.",
   "musicatchersDescription": "Full Stack Project developed at Labenu's bootcamp. It is about a web application with basic features of a music streaming Website.",
   "labedditDescription": "Project developed at Labenu's bootcamp. A social media similar to Reddit, where the users are able to post, comment and vote in each others posts.",
@@ -123,6 +124,20 @@
       "segaAfterMobile": {
         "alt": "Navbar and title on japanese page appears correctly. Mobile version.",
         "caption": "NavBar, after the fix (mobile version)"
+      }
+    },
+    "mongoDBComponentLib": {
+      "webinarsPresentation": {
+        "alt": "MongoDB webinars presentation page, title says 'Data Modeling in MongoDB' and a green button says 'Sign up to watch'",
+        "caption": "MongoDB webinars presentation page"
+      },
+      "cardGrid": {
+        "alt": "MongoDB website page with two cards: One relates to 'Atlas' (Multi-cloud database platform) and the other relates to 'Realm' (Work with data at the edge)",
+        "caption": "Card grid on MongoDB website"
+      },
+      "form": {
+        "alt": "MongoDB webinars registration form",
+        "caption": "MongoDB webinars registration form"
       }
     },
     "shoppingOmni": {

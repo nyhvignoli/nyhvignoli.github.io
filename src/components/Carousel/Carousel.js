@@ -79,15 +79,17 @@ const Carousel = ({ projects, handleGalleryOpen }) => {
                 hasMarginRightOnMobile={index === array.length - 1}
                 headerProps={{
                   title: project.title,
+                  titleStyles: `text-align: center;`,
                   subtitle: project.type,
                   cover: !!project.images?.length && {
                     src: project.images[0].src,
                     alt: project.images[0].alt
                   },
-                  cta: project.type !== 'Back-end' && {
-                    text: dictionary.gallery,
-                    onClick: () => handleGalleryOpen(index)
-                  }
+                  cta: project.type !== 'Back-end' &&
+                    !!project.images.length && {
+                      text: dictionary.gallery,
+                      onClick: () => handleGalleryOpen(index)
+                    }
                 }}
                 footerProps={{ ctas: project.ctas }}
               >

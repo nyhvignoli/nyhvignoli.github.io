@@ -40,6 +40,7 @@
 
   "gallery": "Ver galeria",
   "mongoDBDescription": "Fiz parte do time responsável pela manutenção e desenvolvimento de novas funcionalidades para todos os sites sob domínio mongodb.com. Nesse projeto trabalhei especialmente desenvolvendo bug fixes e melhorias.",
+  "mongoDBComponentLibDescription": "Fui uma das colaboradoras da biblioteca de componentes interna da MongoDB. Participando do desenvolvimento e documentação de componentes, implementando o Design System utilizando conceitos de Atomic Design.",
   "shoppingOmniDescription": "Fiz parte do time de desenvolvimento do projeto Shopping Omni, por cerca de 2 meses. Trata-se de uma plataforma direcionada à lojistas, para facilitar o gerenciamento e integração de lojas, marketplaces, produtos, pedidos e outras funcionalidades.",
   "musicatchersDescription": "Projeto Full Stack do bootcamp da escola Labenu. Trata-se de uma aplicação com funcionalidades básicas de um site para streaming de músicas.",
   "labedditDescription": "Projeto feito no bootcamp da escola Labenu. Uma rede social similar ao Reddit, onde é possível fazer postagens, comentar nos posts de outras pessoas e votar!",
@@ -123,6 +124,20 @@
       "segaAfterMobile": {
         "alt": "Barra de navegação e título da página em japonês aparecem corretamente. Versão mobile.",
         "caption": "NavBar, depois do fix (versão mobile)"
+      }
+    },
+    "mongoDBComponentLib": {
+      "webinarsPresentation": {
+        "alt": "Página webinars no site da MongoDB, título diz 'Data Modeling in MongoDB' e um botão verde diz 'Sign up to watch'",
+        "caption": "Página webinars no site da MongoDB"
+      },
+      "cardGrid": {
+        "alt": "Página no site da MongoDB com dois cartões: Um relacionado à 'Atlas' (Multi-cloud database platform) e outro relacionado à 'Realm' (Work with data at the edge)",
+        "caption": "Grade de cartões no site da MongoDB"
+      },
+      "form": {
+        "alt": "Formulário de registro de MongoDB webinars",
+        "caption": "Formulário de registro de MongoDB webinars"
       }
     },
     "shoppingOmni": {
