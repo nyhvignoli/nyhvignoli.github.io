@@ -33,15 +33,14 @@ export const MenuItem = styled.li`
   border-radius: 5px;
   transition: all 0.2s ease-in-out 0.1s;
 
-  &:hover {
-    background-color: #cdcdcd;
-    cursor: default;
+  &:hover, &:focus {
+    background-color: ${Color.GREY_200};
   }
 
   ${({ selected }) =>
     selected &&
     `
-  color:${Color.GREY_300};
+  color: ${Color.GREY_400};
   transition: all 0.2s ease-in-out 0.1s;
 `}
 `

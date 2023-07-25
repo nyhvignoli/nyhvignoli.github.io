@@ -19,7 +19,7 @@ describe('LanguageSelector', () => {
     expect(menuElement).toBeInTheDocument()
     expect(ptMenuItem).toBeInTheDocument()
     expect(ptMenuItem).toHaveStyle({
-      color: Color.GREY_300
+      color: Color.GREY_400
     })
   })
 
@@ -37,7 +37,7 @@ describe('LanguageSelector', () => {
 
     expect(hideSelect).toHaveBeenCalled()
     expect(enMenuItem).toHaveStyle({
-      color: Color.GREY_300
+      color: Color.GREY_400
     })
   })
 
@@ -55,7 +55,7 @@ describe('LanguageSelector', () => {
 
     expect(hideSelect).toHaveBeenCalled()
     expect(ptMenuItem).toHaveStyle({
-      color: Color.GREY_300
+      color: Color.GREY_400
     })
   })
 })
