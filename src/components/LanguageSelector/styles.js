@@ -33,7 +33,8 @@ export const MenuItem = styled.li`
   border-radius: 5px;
   transition: all 0.2s ease-in-out 0.1s;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     background-color: ${Color.GREY_200};
   }
 
