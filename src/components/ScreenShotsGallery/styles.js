@@ -38,7 +38,7 @@ export const ImageWrapper = styled.div`
   display: flex;
   width: 100%;
   height: 100%;
-  max-height: calc(100vh - 100px);
+  max-height: calc(100% - 100px);
   overflow: auto;
 `
 
