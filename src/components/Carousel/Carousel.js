@@ -28,6 +28,13 @@ const Carousel = ({ projects, handleGalleryOpen }) => {
     [maxSteps]
   )
 
+  const handleCTAFocus = useCallback(
+    (index) => {
+      if (activeStep !== index) setActiveStep(index)
+    },
+    [activeStep]
+  )
+
   const handlers = useSwipeable({
     onSwipedLeft: () => handleStepChange(activeStep + 1),
     onSwipedRight: () => handleStepChange(activeStep - 1)
@@ -88,10 +95,14 @@ const Carousel = ({ projects, handleGalleryOpen }) => {
                   cta: project.type !== 'Back-end' &&
                     !!project.images.length && {
                       text: dictionary.gallery,
-                      onClick: () => handleGalleryOpen(index)
+                      onClick: () => handleGalleryOpen(index),
+                      onFocus: () => handleCTAFocus(index)
                     }
                 }}
-                footerProps={{ ctas: project.ctas }}
+                footerProps={{
+                  ctas: project.ctas,
+                  onFocus: () => handleCTAFocus(index)
+                }}
               >
                 <Space mobile={{ marginBottom: Spacing.MOBILE.X_SMALL }}>
                   <Body>{project.description}</Body>
@@ -131,6 +142,7 @@ const Carousel = ({ projects, handleGalleryOpen }) => {
         steps={projects.map((_, i) => i)}
         activeStep={activeStep}
         handleStepChange={handleStepChange}
+        handleFocus={handleCTAFocus}
       />
     </Wrapper>
   )

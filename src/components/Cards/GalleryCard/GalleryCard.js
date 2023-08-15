@@ -11,7 +11,7 @@ export const GalleryCard = ({
     image: {},
     cta: {}
   },
-  footerProps = { ctas: [] },
+  footerProps = { ctas: [], onFocus: null },
   children,
   active,
   noBackground,
