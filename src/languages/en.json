@@ -41,7 +41,6 @@
   "gallery": "View gallery",
   "mongoDBDescription": "I worked as a contractor for the team responsible for maintenance and development of new features for all websites under the mongodb.com domain. In this project I worked mostly developing bug fixes and improvements.",
   "mongoDBComponentLibDescription": "I've contribuited in developing MongoDB internal component library. Participating in development and documentation of reusables components, implementing Design System based of Atomic Design principles.",
-  "shoppingOmniDescription": "I was part of the agile development team of Shopping Omni project, for about 2 months. This project is sort of a plataform to sellers, to enable management and integration with stores, marketplaces, products, orders, among others features.",
   "musicatchersDescription": "Full Stack Project developed at Labenu's bootcamp. It is about a web application with basic features of a music streaming Website.",
   "labedditDescription": "Project developed at Labenu's bootcamp. A social media similar to Reddit, where the users are able to post, comment and vote in each others posts.",
   "labenuSystemDescription": "Project to wrap the Backend's 4º Module at Labenu. This was a team project, which the main goal was to develop an education intituition system, with students, teachers and missions entities.",
@@ -138,20 +137,6 @@
       "form": {
         "alt": "MongoDB webinars registration form",
         "caption": "MongoDB webinars registration form"
-      }
-    },
-    "shoppingOmni": {
-      "shoppingOmni1": {
-        "alt": "screenshot of 'Etiquetas' screen, listing the orders with information about code, name, costumer name, order price and shipment method",
-        "caption": "'Etiquetas' screen, 'Gerar etiqueta' tab"
-      },
-      "shoppingOmni2": {
-        "alt": "screenshot of 'Minhas Etiquetas' screen, it lists PLP's with print button and ungroup button",
-        "caption": "'Etiquetas' screen, 'Minhas etiquetas' tab"
-      },
-      "shoppingOmni3": {
-        "alt": "screenshot of 'Minhas Etiquetas', tab to request collect, listing order code, costumer name and order price",
-        "caption": "'Etiquetas' screen, 'Coleta' tab"
       }
     },
     "musicatchers": {

@@ -32,7 +32,6 @@ import {
 export const getProjects = ({
   mongoDBDescription,
   mongoDBComponentLibDescription,
-  shoppingOmniDescription,
   musicatchersDescription,
   labedditDescription,
   viewDocumentation,
@@ -133,24 +132,6 @@ export const getProjects = ({
       description: mongoDBComponentLibDescription,
       ctas: [{ href: 'https://www.mongodb.com/' }],
       tags: ['react', 'theme-ui', 'storybook', 'rollup', 'jest', 'node']
-    },
-    {
-      title: 'Shopping Omni',
-      type: 'Full Stack',
-      images: [],
-      description: shoppingOmniDescription,
-      ctas: [],
-      tags: [
-        'react',
-        'styled-components',
-        'bootstrap',
-        'jest',
-        'redux',
-        'node',
-        'postgreSQL',
-        'mocha',
-        'AWS'
-      ]
     },
     {
       title: 'MusiCatchers',

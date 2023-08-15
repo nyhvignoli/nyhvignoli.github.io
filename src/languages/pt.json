@@ -41,7 +41,6 @@
   "gallery": "Ver galeria",
   "mongoDBDescription": "Fiz parte do time responsável pela manutenção e desenvolvimento de novas funcionalidades para todos os sites sob domínio mongodb.com. Nesse projeto trabalhei especialmente desenvolvendo bug fixes e melhorias.",
   "mongoDBComponentLibDescription": "Fui uma das colaboradoras da biblioteca de componentes interna da MongoDB. Participando do desenvolvimento e documentação de componentes, implementando o Design System utilizando conceitos de Atomic Design.",
-  "shoppingOmniDescription": "Fiz parte do time de desenvolvimento do projeto Shopping Omni, por cerca de 2 meses. Trata-se de uma plataforma direcionada à lojistas, para facilitar o gerenciamento e integração de lojas, marketplaces, produtos, pedidos e outras funcionalidades.",
   "musicatchersDescription": "Projeto Full Stack do bootcamp da escola Labenu. Trata-se de uma aplicação com funcionalidades básicas de um site para streaming de músicas.",
   "labedditDescription": "Projeto feito no bootcamp da escola Labenu. Uma rede social similar ao Reddit, onde é possível fazer postagens, comentar nos posts de outras pessoas e votar!",
   "labenuSystemDescription": "Projeto de conclusão do Módulo 4 de Backend da Labenu. Feito em grupo, a proposta era criar um sistema da instituição de ensino trabalhando com as entidades Estudante, Docente e Turma.",
@@ -138,20 +137,6 @@
       "form": {
         "alt": "Formulário de registro de MongoDB webinars",
         "caption": "Formulário de registro de MongoDB webinars"
-      }
-    },
-    "shoppingOmni": {
-      "shoppingOmni1": {
-        "alt": "foto da tela de Etiquetas, onde listam pedidos com informações de código, nome do cliente, valor do pedido e método de entrega",
-        "caption": "Tela Etiquetas, aba 'Gerar etiqueta'"
-      },
-      "shoppingOmni2": {
-        "alt": "foto da tela de Minhas Etiquetas, lista de PLP's com botão para imprimir e botão para desagrupar",
-        "caption": "Tela Etiquetas, aba 'Minhas etiquetas'"
-      },
-      "shoppingOmni3": {
-        "alt": "foto da tela de Minhas Etiquetas, aba para solicitar coleta, listando código do pedido, nome do cliente e valor do pedido",
-        "caption": "Tela Etiquetas, aba 'Coleta'"
       }
     },
     "musicatchers": {
