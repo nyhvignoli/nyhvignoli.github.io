@@ -40,7 +40,7 @@ const AboutMe = () => {
               <InlineLink
                 href="https://www.questrade.com/home"
                 target="_blank"
-                rel="noreferrer"
+                rel="noreferrer noopener"
                 aria-label={`${ariaLabels.questrade} (${ariaLabels.opensInANewTab})`}
               >
                 Questrade Financial Group
@@ -53,7 +53,6 @@ const AboutMe = () => {
           <ButtonLink
             href={userLanguage === 'pt' ? resumePT : resumeEN}
             target="_blank"
-            rel="noreferrer"
             aria-label={`${ariaLabels.viewResume} (${ariaLabels.opensAPDFDocumentInANewTab})`}
           >
             <Text tid="viewResume" />

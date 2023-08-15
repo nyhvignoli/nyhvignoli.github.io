@@ -128,11 +128,11 @@
     },
     "mongoDBComponentLib": {
       "webinarsPresentation": {
-        "alt": "Página webinars no site da MongoDB, título diz 'Data Modeling in MongoDB' e um botão verde diz 'Sign up to watch'",
+        "alt": "Página webinars no site da MongoDB, título diz 'Data Modeling in MongoDB'",
         "caption": "Página webinars no site da MongoDB"
       },
       "cardGrid": {
-        "alt": "Página no site da MongoDB com dois cartões: Um relacionado à 'Atlas' (Multi-cloud database platform) e outro relacionado à 'Realm' (Work with data at the edge)",
+        "alt": "Página no site da MongoDB com dois cartões: 'Atlas' (Multi-cloud database platform) e 'Realm' (Work with data at the edge)",
         "caption": "Grade de cartões no site da MongoDB"
       },
       "form": {
@@ -178,7 +178,7 @@
     },
     "labeddit": {
       "labedditScreenshot": {
-        "alt": "foto do feed do projeto Labeddit, cor base do fundo em branco com a barra de navegação em tons de vermelho.",
+        "alt": "Feed do projeto Labeddit, cor base do fundo em branco e barra de navegação em vermelho.",
         "caption": "Feed com todas as postagens"
       },
       "labeddit2": {

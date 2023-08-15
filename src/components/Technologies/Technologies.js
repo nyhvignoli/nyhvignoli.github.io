@@ -31,7 +31,6 @@ export const Technologies = ({ title, list = [] }) => {
         <InlineLink
           href="https://nyhdevignoli-hsc.surge.sh/"
           target="_blank"
-          rel="noreferrer"
           aria-label={`${dictionary.ariaLabels.skillsClockworkLink} (${dictionary.ariaLabels.opensInANewTab})`}
         >
           Nyh Vignoli - Hard Skills Clockwork

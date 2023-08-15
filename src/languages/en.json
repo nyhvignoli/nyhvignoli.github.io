@@ -128,7 +128,7 @@
     },
     "mongoDBComponentLib": {
       "webinarsPresentation": {
-        "alt": "MongoDB webinars presentation page, title says 'Data Modeling in MongoDB' and a green button says 'Sign up to watch'",
+        "alt": "MongoDB webinars page, title says 'Data Modeling in MongoDB'",
         "caption": "MongoDB webinars presentation page"
       },
       "cardGrid": {
