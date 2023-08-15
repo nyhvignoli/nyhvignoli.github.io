@@ -1,14 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Body, Body5, Subhead, CleanLink } from '../../global/styles'
 import { SocialMedia } from '../SocialMedia'
 import { StyledFooter, Icon, Divider } from './styles'
 import { GridLayout, GridItem } from '../GridLayout'
-import { Text } from '../../global/LanguagesContext'
+import { LanguageContext, Text } from '../../global/LanguagesContext'
 import { Space } from '../Space'
 import { Spacing } from '../../theme'
 import { email, whatsapp } from '../../assets/social-media-icons'
 
 const Footer = () => {
+  const { dictionary } = useContext(LanguageContext)
+
   return (
     <StyledFooter id="contact" data-testid="footer">
       <Space
@@ -40,8 +42,6 @@ const Footer = () => {
               flex
               decorationOnHover="underline"
               href="mailto:nyhv.contato@gmail.com"
-              target="_blank"
-              rel="noreferrer"
             >
               <Icon src={email} alt="email icon" width="24px" height="24px" />
               <Body>nyhv.contato@gmail.com</Body>
@@ -56,7 +56,7 @@ const Footer = () => {
                 decorationOnHover="underline"
                 href="//wa.me/+5551997661364"
                 target="_blank"
-                rel="noreferrer"
+                aria-label={`Whatsapp (${dictionary.ariaLabels.opensInANewTab})`}
               >
                 <Icon
                   src={whatsapp}

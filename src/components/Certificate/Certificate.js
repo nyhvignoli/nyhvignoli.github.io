@@ -41,7 +41,6 @@ const Certification = () => {
                       href={href}
                       aria-label={`${ariaLabel} (${dictionary.ariaLabels.opensInANewTab})`}
                       target="_blank"
-                      rel="noreferrer noopener"
                     >
                       {text}
                     </InlineLink>

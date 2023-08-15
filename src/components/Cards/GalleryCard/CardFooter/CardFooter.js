@@ -5,7 +5,7 @@ import { Space } from '../../../Space'
 import { LanguageContext } from '../../../../global/LanguagesContext'
 import { Chevron } from '../../../Icons'
 
-export const CardFooter = ({ ctas = [] }) => {
+export const CardFooter = ({ ctas = [], onFocus }) => {
   const { dictionary } = useContext(LanguageContext)
 
   return (
@@ -14,7 +14,12 @@ export const CardFooter = ({ ctas = [] }) => {
         return (
           !!cta.href && (
             <Space key={`${cta.href}-${index}`} mobile={{ marginTop: 'auto' }}>
-              <InlineLink flex href={cta.href} aria-label={cta.ariaLabel}>
+              <InlineLink
+                flex
+                href={cta.href}
+                aria-label={cta.ariaLabel}
+                onFocus={onFocus}
+              >
                 {cta.text || dictionary.viewWebsite}
                 <Chevron />
               </InlineLink>

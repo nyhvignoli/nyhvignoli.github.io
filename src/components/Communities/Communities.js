@@ -54,7 +54,7 @@ const Communities = () => {
                       <InlineLink
                         flex
                         href={href}
-                        aria-label={ariaLabel}
+                        aria-label={`${ariaLabel} (${dictionary.ariaLabels.opensInANewTab})`}
                         target="_blank"
                         rel="noopener noreferrer"
                       >

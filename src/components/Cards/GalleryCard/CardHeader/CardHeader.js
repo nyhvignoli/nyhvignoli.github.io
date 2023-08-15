@@ -8,7 +8,7 @@ export const CardHeader = ({
   subtitle,
   titleStyles = '',
   cover = { src: '', alt: '' },
-  cta = { text: '', arialLabel: '', onClick: null }
+  cta = { text: '', arialLabel: '', onClick: null, onFocus: null }
 }) => {
   return (
     <Wrapper data-testid="gallery-card-header">
@@ -18,7 +18,7 @@ export const CardHeader = ({
         <Subhead3>{`{ ${subtitle} }`}</Subhead3>
         {!!cta.text && (
           <Space mobile={{ marginTop: 'auto' }}>
-            <SecondaryButton small onClick={cta.onClick}>
+            <SecondaryButton small onClick={cta.onClick} onFocus={cta.onFocus}>
               {cta.text}
             </SecondaryButton>
           </Space>
