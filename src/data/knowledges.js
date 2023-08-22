@@ -6,14 +6,15 @@ export const getKnowledges = ({
   frontendKnowledges,
   backendKnowledges,
   general: generalTitle,
-  generalKnowledges
+  generalKnowledges,
+  alternativeText
 }) => {
   const knowledges = [
     {
       title: 'Front-end',
       icon: {
         src: frontend,
-        alt: 'Ícone de diferentes telas e dispositivos'
+        alt: alternativeText.icons.frontend
       },
       list: frontendKnowledges
     },
@@ -21,7 +22,7 @@ export const getKnowledges = ({
       title: 'Back-end',
       icon: {
         src: backend,
-        alt: 'Ícone de uma tela com engrenagens'
+        alt: alternativeText.icons.backend
       },
       list: backendKnowledges
     },
@@ -29,7 +30,7 @@ export const getKnowledges = ({
       title: generalTitle,
       icon: {
         src: general,
-        alt: 'Ícone de um cérebro representando uma lâmpada'
+        alt: alternativeText.icons.generalKnowledges
       },
       list: generalKnowledges
     }

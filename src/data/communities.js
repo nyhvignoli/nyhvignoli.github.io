@@ -8,14 +8,15 @@ export const getCommunities = ({
   codivasDescription,
   compiladorasDescription,
   gufersDescription,
-  ariaLabels
+  ariaLabels,
+  alternativeText
 }) => {
   const communities = [
     {
       name: 'Labenu',
       logo: {
         image: labenuLogo,
-        alt: 'Logo da Labenu, uma chame minimalista e poligonal nas cores laranja, amarelo a azul acinzentado'
+        alt: alternativeText.logos.labenu
       },
       href: 'https://www.labenu.com.br/',
       ariaLabel: ariaLabels.labenu,
@@ -25,7 +26,7 @@ export const getCommunities = ({
       name: 'Codivas',
       logo: {
         image: codivasLogo,
-        alt: 'Logo da Codivas, escrito codivas em preto e roxo'
+        alt: alternativeText.logos.codivas
       },
       href: 'https://www.codivas.com.br/',
       ariaLabel: ariaLabels.codivas,
@@ -35,7 +36,7 @@ export const getCommunities = ({
       name: 'Compiladoras de Cafeína',
       logo: {
         image: compiladorasLogo,
-        alt: 'Logo das Compiladoras, com fundo preto e um xícara de café com um coração vermelho dentro'
+        alt: alternativeText.logos.compiladoras
       },
       href: 'https://www.instagram.com/comunidadecafeina/',
       ariaLabel: ariaLabels.compiladoras,
@@ -45,7 +46,7 @@ export const getCommunities = ({
       name: 'Gufers',
       logo: {
         image: gufersLogo,
-        alt: 'Logo dos Gufers, círculo de fundo preto com um foguete branco'
+        alt: alternativeText.logos.gufers
       },
       href: 'https://www.youtube.com/channel/UCcL_lGqZNsa_9cR4ckjy07A',
       ariaLabel: ariaLabels.gufers,

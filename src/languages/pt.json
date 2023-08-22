@@ -40,6 +40,7 @@
 
   "gallery": "Ver galeria",
   "mongoDBDescription": "Fiz parte do time responsável pela manutenção e desenvolvimento de novas funcionalidades para todos os sites sob domínio mongodb.com. Nesse projeto trabalhei especialmente desenvolvendo bug fixes e melhorias.",
+  "mongoDBComponentLibrary": "MongoDB Biblioteca de Componentes",
   "mongoDBComponentLibDescription": "Fui uma das colaboradoras da biblioteca de componentes interna da MongoDB. Participando do desenvolvimento e documentação de componentes, implementando o Design System utilizando conceitos de Atomic Design.",
   "musicatchersDescription": "Projeto Full Stack do bootcamp da escola Labenu. Trata-se de uma aplicação com funcionalidades básicas de um site para streaming de músicas.",
   "labedditDescription": "Projeto feito no bootcamp da escola Labenu. Uma rede social similar ao Reddit, onde é possível fazer postagens, comentar nos posts de outras pessoas e votar!",
@@ -224,5 +225,24 @@
     "codivas": "Link para o website Codivas",
     "compiladoras": "Link para o Instagram do grupo Compiladoras de Cafeína",
     "gufers": "Link para o canal do Youtube do grupo Gufers"
+  },
+
+  "alternativeText": {
+    "icons": {
+      "worldMap": "Mapa mundial",
+      "menu": "Menu hambúrger",
+      "cancel": "X cancelar",
+      "email": "E-mail",
+      "whatsapp": "Whatsapp",
+      "frontend": "Ícone de diferentes telas e dispositivos",
+      "backend": "Ícone de uma tela com engrenagens",
+      "generalKnowledges": "Ícone de um cérebro representando uma lâmpada"
+    },
+    "logos": {
+      "labenu": "Logo da Labenu, uma chame minimalista e poligonal nas cores laranja, amarelo a azul acinzentado",
+      "codivas": "Logo da Codivas, escrito codivas em preto e roxo",
+      "compiladoras": "Logo das Compiladoras, com fundo preto e um xícara de café com um coração vermelho dentro",
+      "gufers": "Logo dos Gufers, círculo de fundo preto com um foguete branco"
+    }
   }
 }

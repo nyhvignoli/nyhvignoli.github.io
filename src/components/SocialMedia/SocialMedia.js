@@ -22,7 +22,7 @@ export const SocialMedia = () => {
         rel="noreferrer noopener"
         aria-label={`Github (${dictionary.ariaLabels.opensInANewTab})`}
       >
-        <Icon src={github} alt="github icon" />
+        <Icon src={github} alt="" aria-hidden="true" />
         <Body4>GitHub</Body4>
       </CleanLink>
       <CleanLink
@@ -32,7 +32,7 @@ export const SocialMedia = () => {
         target="_blank"
         rel="noreferrer noopener"
       >
-        <Icon src={linkedin} alt="linkedin icon" />
+        <Icon src={linkedin} alt="" aria-hidden="true" />
         <Body4>LinkedIn</Body4>
       </CleanLink>
       <CleanLink
@@ -42,7 +42,7 @@ export const SocialMedia = () => {
         target="_blank"
         rel="noreferrer noopener"
       >
-        <Icon src={instagram} alt="instagram icon" />
+        <Icon src={instagram} alt="" aria-hidden="true" />
         <Body4>Instagram</Body4>
       </CleanLink>
       <CleanLink
@@ -52,7 +52,7 @@ export const SocialMedia = () => {
         target="_blank"
         rel="noreferrer noopener"
       >
-        <Icon src={twitter} alt="twitter icon" />
+        <Icon src={twitter} alt="" aria-hidden="true" />
         <Body4>Twitter</Body4>
       </CleanLink>
     </SocialMediaWrapper>
