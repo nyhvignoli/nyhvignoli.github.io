@@ -43,7 +43,12 @@ const Footer = () => {
               decorationOnHover="underline"
               href="mailto:nyhv.contato@gmail.com"
             >
-              <Icon src={email} alt="email icon" width="24px" height="24px" />
+              <Icon
+                src={email}
+                alt={dictionary.alternativeText.icons.email}
+                width="24px"
+                height="24px"
+              />
               <Body>nyhv.contato@gmail.com</Body>
             </CleanLink>
             <Space
@@ -60,7 +65,7 @@ const Footer = () => {
               >
                 <Icon
                   src={whatsapp}
-                  alt="whatsapp icon"
+                  alt={dictionary.alternativeText.icons.whatsapp}
                   width="24px"
                   height="24px"
                 />

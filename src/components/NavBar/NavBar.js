@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Text } from '../../global/LanguagesContext'
+import React, { useState, useContext } from 'react'
+import { LanguageContext, Text } from '../../global/LanguagesContext'
 import LanguageSelector from '../LanguageSelector/LanguageSelector'
 import {
   StyledNav,
@@ -17,6 +17,7 @@ const NavBar = () => {
   const [active, setActive] = useState(undefined)
   const [open, setOpen] = useState(false)
   const [drawerOpen, setDrawerOpen] = useState(false)
+  const { dictionary } = useContext(LanguageContext)
 
   const handleActive = (menuItem) => {
     setActive(menuItem)
@@ -46,7 +47,10 @@ const NavBar = () => {
             onFocus={showSelect}
             onBlur={hideSelect}
           >
-            <img src={languagesIcon} alt="World map icon" />
+            <img
+              src={languagesIcon}
+              alt={dictionary.alternativeText.icons.worldMap}
+            />
             <LanguageSelector show={open} hideSelect={hideSelect} />
           </LanguageMenu>
           <StyledList hide={!drawerOpen}>
@@ -94,7 +98,9 @@ const NavBar = () => {
           <MenuIcon
             onClick={showDrawer}
             src={drawerOpen ? cancelIcon : menuIcon}
-            alt="menu icon"
+            alt={
+              dictionary.alternativeText.icons[drawerOpen ? 'cancel' : 'menu']
+            }
           />
         </Wrapper>
       </GridLayout>

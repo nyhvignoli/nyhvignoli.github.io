@@ -31,6 +31,7 @@ import {
 
 export const getProjects = ({
   mongoDBDescription,
+  mongoDBComponentLibrary,
   mongoDBComponentLibDescription,
   musicatchersDescription,
   labedditDescription,
@@ -110,7 +111,7 @@ export const getProjects = ({
       ]
     },
     {
-      title: 'MongoDB Component Library',
+      title: mongoDBComponentLibrary,
       type: 'Front-end',
       images: [
         {

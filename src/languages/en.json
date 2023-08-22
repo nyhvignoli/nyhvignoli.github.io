@@ -40,6 +40,7 @@
 
   "gallery": "View gallery",
   "mongoDBDescription": "I worked as a contractor for the team responsible for maintenance and development of new features for all websites under the mongodb.com domain. In this project I worked mostly developing bug fixes and improvements.",
+  "mongoDBComponentLibrary": "MongoDB Component Library",
   "mongoDBComponentLibDescription": "I've contribuited in developing MongoDB internal component library. Participating in development and documentation of reusables components, implementing Design System based of Atomic Design principles.",
   "musicatchersDescription": "Full Stack Project developed at Labenu's bootcamp. It is about a web application with basic features of a music streaming Website.",
   "labedditDescription": "Project developed at Labenu's bootcamp. A social media similar to Reddit, where the users are able to post, comment and vote in each others posts.",
@@ -224,5 +225,24 @@
     "codivas": "Codivas agency website link",
     "compiladoras": "Compiladoras de Cafeína Instagram profile",
     "gufers": "Gufers group YouTube channel"
+  },
+
+  "alternativeText": {
+    "icons": {
+      "worldMap": "World map",
+      "menu": "Hamburger menu",
+      "cancel": "X cancel",
+      "email": "E-mail",
+      "whatsapp": "Whatsapp",
+      "frontend": "Illustration of different screens and devices",
+      "backend": "Illustration of a screen with gears",
+      "generalKnowledges": "Illustration of a brain representing a lamp"
+    },
+    "logos": {
+      "labenu": "Labenu logo, a minimalist polygonal flame coloured with orange, yellow and greyish blue",
+      "codivas": "Codivas logo, reads 'Codiva' in black and purple",
+      "compiladoras": "Compiladoras logo, black background and a coffee mug with a red heart inside",
+      "gufers": "Gufers logo, black background circule with a white rocket"
+    }
   }
 }
