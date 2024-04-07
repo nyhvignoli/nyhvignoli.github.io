@@ -23,9 +23,7 @@
     "test:coverage": "npm test -- --coverage --watchAll",
     "eject": "react-scripts eject",
     "lint": "npx prettier --c .",
-    "fix": "npx prettier --write .",
-    "deploy": "npm run build && surge ./build --domain nyhdevignoli.surge.sh",
-    "deploy:test": "npm run build && surge ./build --domain test.nyhdevignoli.surge.sh"
+    "fix": "npx prettier --write ."
   },
   "eslintConfig": {
     "extends": [
