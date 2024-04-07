@@ -1,7 +1,8 @@
 import React from 'react'
-import { Header, Icon, Wrapper } from './styles'
+import { Header, Wrapper } from './styles'
 import { Subhead2 } from '../../../../global/styles'
 import { Sizes } from '../../../../theme'
+import { ResponsiveImage } from '../../../ResponsiveImage'
 
 export const CardHeader = ({
   title,
@@ -13,11 +14,12 @@ export const CardHeader = ({
     <Wrapper data-testid="base-card-header">
       <Header flexDirection={flexDirection}>
         {!!icon.src && (
-          <Icon
+          <ResponsiveImage
             src={icon.src}
             alt={icon.alt}
             width={Sizes.ICON.WIDTH.DESKTOP.HUGE}
             height={Sizes.ICON.HEIGHT.DESKTOP.HUGE}
+            rounded
           />
         )}
         <Subhead2>{title}</Subhead2>
