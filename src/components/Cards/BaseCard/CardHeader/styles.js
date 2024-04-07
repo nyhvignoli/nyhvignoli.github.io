@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Border, Spacing, Breakpoints } from '../../../../theme'
+import { Spacing, Breakpoints } from '../../../../theme'
 
 export const Wrapper = styled.div`
   margin-bottom: ${Spacing.MOBILE.X_SMALL};
@@ -17,8 +17,4 @@ export const Header = styled.div`
     gap: ${Spacing.DESKTOP.TINY};
 
   `}
-`
-
-export const Icon = styled.img`
-  border-radius: ${Border.RADIUS.CIRCLE};
 `
