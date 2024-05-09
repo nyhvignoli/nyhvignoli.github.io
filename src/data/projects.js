@@ -1,33 +1,76 @@
 import {
-  musicatchersScreenshot,
-  musicatchers2,
-  musicatchers3,
-  musicatchers4,
-  musicatchers5
-} from '../assets/musicatchers'
+  labeddit01Desktop,
+  labeddit01Mobile,
+  labeddit01Tablet,
+  labeddit02Desktop,
+  labeddit02Mobile,
+  labeddit02Tablet,
+  labeddit03Desktop,
+  labeddit03Mobile,
+  labeddit03Tablet,
+  labeddit04Desktop,
+  labeddit04Mobile,
+  labeddit04Tablet
+} from '../assets/projects/labeddit'
 import {
-  labedditScreenshot,
-  labeddit2,
-  labeddit3,
-  labeddit4
-} from '../assets/labeddit'
+  formDesktop,
+  formTablet,
+  masonryCardsDesktop,
+  masonryCardsMobile,
+  masonryCardsTablet,
+  presentationDesktop,
+  presentationMobile,
+  presentationTablet
+} from '../assets/projects/mongo-db/lib'
 import {
-  mongoDBComponentLibCover,
-  masonryCards,
-  formComponents
-} from '../assets/mondo-db-component-lib'
-import {
-  backgroundImgBefore,
-  backgroundImgAfter,
-  detailsBefore,
-  detailsAfter,
-  lpNavBefore,
-  lpNavAfter,
-  segaBefore,
-  segaAfter,
+  bgImgAfterDesktop,
+  bgImgAfterMobile,
+  bgImgAfterTablet,
+  bgImgBeforeDesktop,
+  bgImgBeforeMobile,
+  bgImgBeforeTablet,
+  detailsAfterDesktop,
+  detailsAfterMobile,
+  detailsAfterTablet,
+  detailsBeforeDesktop,
+  detailsBeforeMobile,
+  detailsBeforeTablet,
+  lpNavAfterDesktop,
+  lpNavAfterMobile,
+  lpNavAfterTablet,
+  lpNavBeforeDesktop,
+  lpNavBeforeMobile,
+  lpNavBeforeTablet,
+  segaAfterDesktop,
+  segaAfterMobileDesktop,
+  segaAfterMobileMobile,
+  segaAfterMobileTablet,
+  segaAfterMobile,
+  segaAfterTablet,
+  segaBeforeDesktop,
+  segaBeforeMobileDesktop,
+  segaBeforeMobileMobile,
+  segaBeforeMobileTablet,
   segaBeforeMobile,
-  segaAfterMobile
-} from '../assets/mongo-db'
+  segaBeforeTablet
+} from '../assets/projects/mongo-db/website'
+import {
+  musicatchers01Desktop,
+  musicatchers01Mobile,
+  musicatchers01Tablet,
+  musicatchers02Desktop,
+  musicatchers02Mobile,
+  musicatchers02Tablet,
+  musicatchers03Desktop,
+  musicatchers03Mobile,
+  musicatchers03Tablet,
+  musicatchers04Desktop,
+  musicatchers04Mobile,
+  musicatchers04Tablet,
+  musicatchers05Desktop,
+  musicatchers05Mobile,
+  musicatchers05Tablet
+} from '../assets/projects/musicatchers'
 
 export const getProjects = ({
   mongoDBDescription,
@@ -48,52 +91,92 @@ export const getProjects = ({
       type: 'Full Stack',
       images: [
         {
-          src: backgroundImgAfter,
+          sources: {
+            desktop: bgImgAfterDesktop,
+            mobile: bgImgAfterMobile,
+            tablet: bgImgAfterTablet
+          },
           alt: mongoDB.backgroundImgAfter.alt,
           caption: mongoDB.backgroundImgAfter.caption
         },
         {
-          src: backgroundImgBefore,
+          sources: {
+            desktop: bgImgBeforeDesktop,
+            mobile: bgImgBeforeMobile,
+            tablet: bgImgBeforeTablet
+          },
           alt: mongoDB.backgroundImgBefore.alt,
           caption: mongoDB.backgroundImgBefore.caption
         },
         {
-          src: detailsBefore,
+          sources: {
+            desktop: detailsBeforeDesktop,
+            mobile: detailsBeforeMobile,
+            tablet: detailsBeforeTablet
+          },
           alt: mongoDB.detailsBefore.alt,
           caption: mongoDB.detailsBefore.caption
         },
         {
-          src: detailsAfter,
+          sources: {
+            desktop: detailsAfterDesktop,
+            mobile: detailsAfterMobile,
+            tablet: detailsAfterTablet
+          },
           alt: mongoDB.detailsAfter.alt,
           caption: mongoDB.detailsAfter.caption
         },
         {
-          src: lpNavBefore,
+          sources: {
+            desktop: lpNavBeforeDesktop,
+            mobile: lpNavBeforeMobile,
+            tablet: lpNavBeforeTablet
+          },
           alt: mongoDB.lpNavBefore.alt,
           caption: mongoDB.lpNavBefore.caption
         },
         {
-          src: lpNavAfter,
+          sources: {
+            desktop: lpNavAfterDesktop,
+            mobile: lpNavAfterMobile,
+            tablet: lpNavAfterTablet
+          },
           alt: mongoDB.lpNavAfter.alt,
           caption: mongoDB.lpNavAfter.caption
         },
         {
-          src: segaBefore,
+          sources: {
+            desktop: segaBeforeDesktop,
+            mobile: segaBeforeMobile,
+            tablet: segaBeforeTablet
+          },
           alt: mongoDB.segaBefore.alt,
           caption: mongoDB.segaBefore.caption
         },
         {
-          src: segaBeforeMobile,
+          sources: {
+            desktop: segaBeforeMobileDesktop,
+            mobile: segaBeforeMobileMobile,
+            tablet: segaBeforeMobileTablet
+          },
           alt: mongoDB.segaBeforeMobile.alt,
           caption: mongoDB.segaBeforeMobile.caption
         },
         {
-          src: segaAfter,
+          sources: {
+            desktop: segaAfterDesktop,
+            mobile: segaAfterMobile,
+            tablet: segaAfterTablet
+          },
           alt: mongoDB.segaAfter.alt,
           caption: mongoDB.segaAfter.caption
         },
         {
-          src: segaAfterMobile,
+          sources: {
+            desktop: segaAfterMobileDesktop,
+            mobile: segaAfterMobileMobile,
+            tablet: segaAfterMobileTablet
+          },
           alt: mongoDB.segaAfterMobile.alt,
           caption: mongoDB.segaAfterMobile.caption
         }
@@ -115,17 +198,29 @@ export const getProjects = ({
       type: 'Front-end',
       images: [
         {
-          src: mongoDBComponentLibCover,
+          sources: {
+            desktop: presentationDesktop,
+            mobile: presentationMobile,
+            tablet: presentationTablet
+          },
           alt: mongoDBComponentLib.webinarsPresentation.alt,
           caption: mongoDBComponentLib.webinarsPresentation.caption
         },
         {
-          src: masonryCards,
+          sources: {
+            desktop: masonryCardsDesktop,
+            mobile: masonryCardsMobile,
+            tablet: masonryCardsTablet
+          },
           alt: mongoDBComponentLib.cardGrid.alt,
           caption: mongoDBComponentLib.cardGrid.caption
         },
         {
-          src: formComponents,
+          sources: {
+            desktop: formDesktop,
+            mobile: formTablet,
+            tablet: formTablet
+          },
           alt: mongoDBComponentLib.form.alt,
           caption: mongoDBComponentLib.form.caption
         }
@@ -139,27 +234,47 @@ export const getProjects = ({
       type: 'Full Stack',
       images: [
         {
-          src: musicatchersScreenshot,
+          sources: {
+            desktop: musicatchers01Desktop,
+            mobile: musicatchers01Mobile,
+            tablet: musicatchers01Tablet
+          },
           alt: musicatchers.musicatchersScreenshot.alt,
           caption: musicatchers.musicatchersScreenshot.caption
         },
         {
-          src: musicatchers2,
+          sources: {
+            desktop: musicatchers02Desktop,
+            mobile: musicatchers02Mobile,
+            tablet: musicatchers02Tablet
+          },
           alt: musicatchers.musicatchers2.alt,
           caption: musicatchers.musicatchers2.caption
         },
         {
-          src: musicatchers3,
+          sources: {
+            desktop: musicatchers03Desktop,
+            mobile: musicatchers03Mobile,
+            tablet: musicatchers03Tablet
+          },
           alt: musicatchers.musicatchers3.alt,
           caption: musicatchers.musicatchers3.caption
         },
         {
-          src: musicatchers4,
+          sources: {
+            desktop: musicatchers04Desktop,
+            mobile: musicatchers04Mobile,
+            tablet: musicatchers04Tablet
+          },
           alt: musicatchers.musicatchers4.alt,
           caption: musicatchers.musicatchers4.caption
         },
         {
-          src: musicatchers5,
+          sources: {
+            desktop: musicatchers05Desktop,
+            mobile: musicatchers05Mobile,
+            tablet: musicatchers05Tablet
+          },
           alt: musicatchers.musicatchers5.alt,
           caption: musicatchers.musicatchers5.caption
         }
@@ -190,22 +305,38 @@ export const getProjects = ({
       type: 'Front-end',
       images: [
         {
-          src: labedditScreenshot,
+          sources: {
+            desktop: labeddit01Desktop,
+            mobile: labeddit01Mobile,
+            tablet: labeddit01Tablet
+          },
           alt: labeddit.labedditScreenshot.alt,
           caption: labeddit.labedditScreenshot.caption
         },
         {
-          src: labeddit2,
+          sources: {
+            desktop: labeddit02Desktop,
+            mobile: labeddit02Mobile,
+            tablet: labeddit02Tablet
+          },
           alt: labeddit.labeddit2.alt,
           caption: labeddit.labeddit2.caption
         },
         {
-          src: labeddit3,
+          sources: {
+            desktop: labeddit03Desktop,
+            mobile: labeddit03Mobile,
+            tablet: labeddit03Tablet
+          },
           alt: labeddit.labeddit3.alt,
           caption: labeddit.labeddit3.caption
         },
         {
-          src: labeddit4,
+          sources: {
+            desktop: labeddit04Desktop,
+            mobile: labeddit04Mobile,
+            tablet: labeddit04Tablet
+          },
           alt: labeddit.labeddit4.alt,
           caption: labeddit.labeddit4.caption
         }

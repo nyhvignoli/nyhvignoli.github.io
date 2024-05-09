@@ -1,6 +1,4 @@
-import backend from '../assets/backend.png'
-import frontend from '../assets/frontend.svg'
-import general from '../assets/general-knowledges.jpg'
+import { backend, frontend, general } from '../assets/general'
 
 export const getKnowledges = ({
   frontendKnowledges,

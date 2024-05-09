@@ -1,7 +1,4 @@
-import labenuLogo from '../assets/labenu.png'
-import codivasLogo from '../assets/codivas.jpg'
-import gufersLogo from '../assets/gufers.png'
-import compiladorasLogo from '../assets/compiladoras.jpg'
+import { codivas, compiladoras, gufers } from '../assets/logos'
 
 export const getCommunities = ({
   labenuCommunityDescription,
@@ -13,19 +10,9 @@ export const getCommunities = ({
 }) => {
   const communities = [
     {
-      name: 'Labenu',
-      logo: {
-        image: labenuLogo,
-        alt: alternativeText.logos.labenu
-      },
-      href: 'https://www.labenu.com.br/',
-      ariaLabel: ariaLabels.labenu,
-      description: labenuCommunityDescription
-    },
-    {
       name: 'Codivas',
       logo: {
-        image: codivasLogo,
+        image: codivas,
         alt: alternativeText.logos.codivas
       },
       href: 'https://www.codivas.com.br/',
@@ -35,7 +22,7 @@ export const getCommunities = ({
     {
       name: 'Compiladoras de Cafeína',
       logo: {
-        image: compiladorasLogo,
+        image: compiladoras,
         alt: alternativeText.logos.compiladoras
       },
       href: 'https://www.instagram.com/comunidadecafeina/',
@@ -45,7 +32,7 @@ export const getCommunities = ({
     {
       name: 'Gufers',
       logo: {
-        image: gufersLogo,
+        image: gufers,
         alt: alternativeText.logos.gufers
       },
       href: 'https://www.youtube.com/channel/UCcL_lGqZNsa_9cR4ckjy07A',
