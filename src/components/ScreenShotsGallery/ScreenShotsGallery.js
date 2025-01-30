@@ -5,8 +5,9 @@ import Button from '@material-ui/core/Button'
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft'
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight'
 import Close from '@material-ui/icons/Close'
-import { Wrapper, ImageWrapper, Image, Header, Background } from './styles'
+import { Wrapper, ImageWrapper, Header, Background, getStyles } from './styles'
 import { IconButton } from '@material-ui/core'
+import { ResponsiveImage } from '../ResponsiveImage'
 
 const ScreenShotsGallery = ({ images, handleGalleryClose }) => {
   const [activeStep, setActiveStep] = useState(0)
@@ -35,10 +36,14 @@ const ScreenShotsGallery = ({ images, handleGalleryClose }) => {
           </IconButton>
         </Header>
         <ImageWrapper>
-          <Image
+          
+          <ResponsiveImage
             zoom
-            src={images[activeStep].src}
+            scr={images[activeStep].sources.desktop}
+            srcSet={`${images[activeStep].sources.mobile} 375w, ${images[activeStep].sources.tablet} 768w, ${images[activeStep].sources.desktop} 1024w`}
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33.3vw"
             alt={images[activeStep].alt}
+            style={getStyles()}
           />
         </ImageWrapper>
 

@@ -4,9 +4,9 @@ export const getBackgroundImages = () => {
   const images = [
     {
       sources: {
-        profile2022Desktop,
-        profile2022Mobile,
-        profile2022Tablet
+        desktop: profile2022Desktop,
+        mobile: profile2022Mobile,
+        tablet: profile2022Tablet
       },
       styles: {
         desktop: { opacity: '0.06', left: '0' },
@@ -15,9 +15,9 @@ export const getBackgroundImages = () => {
     },
     {
       sources: {
-        profile2022Desktop,
-        profile2022Mobile,
-        profile2022Tablet
+        desktop: profile2022Desktop,
+        mobile: profile2022Mobile,
+        tablet: profile2022Tablet
       },
       styles: {
         desktop: { opacity: '0.02', left: '20%' },
@@ -26,9 +26,9 @@ export const getBackgroundImages = () => {
     },
     {
       sources: {
-        profile2022Desktop,
-        profile2022Mobile,
-        profile2022Tablet
+        desktop: profile2022Desktop,
+        mobile: profile2022Mobile,
+        tablet: profile2022Tablet
       },
       styles: {
         desktop: { opacity: '0.01', left: '40%' },

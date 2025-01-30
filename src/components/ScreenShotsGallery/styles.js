@@ -48,3 +48,12 @@ export const Image = styled.img`
   object-fit: contain;
   transition: all 0.2s ease-in-out;
 `
+
+export const getStyles = () => {
+  return {
+    width: '100%',
+    //maxHeight: 'inherit',
+    objectFit: 'contain',
+    transition: 'all 0.2s ease-in-out'
+  }
+}

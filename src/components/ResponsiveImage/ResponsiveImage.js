@@ -9,7 +9,9 @@ export const ResponsiveImage = ({
   sizes,
   alt,
   className,
-  rounded
+  rounded = false,
+  styles = {},
+  mediaStyles = {}
 }) => {
   const imgRef = useRef(null)
   const [isVisible, setIsVisible] = useState(false)
@@ -39,7 +41,6 @@ export const ResponsiveImage = ({
 
   return (
     <Img
-      rounded={rounded}
       width={width}
       height={height}
       ref={imgRef}
@@ -49,6 +50,9 @@ export const ResponsiveImage = ({
       alt={alt}
       className={className}
       loading={isVisible ? 'auto' : 'lazy'}
+      styles={styles}
+      mediaStyles={mediaStyles}
+      rounded={rounded}
     />
   )
 }
